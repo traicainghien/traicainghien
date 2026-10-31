@@ -105,6 +105,8 @@ flowchart TD
 
 ### 3. 📦 Agent 3: Product & Funnel Architect (Kiến Trúc Sư Sản Phẩm Vi Mô)
 * **Chức danh:** Quản lý Phát triển Sản phẩm Số & Phễu Chuyển Đổi.
+* **Kỹ năng chủ chốt:**
+  - [`.agents/skills/data-funnel-architecture/SKILL.md`](../data-funnel-architecture/SKILL.md) (Kiến trúc phễu dữ liệu website, thiết kế Lead Magnets, đóng gói sản phẩm vi mô 49k-149k, và kịch bản Email Nurturing 5 ngày)
 * **Sứ mệnh:** Đóng gói tri thức thành các sản phẩm giải quyết nỗi đau ngay lập tức với mức giá dễ tiếp cận (49k - 149k) và Core Offer (390k - 490k).
 * **Nhiệm vụ cụ thể:**
   - Thiết kế trắc nghiệm nhận diện tâm lý 25 câu (kèm logic chấm điểm & ma trận phân loại).
@@ -175,6 +177,8 @@ flowchart TD
 
 ### 7. 🎯 Agent 7: Lead Intelligence & Retargeting Specialist (Thu Thập Data & Bám Đuổi Tái Tiếp Thị)
 * **Chức danh:** Chuyên gia Quản trị Dữ liệu Khách hàng & Tiếp thị Vòng đời (Lifecycle Marketing).
+* **Kỹ năng chủ chốt:**
+  - [`.agents/skills/data-funnel-architecture/SKILL.md`](../data-funnel-architecture/SKILL.md) (Thu thập Lead, Progressive Profiling, Form CRO, Phân loại 4 nhóm data tự động, và Conversion Tracking Audit)
 * **Sứ mệnh:** Biến 100% lượng truy cập vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), thiết lập cỗ máy bám đuổi tự động chi phí 0đ.
 * **Nhiệm vụ cụ thể:**
   - Thiết kế nam châm hút Lead (Lead Magnets): Form trắc nghiệm 25 câu hỏi, nhận kết quả phân tích qua Email, tặng Dopamine Reset Checklist 7 ngày.

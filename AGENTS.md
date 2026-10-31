@@ -512,7 +512,7 @@ flowchart TD
    - *Trách nhiệm:* Bẻ nhỏ bài viết 2.500 từ thành kịch bản video ngắn 60 - 90 giây cho TikTok, Shorts, Reels.
    - *Chuẩn mực:* Giật Hook 3 giây đầu đánh trúng nỗi đau, tối ưu ngắt nghỉ cho giọng đọc AI (TTS), kèm prompt mô tả cảnh B-roll Zen Minimalist không lộ mặt.
 3. **Agent 3: Product & Funnel Architect (Kiến Trúc Sư Sản Phẩm & Phễu)**
-   - *Trách nhiệm:* Thiết kế bài trắc nghiệm nhận diện 25 câu hỏi, đóng gói sản phẩm vi mô (49k - 149k) và Core Offer (390k - 490k), soạn chuỗi Email Sequence 5 ngày nuôi dưỡng lead.
+   - *Trách nhiệm:* Thiết kế bài trắc nghiệm nhận diện 25 câu hỏi, đóng gói sản phẩm vi mô (49k - 149k) và Core Offer (390k - 490k), soạn chuỗi Email Sequence 5 ngày nuôi dưỡng lead. Vận hành kỹ năng `data-funnel-architecture` chuẩn quốc tế.
 4. **Agent 4: Tech & Automation Engineer (Kỹ Sư Hệ Thống)**
    - *Trách nhiệm:* Code Next.js, quản trị SEO Technical, kích hoạt Google Indexing API (`npm run seo:index`) ép Googlebot cào bài mới trong 24h, theo dõi Google Search Console & Google Analytics (`npm run seo:report`), tích hợp cổng thanh toán quét mã QR tự động giao file trong 30 giây, bảo trì và deploy production.
 5. **Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng & Kiểm Duyệt)**
@@ -529,7 +529,7 @@ flowchart TD
      7. `Psychologie` (@psychologie-france): Cơ chế tâm lý học hành vi sâu sắc (Coping mechanisms, tâm lý cảm xúc, bẫy mục tiêu mơ hồ).
      8. `Vua Trở Lại` (@vuatrolai): Tinh thần Samurai / Miyamoto Musashi, rèn luyện nội lực, tái thiết bản thân và phục hồi nghị lực sống.
 7. **Agent 7: Lead Intelligence & Retargeting Specialist (Thu Thập Data & Bám Đuổi Tái Tiếp Thị)**
-   - *Trách nhiệm:* Chuyển hóa 100% người xem vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), phân loại 4 nhóm đối tượng tự động và thiết lập các kịch bản bám đuổi (Email Drip, Zalo broadcast, Retargeting Pixel) với chi phí 0đ.
+   - *Trách nhiệm:* Chuyển hóa 100% người xem vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), phân loại 4 nhóm đối tượng tự động và thiết lập các kịch bản bám đuổi (Email Drip, Zalo broadcast, Retargeting Pixel) với chi phí 0đ. Vận hành kỹ năng `data-funnel-architecture` chuẩn quốc tế.
 8. **Agent 8: Visual Stylist & AI Thumbnail Creator (Chuyên Gia Hình Ảnh & Thumbnail Chuẩn SEO)**
    - *Trách nhiệm:* Tạo ảnh Thumbnail và ảnh minh họa độc bản theo triết lý mỹ cảm **Zen Minimalist** (Bảng màu Xanh rêu `#3A5A40`, Be ấm `#FAF7F2`, Đất nung `#C27D53`).
    - *Quy chuẩn SEO Google:* Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB, đặt tên file chứa từ khóa không dấu (`tu-khoa-chinh-trai-cai-nghien.webp`), cấu hình thẻ Alt Text và Metadata sẵn sàng cho Google Discover.
