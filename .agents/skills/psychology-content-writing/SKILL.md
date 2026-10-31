@@ -104,6 +104,23 @@ Học hỏi từ bài viết mẫu đỉnh cao (*"Bạn không lười ... Bạn
   12. Đa danh mục & 2-3 liên kết nội bộ.
 * **Chỉ khi đạt 12/12 điểm PASS mới được phép xuất bản.** Bất kỳ lỗi nào cũng phải sửa xong trước khi lên web.
 
+### 1.11. Bộ Quy Tắc Thép Copywriting Chuyển Đổi & Chống Văn Mẫu AI (Học Hỏi Từ Corey Haines)
+Kế thừa tinh hoa từ bộ kỹ năng Copywriting số 1 thế giới `coreyhaines31/marketingskills` (xem chi tiết tại [copywriting](../copywriting/SKILL.md)), Agent 1 và Mây bắt buộc tuân thủ 5 nguyên lý chuyển đổi đỉnh cao:
+1. **Triệt tiêu 100% "Dấu vết AI" (No AI Tells & Anti-AI Slop):**
+   * **CẤM cấu trúc tương phản giả tạo:** Không viết *"Nó không phải là X, nó là Y"* hay *"Không chỉ X, mà còn Y"*. Nói thẳng sự thật Y kèm minh chứng đời thực.
+   * **CẤM danh sách phủ định rập khuôn:** Không viết *"Không cần X, không cần Y, không cần Z"*. Nói thẳng hành động tích cực cần làm.
+   * **CẤM câu mở đầu sáo rỗng:** Không bao giờ mở đầu bằng *"Trong thế giới vội vã ngày nay..."*, *"Trong kỷ nguyên số..."*, *"Dù bạn là ai..."*, *"Nâng tầm cuộc sống..."*. Bắt đầu trực tiếp bằng một khung cảnh đời thực, một tiếng động hoặc một cảm giác cụ thể.
+   * **CẤM tự hỏi tự trả lời kịch tính:** Không dùng *"Kết quả là gì? Não bạn teo tóp."*. Hãy trình bày chân thành, tự nhiên.
+2. **Rõ ràng trên hết, không cần hoa mỹ (Clarity Over Cleverness):**
+   * Đừng cố tỏ ra văn vẻ hay uyên bác. Câu văn càng giản dị, gần gũi thì sức sát thương và sự thức tỉnh càng mạnh.
+3. **Cụ thể thay vì mơ hồ (Specificity Over Vagueness):**
+   * Không nói *"tiết kiệm nhiều thời gian"*, hãy nói *"dứt điểm xong công việc trước 17h chiều để về ăn cơm nóng cùng gia đình"*.
+   * Không nói *"giảm bớt căng thẳng"*, hãy nói *"đêm nay không còn trằn trọc nhìn trần nhà đến 2h sáng"*.
+4. **Ngôn ngữ người đọc > Ngôn ngữ chuyên gia (Customer Language):**
+   * Sử dụng đúng những từ ngữ độc giả tự độc thoại nội tâm: *"ngón tay quẹt mỏi nhừ"*, *"đầu nhức bưng bưng"*, *"bát phở 30k"*, *"tiếng thở dài trong đêm"*.
+5. **Kiểm tra Hoán đổi (The Swap Test):**
+   * Trước khi xuất bản, tự hỏi: *"Câu này nếu đem dán sang một trang web khác thì có dùng được không?"*. Nếu có, chứng tỏ nó vẫn là câu nói chung chung sáo rỗng. Bắt buộc viết lại với các chi tiết, cảm xúc mang đậm linh hồn của Trại Cai Nghiện.
+
 ---
 
 ## 1.b. 🏛️ BỐN TRỤ CỘT NỘI DUNG CỐT LÕI (THE 4 CONTENT PILLARS)
