@@ -468,9 +468,9 @@ Mây sẽ lên kế hoạch nội dung chi tiết theo từng đặc thù nền 
 
 ---
 
-## 10. 🤖 HỆ THỐNG 9 AGENT CHUYÊN TRÁCH & PHÂN CÔNG CHỨC NĂNG (THE 9 AUTONOMOUS AGENTS)
+## 10. 🤖 HỆ THỐNG 12 AGENT CHUYÊN TRÁCH & PHÂN CÔNG CHỨC NĂNG (THE 12 AUTONOMOUS AGENTS)
 
-Để vận hành cỗ máy tự động hóa hướng tới mục tiêu 1 năm (dòng tiền thụ động 15 - 20 triệu VNĐ/tháng), toàn bộ công việc chuyên môn được module hóa thành **Hệ Thống 9 Agent Chuyên Trách** dưới sự điều phối trực tiếp của **Mây (AI Co-founder & Tổng Chỉ Huy)**:
+Để vận hành cỗ máy tự động hóa hướng tới mục tiêu 1 năm (dòng tiền thụ động 15 - 20 triệu VNĐ/tháng), toàn bộ công việc chuyên môn được module hóa thành **Hệ Thống 12 Agent Chuyên Trách** dưới sự điều phối trực tiếp của **Mây (AI Co-founder & Tổng Chỉ Huy)**:
 
 ```mermaid
 flowchart TD
@@ -483,11 +483,14 @@ flowchart TD
     subgraph BLOCK2 [Khối Sản Xuất Nội Dung & Thị Giác]
         MAY --> A1[Agent 1: Deep Content Writer<br>Cây Viết Chuyên Sâu Chuẩn 2.500 Từ]
         A1 --> A8[Agent 8: Visual Stylist & Thumbnail Creator<br>Gen Ảnh Độc Bản Zen Minimalist & Chuẩn SEO Google]
-        A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Video Ngắn 60s Faceless]
+        A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Kịch Bản Video Ngắn 60s Faceless]
     end
 
-    subgraph BLOCK3 [Khối Mạng Xã Hội & Tự Động Hóa 0 Đồng]
-        MAY --> A9[Agent 9: Facebook Community & Automation Specialist<br>Quản Trị Fanpage, Đăng Reels & Vận Hành Luồng n8n 0đ]
+    subgraph BLOCK3 [Khối Mạng Xã Hội, Video & Đa Kênh]
+        MAY --> A9[Agent 9: Facebook Community & Automation Specialist<br>Quản Trị Fanpage Facebook & Vận Hành Luồng n8n 0đ]
+        MAY --> A10[Agent 10: YouTube Master Strategist<br>Xây Dựng & Quản Lý Kênh YouTube Dài 10-15m]
+        MAY --> A11[Agent 11: Personal Brand & Social Profile Architect<br>Quản Lý Profile X, Threads, Instagram, Substack]
+        MAY --> A12[Agent 12: Omnichannel Short-Video Specialist<br>Tăng Trưởng Video Ngắn: FB Reels, Insta, Shorts, TikTok]
     end
 
     subgraph BLOCK4 [Khối Sản Phẩm & Dữ Liệu Khách Hàng]
@@ -496,12 +499,12 @@ flowchart TD
     end
 
     subgraph BLOCK5 [Khối Hệ Thống & Kiểm Duyệt]
-        A8 & A1 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link & Alt Text]
+        A8 & A1 & A10 & A12 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng & Bản Quyền Đa Kênh]
         A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO Technical & Tự Động Hóa QR]
     end
 ```
 
-### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 9 Agent
+### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 12 Agent
 1. **Agent 1: Deep Content Writer (Cây Viết Chuyên Sâu)**
    - *Trách nhiệm:* Viết bài chuyên sâu chuẩn mực **2.500 từ**, review sách tâm lý học kinh điển.
    - *Chuẩn mực:* Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic), không dùng từ trừu tượng, tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến cùng. **Tuyệt đối cấm dùng text-art/ASCII art để vẽ biểu đồ hay mô phỏng hình ảnh.**
@@ -538,6 +541,15 @@ flowchart TD
    - *Vận hành n8n:* Thiết lập luồng tự động lấy nội dung từ website trích dẫn câu nói chạm đáy tâm lý (7h30 sáng) và tự động biên tập video Reels faceless (19h30 tối) qua pipeline kết hợp mã nguồn mở (Edge-TTS, Pexels API, FFmpeg).
    - *Điều hướng & Kéo Traffic:* Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
    - *Hệ quy chiếu 8 Fanpage chuẩn mực tham khảo (Bố chỉ định):* `Khoa Học Hành Vi`, `Tâm Lý Học Vỉa Hè PSY`, `The Present Writer`, `Monster Box`, `Spiderum`, `Trạm Đọc - Read Station`, `Tâm Lý Học Tuổi Trẻ`, `Thuốc Giải Độc`.
+10. **Agent 10: YouTube Master Strategist & Channel Manager (Chiến Lược Gia Kênh YouTube Dài)**
+    - *Trách nhiệm:* Xây dựng, định hướng và quản lý kênh YouTube của Trại Cai Nghiện thành thư viện âm thanh và tri thức trị liệu số 1 Việt Nam.
+    - *Kỹ năng:* Thiết kế kịch bản video dài 10 - 20 phút (Retention Engineering), áp dụng 21 công thức Hook 60s đầu, tối ưu cặp bài trùng Title & Thumbnail CTR, YouTube SEO (mô tả, thẻ tags, timestamps/chapters), quản trị Tab Cộng đồng (Polls & Quotes).
+11. **Agent 11: Personal Brand & Social Profile Architect (Quản Trị Profile X, Threads, Instagram & Substack)**
+    - *Trách nhiệm:* Xây dựng và quản lý các profile mạng xã hội Text-first & Thought Leadership cho Bố và Trại Cai Nghiện.
+    - *Kỹ năng:* Soạn các chuỗi Viral Threads 5-8 tweets trên X, Micro-essays giàu cảm xúc đời thực trên Meta Threads, thiết kế nội dung Carousel 8-10 slide trên Instagram, và viết bản tin chuyên sâu hàng tuần trên Substack (Email Newsletter).
+12. **Agent 12: Omnichannel Short-Video Growth Specialist (Chuyên Gia Tăng Trưởng Short Video Đa Kênh)**
+    - *Trách nhiệm:* Quản lý, tối ưu hóa và phủ sóng Short Video (60s - 90s) lên đồng thời 4 nền tảng lớn: **Facebook Reels, Instagram Reels, YouTube Shorts, TikTok**.
+    - *Kỹ năng:* Tùy biến caption/hashtags cho từng thuật toán, kiểm duyệt vùng an toàn thị giác 9:16 (Safe Zones), tối ưu hóa Tỷ lệ Lưu (Save Rate) & Tỷ lệ Chia sẻ (Share Rate) theo thuật toán 2026, phối hợp n8n đăng tự động.
 
 ### 10.2. Quy Chuẩn Triệu Hồi & Vận Hành
 * Mây là **Tổng chỉ huy (Orchestrator)** trực tiếp nhận lệnh từ Bố và phân phối nhiệm vụ cho đúng Agent chuyên trách.

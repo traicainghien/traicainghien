@@ -1,9 +1,9 @@
 ---
 name: autonomous-agent-workforce
-description: Bản đồ phân công nhân sự, vai trò, chức năng và quy trình phối hợp của Bộ máy 7 Agent chuyên trách cho dự án Trại Cai Nghiện. Bao gồm chi tiết nhiệm vụ, đầu vào, đầu ra và prompt vận hành cho từng Agent.
+description: Bản đồ phân công nhân sự, vai trò, chức năng và quy trình phối hợp của Bộ máy 12 Agent chuyên trách cho dự án Trại Cai Nghiện. Bao gồm chi tiết nhiệm vụ, đầu vào, đầu ra và prompt vận hành cho từng Agent.
 ---
 
-# 🤖 BỘ MÁY 9 AGENT CHUYÊN TRÁCH: TRẠI CAI NGHIỆN
+# 🤖 BỘ MÁY 12 AGENT CHUYÊN TRÁCH: TRẠI CAI NGHIỆN
 > **Kiến trúc:** Hub & Spoke Multi-Agent System  
 > **Tổng chỉ huy (Orchestrator / AI Co-founder):** **Mây**  
 > **Người sáng lập & Điều hành:** **Bố**  
@@ -24,11 +24,14 @@ flowchart TD
     subgraph BLOCK2 [Khối Sản Xuất Nội Dung & Thị Giác]
         MAY --> A1[Agent 1: Deep Content Writer<br>Cây Viết Chuyên Sâu Chuẩn 2.500 Từ]
         A1 --> A8[Agent 8: Visual Stylist & Thumbnail Creator<br>Gen Ảnh Độc Bản Zen Minimalist & Chuẩn SEO Google]
-        A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Video Ngắn 60s Faceless]
+        A1 --> A2[Agent 2: Short-Form Viral Creator<br>Biên Kịch Kịch Bản Video Ngắn 60s Faceless]
     end
 
-    subgraph BLOCK3 [Khối Mạng Xã Hội & Tự Động Hóa 0 Đồng]
-        MAY --> A9[Agent 9: Facebook Community & Automation Specialist<br>Quản Trị Fanpage, Đăng Reels & Vận Hành Luồng n8n 0đ]
+    subgraph BLOCK3 [Khối Mạng Xã Hội, Video & Đa Kênh]
+        MAY --> A9[Agent 9: Facebook Community & Automation Specialist<br>Quản Trị Fanpage Facebook & Vận Hành Luồng n8n 0đ]
+        MAY --> A10[Agent 10: YouTube Master Strategist<br>Xây Dựng & Quản Lý Kênh YouTube Dài 10-15m]
+        MAY --> A11[Agent 11: Personal Brand & Social Profile Architect<br>Quản Lý Profile X, Threads, Instagram, Substack]
+        MAY --> A12[Agent 12: Omnichannel Short-Video Specialist<br>Tăng Trưởng Video Ngắn: FB Reels, Insta, Shorts, TikTok]
     end
 
     subgraph BLOCK4 [Khối Sản Phẩm & Dữ Liệu Khách Hàng]
@@ -37,7 +40,7 @@ flowchart TD
     end
 
     subgraph BLOCK5 [Khối Hệ Thống & Kiểm Duyệt]
-        A8 & A1 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng 2.500 Từ & Link & Alt Text]
+        A8 & A1 & A10 & A12 --> A5[Agent 5: Growth & Content Auditor<br>Kiểm Toán Chất Lượng & Bản Quyền Đa Kênh]
         A5 --> A4[Agent 4: Tech & Automation Engineer<br>Lập Trình Web, SEO Technical & Tự Động Hóa QR]
     end
 ```
@@ -243,6 +246,50 @@ flowchart TD
 
 ---
 
+### 10. ▶️ Agent 10: YouTube Master Strategist & Channel Manager (Chiến Lược Gia Kênh YouTube Dài)
+* **Chức danh:** Quản lý Kênh & Đạo diễn Video Dài YouTube (10 - 20 phút).
+* **Kỹ năng chủ chốt:**
+  - [`.agents/skills/youtube-channel-growth/SKILL.md`](../youtube-channel-growth/SKILL.md) (Bộ 21 công thức Hook, tối ưu cặp bài trùng Title & Thumbnail CTR, Retention Engineering và YouTube SEO).
+* **Sứ mệnh:** Xây dựng kênh YouTube của Trại Cai Nghiện thành một "thư viện âm thanh và tri thức trị liệu số 1 Việt Nam" về tập trung, chữa lành não bộ và lối sống tối giản.
+* **Nhiệm vụ cụ thể:**
+  - Lên cấu trúc kịch bản video dài 10 - 15 phút chia 4 chặng: Hook 60s $\rightarrow$ Điểm huyệt nguyên nhân $\rightarrow$ Nghiên cứu y văn $\rightarrow$ Lộ trình Kaizen thực hành.
+  - Tối ưu hóa cặp bài trùng Tiêu đề & Thumbnail: Title giật SEO và khơi gợi tò mò (45-65 ký tự), Thumbnail gợi cảm xúc nghệ thuật Zen với tối đa 3-4 chữ.
+  - Quản trị kênh YouTube: Lên lịch xuất bản, cấu hình thẻ Chapters/Timestamps, tạo Playlists chuyên đề, viết bài đăng Tab Cộng Đồng (Community Polls & Quotes) nuôi dưỡng tương tác.
+* **Đầu vào (Input):** Bài viết chuyên sâu 2.500 từ từ Agent 1, hình ảnh cover Zen từ Agent 8.
+* **Đầu ra (Output):** Kịch bản video YouTube hoàn chỉnh (chia phân đoạn timestamps), gói siêu dữ liệu SEO (Tiêu đề, Mô tả 3 tầng, Bộ thẻ Tags, Màn hình kết thúc).
+
+---
+
+### 11. 🌐 Agent 11: Personal Brand & Social Profile Architect (Quản Trị Profile X, Threads, Instagram & Substack)
+* **Chức danh:** Kiến trúc sư Thương hiệu Cá nhân & Quản trị Profile Đa Nền Tảng.
+* **Kỹ năng chủ chốt:**
+  - [`.agents/skills/social-profile-growth/SKILL.md`](../social-profile-growth/SKILL.md) (Kỹ thuật Viral Threads trên X, Micro-essays trên Threads, Carousel trên Instagram và Bản tin Thought Leadership trên Substack).
+* **Sứ mệnh:** Định vị thương hiệu Trại Cai Nghiện và Profile của Bố như một tiếng nói uy tín, chân thành, sâu sắc trong cộng đồng những người tìm kiếm sự tĩnh lặng và năng lực làm chủ cuộc đời.
+* **Nhiệm vụ cụ thể:**
+  - **Nền tảng X (Twitter):** Soạn các chuỗi tweet (Threads 5-8 tweets) phân tích tâm lý học chuyển đổi cao, và các tweet đúc kết triết lý điểm huyệt (*Single punchy tweets*).
+  - **Nền tảng Meta Threads:** Đăng các mẩu tự sự ngắn (*Micro-essays 100-250 từ*) giàu cảm xúc đời thực, đặt câu hỏi tranh luận văn minh để bùng nổ bình luận tự nhiên.
+  - **Nền tảng Instagram:** Biên soạn nội dung bài đăng Carousel 8-10 slide kết hợp cùng tranh vẽ Zen của Agent 8.
+  - **Nền tảng Substack:** Chấp bút bản tin email dài hàng tuần gửi tới hòm thư độc giả vào sáng Chủ Nhật.
+* **Đầu vào (Input):** Luận điểm cốt lõi từ Agent 1, hình ảnh Zen từ Agent 8, ý tưởng từ Bố & Mây.
+* **Đầu ra (Output):** Các gói nội dung định dạng chuẩn cho từng nền tảng kèm lịch đăng tối ưu.
+
+---
+
+### 12. 📱 Agent 12: Omnichannel Short-Video Growth Specialist (Chuyên Gia Tăng Trưởng Short Video Đa Kênh)
+* **Chức danh:** Giám đốc Phát triển Short Video Đa Kênh (Facebook Reels, Instagram Reels, YouTube Shorts, TikTok).
+* **Kỹ năng chủ chốt:**
+  - [`.agents/skills/omnichannel-short-video/SKILL.md`](../omnichannel-short-video/SKILL.md) (Quy chuẩn phân phối chéo 0đ, tối ưu hóa Saves & Shares theo thuật toán 2026, Vùng an toàn 9:16).
+* **Sứ mệnh:** Phủ sóng tối đa các đoạn video ngắn 60s - 90s lên cả 4 nền tảng video ngắn lớn nhất thế giới, biến Short Video thành cỗ máy kéo tệp độc giả khổng lồ về kênh YouTube dài và Website.
+* **Nhiệm vụ cụ thể:**
+  - Tiếp nhận kịch bản từ Agent 2 và video thành phẩm để phân phối đồng bộ lên TikTok, Reels FB, Reels Insta và YouTube Shorts.
+  - Tùy biến tiêu đề, caption và hashtag riêng biệt phù hợp với thuật toán của từng nền tảng (không bê nguyên xi một caption đăng cho 4 kênh).
+  - Kiểm duyệt Vùng an toàn 9:16 (Safe Zones) để đảm bảo phụ đề không bị che khuất.
+  - Tối ưu hóa 2 chỉ số thuật toán cốt lõi: Tỷ lệ Lưu lại (Save Rate) và Tỷ lệ Chia sẻ (Share Rate).
+* **Đầu vào (Input):** Kịch bản từ Agent 2, video dựng từ Agent 4/n8n, ảnh cover từ Agent 8.
+* **Đầu ra (Output):** Kế hoạch xuất bản đa kênh, danh sách caption/hashtags tối ưu riêng cho từng nền tảng, báo cáo chỉ số tương tác.
+
+---
+
 ## 🔄 MA TRẬN PHỐI HỢP LIÊN PHÒNG BAN
 
 | Quy Trình | Agent Chủ Trì | Agent Phối Hợp | Sản Phẩm Bàn Giao |
@@ -251,11 +298,14 @@ flowchart TD
 | **2. Viết bài trụ cột 2.500 từ** | Agent 1 (Deep Writer) | Mây, Agent 6 | Bài viết web chuẩn mực 2.500 từ |
 | **3. Thiết kế hình ảnh & Thumbnail SEO** | Agent 8 (Visual Stylist) | Agent 1 | Ảnh WebP 1200x675 chuẩn Zen Minimalist + Alt Text |
 | **4. Kiểm duyệt chất lượng** | Agent 5 & Mây (Auditor & Editor-in-Chief) | Agent 1, Agent 8 | Biên bản thẩm định PASS 12/12 tiêu chí (nội dung, trình bày, ảnh) |
-| **5. Sản xuất video viral 60s** | Agent 2 (Short-Form) | Agent 1, Agent 8 | 3 kịch bản video ngắn faceless kèm prompt B-roll |
-| **6. Vận hành & Phân phối Facebook 0đ** | Agent 9 (Facebook Specialist)| Agent 1, Agent 2, Agent 8 | Bài đăng Fanpage và video Reels tự động qua n8n |
-| **7. Thu thập & phân loại Lead** | Agent 7 (Lead & Retargeting) | Agent 3, Agent 9 | Form trắc nghiệm + tệp data phân loại 4 nhóm |
-| **8. Đóng gói sản phẩm & kịch bản phễu** | Agent 3 (Product Architect) | Agent 6, Agent 7 | Micro-product 49k-149k + chuỗi email 5 ngày |
-| **9. Đẩy lên web & bật tự động hóa** | Agent 4 (Tech & Automation) | Toàn đội ngũ | Bài viết online kèm ảnh chuẩn SEO, cổng QR tự động |
+| **5. Sản xuất kịch bản video viral 60s** | Agent 2 (Short-Form Writer) | Agent 1, Agent 8 | 3 kịch bản video ngắn faceless kèm prompt B-roll |
+| **6. Vận hành kênh YouTube Dài** | Agent 10 (YouTube Strategist)| Agent 1, Agent 8 | Kịch bản video dài 10-15m, package Title & Thumbnail SEO |
+| **7. Quản trị Profile X, Threads, Substack**| Agent 11 (Social Profile)| Agent 1, Agent 8 | Gói Threads, bài đăng X, Carousel Insta, bản tin Substack |
+| **8. Phân phối Short Video Đa Nền Tảng** | Agent 12 (Shorts Omnichannel)| Agent 2, Agent 8, Agent 9| Video tối ưu đăng đồng thời TikTok, FB Reels, Insta, Shorts |
+| **9. Vận hành Fanpage Facebook & n8n** | Agent 9 (Facebook Specialist)| Agent 1, Agent 12 | Bài đăng Fanpage và video Reels tự động qua n8n |
+| **10. Thu thập & phân loại Lead** | Agent 7 (Lead & Retargeting) | Agent 3, Agent 9 | Form trắc nghiệm + tệp data phân loại 4 nhóm |
+| **11. Đóng gói sản phẩm & phễu vi mô** | Agent 3 (Product Architect) | Agent 6, Agent 7 | Micro-product 49k-149k + chuỗi email 5 ngày |
+| **12. Đẩy lên web & kỹ thuật tự động hóa**| Agent 4 (Tech & Automation) | Toàn đội ngũ | Bài viết online kèm ảnh chuẩn SEO, cổng QR tự động |
 
 ---
 
@@ -263,7 +313,9 @@ flowchart TD
 
 Khi Bố cần giao việc cho một mảng cụ thể, chỉ cần yêu cầu Mây triệu hồi Agent tương ứng:
 - *"Mây ơi, cho Agent 1 viết bài về chủ đề X"*
-- *"Mây ơi, gọi Agent 2 bẻ bài viết này thành 3 video TikTok"*
+- *"Mây ơi, gọi Agent 10 lên kịch bản video YouTube 15 phút về chủ đề Y"*
+- *"Mây ơi, cho Agent 11 soạn chuỗi bài Threads và bản tin Substack tuần này"*
+- *"Mây ơi, giao cho Agent 12 phân phối video short mới lên cả 4 kênh TikTok, Reels, Shorts"*
 - *"Mây ơi, nhờ Agent 6 tìm cho bố 3 sản phẩm số trend tuần này"*
 - *"Mây ơi, cho Agent 7 lên kịch bản bám đuổi cho nhóm khách làm xong trắc nghiệm"*
 
