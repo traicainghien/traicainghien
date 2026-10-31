@@ -60,6 +60,47 @@ Mô hình này là vũ khí tối thượng cho **các chủ đề cai nghiện 
 
 ---
 
+## 2.2. 🎣 BỘ 5 CÔNG THỨC MÓC CÂU 3 GIÂY ĐẦU (SCROLL-STOPPING HOOKS TỪ 200.000 VIRAL SHORTS)
+*(Đúc kết từ repo mã nguồn mở `vyralcontent/content-skills`)*
+
+Khán giả quyết định lướt qua hay ở lại chỉ trong đúng **1.8 giây đến 3 giây đầu tiên**. Agent 2 bắt buộc sử dụng 1 trong 5 cấu trúc Hook đã được kiểm chứng qua 200.000 video viral:
+
+1. **Hook Nghịch Lý Gây Sốc (The Paradox / Contrarian Hook):**
+   * *"Lý do bạn nghiện điện thoại không phải vì bạn vô kỷ luật — mà vì bạn quá thông minh."*
+   * *"Càng cố gắng sống kỷ luật, bạn càng dễ thức trắng đêm lướt TikTok."*
+2. **Hook Tự Thú Trần Trụi (Radical Vulnerability Hook):**
+   * *"Mình từng là một đứa khóa điện thoại trong tủ sắt, và rồi 2 tiếng sau phải tự tay cạy khóa để lướt tiếp..."*
+   * *"Đêm qua, bạn lại trót tắt chuông lúc 11h đêm rồi thức trắng tới 2h sáng đúng không?"*
+3. **Hook Đảo Ngược Giả Định (Assumption Inversion Hook):**
+   * *"Nếu bạn nghĩ lướt mạng xã hội là cách để xả stress sau giờ làm việc, não bạn đang bị lừa một vố đau đớn."*
+   * *"Nghỉ ngơi không phải là nằm bấm điện thoại. Đó là lúc não bạn đang bị vắt kiệt năng lượng nhất."*
+4. **Hook Con Số & Chi Tiết Đời Thực (Hyper-Specific Relatable Hook):**
+   * *"Một bát phở 30k bạn có thể ăn trong 10 phút, nhưng 15 phút lướt TikTok sẽ cướp đi của bạn đúng 4 tiếng ngủ sâu."*
+   * *"Tại sao ngón tay cái của bạn luôn quẹt máy trước khi não bạn kịp nhận thức?"*
+5. **Hook Bóc Mẽ Tâm Lý (Psychological Mirror Hook):**
+   * *"Bạn không lười. Bạn chỉ đang dùng chiếc điện thoại để trốn chạy một việc khó mà bạn chưa dám đối mặt."*
+
+---
+
+## 2.3. ⚡ KỸ THUẬT NÂNG BẬC CẢM XÚC & GIỮ CHÂN (ESCALATION SCRIPTING)
+* **Cứ mỗi 3 - 5 giây phải có một cú nảy nhận thức (Cognitive Micro-hit):** Không để thoại đều đều ru ngủ. Cứ sau một câu kể, phải có một câu đúc kết triết lý hoặc một cú bẻ góc nhìn (*Reframing*).
+* **Quy chuẩn Tối ưu Saves & Shares (Thuật toán 2026):**
+  * **Chỉ số Lưu lại (Save Rate):** Cài cắm một công thức thực hành ngắn gọn hoặc một trích dẫn sách đắt giá ở giây thứ 60–80 khiến người xem buộc phải bấm Lưu vào bộ sưu tập để xem lại khi cần.
+  * **Chỉ số Chia sẻ (Share Rate):** Tạo ra câu nói chạm sâu vào tình thương gia đình hoặc người yêu: *"Gửi video này cho người bạn hay cùng bạn thức khuya lướt điện thoại..."*.
+
+---
+
+## 2.4. 📐 QUY CHUẨN VÙNG AN TOÀN THỊ GIÁC (9:16 SAFE ZONES - REMOTION STANDARD)
+Khi lên kịch bản dựng hình và phụ đề động:
+* **Khung hình:** Tỷ lệ dọc `9:16` (`1080 x 1920 px`).
+* **Vùng cấm đặt chữ/phụ đề:**
+  * Cách mép trên **250px** (tránh thanh tìm kiếm và header ứng dụng).
+  * Cách mép dưới **350px** (tránh caption tiêu đề, username và thanh âm thanh).
+  * Cách mép phải **180px** (tránh cột nút Like, Comment, Bookmark, Share).
+* **Vị trí vàng cho phụ đề (Subtitles Center):** Đặt chính giữa màn hình từ tọa độ Y `40%` đến `60%`, chữ to rõ nét, tương phản cao trên nền tối, đổi màu ở các từ khóa trọng tâm.
+
+---
+
 ## 3. 🎨 HAI ĐỊNH DẠNG HÌNH ẢNH ÁP DỤNG CHO BỐ
 
 | Hồi | Thời Lượng | Mục Tiêu Tâm Lý | Kỹ Thuật Lời Thoại (Voiceover) | Mô Tả Thị Giác (Visual/B-roll) |

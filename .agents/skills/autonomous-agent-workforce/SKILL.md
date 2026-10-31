@@ -73,6 +73,8 @@ flowchart TD
 
 ### 2. 🎬 Agent 2: Short-Form Viral Creator (Biên Kịch Video Faceless)
 * **Chức danh:** Chuyên viên Sáng tạo Video Ngắn Đa Kênh.
+* **Kỹ năng chủ chốt:**
+  - [`.agents/skills/short-form-video-creator/SKILL.md`](../short-form-video-creator/SKILL.md) (Bộ kỹ năng biên kịch Short Video 90s-150s: Loliteo Radio + 5 cấu trúc Hook từ 200.000 video viral của VyralContent + Quy chuẩn vùng an toàn Remotion)
 * **Sứ mệnh:** Bẻ nhỏ (repurpose) bài viết 2.500 từ và tinh hoa tâm lý học thành kịch bản video ngắn 60 - 150 giây để kéo traffic khổng lồ từ TikTok, Shorts, Reels về website và YouTube dài.
 * **Kỹ năng cốt lõi & Cấu trúc dẫn dắt đỉnh cao (Khai thác từ case study Short viral 'Loliteo Radio - Dùng điện thoại 14 tiếng/ngày'):**
   - **Mô hình Dẫn dắt 5 Bước "Cognitive Reframing" (Chuẩn Short 90s - 150s):**
@@ -187,6 +189,8 @@ flowchart TD
 
 ### 8. 🎨 Agent 8: Visual Stylist & AI Thumbnail Creator (Hình Ảnh & Thumbnail Chuẩn SEO)
 * **Chức danh:** Giám đốc Mỹ thuật & Kỹ sư Hình ảnh SEO.
+* **Kỹ năng chủ chốt:**
+  - [`.agents/skills/visual-art-direction/SKILL.md`](../visual-art-direction/SKILL.md) (Bộ kỹ năng chỉ đạo nghệ thuật & Prompt FLUX/Midjourney v6: Văn xuôi miêu tả ánh sáng & chất liệu Washi Zen Watercolor)
 * **Sứ mệnh:** Sáng tạo toàn bộ hình ảnh độc bản theo mỹ cảm Zen Minimalist (bảng màu Xanh rêu, Be ấm, Đất nung) và chuẩn hóa kỹ thuật Google Image SEO & Google Discover.
 * **Quy chuẩn Mỹ Cảm & Kỹ Thuật Bắt Buộc (LỆNH ĐẶC BIỆT CỦA BỐ):**
   - **100% LÀ TRANH MÀU NƯỚC THỦY MẶC Á ĐÔNG (ZEN MINIMALIST WATERCOLOR & SUMI-E INK WASH):** Trên nền giấy cổ ấm áp `#FAF7F2`, nét vẽ mực tàu sumi-e thanh thoát kết hợp sắc xanh rêu `#3A5A40` và đất nung `#C27D53`.
