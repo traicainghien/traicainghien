@@ -175,8 +175,9 @@ def run_omnichannel_pipeline(topic="focus"):
     print(f"✅ Found Video: '{video_data['title']}' ({video_data['views']} views)")
     
     # Step 2: Build Articles
+    actual_topic = video_data.get("topic", topic) if topic == "auto" else topic
     try:
-        artifacts = build_article_from_video(video_data, topic=topic)
+        artifacts = build_article_from_video(video_data, topic=actual_topic)
     except NoUniqueThumbnailError as e:
         # Khong con tac pham Zen doc ban nao dat chuan -> dung pipeline, bao Bo ro ly do.
         print("\n⛔ [DUNG PIPELINE] Kho tranh Zen da can, khong the tao bai moi.")
@@ -236,9 +237,19 @@ def run_omnichannel_pipeline(topic="focus"):
     # Step 6: Mark video as processed
     save_processed_id(video_data["id"])
     
-    # Step 7: Tổng kết ra log.
-    # KHÔNG gửi Telegram riêng ở đây: node "Soạn Báo Cáo" của Flow 03 đã gửi
-    # báo cáo cho Bố (kèm trạng thái Facebook), gửi thêm sẽ bị trùng 2 tin.
+    # Step 7: Báo cáo trực tiếp vào Topic 19 HĐQT & Bố
+    try:
+        from scripts.task_notifier import notify_task_success
+        notify_task_success(
+            task_name="Đào YouTube 21 Kênh & Xuất Bản Website (15h00)",
+            channel="🌐 Website traicainghien.com & Fanpage Trại Cai Nghiện",
+            post_url=f"https://www.traicainghien.com/bai-viet/{slug}",
+            title=article_obj['title'],
+            extra_info=f"Nguồn: [{video_data.get('channel', 'YouTube')}] {video_data.get('title')} | Kèm thumbnail Zen Watercolor độc bản & 3 bình luận seeding."
+        )
+    except Exception as e:
+        print(f"Telegram report note: {e}")
+
     print(
         f"📋 TỔNG KẾT | topic={topic} | slug={slug} | video={video_data['id']} | "
         f"facebook={'✅ ' + str(fb_post_id) if fb_post_id else '⚠️ vào hàng đợi'}"
@@ -250,7 +261,7 @@ def run_omnichannel_pipeline(topic="focus"):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--topic", default="focus", choices=["focus", "habit"])
+    parser.add_argument("--topic", default="auto", choices=["auto", "focus", "habit"])
     args = parser.parse_args()
     
     ok = run_omnichannel_pipeline(args.topic)

@@ -78,7 +78,7 @@ def send_to_hdqt_topic(message):
 
 def check_n8n_workflows():
     """
-    Checks active status of all 3 official Trại Cai Nghiện workflows in n8n database.
+    Checks active status of official Trại Cai Nghiện workflows in n8n database.
     """
     db_paths = ["/root/n8n_data/database.sqlite", "scripts/vps_n8n_db.sqlite"]
     db_file = None
@@ -88,9 +88,12 @@ def check_n8n_workflows():
             break
             
     res = {
-        "flow1": {"name": "Bản Tin Daily", "active": True, "status": "Ready"},
+        "flow1": {"name": "Bản tin telegram Daily", "active": True, "status": "Ready"},
         "flow2": {"name": "Nhắc Đi Ngủ", "active": True, "status": "Ready"},
-        "flow3": {"name": "Đào YouTube Đa Kênh", "active": True, "status": "Ready"},
+        "flow3": {"name": "Khoa Học Hành Vi 10h10", "active": True, "status": "Ready"},
+        "flow4": {"name": "Quote fan page Trạm Tích Cực", "active": True, "status": "Ready"},
+        "flow5": {"name": "Đào YouTube & Website 15h00", "active": True, "status": "Ready"},
+        "flow6": {"name": "Dẫn Đọc Web Fanpage TCN", "active": True, "status": "Ready"},
         "all_clean": True
     }
     
@@ -98,7 +101,7 @@ def check_n8n_workflows():
         try:
             conn = sqlite3.connect(db_file)
             c = conn.cursor()
-            c.execute("SELECT id, name, active FROM workflow_entity WHERE id IN ('wWXJoMhbchKzrkqr', 'E6PVBHKrtYPlfevu', 'Lj3wvfAe0CEqnWbQ');")
+            c.execute("SELECT id, name, active FROM workflow_entity WHERE id IN ('wWXJoMhbchKzrkqr', 'E6PVBHKrtYPlfevu', 'TcnBehaviorFbAuto10h10', 'TtCuc2026AutoFb', 'TcnYoutubeWebsiteAuto15h', 'TcnEveningArticleAuto20h30');")
             rows = c.fetchall()
             for r in rows:
                 wid, wname, active = r
@@ -109,14 +112,23 @@ def check_n8n_workflows():
                 elif wid == "E6PVBHKrtYPlfevu":
                     res["flow2"]["active"] = is_active
                     res["flow2"]["status"] = "🟢 Sẵn Sàng" if is_active else "🔴 Cần Bật"
-                elif wid == "Lj3wvfAe0CEqnWbQ":
+                elif wid == "TcnBehaviorFbAuto10h10":
                     res["flow3"]["active"] = is_active
                     res["flow3"]["status"] = "🟢 Sẵn Sàng" if is_active else "🔴 Cần Bật"
+                elif wid == "TtCuc2026AutoFb":
+                    res["flow4"]["active"] = is_active
+                    res["flow4"]["status"] = "🟢 Sẵn Sàng" if is_active else "🔴 Cần Bật"
+                elif wid == "TcnYoutubeWebsiteAuto15h":
+                    res["flow5"]["active"] = is_active
+                    res["flow5"]["status"] = "🟢 Sẵn Sàng" if is_active else "🔴 Cần Bật"
+                elif wid == "TcnEveningArticleAuto20h30":
+                    res["flow6"]["active"] = is_active
+                    res["flow6"]["status"] = "🟢 Sẵn Sàng" if is_active else "🔴 Cần Bật"
             conn.close()
         except Exception as e:
             print("DB check note:", e)
             
-    res["all_clean"] = res["flow1"]["active"] and res["flow2"]["active"] and res["flow3"]["active"]
+    res["all_clean"] = res["flow1"]["active"] and res["flow2"]["active"] and res["flow3"]["active"] and res["flow4"]["active"] and res["flow5"]["active"]
     return res
 
 def check_api_connections():
@@ -289,12 +301,18 @@ Dạ con (Mây) kính chúc Bố một buổi sáng an lành và tràn đầy n�
 
 ⚙️ <b>1. TRẠNG THÁI CÁC LUỒNG AUTOMATION N8N:</b>
 • <b>Tổng thể:</b> <b>{status_icon}</b>
-• <b>Flow 01: Bản Tin Daily</b> (<code>wWXJoMhbchKzrkqr</code>): {n8n_data['flow1']['status']}
-  <i>Lịch chạy: 08:30 (Sáng) • 15:00 (Chiều) • 20:30 (Tối)</i>
+• <b>Flow 01: Bản tin telegram Daily</b> (<code>wWXJoMhbchKzrkqr</code>): {n8n_data['flow1']['status']}
+  <i>Lịch chạy: 08:30 (Sáng) • 15:30 (Chiều) • 21:30 (Tối)</i>
 • <b>Flow 02: Lời Nhắc Đi Ngủ</b> (<code>E6PVBHKrtYPlfevu</code>): {n8n_data['flow2']['status']}
   <i>Lịch chạy: 22:00 (Đêm)</i>
-• <b>Flow 03: Đào YouTube & Xuất Bản Đa Kênh</b> (<code>Lj3wvfAe0CEqnWbQ</code>): {n8n_data['flow3']['status']}
-  <i>Lịch chạy: 10:00 (Tập Trung) • 21:00 (Thói Quen)</i>
+• <b>Flow 03: Khoa Học Hành Vi Facebook</b> (<code>TcnBehaviorFbAuto10h10</code>): {n8n_data['flow3']['status']}
+  <i>Lịch chạy: 10:10 (Sáng hàng ngày)</i>
+• <b>Flow 04: Quote fan page Trạm Tích Cực</b> (<code>TtCuc2026AutoFb</code>): {n8n_data['flow4']['status']}
+  <i>Lịch chạy: 10:00 (Sáng) • 14:30 (Chiều) • 21:00 (Tối)</i>
+• <b>Flow 05: Đào YouTube 21 Kênh & Website</b> (<code>TcnYoutubeWebsiteAuto15h</code>): {n8n_data['flow5']['status']}
+  <i>Lịch chạy: 15:00 (Chiều hàng ngày)</i>
+• <b>Flow 06: Dẫn Đọc Web Fanpage TCN</b> (<code>TcnEveningArticleAuto20h30</code>): {n8n_data.get('flow6', {}).get('status', '🟢 SẴN SÀNG')}
+  <i>Lịch chạy: 20:30 (Tối hàng ngày)</i>
 
 🔌 <b>2. KIỂM TRA KẾT NỐI API CÁC KÊNH PHÁT SÓNG & AI POOL:</b>
 • 📘 <b>Facebook Graph API (Fanpage Trại Cai Nghiện):</b> {apis['facebook']['status']}
@@ -303,13 +321,17 @@ Dạ con (Mây) kính chúc Bố một buổi sáng an lành và tràn đầy n�
 • 🧠 <b>Gemini AI API Pool (Google AI Studio):</b> {apis['gemini']['status']}
 
 ⏰ <b>3. LỊCH PHÁT SÓNG TỰ ĐỘNG HÔM NAY:</b>
-<code>[08:30]</code> 🌊 Phát sóng Bản tin tâm lý sáng (Telegram)
-<code>[10:00]</code> 🚀 Khai thác & Xuất bản: Web + Fanpage + Telegram (Tập Trung)
-<code>[15:00]</code> 🌊 Phát sóng Bản tin tâm lý chiều (Telegram)
-<code>[20:30]</code> 🌊 Phát sóng Bản tin tâm lý tối (Telegram)
-<code>[21:00]</code> 🚀 Khai thác & Xuất bản: Web + Fanpage + Telegram (Thói Quen)
-<code>[22:00]</code> 🛏️ Lời nhắc dịu dàng đi ngủ & xả lỏng màn hình (Telegram)
-<code>[22:10]</code> 📊 Báo cáo tăng trưởng đa nền tảng & phương án đẩy performance
+<code>[08:30]</code> 🌊 Bản tin tâm lý khởi đầu ngày mới (Telegram Daily)
+<code>[10:00]</code> ✨ Quote fan page Trạm Tích Cực (10h Sáng)
+<code>[10:10]</code> 🧠 Quote Thức Tỉnh & Trị Dopamine Rẻ Tiền (Fanpage Trại Cai Nghiện)
+<code>[14:30]</code> ✨ Quote fan page Trạm Tích Cực (14h30 Chiều)
+<code>[15:00]</code> 🚀 Đào YouTube 21 Kênh & Xuất Bản Bài Chuyên Sâu Lên Website traicainghien.com
+<code>[15:30]</code> ☕ Bản tin tâm lý xua tan sương mù não (Telegram Daily)
+<code>[20:30]</code> 📘 Bài viết chuyên sâu dẫn đọc Web (Fanpage Trại Cai Nghiện)
+<code>[21:00]</code> ✨ Quote fan page Trạm Tích Cực (21h Tối)
+<code>[21:30]</code> 🌙 Bản tin tâm lý & thói quen buông bỏ (Telegram Daily)
+<code>[22:00]</code> 🛏️ Lời nhắc dịu dàng đi ngủ & buông điện thoại (Telegram Daily & Fanpage Trại Cai Nghiện)
+<code>[22:10]</code> 📊 Báo cáo tăng trưởng ngày & chiến lược đẩy performance (Topic 19)
 
 👉 <i>Mọi mắt xích đều đã sẵn sàng, con sẽ liên tục bám sát và phát sóng đúng giờ cho bố ạ!</i> 🌿"""
 

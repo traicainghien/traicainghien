@@ -1,17 +1,15 @@
-import urllib.request
-import urllib.parse
-import re
-import json
 import os
 import sys
-import time
+import json
+import re
 import html
+import datetime
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone, timedelta
-import xml.etree.ElementTree as ET
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-# Ensure working directory is project root
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
@@ -22,7 +20,6 @@ HISTORY_FILE = os.path.join(BASE_DIR, "scripts", "daily_news_history.json")
 BOT_TOKEN = "9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q"
 CHANNEL_ID = "-1004488309634" # @traicainghiendaily
 
-# Danh sách 5 nguồn tin học thuật & tâm lý học hành vi uy tín hàng đầu thế giới
 INTERNATIONAL_SOURCES = [
     {
         "name": "Psychology Today (Science of Choice)",
@@ -37,6 +34,18 @@ INTERNATIONAL_SOURCES = [
         "topic": "Khoa học thần kinh, Dopamine & rèn luyện thể chất/tâm trí"
     },
     {
+        "name": "Psychology Today (Don't Delay)",
+        "feed": "https://www.psychologytoday.com/us/blog/dont-delay/feed",
+        "domain": "psychologytoday.com",
+        "topic": "Tâm lý học về sự trì hoãn, vượt qua thói quen trì hoãn & hành động"
+    },
+    {
+        "name": "Psychology Today (In Practice)",
+        "feed": "https://www.psychologytoday.com/us/blog/in-practice/feed",
+        "domain": "psychologytoday.com",
+        "topic": "Liệu pháp nhận thức hành vi (CBT) ứng dụng đời sống hàng ngày"
+    },
+    {
         "name": "Behavioral Scientist",
         "feed": "https://behavioralscientist.org/feed/",
         "domain": "behavioralscientist.org",
@@ -46,19 +55,13 @@ INTERNATIONAL_SOURCES = [
         "name": "Ness Labs",
         "feed": "https://nesslabs.com/feed",
         "domain": "nesslabs.com",
-        "topic": "Khoa học thần kinh về sự tập trung, năng suất chánh niệm & chữa lành não bộ"
+        "topic": "Năng suất chánh niệm (Mindful Productivity), Khoa học thần kinh & Vượt qua kiệt sức"
     },
     {
         "name": "Greater Good Science Center (UC Berkeley)",
         "feed": "https://greatergood.berkeley.edu/rss",
-        "domain": "berkeley.edu",
-        "topic": "Tâm lý học thực chứng, kiểm soát sự chú ý (Attention Control) & Self-compassion"
-    },
-    {
-        "name": "Farnam Street (Brain Food)",
-        "feed": "https://fs.blog/feed/",
-        "domain": "fs.blog",
-        "topic": "Mô hình tư duy (Mental Models), Kỷ luật tự thân & Làm việc sâu (Deep Work)"
+        "domain": "greatergood.berkeley.edu",
+        "topic": "Khoa học về hạnh phúc, lòng trắc ẩn, kết nối xã hội & sự kiên cường"
     }
 ]
 
@@ -66,89 +69,89 @@ def load_history():
     if os.path.exists(HISTORY_FILE):
         try:
             with open(HISTORY_FILE, "r", encoding="utf-8") as f:
-                return json.load(f)
-        except:
-            return []
-    return []
+                data = json.load(f)
+                if isinstance(data, list):
+                    return {"sent_links": data, "sent_photos": []}
+                elif isinstance(data, dict):
+                    return {
+                        "sent_links": data.get("sent_links", []),
+                        "sent_photos": data.get("sent_photos", [])
+                    }
+        except Exception as e:
+            print(f"Lỗi đọc history: {e}")
+    return {"sent_links": [], "sent_photos": []}
 
 def save_history(history):
     os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
     with open(HISTORY_FILE, "w", encoding="utf-8") as f:
-        json.dump(history[-300:], f, ensure_ascii=False, indent=2)
+        json.dump(history, f, ensure_ascii=False, indent=2)
 
-def count_words(text):
-    clean = re.sub(r'<[^>]*>', ' ', text or '')
-    clean = html.unescape(clean)
-    return len(clean.strip().split())
+def fetch_rss_feed(feed_url):
+    req = urllib.request.Request(
+        feed_url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        }
+    )
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        return resp.read().decode('utf-8', errors='ignore')
 
-def fetch_all_candidate_articles():
-    """
-    Quét qua toàn bộ 5 nguồn quốc tế uy tín để lấy danh sách bài viết ứng viên mới nhất.
-    """
-    candidates = []
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-
-    for src in INTERNATIONAL_SOURCES:
-        feed_url = src["feed"]
-        src_name = src["name"]
-        print(f"📡 Đang quét nguồn: {src_name}...")
-        try:
-            req = urllib.request.Request(feed_url, headers=headers)
-            with urllib.request.urlopen(req, timeout=10) as resp:
-                xml_data = resp.read()
-                root = ET.fromstring(xml_data)
-                items = root.findall('.//item')
-                print(f"   -> Tìm thấy {len(items)} bài viết từ {src_name}.")
-                for it in items[:10]:
-                    title_elem = it.find('title')
-                    link_elem = it.find('link')
-                    desc_elem = it.find('description')
-                    
-                    title = title_elem.text.strip() if title_elem is not None and title_elem.text else ''
-                    link = link_elem.text.strip() if link_elem is not None and link_elem.text else ''
-                    desc = desc_elem.text.strip() if desc_elem is not None and desc_elem.text else ''
-                    
-                    if link:
-                        candidates.append({
-                            "source_name": src_name,
-                            "domain": src["domain"],
-                            "topic": src["topic"],
-                            "title": title,
-                            "link": link,
-                            "description": desc
-                        })
-        except Exception as e:
-            print(f"   ⚠️ Lỗi quét nguồn {src_name}: {e}")
-
-    return candidates
-
-def extract_article_full_content(article_url):
-    """
-    Tải HTML bài báo gốc để bóc tách ảnh og:image và toàn văn các đoạn văn bản.
-    """
-    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
-    req = urllib.request.Request(article_url, headers=headers)
+def extract_articles_from_rss(feed_xml, source_info):
+    import xml.etree.ElementTree as ET
+    articles = []
     try:
-        with urllib.request.urlopen(req, timeout=12) as resp:
+        clean_xml = re.sub(r'&(?!(?:amp|lt|gt|quot|apos);)', '&amp;', feed_xml)
+        root = ET.fromstring(clean_xml)
+        channel = root.find("channel")
+        if channel is None:
+            return articles
+        
+        for item in channel.findall("item"):
+            title = item.find("title").text if item.find("title") is not None else ""
+            link = item.find("link").text if item.find("link") is not None else ""
+            desc = item.find("description").text if item.find("description") is not None else ""
+            
+            clean_desc = re.sub(r'<[^>]+>', ' ', desc).strip()
+            clean_desc = html.unescape(clean_desc)
+            
+            if title and link:
+                articles.append({
+                    "title": title.strip(),
+                    "url": link.strip(),
+                    "description": clean_desc[:300],
+                    "source_name": source_info["name"],
+                    "domain": source_info["domain"],
+                    "topic": source_info["topic"]
+                })
+    except Exception as e:
+        print(f"Lỗi parse RSS {source_info['name']}: {e}")
+    return articles
+
+def scrape_full_article_content_and_image(article_url):
+    req = urllib.request.Request(
+        article_url,
+        headers={
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as resp:
             page_html = resp.read().decode('utf-8', errors='ignore')
             
-            # Extract og:image
-            og_img = re.search(r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)["\']', page_html, re.I)
-            if not og_img:
-                og_img = re.search(r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image["\']', page_html, re.I)
+            image_url = None
+            og_match = re.search(r'<meta[^>]+property=[\'"]og:image[\'"][^>]+content=[\'"]([^\'"]+)[\'"]', page_html, re.I)
+            if not og_match:
+                og_match = re.search(r'<meta[^>]+content=[\'"]([^\'"]+)[\'"][^>]+property=[\'"]og:image[\'"]', page_html, re.I)
+            if og_match:
+                image_url = og_match.group(1).strip()
             
-            image_url = og_img.group(1).strip() if og_img else ""
-            if not image_url or not image_url.startswith("http"):
-                return None
-
-            # Extract og:title & og:description
-            og_title = re.search(r'<meta[^>]+property=["\']og:title["\'][^>]+content=["\']([^"\']+)["\']', page_html, re.I)
-            og_desc = re.search(r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)["\']', page_html, re.I)
+            title_match = re.search(r'<meta[^>]+property=[\'"]og:title[\'"][^>]+content=[\'"]([^\'"]+)[\'"]', page_html, re.I)
+            title = title_match.group(1).strip() if title_match else ""
             
-            title = og_title.group(1).strip() if og_title else ""
-            desc = og_desc.group(1).strip() if og_desc else ""
-
-            # Extract clean paragraphs
+            desc_match = re.search(r'<meta[^>]+property=[\'"]og:description[\'"][^>]+content=[\'"]([^\'"]+)[\'"]', page_html, re.I)
+            desc = desc_match.group(1).strip() if desc_match else ""
+            
             paras = re.findall(r'<p\b[^>]*>(.*?)</p>', page_html, re.I | re.DOTALL)
             clean_paras = []
             for p in paras:
@@ -159,7 +162,6 @@ def extract_article_full_content(article_url):
                     clean_paras.append(clean_p)
             
             full_body = "\n\n".join(clean_paras[:8])
-            
             return {
                 "url": article_url,
                 "title": title,
@@ -171,12 +173,18 @@ def extract_article_full_content(article_url):
         print(f"Lỗi bóc tách bài {article_url}: {e}")
         return None
 
-def synthesize_bulletin_150_words(article):
+def synthesize_bulletin_structured(article):
     """
-    Biên soạn bản tin cô đọng khoảng 150 từ (chuẩn Telegram sendPhoto dưới 1024 ký tự).
+    Biên soạn bản tin theo đúng cấu trúc chuẩn của Trại Cai Nghiện:
+    - Tiêu đề
+    - Đoạn mở đầu
+    - 3 Cơ chế cần nhớ
+    - Hành động hôm nay (Key Action)
+    - Câu châm ngôn triết lý
+    - Nguồn & Chữ ký thương hiệu
     """
     prompt = f"""Bạn là Mây — AI Co-founder của Trại Cai Nghiện (traicainghien.com).
-Nhiệm vụ: Hãy phân tích bài báo nghiên cứu tâm lý học / khoa học hành vi quốc tế dưới đây và biên soạn BẢN TIN TELEGRAM CÔ ĐỌNG KHOẢNG 140 ĐẾN 160 TỪ (tổng ký tự bắt buộc DƯỚI 950 ký tự để vừa vặn trong caption ảnh Telegram sendPhoto).
+Nhiệm vụ: Hãy phân tích bài báo nghiên cứu tâm lý học / khoa học hành vi quốc tế dưới đây và trích xuất BẢN TIN TELEGRAM CÔ ĐỌNG (tổng cộng phần nội dung khoảng 90-110 từ).
 
 THÔNG TIN BÀI BÁO GỐC:
 - Nguồn: {article.get('source_name', 'Tâm lý học hành vi quốc tế')}
@@ -185,60 +193,93 @@ THÔNG TIN BÀI BÁO GỐC:
 - Nội dung trích xuất:
 {article.get('body', '')[:2500]}
 
-CẤU TRÚC BẢN TIN BẮT BUỘC (Trả về đúng cấu trúc sau bằng tiếng Việt):
-👉 <b>[Tiêu đề tiếng Việt ngắn gọn, hấp dẫn]</b>
+YÊU CẦU ĐỘ DÀI NGHIÊM NGẶT ĐỂ VỪA VẶN KHUNG ẢNH TELEGRAM:
+Hãy trả về định dạng JSON thuần túy (không code block markdown) với các trường sau:
+{{
+  "title_vn": "Tiêu đề tiếng Việt ngắn gọn, chạm nỗi đau (dưới 8 từ, tối đa 45 ký tự)",
+  "intro": "1 câu duy nhất: Đặt vấn đề chạm đúng nỗi đau xao nhãng đời thường, vỗ về người đọc rằng họ không hề lười hay thiếu kỷ luật, não bộ chỉ đang phản ứng tự nhiên (dưới 20 từ, tối đa 110 ký tự)",
+  "point_1": "<b>[Tên cơ chế 1]:</b> [Giải thích 1 câu ngắn gọn về cơ chế não bộ/dopamine, dưới 18 từ, tối đa 95 ký tự]",
+  "point_2": "<b>[Tên cơ chế 2]:</b> [Giải thích 1 câu ngắn gọn về bẫy kích thích/thói quen, dưới 18 từ, tối đa 95 ký tự]",
+  "point_3": "<b>[Tên cơ chế 3]:</b> [Giải thích 1 câu ngắn gọn về giải pháp môi trường/tâm lý, dưới 18 từ, tối đa 95 ký tự]",
+  "action": "[Hành động vi mô 2 phút có thể thực hành ngay hôm nay, dưới 18 từ, tối đa 95 ký tự]",
+  "quote": "[1 câu danh ngôn triết lý đúc kết sâu sắc, dưới 15 từ, tối đa 80 ký tự]"
+}}
+"""
 
-[1 đoạn mở đầu 2 câu: Đặt vấn đề chạm đúng nỗi đau xao nhãng đời thường, vỗ về người đọc rằng họ không hề lười hay thiếu kỷ luật, não bộ chỉ đang phản ứng tự nhiên].
-
-📌 <b>3 Cơ chế cần nhớ:</b>
-• <b>[Điểm 1]:</b> [Giải thích ngắn gọn 1 câu về cơ chế não bộ/dopamine].
-• <b>[Điểm 2]:</b> [Giải thích ngắn gọn 1 câu về bẫy kích thích/thói quen].
-• <b>[Điểm 3]:</b> [Giải thích ngắn gọn 1 câu về giải pháp môi trường/tâm lý].
-
-💡 <b>Kaizen 1%:</b> [Hành động vi mô 2 phút có thể làm ngay].
-
-🌱 <i>"[1 câu danh ngôn triết lý ngắn gọn, sâu sắc]"</i>
-
-QUY TẮC BẮT BUỘC:
-- Định dạng HTML Telegram: chỉ dùng <b>, <i>, <a>.
-- Tuyệt đối giữ tổng độ dài phần bạn viết trong khoảng 130 - 150 từ để khi ghép header và footer không vượt quá 1000 ký tự."""
-
-    system_instruction = "Bạn là Mây của Trại Cai Nghiện. Phong cách: Thấu cảm, mộc mạc, khoa học, súc tích. Tuyệt đối tuân thủ độ dài khoảng 140-150 từ."
-    
-    generated_text = generate_content(prompt, system_instruction)
+    system_instruction = "Bạn là Mây của Trại Cai Nghiện. Phong cách: Thấu cảm, mộc mạc, khoa học, súc tích. Chỉ trả về JSON hợp lệ."
+    generated_text = generate_content(prompt, system_instruction, temperature=0.7)
     if not generated_text:
         raise ValueError("Gemini returned empty response")
 
-    clean_body = generated_text.strip()
-    if clean_body.startswith("```html"):
-        clean_body = clean_body[7:]
-    elif clean_body.startswith("```"):
-        clean_body = clean_body[3:]
-    if clean_body.endswith("```"):
-        clean_body = clean_body[:-3]
-    clean_body = clean_body.strip()
+    clean_json = re.sub(r"^```json\s*", "", generated_text.strip(), flags=re.MULTILINE)
+    clean_json = re.sub(r"^```\s*", "", clean_json.strip(), flags=re.MULTILINE)
+    clean_json = re.sub(r"```$", "", clean_json.strip())
+    
+    data = json.loads(clean_json)
 
-    header = "🌿 <b>TRẠI CAI NGHIỆN DAILY</b>\n🧠 <b>[TÂM LÝ HỌC &amp; HÀNH VI]</b>\n\n"
-    footer = f"\n\n📖 <a href=\"{article['url']}\">Bài gốc</a> · 🌿 <a href=\"https://traicainghien.com\">Trại Cai Nghiện</a>"
+    source_label = article.get("source_name", "Psychology Today")
+    if "psychology today" in source_label.lower():
+        source_label = "Psychology Today"
 
-    caption = header + clean_body + footer
+    header = (
+        "🌿 <b>TRẠI CAI NGHIỆN DAILY</b>\n"
+        "🧠 <b>[TÂM LÝ HỌC &amp; HÀNH VI]</b>\n\n"
+        f"👉 <b>{data['title_vn']}</b>\n\n"
+    )
 
-    # Smart truncation fallback if > 1024
+    body = (
+        f"{data['intro']}\n\n"
+        "📌 <b>3 Cơ chế cần nhớ:</b>\n"
+        f"• {data['point_1']}\n"
+        f"• {data['point_2']}\n"
+        f"• {data['point_3']}\n\n"
+        f"💡 <b>Hành động hôm nay (Key Action):</b>\n{data['action']}\n\n"
+        f"🌱 <i>\"{data['quote']}\"</i>\n\n"
+        f"📖 <b>Nguồn:</b> {source_label}\n\n"
+        "======\n"
+        "🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>\n"
+        '<a href="https://traicainghien.com">Website</a> | <a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm</a> | <a href="https://facebook.com/traicainghien">Fanpage</a>'
+    )
+
+    caption = header + body
+
+    # An toàn tuyệt đối: Kiểm tra độ dài caption
     if len(caption) > 1024:
-        clean_body_trimmed = clean_body[:(1020 - len(header) - len(footer) - 5)]
-        last_nl = clean_body_trimmed.rfind("\n")
-        if last_nl > 50:
-            clean_body = clean_body_trimmed[:last_nl]
-        caption = header + clean_body + footer
+        # Nếu vượt quá 1024, rút gọn nhẹ nhàng intro theo từ hoàn chỉnh, giữ 100% action, quote, signature
+        max_intro_len = len(data['intro']) - (len(caption) - 1010)
+        if max_intro_len > 30:
+            words = data['intro'].split()
+            trimmed = ""
+            for w in words:
+                if len(trimmed) + len(w) + 1 <= max_intro_len:
+                    trimmed = f"{trimmed} {w}".strip()
+                else:
+                    break
+            data['intro'] = trimmed + "..."
+        else:
+            data['intro'] = ""
 
-    w_count = count_words(caption)
-    print(f"📊 Độ dài bản tin: {w_count} từ | {len(caption)} ký tự (Giới hạn: 1024)")
+        body = ""
+        if data['intro']:
+            body += f"{data['intro']}\n\n"
+        body += (
+            "📌 <b>3 Cơ chế cần nhớ:</b>\n"
+            f"• {data['point_1']}\n"
+            f"• {data['point_2']}\n"
+            f"• {data['point_3']}\n\n"
+            f"💡 <b>Hành động hôm nay (Key Action):</b>\n{data['action']}\n\n"
+            f"🌱 <i>\"{data['quote']}\"</i>\n\n"
+            f"📖 <b>Nguồn:</b> {source_label}\n\n"
+            "======\n"
+            "🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>\n"
+            '<a href="https://traicainghien.com">Website</a> | <a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm</a> | <a href="https://facebook.com/traicainghien">Fanpage</a>'
+        )
+        caption = header + body
+
+    print(f"📊 Độ dài bản tin Telegram: {len(caption)} ký tự (Giới hạn: 1024)")
     return caption
 
 def send_telegram_photo_bulletin(photo_url, caption):
-    """
-    Gửi ảnh gốc của bài báo và bản tin 150 từ lên Telegram channel qua sendPhoto.
-    """
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
     payload = {
         "chat_id": CHANNEL_ID,
@@ -249,78 +290,110 @@ def send_telegram_photo_bulletin(photo_url, caption):
     
     req = urllib.request.Request(
         url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json", "User-Agent": "Mozilla/5.0"}
+        data=json.dumps(payload).encode('utf-8'),
+        headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
     )
-    with urllib.request.urlopen(req, timeout=25) as resp:
-        res = json.loads(resp.read().decode("utf-8"))
-        if res.get("ok"):
-            msg_id = res['result']['message_id']
-            print(f"✅ GỬI THÀNH CÔNG BẢN TIN 150 TỪ QUA SENDPHOTO! Message ID: {msg_id}")
-            print(f"🔗 Xem bài tại: https://t.me/traicainghiendaily/{msg_id}")
-            return res
-        else:
-            print(f"❌ Telegram trả về lỗi: {res}")
-            return None
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        return json.loads(resp.read().decode())
 
-def run_daily_news_pipeline(dry_run=False, force_url=None):
+def run_daily_news_pipeline(dry_run=False):
     print("==================================================================")
-    print("🚀 CHẠY LUỒNG BẢN TIN DAILY 150 TỪ KÈM ẢNH GỐC NATIVE (FLOW 01)")
+    print("🚀 CHẠY LUỒNG BẢN TIN DAILY TELEGRAM 08:30 (FLOW 01)")
     print("==================================================================")
     
     history = load_history()
-    print(f"Đã tải {len(history)} bài viết trong lịch sử chống trùng.")
-    
-    candidates = fetch_all_candidate_articles()
-    print(f"Tổng hợp được {len(candidates)} bài viết ứng viên từ 5 nguồn quốc tế.")
-    
+    sent_links = set(history.get("sent_links", []))
+    sent_photos = set(history.get("sent_photos", []))
+    print(f"Đã tải {len(sent_links)} bài viết trong lịch sử chống trùng.")
+
+    all_candidates = []
+    for src in INTERNATIONAL_SOURCES:
+        try:
+            print(f"📡 Đang quét nguồn: {src['name']}...")
+            xml_data = fetch_rss_feed(src["feed"])
+            items = extract_articles_from_rss(xml_data, src)
+            print(f"   -> Tìm thấy {len(items)} bài viết từ {src['name']}.")
+            all_candidates.extend(items)
+        except Exception as e:
+            print(f"Lỗi fetch feed {src['name']}: {e}")
+
     selected_article = None
-    if force_url:
-        print(f"Chỉ định URL cụ thể: {force_url}")
-        info = extract_article_full_content(force_url)
-        if info:
-            selected_article = info
-            selected_article["source_name"] = "Nghiên cứu quốc tế chọn lọc"
-    else:
-        for cand in candidates:
-            url = cand["link"]
-            if url not in history:
-                print(f" -> Đang kiểm tra bài: '{cand['title']}' ({cand['source_name']})")
-                info = extract_article_full_content(url)
-                if info and info.get("image") and len(info.get("body", "")) > 200:
-                    selected_article = info
-                    selected_article["source_name"] = cand["source_name"]
-                    break
+    for cand in all_candidates:
+        if cand["url"] in sent_links:
+            continue
+        print(f" -> Đang kiểm tra bài: '{cand['title']}' ({cand['source_name']})")
+        full_info = scrape_full_article_content_and_image(cand["url"])
+        if full_info and full_info["image"] and full_info["body"]:
+            if full_info["image"] in sent_photos:
+                print("   ⚠️ Trùng ảnh đã phát sóng, bỏ qua.")
+                continue
+            full_info["source_name"] = cand["source_name"]
+            selected_article = full_info
+            break
 
     if not selected_article:
-        print("❌ Không tìm thấy bài viết mới nào thỏa mãn điều kiện!")
-        return False
+        print("⚠️ Không tìm thấy bài mới chưa từng gửi, lấy bài đầu tiên...")
+        for cand in all_candidates:
+            full_info = scrape_full_article_content_and_image(cand["url"])
+            if full_info and full_info["image"]:
+                full_info["source_name"] = cand["source_name"]
+                selected_article = full_info
+                break
 
-    print(f"\n✅ ĐÃ CHỌN ĐƯỢC BÀI VIẾT PHÙ HỢP:")
+    if not selected_article:
+        raise ValueError("Không thể bóc tách bất kỳ bài báo nào!")
+
+    print("\n✅ ĐÃ CHỌN ĐƯỢC BÀI VIẾT PHÙ HỢP:")
     print(f"   • Tiêu đề: {selected_article['title']}")
-    print(f"   • Nguồn: {selected_article.get('source_name')}")
+    print(f"   • Nguồn: {selected_article['source_name']}")
     print(f"   • URL: {selected_article['url']}")
-    print(f"   • Ảnh gốc: {selected_article['image']}\n")
+    print(f"   • Ảnh gốc: {selected_article['image']}")
 
-    print("🤖 Đang biên soạn bản tin cô đọng khoảng 150 từ...")
-    caption = synthesize_bulletin_150_words(selected_article)
+    print("\n🤖 Đang biên soạn bản tin chuẩn cấu trúc Telegram...")
+    caption = synthesize_bulletin_structured(selected_article)
 
     print("\n--- NỘI DUNG BẢN TIN TRÊN TELEGRAM ---")
     print(caption)
-    print("--------------------------------------\n")
+    print("--------------------------------------")
 
     if dry_run:
-        print("Chế độ Dry-run: Bỏ qua bước phát sóng lên Telegram.")
-        return True
+        print("🧪 [DRY RUN] Đã hoàn thành thử nghiệm.")
+        return
 
-    print(f"📢 Đang phát sóng bài viết 150 từ lên kênh Telegram {CHANNEL_ID}...")
+    print(f"\n📢 Đang phát sóng lên kênh Telegram {CHANNEL_ID}...")
     result = send_telegram_photo_bulletin(selected_article["image"], caption)
-    if result:
-        history.append(selected_article["url"])
+    if result.get("ok"):
+        msg_id = result["result"]["message_id"]
+        print(f"✅ GỬI THÀNH CÔNG BẢN TIN QUA SENDPHOTO! Message ID: {msg_id}")
+        post_link = f"https://t.me/traicainghiendaily/{msg_id}"
+        print(f"🔗 Xem bài tại: {post_link}")
+        
+        history["sent_links"].append(selected_article["url"])
+        history["sent_photos"].append(selected_article["image"])
         save_history(history)
         print("🎉 Bản tin đã được xuất bản và lưu lịch sử thành công!")
-        return True
-    return False
+        
+        try:
+            from scripts.task_notifier import notify_task_success
+            notify_task_success(
+                task_name="Bản tin telegram Daily",
+                channel="📢 Kênh Telegram @traicainghiendaily",
+                post_url=post_link,
+                title=selected_article.get("title", "Bản tin tâm lý học mới nhất")
+            )
+        except Exception as e:
+            print("Warning: Không thể gửi task_notifier:", e)
+    else:
+        print("❌ Lỗi gửi Telegram:", result)
+        try:
+            from scripts.task_notifier import notify_task_error
+            notify_task_error(
+                task_name="Bản tin telegram Daily",
+                channel="📢 Kênh Telegram @traicainghiendaily",
+                error_msg=str(result)
+            )
+        except Exception as e:
+            pass
 
 if __name__ == "__main__":
     dry_run = "--dry-run" in sys.argv
