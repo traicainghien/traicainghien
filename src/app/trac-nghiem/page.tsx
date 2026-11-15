@@ -61,7 +61,7 @@ export default function TracNghiemPage() {
 
   const handleCopyResult = () => {
     if (!result) return;
-    const textToCopy = `🌿 [TRẠI CAI NGHIỆN] Kết quả đo mức độ nghiện của tôi:\n• Điểm số: ${result.totalScore}/${result.maxScore} điểm (${result.percentage}%)\n• Hệ nghiện: ${result.archetype.name} (${result.archetype.tagline})\n• Đánh giá: ${result.title}\n👉 Đo mức độ nghiện của bạn tại: https://www.traicainghien.com/trac-nghiem`;
+    const textToCopy = `🌿 [TRẠI CAI NGHIỆN] Kết quả đo mức độ mất tập trung của tôi:\n• Điểm số: ${result.totalScore}/${result.maxScore} điểm (${result.percentage}%)\n• Hệ nghiện: ${result.archetype.name} (${result.archetype.tagline})\n• Đánh giá: ${result.title}\n👉 Đo mức độ mất tập trung của bạn tại: https://www.traicainghien.com/trac-nghiem`;
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
@@ -79,7 +79,7 @@ export default function TracNghiemPage() {
               Trắc Nghiệm Nhập Trại • 25 Câu Hỏi
             </span>
             <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#2D312E]">
-              Đo Mức Độ Nghiện Của Bạn
+              Đo Mức Độ Mất Tập Trung Của Bạn
             </h1>
             <p className="text-xs md:text-sm text-[#6B726E] max-w-xl mx-auto leading-relaxed">
               Không phán xét, không giáo điều. 25 câu hỏi bóc tách 5 tầng hành vi đời thực để gọi tên những điều bạn đang vô thức lặp lại mỗi ngày.

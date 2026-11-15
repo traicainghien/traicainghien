@@ -33,7 +33,7 @@ export default function HomePage() {
               href="/trac-nghiem"
               className="w-full sm:w-auto px-8 py-4 rounded-2xl text-base font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2"
             >
-              <span>Đo mức độ nghiện của bạn (3 phút)</span>
+              <span>Đo mức độ mất tập trung (3 phút)</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
@@ -246,7 +246,7 @@ export default function HomePage() {
               href="/trac-nghiem"
               className="px-6 py-3.5 rounded-xl text-xs md:text-sm font-bold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-sm shrink-0 transition-all flex items-center gap-2 hover:scale-105"
             >
-              <span>Đo mức độ nghiện ngay</span>
+              <span>Đo mức độ mất tập trung ngay</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -393,7 +393,7 @@ export default function HomePage() {
                 Trắc nghiệm nhập trại • 25 Câu Hỏi
               </span>
               <h2 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E]">
-                Đo mức độ nghiện của bạn: Bạn thuộc Hệ Nghiện nào?
+                Đo mức độ mất tập trung: Bạn thuộc Hệ Nghiện nào?
               </h2>
               <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
                 Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 25 câu hỏi 5 chặng sẽ bóc tách chính xác 5 Hệ Nghiện thời hiện đại và Khoản Thuế Vô Hình bạn đang âm thầm gánh chịu.
@@ -410,7 +410,7 @@ export default function HomePage() {
                 href="/trac-nghiem"
                 className="w-full md:w-auto px-8 py-4 rounded-2xl text-base font-bold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-md hover:scale-105 transition-all text-center"
               >
-                Bắt đầu đo mức độ nghiện
+                Bắt đầu đo mức độ mất tập trung
               </Link>
               <span className="text-[11px] text-[#6B726E]">Nhận kết quả phân tích tức thì</span>
             </div>

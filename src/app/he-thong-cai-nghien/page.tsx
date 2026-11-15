@@ -172,7 +172,7 @@ export default function HeThongCaiNghienPage() {
               href="/trac-nghiem"
               className="px-6 py-3 rounded-xl bg-[#3A5A40] text-white font-bold text-xs hover:bg-[#2F4A34] transition-all"
             >
-              Đo mức độ nghiện của bạn ngay
+              Đo mức độ mất tập trung ngay
             </Link>
             <Link
               href="/gioi-thieu"
