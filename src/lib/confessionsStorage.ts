@@ -195,7 +195,13 @@ export async function createConfession(
   const raw = fs.readFileSync(CONFESSIONS_FILE, 'utf-8');
   const all: Confession[] = JSON.parse(raw);
 
-  const colors: Array<'be' | 'green' | 'terracotta'> = ['be', 'green', 'terracotta'];
+  const colors: Array<'yellow' | 'mint' | 'rose' | 'blue' | 'lavender'> = [
+    'yellow',
+    'mint',
+    'rose',
+    'blue',
+    'lavender',
+  ];
   const colorTheme = colors[Math.floor(Math.random() * colors.length)];
 
   const newConfession: Confession = {

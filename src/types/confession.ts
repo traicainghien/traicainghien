@@ -7,6 +7,8 @@ export type MoodTag =
 
 export type ReactionType = 'feel_you' | 'hug' | 'not_alone';
 
+export type NoteColorTheme = 'yellow' | 'mint' | 'rose' | 'blue' | 'lavender' | 'be' | 'green' | 'terracotta';
+
 export interface Confession {
   id: string;
   slug: string;
@@ -23,7 +25,7 @@ export interface Confession {
     hug: number;
     not_alone: number;
   };
-  cardColorTheme?: 'be' | 'green' | 'terracotta';
+  cardColorTheme?: NoteColorTheme;
 }
 
 export interface ConfessionSubmission {

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import { Confession, ReactionType } from '@/types/confession';
 import WashiCard from '@/components/confessions/WashiCard';
@@ -12,16 +12,21 @@ import {
   ShieldCheck,
   Send,
   ArrowRight,
-  MessageSquareHeart,
-  RefreshCw,
+  ChevronLeft,
+  ChevronRight,
 } from 'lucide-react';
+
+const ITEMS_PER_PAGE = 6;
 
 export default function GocTamSuPage() {
   const [confessions, setConfessions] = useState<Confession[]>([]);
   const [activeMood, setActiveMood] = useState<string>('all');
+  const [currentPage, setCurrentPage] = useState<number>(1);
   const [isLoading, setIsLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [userReactions, setUserReactions] = useState<Record<string, boolean>>({});
+
+  const wallRef = useRef<HTMLDivElement>(null);
 
   // Load user reactions from localStorage
   useEffect(() => {
@@ -54,6 +59,7 @@ export default function GocTamSuPage() {
 
   useEffect(() => {
     loadConfessions(activeMood);
+    setCurrentPage(1); // Reset to page 1 on filter change
   }, [activeMood, loadConfessions]);
 
   // Handle reaction with optimistic update
@@ -95,6 +101,19 @@ export default function GocTamSuPage() {
     }
   };
 
+  // Pagination calculation
+  const totalPages = Math.ceil(confessions.length / ITEMS_PER_PAGE) || 1;
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const paginatedConfessions = confessions.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const handlePageChange = (newPage: number) => {
+    if (newPage < 1 || newPage > totalPages) return;
+    setCurrentPage(newPage);
+    if (wallRef.current) {
+      wallRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <div className="space-y-12 sm:space-y-16 pb-24">
       {/* 1. HERO HEADER */}
@@ -102,7 +121,7 @@ export default function GocTamSuPage() {
         <div className="max-w-3xl mx-auto space-y-6">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#EBF0EC] text-[#3A5A40] dark:bg-[#222B25] dark:text-[#78A380]">
-            <span>🌿 Trại Cai Nghiện</span> • <span>Bức Tường Lắng Nghe</span>
+            <span>🌿 Trại Cai Nghiện</span> • <span>Bức Tường Ghi Chú Lắng Nghe</span>
           </div>
 
           {/* Headline */}
@@ -112,7 +131,7 @@ export default function GocTamSuPage() {
 
           {/* Subtitle / Manifesto */}
           <p className="text-base sm:text-lg text-[#6B726E] dark:text-[#9DA39F] leading-relaxed max-w-2xl mx-auto">
-            "Mỗi tờ giấy dán lại là một khoảnh khắc can đảm đối diện với chính mình. Hãy để lại gánh nặng của bạn ở đây, để bước tiếp nhẹ nhõm hơn."
+            "Mỗi tờ note dán lại là một khoảnh khắc can đảm đối diện với chính mình. Hãy để lại gánh nặng của bạn ở đây, để bước tiếp nhẹ nhõm hơn."
           </p>
 
           {/* Central CTA to Write */}
@@ -123,7 +142,7 @@ export default function GocTamSuPage() {
               className="w-full sm:w-auto px-8 py-4 rounded-2xl text-base font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#527A59] dark:hover:bg-[#63926B] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5"
             >
               <Send className="w-4 h-4" />
-              <span>✍️ Dán Một Tờ Giấy Lên Tường</span>
+              <span>✍️ Dán Một Tờ Note Lên Tường</span>
             </button>
           </div>
 
@@ -143,16 +162,16 @@ export default function GocTamSuPage() {
       </section>
 
       {/* 2. MOSAIC WALL FEED SECTION */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+      <section ref={wallRef} className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8 scroll-mt-24">
         {/* Mood Filter Pills */}
         <div className="space-y-3">
           <div className="flex items-center justify-between pb-2 border-b border-[#E6E1D8] dark:border-[#2E3531] text-xs font-bold uppercase tracking-wider text-[#3A5A40] dark:text-[#78A380]">
             <div className="flex items-center gap-2">
               <span>📌</span>
-              <span>BỨC TƯỜNG GẮN GẮM TÂM TƯ</span>
+              <span>BỨC TƯỜNG DÁN NOTE TÂM TƯ</span>
             </div>
             <span className="text-[#8C9490] dark:text-[#9DA39F] font-normal normal-case">
-              {confessions.length} mẩu giấy sẻ chia
+              {confessions.length} tờ note chia sẻ
             </span>
           </div>
 
@@ -169,26 +188,26 @@ export default function GocTamSuPage() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-72 rounded-2xl bg-[#FAF7F2] dark:bg-[#1D221F] border border-[#E6E1D8] dark:border-[#2E3531] animate-pulse p-6 space-y-4"
+                className="h-72 rounded-xl bg-[#FAF7F2] dark:bg-[#1D221F] border border-[#E6E1D8] dark:border-[#2E3531] animate-pulse p-6 space-y-4"
               >
                 <div className="flex justify-between items-center">
-                  <div className="w-24 h-5 rounded-full bg-black/5 dark:bg-white/5" />
-                  <div className="w-16 h-3 rounded-full bg-black/5 dark:bg-white/5" />
+                  <div className="w-24 h-5 rounded-md bg-black/5 dark:bg-white/5" />
+                  <div className="w-16 h-3 rounded-md bg-black/5 dark:bg-white/5" />
                 </div>
                 <div className="space-y-2 pt-2">
-                  <div className="w-full h-3 rounded-full bg-black/5 dark:bg-white/5" />
-                  <div className="w-5/6 h-3 rounded-full bg-black/5 dark:bg-white/5" />
-                  <div className="w-4/6 h-3 rounded-full bg-black/5 dark:bg-white/5" />
+                  <div className="w-full h-3 rounded-md bg-black/5 dark:bg-white/5" />
+                  <div className="w-5/6 h-3 rounded-md bg-black/5 dark:bg-white/5" />
+                  <div className="w-4/6 h-3 rounded-md bg-black/5 dark:bg-white/5" />
                 </div>
               </div>
             ))}
           </div>
         ) : confessions.length === 0 ? (
           /* Empty State */
-          <div className="text-center py-16 px-4 bg-white dark:bg-[#1D221F] rounded-3xl border border-[#E6E1D8] dark:border-[#2E3531] space-y-4">
+          <div className="text-center py-16 px-4 bg-white dark:bg-[#1D221F] rounded-2xl border border-[#E6E1D8] dark:border-[#2E3531] space-y-4">
             <div className="text-4xl">🍃</div>
             <h3 className="text-lg font-bold text-[#2D312E] dark:text-[#F0ECE6] font-serif">
-              Chưa có mẩu giấy nào trong chủ đề này
+              Chưa có tờ note nào trong chủ đề này
             </h3>
             <p className="text-sm text-[#6B726E] dark:text-[#9DA39F] max-w-md mx-auto">
               Hãy là người đầu tiên dán lên bức tường một dòng tâm sự can đảm nhé.
@@ -198,22 +217,76 @@ export default function GocTamSuPage() {
               onClick={() => setIsModalOpen(true)}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#3A5A40] dark:bg-[#527A59] text-white text-xs font-semibold hover:bg-[#2F4A34] dark:hover:bg-[#63926B]"
             >
-              <span>Viết dòng đầu tiên</span>
+              <span>Dán tờ note đầu tiên</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>
         ) : (
-          /* Actual Mosaic Wall Grid */
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-start">
-            {confessions.map((c) => (
-              <WashiCard
-                key={c.id}
-                confession={c}
-                onReact={handleReact}
-                userReactions={userReactions}
-              />
-            ))}
-          </div>
+          <>
+            {/* Actual Mosaic Wall Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 items-start">
+              {paginatedConfessions.map((c) => (
+                <WashiCard
+                  key={c.id}
+                  confession={c}
+                  onReact={handleReact}
+                  userReactions={userReactions}
+                />
+              ))}
+            </div>
+
+            {/* Pagination Controls */}
+            {totalPages > 1 && (
+              <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-[#E6E1D8] dark:border-[#2E3531]">
+                <div className="text-xs text-[#8C9490] dark:text-[#9DA39F]">
+                  Hiển thị {startIndex + 1} - {Math.min(startIndex + ITEMS_PER_PAGE, confessions.length)} trong số {confessions.length} tờ note
+                </div>
+
+                <div className="flex items-center gap-1.5">
+                  {/* Previous Page Button */}
+                  <button
+                    type="button"
+                    disabled={currentPage === 1}
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    className="p-2 rounded-lg border border-[#E6E1D8] dark:border-[#2E3531] bg-white dark:bg-[#1D221F] text-[#2D312E] dark:text-[#F0ECE6] hover:bg-black/5 dark:hover:bg-white/5 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                    aria-label="Trang trước"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+
+                  {/* Page Numbers */}
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => {
+                    const isActive = page === currentPage;
+                    return (
+                      <button
+                        key={page}
+                        type="button"
+                        onClick={() => handlePageChange(page)}
+                        className={`w-9 h-9 rounded-lg text-xs font-semibold transition-all ${
+                          isActive
+                            ? 'bg-[#3A5A40] dark:bg-[#527A59] text-white shadow-xs'
+                            : 'border border-[#E6E1D8] dark:border-[#2E3531] bg-white dark:bg-[#1D221F] text-[#2D312E] dark:text-[#F0ECE6] hover:bg-black/5 dark:hover:bg-white/5'
+                        }`}
+                      >
+                        {page}
+                      </button>
+                    );
+                  })}
+
+                  {/* Next Page Button */}
+                  <button
+                    type="button"
+                    disabled={currentPage === totalPages}
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    className="p-2 rounded-lg border border-[#E6E1D8] dark:border-[#2E3531] bg-white dark:bg-[#1D221F] text-[#2D312E] dark:text-[#F0ECE6] hover:bg-black/5 dark:hover:bg-white/5 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+                    aria-label="Trang sau"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            )}
+          </>
         )}
       </section>
 

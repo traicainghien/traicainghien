@@ -15,7 +15,7 @@
       "hug": 98,
       "not_alone": 65
     },
-    "cardColorTheme": "be"
+    "cardColorTheme": "yellow"
   },
   {
     "id": "cf-seed-02",
@@ -33,7 +33,7 @@
       "hug": 112,
       "not_alone": 84
     },
-    "cardColorTheme": "green"
+    "cardColorTheme": "mint"
   },
   {
     "id": "cf-seed-03",
@@ -51,7 +51,7 @@
       "hug": 178,
       "not_alone": 130
     },
-    "cardColorTheme": "terracotta"
+    "cardColorTheme": "blue"
   },
   {
     "id": "cf-seed-04",
@@ -69,7 +69,7 @@
       "hug": 145,
       "not_alone": 82
     },
-    "cardColorTheme": "be"
+    "cardColorTheme": "rose"
   },
   {
     "id": "cf-seed-05",
@@ -87,7 +87,7 @@
       "hug": 168,
       "not_alone": 95
     },
-    "cardColorTheme": "green"
+    "cardColorTheme": "mint"
   },
   {
     "id": "cf-seed-06",
@@ -105,6 +105,6 @@
       "hug": 85,
       "not_alone": 76
     },
-    "cardColorTheme": "terracotta"
+    "cardColorTheme": "lavender"
   }
 ]
