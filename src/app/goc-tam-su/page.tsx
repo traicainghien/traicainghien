@@ -295,8 +295,9 @@ export default function GocTamSuPage() {
         <div className="p-8 sm:p-12 rounded-3xl bg-[#FAF7F2] dark:bg-[#1D221F] border border-[#E6E1D8] dark:border-[#2E3531] shadow-xs text-center space-y-6 relative overflow-hidden">
           <div className="space-y-2 max-w-xl mx-auto">
             <span className="text-2xl">🌱</span>
-            <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#2D312E] dark:text-[#F0ECE6]">
-              Bạn Không Hề Đơn Độc Trong Cuộc Chiến Với Xao Nhãng Số
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#2D312E] dark:text-[#F0ECE6] leading-snug">
+              Bạn Không Hề Đơn Độc Trong Cuộc Chiến Với
+              <span className="block mt-1">Sự Mất Tập Trung</span>
             </h3>
             <p className="text-xs sm:text-sm text-[#6B726E] dark:text-[#9DA39F] leading-relaxed">
               Trại Cai Nghiện xuất bản bản tin tâm lý học mỗi sáng lúc 8h30 và bức thư nhắc nhở đi ngủ dịu dàng lúc 22h00 trên kênh Telegram. Hãy tham gia cùng chúng mình nhé.
