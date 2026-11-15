@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sparkles, ChevronDown, ArrowRight } from "lucide-react";
+import { Menu, X, Sparkles, ChevronDown, ArrowRight, MessageCircleHeart } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 
 const categories = [
@@ -74,7 +74,7 @@ export default function Navbar() {
       <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between">
         
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3.5 group shrink-0 mr-8 lg:mr-12 xl:mr-16">
+        <Link href="/" className="flex items-center gap-3.5 group shrink-0 mr-3 sm:mr-8 lg:mr-12 xl:mr-16">
           <div className="w-11 h-11 rounded-xl overflow-hidden bg-[#FAF7F2] dark:bg-[#202722] border border-[#E6E1D8] dark:border-[#354037] shadow-sm flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
             <Image
               src="/images/logo-totem.webp"
@@ -85,7 +85,7 @@ export default function Navbar() {
               priority
             />
           </div>
-          <div className="flex flex-col justify-center">
+          <div className="hidden sm:flex flex-col justify-center">
             <span className="text-2xl font-bold block font-serif text-[#2D312E] dark:text-[#F0ECE6] leading-tight tracking-tight">
               Trại Cai Nghiện
             </span>
@@ -96,7 +96,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu Items */}
-        <nav className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm font-medium">
+        <nav className="hidden xl:flex items-center gap-5 xl:gap-7 text-sm font-medium">
           <Link
             href="/"
             className={`transition-colors py-1 relative ${
@@ -121,20 +121,6 @@ export default function Navbar() {
           >
             Hệ Thống Cai Nghiện
             {isActive("/he-thong-cai-nghien") && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
-            )}
-          </Link>
-
-          <Link
-            href="/trac-nghiem"
-            className={`transition-colors py-1 relative ${
-              isActive("/trac-nghiem")
-                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
-                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
-            }`}
-          >
-            Trắc Nghiệm
-            {isActive("/trac-nghiem") && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
             )}
           </Link>
@@ -199,6 +185,19 @@ export default function Navbar() {
             </div>
           </div>
 
+          {/* Góc Tâm Sự - Nút xanh nổi bật, đứng trước Giới Thiệu */}
+          <Link
+            href="/goc-tam-su"
+            className={`px-4 py-2.5 rounded-xl text-xs md:text-sm font-semibold text-white shadow-sm hover:shadow transition-all flex items-center gap-2 shrink-0 ${
+              isActive("/goc-tam-su")
+                ? "bg-[#2F4A34] dark:bg-[#63926B]"
+                : "bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#527A59] dark:hover:bg-[#63926B]"
+            }`}
+          >
+            <MessageCircleHeart className="w-4 h-4" />
+            <span>Góc Tâm Sự</span>
+          </Link>
+
           <Link
             href="/gioi-thieu"
             className={`transition-colors py-1 relative ${
@@ -212,42 +211,28 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
             )}
           </Link>
-
-          <Link
-            href="/goc-tam-su"
-            className={`transition-colors py-1 relative ${
-              isActive("/goc-tam-su")
-                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
-                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
-            }`}
-          >
-            Góc Tâm Sự
-            {isActive("/goc-tam-su") && (
-              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
-            )}
-          </Link>
         </nav>
 
         {/* Action Button & Theme Toggle (Desktop) */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden xl:flex items-center gap-3">
           <ThemeToggle />
           <Link
             href="/trac-nghiem"
-            className="px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#527A59] dark:hover:bg-[#63926B] shadow-sm hover:shadow transition-all flex items-center gap-2"
+            className="px-5 py-2.5 rounded-xl text-xs md:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#527A59] dark:hover:bg-[#63926B] shadow-sm hover:shadow transition-all flex items-center gap-2 shrink-0"
           >
             <Sparkles className="w-4 h-4" />
-            <span>Đo Mức Độ Nghiện</span>
+            <span>Đo Mức Độ Mất Tập Trung</span>
           </Link>
         </div>
 
         {/* Mobile Actions */}
-        <div className="lg:hidden flex items-center gap-2">
+        <div className="xl:hidden flex items-center gap-2 shrink-0">
           <ThemeToggle />
           <Link
             href="/trac-nghiem"
-            className="px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-[#3A5A40] dark:bg-[#527A59]"
+            className="px-2.5 sm:px-3 py-1.5 rounded-lg text-[11px] sm:text-xs font-semibold text-white bg-[#3A5A40] dark:bg-[#527A59] whitespace-nowrap"
           >
-            Đo Nghiện
+            Đo Mất Tập Trung
           </Link>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -261,7 +246,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-b border-[#E6E1D8] dark:border-[#2E3531] bg-[#FAF7F2] dark:bg-[#151816] px-6 py-4 space-y-3 shadow-lg">
+        <div className="xl:hidden border-b border-[#E6E1D8] dark:border-[#2E3531] bg-[#FAF7F2] dark:bg-[#151816] px-6 py-4 space-y-3 shadow-lg">
           <Link
             href="/"
             onClick={() => setMobileMenuOpen(false)}
@@ -280,16 +265,6 @@ export default function Navbar() {
             }`}
           >
             Hệ Thống Cai Nghiện
-          </Link>
-
-          <Link
-            href="/trac-nghiem"
-            onClick={() => setMobileMenuOpen(false)}
-            className={`block py-2 text-sm font-medium transition-colors ${
-              isActive("/trac-nghiem") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
-            }`}
-          >
-            Trắc Nghiệm
           </Link>
 
           {/* Mobile Accordion for Bài Viết */}
@@ -332,6 +307,17 @@ export default function Navbar() {
           </div>
 
           <Link
+            href="/goc-tam-su"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#527A59] dark:hover:bg-[#63926B] transition-colors ${
+              isActive("/goc-tam-su") ? "ring-2 ring-[#C27D53] ring-offset-2 ring-offset-[#FAF7F2] dark:ring-offset-[#151816]" : ""
+            }`}
+          >
+            <MessageCircleHeart className="w-4 h-4" />
+            <span>Góc Tâm Sự</span>
+          </Link>
+
+          <Link
             href="/gioi-thieu"
             onClick={() => setMobileMenuOpen(false)}
             className={`block py-2 text-sm font-medium transition-colors ${
@@ -339,16 +325,6 @@ export default function Navbar() {
             }`}
           >
             Giới Thiệu
-          </Link>
-
-          <Link
-            href="/goc-tam-su"
-            onClick={() => setMobileMenuOpen(false)}
-            className={`block py-2 text-sm font-medium transition-colors ${
-              isActive("/goc-tam-su") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
-            }`}
-          >
-            Góc Tâm Sự
           </Link>
         </div>
       )}
