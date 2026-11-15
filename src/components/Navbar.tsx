@@ -212,6 +212,20 @@ export default function Navbar() {
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
             )}
           </Link>
+
+          <Link
+            href="/goc-tam-su"
+            className={`transition-colors py-1 relative ${
+              isActive("/goc-tam-su")
+                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
+                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
+            }`}
+          >
+            Góc Tâm Sự
+            {isActive("/goc-tam-su") && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
+            )}
+          </Link>
         </nav>
 
         {/* Action Button & Theme Toggle (Desktop) */}
@@ -325,6 +339,16 @@ export default function Navbar() {
             }`}
           >
             Giới Thiệu
+          </Link>
+
+          <Link
+            href="/goc-tam-su"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`block py-2 text-sm font-medium transition-colors ${
+              isActive("/goc-tam-su") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+            }`}
+          >
+            Góc Tâm Sự
           </Link>
         </div>
       )}
