@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "hoc-cach-yeu-ban-than-de-be-gay-xieng-xich-xao-nha-20261115": [
+    {
+      "id": "hocca-1",
+      "name": "Nguyễn Diệu Linh (Sinh viên năm cuối)",
+      "content": "Đọc bài 'Học cách yêu bản thân để bẻ gãy xiềng xích của xao nhãng' xong, mình mới dám thừa nhận với bản thân một chuyện. Mình là sinh viên năm cuối, đồ án trễ ba tuần. Áp dụng đúng cái khung một việc một lúc, hôm nay mình làm được 4 tiếng, nhiều hơn cả tuần trước cộng lại.",
+      "date": "Hôm qua",
+      "likes": 50,
+      "isLongStory": true
+    },
+    {
+      "id": "hocca-2",
+      "name": "Đỗ Văn Sơn (Kỹ sư cơ khí • 27 tuổi)",
+      "content": "Đoạn mình thấy đắt giá nhất là phần 'Học cách yêu bản thân để bẻ gãy xiềng xích của xao nhãng'. Mình đã thử và thấy đúng: bớt ma sát thì bớt phải gồng.",
+      "date": "2 ngày trước",
+      "likes": 42
+    },
+    {
+      "id": "hocca-3",
+      "name": "Lý Mai Chi (Biên tập viên • 30 tuổi)",
+      "content": "Mình dừng lại lâu nhất ở phần 'Học cách yêu bản thân để bẻ gãy xiềng xích của xao nhãng'. Mình làm luôn, không chờ có động lực: bắt đầu bằng đúng hai phút, không đặt mục tiêu cao hơn.",
+      "date": "2 ngày trước",
+      "likes": 32
+    }
+  ],
   "bay-truong-thanh-gia-tao-cang-noi-hay-cang-kho-thay-doi": [
     {
       "id": "ttgt-1",
