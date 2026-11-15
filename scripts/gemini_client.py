@@ -22,8 +22,8 @@ def load_gemini_keys() -> List[str]:
             if k and k not in keys:
                 keys.append(k)
                 
-    # 2. Check individual GEMINI_API_KEY_1..10
-    for i in range(1, 11):
+    # 2. Check individual GEMINI_API_KEY_1..20
+    for i in range(1, 21):
         k = os.environ.get(f"GEMINI_API_KEY_{i}", "").strip()
         if k and k not in keys:
             keys.append(k)
