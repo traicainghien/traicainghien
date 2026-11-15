@@ -109,14 +109,14 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-200">
       {/* Modal Container */}
-      <div className="relative w-full max-w-xl bg-[#FAF7F2] rounded-3xl border border-[#E6E1D8] shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+      <div className="relative w-full max-w-xl bg-[#FAF7F2] dark:bg-[#1A1F1C] rounded-3xl border border-[#E6E1D8] dark:border-[#2E3531] shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
         {/* Close Button */}
         <button
           type="button"
           onClick={handleResetAndClose}
-          className="absolute right-5 top-5 p-2 rounded-full text-[#8C9490] hover:text-[#2D312E] hover:bg-black/5 transition-all"
+          className="absolute right-5 top-5 p-2 rounded-full text-[#8C9490] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:bg-black/5 dark:hover:bg-white/5 transition-all"
         >
           <X className="w-5 h-5" />
         </button>
@@ -132,17 +132,17 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
             {/* Header */}
             <div className="text-center space-y-1.5 pt-2">
               <span className="text-2xl">✍️</span>
-              <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#2D312E]">
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#2D312E] dark:text-[#F0ECE6]">
                 Dán Một Tờ Giấy Lên Tường
               </h3>
-              <p className="text-xs sm:text-sm text-[#6B726E]">
+              <p className="text-xs sm:text-sm text-[#6B726E] dark:text-[#9DA39F]">
                 Ở đây không có sự phán xét. Hãy viết ra thật lòng mọi trăn trở của bạn.
               </p>
             </div>
 
             {/* Step 1: Mood Selector */}
             <div className="space-y-2">
-              <label className="text-xs font-semibold uppercase tracking-wider text-[#3A5A40]">
+              <label className="text-xs font-semibold uppercase tracking-wider text-[#3A5A40] dark:text-[#78A380]">
                 1. Tâm trạng của bạn lúc này:
               </label>
               <div className="flex flex-wrap gap-2">
@@ -153,8 +153,8 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
                     onClick={() => setMoodTag(m.id)}
                     className={`px-3 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-1.5 ${
                       moodTag === m.id
-                        ? 'bg-[#3A5A40] text-white shadow-xs'
-                        : 'bg-white text-[#2D312E] border border-[#E6E1D8] hover:border-[#3A5A40]/40'
+                        ? 'bg-[#3A5A40] dark:bg-[#527A59] text-white shadow-xs'
+                        : 'bg-white dark:bg-[#252C28] text-[#2D312E] dark:text-[#D1CCC4] border border-[#E6E1D8] dark:border-[#2E3531] hover:border-[#3A5A40]/40 dark:hover:border-[#78A380]/40'
                     }`}
                   >
                     <span>{m.icon}</span>
@@ -167,10 +167,10 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
             {/* Step 2: Content Textarea */}
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <label className="text-xs font-semibold uppercase tracking-wider text-[#3A5A40]">
+                <label className="text-xs font-semibold uppercase tracking-wider text-[#3A5A40] dark:text-[#78A380]">
                   2. Trút bỏ tâm sự của bạn:
                 </label>
-                <span className="text-[11px] text-[#8C9490]">{content.length} ký tự</span>
+                <span className="text-[11px] text-[#8C9490] dark:text-[#9DA39F]">{content.length} ký tự</span>
               </div>
 
               <div
@@ -183,27 +183,27 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
                   value={content}
                   onChange={(e) => setContent(e.target.value)}
                   placeholder="Điều gì đang khiến tâm trí bạn nặng nề nhất hôm nay? Có phải bạn lại lướt điện thoại đêm, hay đang né tránh một việc quan trọng? Cứ viết ra đây thật lòng nhé..."
-                  className="w-full p-4 rounded-2xl bg-white border border-[#E6E1D8] focus:border-[#3A5A40] focus:ring-1 focus:ring-[#3A5A40] text-sm text-[#2D312E] placeholder-[#8C9490] leading-relaxed resize-none font-serif italic"
+                  className="w-full p-4 rounded-2xl bg-white dark:bg-[#202722] border border-[#E6E1D8] dark:border-[#2E3531] focus:border-[#3A5A40] dark:focus:border-[#527A59] focus:ring-1 focus:ring-[#3A5A40] text-sm text-[#2D312E] dark:text-[#F0ECE6] placeholder-[#8C9490] dark:placeholder-[#6B726E] leading-relaxed resize-none font-serif italic"
                 />
               </div>
 
               {isDissolving && (
-                <div className="text-center py-2 text-xs font-medium text-[#C27D53] animate-pulse">
+                <div className="text-center py-2 text-xs font-medium text-[#C27D53] dark:text-[#D48C62] animate-pulse">
                   🍃 Chữ đang tan biến vào hư không nhẹ nhõm...
                 </div>
               )}
             </div>
 
             {/* Step 3: Lead Capture (Email for Dopamine Guide) */}
-            <div className="p-4 rounded-2xl bg-white border border-[#E6E1D8] space-y-3">
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#202722] border border-[#E6E1D8] dark:border-[#2E3531] space-y-3">
               <label className="flex items-start gap-2.5 cursor-pointer">
                 <input
                   type="checkbox"
                   checked={wantGuide}
                   onChange={(e) => setWantGuide(e.target.checked)}
-                  className="mt-1 h-4 w-4 rounded-xs border-gray-300 text-[#3A5A40] focus:ring-[#3A5A40]"
+                  className="mt-1 h-4 w-4 rounded-xs border-gray-300 dark:border-gray-600 text-[#3A5A40] dark:text-[#527A59] focus:ring-[#3A5A40]"
                 />
-                <span className="text-xs text-[#2D312E] leading-relaxed">
+                <span className="text-xs text-[#2D312E] dark:text-[#E8E4DD] leading-relaxed">
                   Nhận <b>Cẩm nang 7 Ngày Tái Lập Thụ Thể Dopamine</b> và thư hồi đáp dịu dàng từ Mây qua email.
                 </span>
               </label>
@@ -215,10 +215,10 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Nhập email của bạn (Ví dụ: ban@gmail.com)"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8] focus:border-[#3A5A40] text-xs text-[#2D312E] placeholder-[#8C9490]"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#FAF7F2] dark:bg-[#181C1A] border border-[#E6E1D8] dark:border-[#2E3531] focus:border-[#3A5A40] dark:focus:border-[#527A59] text-xs text-[#2D312E] dark:text-[#F0ECE6] placeholder-[#8C9490] dark:placeholder-[#6B726E]"
                   />
-                  <div className="flex items-center gap-1.5 text-[11px] text-[#8C9490]">
-                    <ShieldCheck className="w-3.5 h-3.5 text-[#3A5A40]" />
+                  <div className="flex items-center gap-1.5 text-[11px] text-[#8C9490] dark:text-[#9DA39F]">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#3A5A40] dark:text-[#78A380]" />
                     <span>Email được bảo mật 100%, không bao giờ hiển thị trên bài viết.</span>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
             </div>
 
             {errorMessage && (
-              <p className="text-xs text-red-600 font-medium text-center">{errorMessage}</p>
+              <p className="text-xs text-red-600 dark:text-red-400 font-medium text-center">{errorMessage}</p>
             )}
 
             {/* Actions: Dissolve vs Submit */}
@@ -235,10 +235,10 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
                 type="button"
                 disabled={isSubmitting || isDissolving}
                 onClick={handleDissolve}
-                className="py-3 px-4 rounded-xl border border-[#E6E1D8] bg-white hover:bg-black/5 text-[#6B726E] text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2"
+                className="py-3 px-4 rounded-xl border border-[#E6E1D8] dark:border-[#2E3531] bg-white dark:bg-[#252C28] hover:bg-black/5 dark:hover:bg-white/5 text-[#6B726E] dark:text-[#9DA39F] text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2"
                 title="Chữ sẽ mờ dần và biến mất, không lưu lại đâu cả"
               >
-                <Wind className="w-4 h-4 text-[#C27D53]" />
+                <Wind className="w-4 h-4 text-[#C27D53] dark:text-[#D48C62]" />
                 <span>Thả trôi vào hư không</span>
               </button>
 
@@ -246,7 +246,7 @@ export default function WritingEnvelopeModal({ isOpen, onClose, onPostSuccess }:
                 type="button"
                 disabled={isSubmitting || isDissolving}
                 onClick={handleSubmitPublic}
-                className="py-3 px-4 rounded-xl bg-[#3A5A40] hover:bg-[#2F4A34] text-white text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 shadow-xs"
+                className="py-3 px-4 rounded-xl bg-[#3A5A40] dark:bg-[#527A59] hover:bg-[#2F4A34] dark:hover:bg-[#63926B] text-white text-xs sm:text-sm font-semibold transition-all flex items-center justify-center gap-2 shadow-xs"
               >
                 <Send className="w-4 h-4" />
                 <span>{isSubmitting ? 'Đang gửi...' : 'Dán Lên Bức Tường'}</span>

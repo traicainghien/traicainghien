@@ -98,20 +98,20 @@ export default function GocTamSuPage() {
   return (
     <div className="space-y-12 sm:space-y-16 pb-24">
       {/* 1. HERO HEADER */}
-      <section className="pt-12 sm:pt-16 pb-10 px-4 sm:px-6 text-center border-b border-[#E6E1D8]">
+      <section className="pt-12 sm:pt-16 pb-10 px-4 sm:px-6 text-center border-b border-[#E6E1D8] dark:border-[#2E3531]">
         <div className="max-w-3xl mx-auto space-y-6">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#EBF0EC] text-[#3A5A40]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#EBF0EC] text-[#3A5A40] dark:bg-[#222B25] dark:text-[#78A380]">
             <span>🌿 Trại Cai Nghiện</span> • <span>Bức Tường Lắng Nghe</span>
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[#2D312E] tracking-tight leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-serif text-[#2D312E] dark:text-[#F0ECE6] tracking-tight leading-tight">
             Góc Tâm Sự • Không Phán Xét
           </h1>
 
           {/* Subtitle / Manifesto */}
-          <p className="text-base sm:text-lg text-[#6B726E] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-[#6B726E] dark:text-[#9DA39F] leading-relaxed max-w-2xl mx-auto">
             "Mỗi tờ giấy dán lại là một khoảnh khắc can đảm đối diện với chính mình. Hãy để lại gánh nặng của bạn ở đây, để bước tiếp nhẹ nhõm hơn."
           </p>
 
@@ -120,7 +120,7 @@ export default function GocTamSuPage() {
             <button
               type="button"
               onClick={() => setIsModalOpen(true)}
-              className="w-full sm:w-auto px-8 py-4 rounded-2xl text-base font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5"
+              className="w-full sm:w-auto px-8 py-4 rounded-2xl text-base font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#527A59] dark:hover:bg-[#63926B] shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2.5"
             >
               <Send className="w-4 h-4" />
               <span>✍️ Dán Một Tờ Giấy Lên Tường</span>
@@ -128,15 +128,15 @@ export default function GocTamSuPage() {
           </div>
 
           {/* Trust Indicators */}
-          <div className="pt-3 flex flex-wrap items-center justify-center gap-6 text-xs text-[#6B726E]">
+          <div className="pt-3 flex flex-wrap items-center justify-center gap-6 text-xs text-[#6B726E] dark:text-[#9DA39F]">
             <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#3A5A40]" /> Hoàn toàn ẩn danh 100%
+              <ShieldCheck className="w-3.5 h-3.5 text-[#3A5A40] dark:text-[#78A380]" /> Hoàn toàn ẩn danh 100%
             </span>
             <span className="flex items-center gap-1.5">
-              <Heart className="w-3.5 h-3.5 text-[#C27D53]" /> Tuyệt đối không phán xét
+              <Heart className="w-3.5 h-3.5 text-[#C27D53] dark:text-[#D48C62]" /> Tuyệt đối không phán xét
             </span>
             <span className="flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#3A5A40]" /> Nhận lời vỗ về từ Mây
+              <Sparkles className="w-3.5 h-3.5 text-[#3A5A40] dark:text-[#78A380]" /> Nhận lời vỗ về từ Mây
             </span>
           </div>
         </div>
@@ -146,12 +146,12 @@ export default function GocTamSuPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         {/* Mood Filter Pills */}
         <div className="space-y-3">
-          <div className="flex items-center justify-between pb-2 border-b border-[#E6E1D8] text-xs font-bold uppercase tracking-wider text-[#3A5A40]">
+          <div className="flex items-center justify-between pb-2 border-b border-[#E6E1D8] dark:border-[#2E3531] text-xs font-bold uppercase tracking-wider text-[#3A5A40] dark:text-[#78A380]">
             <div className="flex items-center gap-2">
               <span>📌</span>
               <span>BỨC TƯỜNG GẮN GẮM TÂM TƯ</span>
             </div>
-            <span className="text-[#8C9490] font-normal normal-case">
+            <span className="text-[#8C9490] dark:text-[#9DA39F] font-normal normal-case">
               {confessions.length} mẩu giấy sẻ chia
             </span>
           </div>
@@ -169,34 +169,34 @@ export default function GocTamSuPage() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div
                 key={i}
-                className="h-72 rounded-2xl bg-[#FAF7F2] border border-[#E6E1D8] animate-pulse p-6 space-y-4"
+                className="h-72 rounded-2xl bg-[#FAF7F2] dark:bg-[#1D221F] border border-[#E6E1D8] dark:border-[#2E3531] animate-pulse p-6 space-y-4"
               >
                 <div className="flex justify-between items-center">
-                  <div className="w-24 h-5 rounded-full bg-black/5" />
-                  <div className="w-16 h-3 rounded-full bg-black/5" />
+                  <div className="w-24 h-5 rounded-full bg-black/5 dark:bg-white/5" />
+                  <div className="w-16 h-3 rounded-full bg-black/5 dark:bg-white/5" />
                 </div>
                 <div className="space-y-2 pt-2">
-                  <div className="w-full h-3 rounded-full bg-black/5" />
-                  <div className="w-5/6 h-3 rounded-full bg-black/5" />
-                  <div className="w-4/6 h-3 rounded-full bg-black/5" />
+                  <div className="w-full h-3 rounded-full bg-black/5 dark:bg-white/5" />
+                  <div className="w-5/6 h-3 rounded-full bg-black/5 dark:bg-white/5" />
+                  <div className="w-4/6 h-3 rounded-full bg-black/5 dark:bg-white/5" />
                 </div>
               </div>
             ))}
           </div>
         ) : confessions.length === 0 ? (
           /* Empty State */
-          <div className="text-center py-16 px-4 bg-white rounded-3xl border border-[#E6E1D8] space-y-4">
+          <div className="text-center py-16 px-4 bg-white dark:bg-[#1D221F] rounded-3xl border border-[#E6E1D8] dark:border-[#2E3531] space-y-4">
             <div className="text-4xl">🍃</div>
-            <h3 className="text-lg font-bold text-[#2D312E] font-serif">
+            <h3 className="text-lg font-bold text-[#2D312E] dark:text-[#F0ECE6] font-serif">
               Chưa có mẩu giấy nào trong chủ đề này
             </h3>
-            <p className="text-sm text-[#6B726E] max-w-md mx-auto">
+            <p className="text-sm text-[#6B726E] dark:text-[#9DA39F] max-w-md mx-auto">
               Hãy là người đầu tiên dán lên bức tường một dòng tâm sự can đảm nhé.
             </p>
             <button
               type="button"
               onClick={() => setIsModalOpen(true)}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#3A5A40] text-white text-xs font-semibold hover:bg-[#2F4A34]"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#3A5A40] dark:bg-[#527A59] text-white text-xs font-semibold hover:bg-[#2F4A34] dark:hover:bg-[#63926B]"
             >
               <span>Viết dòng đầu tiên</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -219,13 +219,13 @@ export default function GocTamSuPage() {
 
       {/* 3. BOTTOM CTA BANNER (COMMUNITY & LEAD FUNNEL) */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="p-8 sm:p-12 rounded-3xl bg-[#FAF7F2] border border-[#E6E1D8] shadow-xs text-center space-y-6 relative overflow-hidden">
+        <div className="p-8 sm:p-12 rounded-3xl bg-[#FAF7F2] dark:bg-[#1D221F] border border-[#E6E1D8] dark:border-[#2E3531] shadow-xs text-center space-y-6 relative overflow-hidden">
           <div className="space-y-2 max-w-xl mx-auto">
             <span className="text-2xl">🌱</span>
-            <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#2D312E]">
+            <h3 className="text-xl sm:text-2xl font-serif font-bold text-[#2D312E] dark:text-[#F0ECE6]">
               Bạn Không Hề Đơn Độc Trong Cuộc Chiến Với Xao Nhãng Số
             </h3>
-            <p className="text-xs sm:text-sm text-[#6B726E] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#6B726E] dark:text-[#9DA39F] leading-relaxed">
               Trại Cai Nghiện xuất bản bản tin tâm lý học mỗi sáng lúc 8h30 và bức thư nhắc nhở đi ngủ dịu dàng lúc 22h00 trên kênh Telegram. Hãy tham gia cùng chúng mình nhé.
             </p>
           </div>
@@ -235,7 +235,7 @@ export default function GocTamSuPage() {
               href="https://t.me/traicainghiendaily"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] transition-all flex items-center justify-center gap-2 shadow-xs"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#527A59] dark:hover:bg-[#63926B] transition-all flex items-center justify-center gap-2 shadow-xs"
             >
               <span>Tham Gia Kênh Telegram Daily</span>
               <ArrowRight className="w-4 h-4" />
@@ -243,7 +243,7 @@ export default function GocTamSuPage() {
 
             <Link
               href="/trac-nghiem"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold border border-[#E6E1D8] text-[#2D312E] bg-white hover:bg-black/5 transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs sm:text-sm font-semibold border border-[#E6E1D8] dark:border-[#2E3531] text-[#2D312E] dark:text-[#F0ECE6] bg-white dark:bg-[#252C28] hover:bg-black/5 dark:hover:bg-white/5 transition-all flex items-center justify-center gap-2"
             >
               <span>Làm Bài Trắc Nghiệm Dopamine (3 phút)</span>
             </Link>
@@ -256,7 +256,7 @@ export default function GocTamSuPage() {
         <button
           type="button"
           onClick={() => setIsModalOpen(true)}
-          className="p-4 rounded-full bg-[#3A5A40] text-white shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center"
+          className="p-4 rounded-full bg-[#3A5A40] dark:bg-[#527A59] text-white shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center"
           aria-label="Viết tâm sự"
         >
           <Send className="w-5 h-5" />
