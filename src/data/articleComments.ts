@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "giai-ma-con-nghien-tri-hoan-tu-noi-so-that-bai-den-20261116": [
+      {
+          "id": "giaim-1",
+          "name": "Nguyễn Diệu Linh (Sinh viên năm hai)",
+          "content": "Đọc bài 'Giải mã cơn nghiện trì hoãn: Từ nỗi sợ thất bại đến kỷ luật' xong, mình nghĩ ngay tới đứa em đang học năm nhất. Mình từng nghĩ thói quen phải đẹp, phải có app theo dõi, phải có bảng streak. Bài này làm mình nhẹ người: chỉ cần nhỏ tới mức không thể từ chối. Mình đang bắt đầu với đúng hai phút mỗi ngày.",
+          "date": "2 ngày trước",
+          "likes": 57,
+          "isLongStory": true
+      },
+      {
+          "id": "giaim-2",
+          "name": "Bùi Thanh Hà (Mẹ hai con • 33 tuổi)",
+          "content": "Mình đọc chậm nhất ở phần 'Từ nỗi sợ thất bại đến kỷ luật'. Mình vừa áp dụng thử một việc nhỏ và thấy khác thật.",
+          "date": "1 ngày trước",
+          "likes": 29
+      },
+      {
+          "id": "giaim-3",
+          "name": "Đỗ Văn Sơn (Kỹ sư cơ khí • 27 tuổi)",
+          "content": "Thứ mình cần nhất hôm nay là đoạn 'Từ nỗi sợ thất bại đến kỷ luật'. Mình làm luôn, không chờ có động lực: sạc điện thoại ở nhà bếp thay vì đầu giường, ba đêm nay ngủ sớm hơn một tiếng.",
+          "date": "2 ngày trước",
+          "likes": 58
+      }
+  ],
   "hoc-cach-yeu-ban-than-de-be-gay-xieng-xich-xao-nha-20261115": [
     {
       "id": "hocca-1",
