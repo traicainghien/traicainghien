@@ -47,6 +47,13 @@
      - TUYỆT ĐỐI KHÔNG dùng ảnh tranh Zen Watercolor ngẫu nhiên cho Flow 01.
      - Duy trì bộ nhớ `sentLinks` để lọc bài viết mới tiếp theo, bảo đảm không bao giờ trùng bài và không bao giờ trùng ảnh trên kênh Telegram.
 
+5. **NGUYÊN TẮC THÉP VỀ HÌNH ẢNH: TUYỆT ĐỐI KHÔNG TRÙNG LẶP DƯỚI MỌI HÌNH THỨC (ZERO DUPLICATE IMAGES - LỆNH CỦA BỐ):**
+   * **Quy chuẩn độc bản:** Mỗi bài viết trên Website, mỗi bài đăng trên mạng xã hội (Facebook, Instagram, Threads, Telegram) BẮT BUỘC phải sở hữu một hình ảnh đại diện độc bản duy nhất. Tuyệt đối không được tái sử dụng bất kỳ ảnh nào đã từng xuất bản.
+   * **Cơ chế kiểm soát 3 lớp (3-Tier Anti-Duplicate Gate):**
+     1. *Lớp 1 (URL & File Name Registry):* Đối chiếu link ảnh và tên file với toàn bộ danh sách `thumbnail` trong `src/data/articles.ts` và cơ sở dữ liệu `scripts/used_curated_images.json`.
+     2. *Lớp 2 (MD5 Hash Check):* Tính toán mã băm nội dung ảnh thực tế (MD5 checksum) trước khi tải và lưu file. Nếu phát hiện trùng mã hash với bất kỳ ảnh nào trong kho `public/images/articles/`, hệ thống lập tức từ chối và tự động chuyển sang ảnh tiếp theo.
+     3. *Lớp 3 (Lưu vết vĩnh viễn):* Ngay khi ảnh được gán cho bài viết hoặc lên lịch đăng, URL, mã hash và tên file được ghi vĩnh viễn vào `scripts/used_curated_images.json` để ngăn chặn trùng lặp tuyệt đối trong tương lai.
+
 ---
 
 ## 1.2. 📡 QUY CHUẨN BÁO CÁO TỰ ĐỘNG ĐỊNH KỲ CHO BỐ (HĐQT TOPIC 19)
