@@ -6,9 +6,10 @@ import json
 import hashlib
 import subprocess
 
-ARTICLES_FILE = "src/data/articles.ts"
-REGISTRY_FILE = "src/data/article_registry.json"
-COMMENTS_FILE = "src/data/articleComments.ts"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ARTICLES_FILE = os.path.join(BASE_DIR, "src", "data", "articles.ts")
+REGISTRY_FILE = os.path.join(BASE_DIR, "src", "data", "article_registry.json")
+COMMENTS_FILE = os.path.join(BASE_DIR, "src", "data", "articleComments.ts")
 
 # ==========================================================================
 # KHO BINH LUAN SEEDING DOC BAN
@@ -361,7 +362,7 @@ def insert_article_to_website(article_obj):
     # Bước 2: Chạy kiểm toán tự động (Audit Gate) để cập nhật Registry và chống đè
     try:
         print("🛡️ [MÂY & AGENT 5] Khởi chạy kiểm toán bài viết tự động...")
-        audit_res = subprocess.run(["node", "scripts/audit_all_articles.js"], capture_output=True, text=True)
+        audit_res = subprocess.run(["node", os.path.join(BASE_DIR, "scripts", "audit_all_articles.js")], cwd=BASE_DIR, capture_output=True, text=True)
         if audit_res.returncode != 0:
             print("❌ [LỖI KIỂM TOÁN] Bài viết không đạt chuẩn! Chi tiết:")
             print(audit_res.stderr or audit_res.stdout)
@@ -390,35 +391,24 @@ def git_commit_and_push(commit_message):
             files_to_add.append(REGISTRY_FILE)
         if os.path.exists(COMMENTS_FILE):
             files_to_add.append(COMMENTS_FILE)
-        if os.path.exists("public/images/articles"):
-            files_to_add.append("public/images/articles")
+        art_dir = os.path.join(BASE_DIR, "public", "images", "articles")
+        if os.path.exists(art_dir):
+            files_to_add.append(art_dir)
 
-        subprocess.run(["git", "add"] + files_to_add, check=True)
-        subprocess.run(["git", "commit", "-m", commit_message], check=True)
+        subprocess.run(["git", "add"] + files_to_add, cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "commit", "-m", commit_message], cwd=BASE_DIR, check=True)
         print("Git commit thành công. Đang đẩy lên remote GitHub...")
         
         # Pull --rebase để tích hợp các commit mới nhất trước khi push
-        subprocess.run(["git", "pull", "--rebase"], capture_output=True)
+        subprocess.run(["git", "pull", "--rebase"], cwd=BASE_DIR, capture_output=True)
 
         # Push lên remote mặc định
-        res = subprocess.run(["git", "push"], capture_output=True, text=True)
+        res = subprocess.run(["git", "push"], cwd=BASE_DIR, capture_output=True, text=True)
         print("Git push result:", res.stdout.strip() if res.stdout else "OK")
 
         # Nếu có remote fork, push thêm fork để Vercel nhận diện
         try:
-            subprocess.run(["git", "push", "fork", "main"], capture_output=True, text=True)
-        except:
-            pass
-
-        return True
-    except Exception as e:
-        print("Git commit/push note:", e)
-        return False
-        print("Git push result:", res.stdout.strip() if res.stdout else "OK")
-
-        # Nếu có remote fork, push thêm fork để Vercel nhận diện
-        try:
-            subprocess.run(["git", "push", "fork", "main"], capture_output=True, text=True)
+            subprocess.run(["git", "push", "fork", "main"], cwd=BASE_DIR, capture_output=True, text=True)
         except:
             pass
 

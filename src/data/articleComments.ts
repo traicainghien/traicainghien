@@ -9,6 +9,54 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "100-ngay-cai-dien-thoai-nao-bo-tai-sinh-ky-dieu-the-nao": [
+    {
+      "id": "cdt-1",
+      "name": "Hoàng Minh (Kỹ sư phần mềm • 27 tuổi)",
+      "content": "Trời ơi, đọc đến đoạn 'ngón tay ma quẹt vô thức' và 'đứng ngơ ngác trước tủ lạnh' mà mình thấy chính xác 100% bản thân mình trong đó! Đã có những giai đoạn screen time của mình lên tới 9 tiếng rưỡi mỗi ngày. Cứ mỗi sáng thức dậy là đầu óc nặng trĩu sương mù não, đọc tài liệu chuyên ngành được 5 phút là mắt díu lại. Mình đã quyết định học theo bài viết, mua một chiếc hộp sắt có khóa số và nhốt điện thoại vào lúc 21h30. Đúng 72 giờ đầu tiên vật vã kinh khủng, bứt dứt như kiến bò trong xương. Nhưng sang đến tuần thứ 2, khi vượt qua Vực thẳm chán nản, mình lần đầu tiên cảm nhận được vị ngọt của Dopamine nỗ lực khi ngồi code liền 3 tiếng không cần nhìn màn hình điện thoại. Bài viết giải thích cơ chế sinh học thần kinh quá sáng rõ và thực tế!",
+      "date": "Vừa xong",
+      "likes": 95,
+      "isLongStory": true
+    },
+    {
+      "id": "cdt-2",
+      "name": "Lan Chi (Sinh viên năm cuối Ngoại Thương)",
+      "content": "Phân tích về thụ thể Dopamine D2 và hormone Melatonin giải thích lý do vì sao trước đây mình luôn thức đến 2h sáng mà không buồn ngủ. Bỏ điện thoại ra khỏi phòng ngủ là quyết định thay đổi cuộc đời mình: Giấc ngủ sâu trở lại, sáng thức dậy tỉnh táo không cần báo thức. Cảm ơn Mây và Trại Cai Nghiện!",
+      "date": "3 giờ trước",
+      "likes": 52
+    },
+    {
+      "id": "cdt-3",
+      "name": "Đức Huy",
+      "content": "Nguyên tắc bàn học chỉ có 3 thứ: sách vở, bút và ly nước lọc đơn giản mà uy lực không ngờ. Loại bỏ hoàn toàn ma sát xao nhãng giúp mình bước vào Flow State nhanh hơn rất nhiều. Khuyên thật lòng các bạn đang mất tập trung hãy thử thử thách này ít nhất 7 ngày!",
+      "date": "Hôm qua",
+      "likes": 64
+    }
+  ],
+  "ky-luat-khong-gong-bi-mat-song-nao-alpha-va-tan-so-20261118": [
+      {
+          "id": "kylua-1",
+          "name": "Bùi Thanh Hà (Mẹ hai con • 33 tuổi)",
+          "content": "Đọc bài 'Kỷ luật không gồng: Bí mật sóng não Alpha và tần số 285Hz' xong, mình thấy trúng tim đen quá. Mình là mẹ hai con, thời gian rời rạc lắm. Thay vì cố một tiếng liền mạch, mình chia thành ba khúc mười phút. Ba tuần rồi vẫn giữ được, chuyện chưa từng xảy ra với mình.",
+          "date": "2 ngày trước",
+          "likes": 72,
+          "isLongStory": true
+      },
+      {
+          "id": "kylua-2",
+          "name": "Lê Quốc Bảo (Sinh viên năm cuối)",
+          "content": "Cái này mình sẽ kể lại với học trò, nhất là phần 'Bí mật sóng não Alpha và tần số 285Hz'. Mình đọc xong mới hiểu vì sao mấy lần trước mình bỏ cuộc.",
+          "date": "2 giờ trước",
+          "likes": 59
+      },
+      {
+          "id": "kylua-3",
+          "name": "Ngô Tuấn Kiệt (Nhân viên thiết kế đồ họa)",
+          "content": "Mình gửi cho đứa bạn đúng đoạn 'Bí mật sóng não Alpha và tần số 285Hz'. Mình làm luôn, không chờ có động lực: sạc điện thoại ở nhà bếp thay vì đầu giường, ba đêm nay ngủ sớm hơn một tiếng.",
+          "date": "2 ngày trước",
+          "likes": 34
+      }
+  ],
   "giai-ma-con-nghien-tri-hoan-tu-noi-so-that-bai-den-20261116": [
       {
           "id": "giaim-1",

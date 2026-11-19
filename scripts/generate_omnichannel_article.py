@@ -46,7 +46,8 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
         3. Sai lech pixel trung binh < 15.0 (ban sao nen lai / chinh sua nhe)
     - KHONG con anh du phong dung chung: het anh dat chuan thi nem NoUniqueThumbnailError.
     """
-    articles_ts_path = "src/data/articles.ts"
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    articles_ts_path = os.path.join(BASE_DIR, "src", "data", "articles.ts")
     existing_content = ""
     used_hashes = set()
     existing_arrays = []
@@ -66,7 +67,7 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
 
         matches = re.findall(r'\{\s*["\']slug["\']:\s*["\']([^"\']+)["\'][\s\S]*?["\']thumbnail["\']:\s*["\']([^"\']+)["\']', existing_content)
         for slug, thumb in matches:
-            p = os.path.join("public", thumb.lstrip("/"))
+            p = os.path.join(BASE_DIR, "public", thumb.lstrip("/"))
             if os.path.exists(p):
                 try:
                     with open(p, "rb") as bf:
@@ -78,7 +79,7 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
                 except Exception:
                     pass
 
-    images_dir = "public/images/articles"
+    images_dir = os.path.join(BASE_DIR, "public", "images", "articles")
     if not os.path.exists(images_dir):
         raise NoUniqueThumbnailError(f"Khong thay thu muc {images_dir}")
 
@@ -124,6 +125,26 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
             return f"/images/articles/{fname}"
         except Exception:
             pass
+
+    # FALLBACK: Nếu toàn bộ ảnh có sẵn đã được dùng, tự động kích hoạt Agent 8 vẽ tác phẩm Zen mới
+    print("🎨 [AGENT 8 THUMBNAIL] Kho ảnh có sẵn đã dùng hết, tự động kích hoạt Agent 8 vẽ tác phẩm Zen độc bản mới...")
+    try:
+        import subprocess
+        auto_slug = f"zen-{topic}-{int(datetime.now().timestamp())}"
+        scene = f"A peaceful Vietnamese contemplation scene about {topic}, solitary figure reading by misty mountains, Zen watercolor, sumi-e ink, rough washi paper texture, muted earthy tones"
+        proc = subprocess.run([
+            sys.executable,
+            "scripts/generate_zen_thumbnails.py",
+            "--slug", auto_slug,
+            "--scene", scene
+        ], capture_output=True, text=True)
+        m = re.search(r'DAT CHUAN: (/images/articles/[^\s]+\.webp)', proc.stdout)
+        if m:
+            new_thumb = m.group(1)
+            print(f"✅ [AGENT 8 THUMBNAIL] Đã vẽ thành công tranh Zen độc bản mới: {new_thumb}")
+            return new_thumb
+    except Exception as e:
+        print(f"⚠️ [AGENT 8 AUTO-DRAW NOTE] {e}")
 
     detail = ", ".join(f"{k}={v}" for k, v in rejected.items() if v)
     msg = (
