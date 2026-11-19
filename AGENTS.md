@@ -104,10 +104,19 @@
   * **CẤM TUYỆT ĐỐI:** Không dùng vector phẳng 2D, không dùng SVG code mô phỏng, không dùng 3D CGI bóng bẩy rẻ tiền.
 * **Tài liệu lưu trữ:** Bảng thiết kế gốc lưu tại `public/images/trai_cai_nghien_totem_brand_board.jpg` (Vị trí Concept 05).
 
-### 2.1. Định vị Dự án & Hai Trụ Cột Trọng Tâm Tuyệt Đối
-**Trại Cai Nghiện** là nền tảng số nhân văn và khoa học, ra đời nhằm đồng hành cùng cộng đồng nhận diện, tháo gỡ và giải phóng bản thân khỏi các **bẫy kích thích dopamine rẻ tiền thời hiện đại**, tập trung tuyệt đối vào **HAI CHỦ ĐỀ CỐT LÕI (TUYỆT ĐỐI KHÔNG ĐỊNH VỊ VÀO CÁC CHỦ ĐỀ NHẠY CẢM NHƯ PORN/CHẤT KÍCH THÍCH NẶNG)**:
-1. **Cách tập trung làm việc & giải phóng khỏi xao nhãng số:** Trị hội chứng sương mù não (Brain Fog), nhũn não số (Brain Rot), nghiện lướt short video (TikTok, Reels, Shorts), mất tập trung, nhảy tab liên tục, khôi phục năng lực làm việc sâu (Deep Work).
-2. **Xây dựng thói quen tốt & kỷ luật không cần gồng:** Thiết kế môi trường sống theo Atomic Habits, Kaizen 1% mỗi ngày, vượt qua trì hoãn, quản trị năng lượng sinh học và làm chủ 60 phút buổi sáng theo tinh thần Ikigai.
+### 2.1. Định vị Dự án & Trọng Tâm Chiến Lược Số 1 Tuyệt Đối: SỰ TẬP TRUNG (LỆNH CỦA BỐ)
+
+> [!IMPORTANT]
+> **CHỈ THỊ CHIẾN LƯỢC CỦA BỐ VỀ ĐỊNH HƯỚNG NỘI DUNG (CẬP NHẬT 19/11/2026):**  
+> Kể từ thời điểm này, toàn bộ hệ sinh thái Trại Cai Nghiện (Website, Video ngắn, Mạng xã hội, Audio Podcast, Workflow n8n và Hệ thống Agent tự động) **TẬP TRUNG TUYỆT ĐỐI VÀO CHỦ ĐỀ: SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)**.  
+> Mọi bài viết, kịch bản và sản phẩm nội dung con xây dựng đều phải lấy **Sự Tập Trung & Giải Phóng Khỏi Xao Nhãng Số** làm trục xoay trung tâm. (Tuyệt đối không định vị vào các chủ đề nhạy cảm như porn/chất kích thích nặng).
+
+#### 5 Phân Nhánh Trọng Tâm Của Chủ Đề Sự Tập Trung:
+1. **Giải phóng khỏi xao nhãng số & Cai nghiện kích thích ngắn:** Trị hội chứng sương mù não (Brain Fog), nhũn não số (Brain Rot), nghiện lướt short video (TikTok, Reels, Shorts), nhảy tab liên tục, bẫy dopamine rẻ tiền từ mạng xã hội.
+2. **Kỹ thuật làm việc sâu & Đơn nhiệm (Deep Work & Mono-tasking):** Khôi phục năng lực làm việc sâu không gián đoạn, quy tắc 90 phút Ultradian Rhythm, trạng thái dòng chảy (Flow State), thiết kế không gian làm việc tĩnh lặng (Sanctuary Environment).
+3. **Khoa học thần kinh về sự chú ý (The Neuroscience of Attention):** Cơ chế phục hồi thùy trán (Prefrontal Cortex), tái lập thụ thể Dopamine D2 (Dopamine Reset), cách não bộ phản ứng trước sự nhàm chán và khó chịu lành mạnh.
+4. **Kỷ luật không cần gồng & Thiết kế thói quen tập trung:** Ứng dụng Kaizen 1%, làm chủ 60 phút buổi sáng không điện thoại, quy trình xả rác tâm trí (Brain Dump), phương pháp ghi chép và đóng khung thời gian (Time-blocking).
+5. **Năng suất chánh niệm & Tâm thế bình an (Mindful Productivity):** Không cổ xúy văn hóa cày cuốc độc hại (Toxic Hustle), học cách làm bạn với sự bồn chồn (Restlessness), nuôi dưỡng sự chú ý bền bỉ và hiện diện trọn vẹn trong từng khoảnh khắc đời sống.
 
 ### 2.2. Triết lý Can thiệp Cốt lõi
 1. **Không phán xét (Non-judgmental Space):** Nghiện không phải là suy đồi đạo đức hay ý chí yếu kém, mà bản chất là **cơ chế đối phó sai lầm (maladaptive coping mechanism)** trước nỗi đau, stress, sự cô đơn hoặc tổn thương tâm lý chưa được chữa lành.

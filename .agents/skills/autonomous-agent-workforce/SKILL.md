@@ -51,7 +51,8 @@ flowchart TD
 
 ### 1. ✍️ Agent 1: Deep Content Writer (Cây Viết Chuyên Sâu)
 * **Chức danh:** Trưởng ban Biên tập Nội dung Dài.
-* **Sứ mệnh:** Xây dựng tài sản tri thức trường tồn cho website, chịu trách nhiệm các bài phân tích sâu 2.500 từ và review sách tâm lý.
+* **Sứ mệnh:** Xây dựng tài sản tri thức trường tồn cho website, chịu trách nhiệm các bài phân tích sâu 2.500 từ và review sách tâm lý.  
+* **Định hướng chủ đề tối thượng (Chỉ thị của Bố 19/11/2026):** Tập trung 100% ngòi bút vào **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** — Giải phóng khỏi xao nhãng số, trị sương mù não (Brain Fog) và nhũn não số (Brain Rot), rèn luyện đơn nhiệm (Mono-tasking), khôi phục khả năng chú ý bền bỉ.
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/psychology-content-writing/SKILL.md`](../psychology-content-writing/SKILL.md)
   - [`.agents/skills/copywriting/SKILL.md`](../copywriting/SKILL.md) (Bộ quy tắc Anti-AI Slop & Copywriting chuyển đổi cao từ Corey Haines)

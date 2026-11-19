@@ -14,6 +14,10 @@ description: Hướng dẫn tư duy, lập luận và phong cách viết nội d
 
 ## 🧬 CÔNG THỨC 6 MẢNH GHÉP VÀNG: TÍNH CÁCH, PHONG CÁCH & SẢN PHẨM
 
+> [!IMPORTANT]
+> **ĐỊNH HƯỚNG NỘI DUNG TỐI THƯỢNG CỦA BỐ (FOCUS & ATTENTION FIRST):**  
+> Kể từ ngày 19/11/2026, 100% bài viết và kịch bản nội dung được sản xuất phải lấy **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** làm trọng tâm cốt lõi. Mọi câu chuyện, phân tích tâm lý, trích dẫn khoa học thần kinh đều phục vụ mục tiêu duy nhất: **Giúp độc giả thoát khỏi xao nhãng số, làm chủ tâm trí và khôi phục năng lực tập trung sâu sắc.**
+
 Toàn bộ nội dung và sản phẩm của Trại Cai Nghiện được đúc kết từ công thức lai tạo 6 trong 1:
 ```text
 TÍNH CÁCH, PHONG CÁCH & SẢN PHẨM TRẠI CAI NGHIỆN = 
