@@ -107,9 +107,16 @@
 ### 2.1. Định vị Dự án & Trọng Tâm Chiến Lược Số 1 Tuyệt Đối: SỰ TẬP TRUNG (LỆNH CỦA BỐ)
 
 > [!IMPORTANT]
-> **CHỈ THỊ CHIẾN LƯỢC CỦA BỐ VỀ ĐỊNH HƯỚNG NỘI DUNG (CẬP NHẬT 19/11/2026):**  
-> Kể từ thời điểm này, toàn bộ hệ sinh thái Trại Cai Nghiện (Website, Video ngắn, Mạng xã hội, Audio Podcast, Workflow n8n và Hệ thống Agent tự động) **TẬP TRUNG TUYỆT ĐỐI VÀO CHỦ ĐỀ: SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)**.  
-> Mọi bài viết, kịch bản và sản phẩm nội dung con xây dựng đều phải lấy **Sự Tập Trung & Giải Phóng Khỏi Xao Nhãng Số** làm trục xoay trung tâm. (Tuyệt đối không định vị vào các chủ đề nhạy cảm như porn/chất kích thích nặng).
+> **CHỈ THỊ CHIẾN LƯỢC CỦA BỐ VỀ ĐỊNH HƯỚNG NỘI DUNG & TIẾP CẬN THỊ TRƯỜNG (CẬP NHẬT 19/11/2026):**  
+> 🎯 **CHIẾN LƯỢC MŨI NHỌN GIAI ĐOẠN ĐẦU (THE FOCUS SPEARHEAD STRATEGY):**  
+> Trong giai đoạn đầu tiếp cận với người dùng và thị trường, thương hiệu **Trại Cai Nghiện sẽ được định vị và quảng bá toàn diện dưới từ khóa cốt lõi: SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)**.  
+> Toàn bộ các kênh truyền thông đa nền tảng (Website, Fanpage Facebook, Group, Kênh Telegram Daily, YouTube, Meta Threads, X, TikTok, Instagram Reels, Audio Podcast) và toàn bộ các sản phẩm số (Bài trắc nghiệm nhận diện, Lead Magnet, Micro-products 49k - 149k, Core Offers, Thử thách 7/14/21 ngày, Chuỗi email nuôi dưỡng) **ĐỀU BẮT BUỘC PHẢI LẤY "SỰ TẬP TRUNG" LÀM TRỤC LÕI TRUNG TÂM ĐỂ THIẾT KẾ VÀ PHÁT TRIỂN**. (Tuyệt đối không định vị vào các chủ đề nhạy cảm như porn hay chất kích thích nặng).
+
+#### 💡 Tại Sao "SỰ TẬP TRUNG" Là Ngọn Cờ Mũi Nhọn Của Giai Đoạn Này?
+1. **Chạm trúng nỗi đau nhức nhối & phổ quát nhất:** Hàng triệu người trẻ 18 - 35 tuổi (học sinh, sinh viên, người làm việc trí óc, dân văn phòng, freelancer) đang phải vật lộn mỗi ngày với hội chứng "sương mù não" (Brain Fog), "nhũn não số" (Brain Rot), nhảy tab liên tục, mở máy định làm việc nhưng lướt video ngắn 2 tiếng trong bất lực.
+2. **Triệt tiêu tâm lý phòng vệ (Low Friction & Anti-Stigma):** Người dùng thường có tâm lý né tránh hoặc xấu hổ khi bị gọi là "kẻ nghiện", nhưng họ lại cực kỳ tự hào và háo hức chia sẻ các bài viết về *"kỹ thuật làm việc sâu không gián đoạn"*, *"cách não bộ khôi phục sự chú ý"* hay *"nghệ thuật kỷ luật không cần gồng"*.
+3. **Thuận dòng thuật toán phân phối đa nền tảng:** "Sự Tập Trung" là từ khóa trong sạch tuyệt đối, mang tính xây dựng cao (Educational & Inspirational), giúp các kênh Facebook, YouTube, TikTok và Website đạt chỉ số phân phối Organic tối đa mà không bao giờ vướng chính sách kiểm duyệt nhạy cảm.
+4. **Giải quyết đúng gốc rễ cơn nghiện thời số:** Cơn nghiện của thời đại công nghệ số bản chất chính là sự sụp đổ của khả năng duy trì chú ý bền bỉ. Khi người dùng giành lại được Sự Tập Trung, họ tự khắc giành lại được quyền làm chủ cuộc đời mình.
 
 #### 5 Phân Nhánh Trọng Tâm Của Chủ Đề Sự Tập Trung:
 1. **Giải phóng khỏi xao nhãng số & Cai nghiện kích thích ngắn:** Trị hội chứng sương mù não (Brain Fog), nhũn não số (Brain Rot), nghiện lướt short video (TikTok, Reels, Shorts), nhảy tab liên tục, bẫy dopamine rẻ tiền từ mạng xã hội.
@@ -710,21 +717,27 @@ flowchart TD
     end
 ```
 
-### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 12 Agent
+### 10.1. Danh Sách & Nhiệm Vụ Chi Tiết Của 12 Agent (Đồng Bộ 100% Theo Trục Lõi "SỰ TẬP TRUNG")
+
+> [!IMPORTANT]
+> **QUY CHUẨN ĐỒNG BỘ BẮT BUỘC CHO TOÀN BỘ 12 AGENT (LỆNH CỦA BỐ 19/11/2026):**  
+> Trong giai đoạn đầu tiếp cận người dùng, mọi thành phẩm của 12 Agent (từ bài viết web, kịch bản video, sản phẩm số, thumbnail, phễu email cho đến tự động hóa đa kênh) **BẮT BUỘC PHẢI LẤY TỪ KHÓA "SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)" LÀM TRỤC XOAY TRUNG TÂM**. Nghiêm cấm sản xuất nội dung lan man hoặc sa đà vào các chủ đề nhạy cảm/tiêu cực.
+
 1. **Agent 1: Deep Content Writer (Cây Viết Chuyên Sâu)**
    - *Trách nhiệm:* Viết bài chuyên sâu chuẩn mực **2.500 từ**, review sách tâm lý học kinh điển.
+   - *Trọng tâm Sự Tập Trung:* 100% ngòi bút đào sâu cơ chế khoa học thần kinh về sự chú ý (Attention Span), phục hồi thùy trán, kỹ thuật Deep Work, đơn nhiệm (Mono-tasking), và các giải pháp Kaizen bẻ gãy bẫy dopamine ngắn hạn từ mạng xã hội.
    - *Chuẩn mực:* Văn phong *"Nói chuyện cà phê nhưng trí tuệ viện nghiên cứu"* (Street-Smart Academic), không dùng từ trừu tượng, tạo lực hút (Sticky Pacing & Open Loops) giữ chân người đọc đến cùng. **Tuyệt đối cấm dùng text-art/ASCII art để vẽ biểu đồ hay mô phỏng hình ảnh.**
 2. **Agent 2: Short-Form Viral Creator (Biên Kịch Video Ngắn Faceless)**
    - *Trách nhiệm:* Bẻ nhỏ bài viết 2.500 từ thành kịch bản video ngắn 60 - 90 giây cho TikTok, Shorts, Reels.
-   - *Chuẩn mực:* Giật Hook 3 giây đầu đánh trúng nỗi đau, tối ưu ngắt nghỉ cho giọng đọc AI (TTS), kèm prompt mô tả cảnh B-roll Zen Minimalist không lộ mặt.
+   - *Trọng tâm Sự Tập Trung:* Giật Hook 3 giây đầu đánh trúng nỗi đau mất tập trung thời số (*"Mở máy định học nhưng lướt video ngắn 2 tiếng trong vô thức", "Tại sao bạn luôn cảm thấy sương mù não dù không làm việc nặng?"*), tối ưu ngắt nghỉ cho giọng đọc AI (TTS), kèm prompt mô tả cảnh B-roll Zen Minimalist không lộ mặt.
 3. **Agent 3: Product & Funnel Architect (Kiến Trúc Sư Sản Phẩm & Phễu)**
-   - *Trách nhiệm:* Thiết kế bài trắc nghiệm nhận diện 25 câu hỏi, đóng gói sản phẩm vi mô (49k - 149k) và Core Offer (390k - 490k), soạn chuỗi Email Sequence 5 ngày nuôi dưỡng lead. Vận hành kỹ năng `data-funnel-architecture` chuẩn quốc tế.
+   - *Trách nhiệm:* Thiết kế bài trắc nghiệm nhận diện 25 câu hỏi (*"Chỉ số ô nhiễm xao nhãng & Độ kiệt quệ chú ý của não bộ"*), đóng gói sản phẩm vi mô (49k - 149k) như *Sanctuary Focus Planner*, *Bản thiết kế 90 phút Deep Work không gián đoạn*, và Core Offer (390k - 490k) *Thử thách 21 ngày tái lập Dopamine & Khôi phục sự tập trung*. Soạn chuỗi Email Sequence 5 ngày nuôi dưỡng lead. Vận hành kỹ năng `data-funnel-architecture` chuẩn quốc tế.
 4. **Agent 4: Tech & Automation Engineer (Kỹ Sư Hệ Thống)**
-   - *Trách nhiệm:* Code Next.js, quản trị SEO Technical, kích hoạt Google Indexing API (`npm run seo:index`) ép Googlebot cào bài mới trong 24h, theo dõi Google Search Console & Google Analytics (`npm run seo:report`), tích hợp cổng thanh toán quét mã QR tự động giao file trong 30 giây, bảo trì và deploy production.
+   - *Trách nhiệm:* Code Next.js, quản trị SEO Technical tập trung vào cụm từ khóa vàng (*"cách tập trung làm việc", "deep work", "trị sương mù não", "cai nghiện xao nhãng số", "tái lập dopamine"*), kích hoạt Google Indexing API (`npm run seo:index`) ép Googlebot cào bài mới trong 24h, theo dõi Google Search Console & Google Analytics (`npm run seo:report`), tích hợp cổng thanh toán quét mã QR tự động giao file trong 30 giây, bảo trì và deploy production.
 5. **Agent 5: Growth & Content Auditor (Kiểm Toán Chất Lượng & Kiểm Duyệt)**
-   - *Trách nhiệm:* Người gác cổng chất lượng: **Quét và từ chối duyệt ngay lập tức (bắt sửa ngay) nếu phát hiện text art / ASCII art vẽ hình hoặc lỗi markdown thô**; đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát tiêu chuẩn SEO On-page (từ khóa trong title, slug, H2, meta description, thẻ alt ảnh 16:9), soát liên kết nội bộ giảm Bounce Rate trên Google Analytics, và nút CTA trắc nghiệm.
+   - *Trách nhiệm:* Người gác cổng chất lượng: **Quét và từ chối duyệt ngay lập tức (bắt sửa ngay) nếu phát hiện bài viết/kịch bản đi chệch khỏi trục "SỰ TẬP TRUNG", hoặc xuất hiện text art / ASCII art vẽ hình hoặc lỗi markdown thô**; đếm số từ (đủ 2.500 từ), kiểm tra lỗi giáo điều/từ trừu tượng, soát tiêu chuẩn SEO On-page (từ khóa tập trung trong title, slug, H2, meta description, thẻ alt ảnh 16:9), soát liên kết nội bộ giảm Bounce Rate trên Google Analytics, và nút CTA trắc nghiệm.
 6. **Agent 6: Monetization Scout & Trend Hunter (Săn Trend & Mô Hình Đóng Gói / Affiliate)**
-   - *Trách nhiệm:* Liên tục săn tìm các mô hình sản phẩm số đóng gói viral trên Gumroad, Etsy, Substack, TikTok Shop và lọc các deal Affiliate béo bở (sách tâm lý, app hỗ trợ cai nghiện như Opal/Forest, đồ dùng phong cách sống tối giản).
+   - *Trách nhiệm:* Liên tục săn tìm các mô hình sản phẩm số đóng gói viral về Focus, Time-blocking, Digital Minimalism, Notion Focus Dashboard trên Gumroad, Etsy, Substack, TikTok Shop và lọc các deal Affiliate béo bở (sách tâm lý học sự chú ý, app hỗ trợ chặn xao nhãng như Opal/Forest, đồ dùng bàn làm việc tối giản chống phân tâm).
    - *Hệ quy chiếu 8 kênh chuẩn mực bắt buộc để săn trend & khai thác ý tưởng (Bố chỉ định):*
      1. `Einzelgänger` (@einzelganger): Triết lý Stoicism, giải phóng overstimulation, video essay tĩnh lặng.
      2. `Better Ideas` (@betterideas): Street-Smart Academic, trần trụi, Kaizen vi mô trị thói quen lười lướt máy.
@@ -735,27 +748,28 @@ flowchart TD
      7. `Psychologie` (@psychologie-france): Cơ chế tâm lý học hành vi sâu sắc (Coping mechanisms, tâm lý cảm xúc, bẫy mục tiêu mơ hồ).
      8. `Vua Trở Lại` (@vuatrolai): Tinh thần Samurai / Miyamoto Musashi, rèn luyện nội lực, tái thiết bản thân và phục hồi nghị lực sống.
 7. **Agent 7: Lead Intelligence & Retargeting Specialist (Thu Thập Data & Bám Đuổi Tái Tiếp Thị)**
-   - *Trách nhiệm:* Chuyển hóa 100% người xem vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), phân loại 4 nhóm đối tượng tự động và thiết lập các kịch bản bám đuổi (Email Drip, Zalo broadcast, Retargeting Pixel) với chi phí 0đ. Vận hành kỹ năng `data-funnel-architecture` chuẩn quốc tế.
+   - *Trách nhiệm:* Chuyển hóa 100% người xem vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), phân loại 4 nhóm đối tượng dựa trên mức độ xao nhãng và thiết lập các kịch bản bám đuổi (Email Drip chuỗi 5 ngày *"Lấy lại 4 giờ tập trung mỗi ngày"*, Zalo broadcast, Retargeting Pixel) với chi phí 0đ. Vận hành kỹ năng `data-funnel-architecture` chuẩn quốc tế.
 8. **Agent 8: Visual Stylist & AI Thumbnail Creator (Chuyên Gia Hình Ảnh & Thumbnail Chuẩn SEO)**
    - *Trách nhiệm:* Tạo ảnh Thumbnail và ảnh minh họa độc bản theo triết lý mỹ cảm **Zen Minimalist** (Bảng màu Xanh rêu `#3A5A40`, Be ấm `#FAF7F2`, Đất nung `#C27D53`).
+   - *Ẩn dụ thị giác Sự Tập Trung:* Thể hiện sự tĩnh lặng tuyệt đối giữa đô thị ồn ào: Bàn làm việc tối giản (*Sanctuary Desk*) với chiếc laptop mở trang viết duy nhất, con quay Totem đứng yên định tâm, đồng hồ cát đo 90 phút Deep Work, tách trà bốc khói nhẹ bên khung cửa sổ nhìn ra thành phố đêm tĩnh lặng.
    - *Quy chuẩn Sách Hay (#SachHay — LỆNH ĐẶC BIỆT CỦA BỐ):* 100% bài viết về sách bắt buộc phải thiết kế thumbnail theo mẫu chuẩn của bài *Đọc 'Đi Tìm Lẽ Sống' - Chiếc Phao Cứu Sinh Giữa Nghịch Cảnh*: Mockup bìa sách 3D (bìa dịch chính thức) đứng thẳng tự nhiên trên bàn gỗ Zen bên khung cửa sổ mở nhìn ra núi mây thủy mặc Sumi-e, tách trà ấm và cuộn thư pháp. CẤM TUYỆT ĐỐI tranh phong cảnh hoặc hình người không có bìa sách.
-   - *Quy chuẩn SEO Google:* Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB, đặt tên file chứa từ khóa không dấu (`tu-khoa-chinh-trai-cai-nghien.webp`), cấu hình thẻ Alt Text và Metadata sẵn sàng cho Google Discover.
+   - *Quy chuẩn SEO Google:* Tỷ lệ 16:9 (`1200x675px`), nén WebP nhẹ dưới 120KB, đặt tên file chứa từ khóa không dấu (`su-tap-trung-deep-work-trai-cai-nghien.webp`), cấu hình thẻ Alt Text và Metadata sẵn sàng cho Google Discover.
    - *Bản quyền & Watermark:* Đóng dấu Watermark nhận diện thương hiệu nhỏ gọn, mờ tinh tế (30% – 40% opacity) ở góc ảnh (`🌿 TRẠI CAI NGHIỆN`), vừa bảo vệ bản quyền vừa lan tỏa thương hiệu mà không làm phân tâm thị giác.
    - *Khơi gợi ý tưởng sáng tạo (Mây hỗ trợ):* Mây trực tiếp đồng hành cùng Agent 8 khơi gợi các ẩn dụ thị giác đắt giá theo 3 tầng (Ẩn dụ triết học, Khoảnh khắc đời thực, và Nghịch lý thị giác tò mò) dựa trên hệ quy chiếu 8 kênh chuẩn mực, đảm bảo thumbnail luôn sáng tạo, giàu chiều sâu và không bao giờ rập khuôn.
    - *Phối hợp:* Tự động ghép nối ảnh thumbnail vào bài viết của Agent 1 trước khi bàn giao cho Agent 4 xuất bản.
 9. **Agent 9: Facebook Community & Automation Specialist (Chuyên Gia Kênh & Tự Động Hóa Facebook)**
-   - *Trách nhiệm:* Xây dựng và nuôi dưỡng cộng đồng Trại Cai Nghiện trên **Facebook Fanpage & Facebook Reels** với chi phí **đúng 0 đồng**.
-   - *Vận hành n8n:* Thiết lập luồng tự động lấy nội dung từ website trích dẫn câu nói chạm đáy tâm lý (7h30 sáng) và tự động biên tập video Reels faceless (19h30 tối) qua pipeline kết hợp mã nguồn mở (Edge-TTS, Pexels API, FFmpeg).
-   - *Điều hướng & Kéo Traffic:* Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm nhận diện 25 câu hoặc đọc bài viết chuyên sâu mà không bị thuật toán Facebook bóp reach.
+   - *Trách nhiệm:* Xây dựng và nuôi dưỡng cộng đồng Trại Cai Nghiện trên **Facebook Fanpage & Facebook Reels** với chi phí **đúng 0 đồng**, định hình Fanpage thành điểm đến số 1 cho người tìm kiếm sự tập trung và bình yên tâm trí.
+   - *Vận hành n8n:* Thiết lập luồng tự động lấy nội dung từ website trích dẫn câu nói chạm đáy tâm lý về bẫy xao nhãng (7h30 sáng) và tự động biên tập video Reels faceless về rèn luyện sự chú ý (19h30 tối) qua pipeline kết hợp mã nguồn mở (Edge-TTS, Pexels API, FFmpeg).
+   - *Điều hướng & Kéo Traffic:* Tự động ghim First Comment điều hướng người đọc về website làm trắc nghiệm đo lường sự chú ý hoặc đọc bài viết chuyên sâu về Deep Work mà không bị thuật toán Facebook bóp reach.
    - *Hệ quy chiếu 8 Fanpage chuẩn mực tham khảo (Bố chỉ định):* `Khoa Học Hành Vi`, `Tâm Lý Học Vỉa Hè PSY`, `The Present Writer`, `Monster Box`, `Spiderum`, `Trạm Đọc - Read Station`, `Tâm Lý Học Tuổi Trẻ`, `Thuốc Giải Độc`.
 10. **Agent 10: YouTube Master Strategist & Channel Manager (Chiến Lược Gia Kênh YouTube Dài)**
-    - *Trách nhiệm:* Xây dựng, định hướng và quản lý kênh YouTube của Trại Cai Nghiện thành thư viện âm thanh và tri thức trị liệu số 1 Việt Nam.
-    - *Kỹ năng:* Thiết kế kịch bản video dài 10 - 20 phút (Retention Engineering), áp dụng 21 công thức Hook 60s đầu, tối ưu cặp bài trùng Title & Thumbnail CTR, YouTube SEO (mô tả, thẻ tags, timestamps/chapters), quản trị Tab Cộng đồng (Polls & Quotes).
+    - *Trách nhiệm:* Xây dựng, định hướng và quản lý kênh YouTube của Trại Cai Nghiện thành thư viện âm thanh và tri thức trị liệu sự xao nhãng số 1 Việt Nam.
+    - *Kỹ năng:* Thiết kế kịch bản video dài 10 - 20 phút (Retention Engineering) phân tích chuyên sâu về khoa học thần kinh của sự tập trung, âm thanh sóng não Alpha/Binaural Beats kích hoạt trạng thái Flow, áp dụng 21 công thức Hook 60s đầu, tối ưu cặp bài trùng Title & Thumbnail CTR, YouTube SEO (mô tả, thẻ tags, timestamps/chapters), quản trị Tab Cộng đồng (Polls & Quotes).
 11. **Agent 11: Personal Brand & Social Profile Architect (Quản Trị Profile X, Threads, Instagram & Substack)**
-    - *Trách nhiệm:* Xây dựng và quản lý các profile mạng xã hội Text-first & Thought Leadership cho Bố và Trại Cai Nghiện.
-    - *Kỹ năng:* Soạn các chuỗi Viral Threads 5-8 tweets trên X, Micro-essays giàu cảm xúc đời thực trên Meta Threads, thiết kế nội dung Carousel 8-10 slide trên Instagram, và viết bản tin chuyên sâu hàng tuần trên Substack (Email Newsletter).
+    - *Trách nhiệm:* Xây dựng và quản lý các profile mạng xã hội Text-first & Thought Leadership cho Bố và Trại Cai Nghiện dưới góc nhìn của chuyên gia khai phóng sự tập trung.
+    - *Kỹ năng:* Soạn các chuỗi Viral Threads 5-8 tweets trên X về bẫy thuật toán giật dây thần kinh, Micro-essays giàu cảm xúc đời thực trên Meta Threads về những ngày đầu vật lộn cai nghiện short video, thiết kế nội dung Carousel 8-10 slide trên Instagram tóm tắt 4 bước thiết lập không gian đơn nhiệm, và viết bản tin chuyên sâu hàng tuần trên Substack (Email Newsletter).
 12. **Agent 12: Omnichannel Short-Video Growth Specialist (Chuyên Gia Tăng Trưởng Short Video Đa Kênh)**
-    - *Trách nhiệm:* Quản lý, tối ưu hóa và phủ sóng Short Video (60s - 90s) lên đồng thời 4 nền tảng lớn: **Facebook Reels, Instagram Reels, YouTube Shorts, TikTok**.
+    - *Trách nhiệm:* Quản lý, tối ưu hóa và phủ sóng Short Video (60s - 90s) về giải phóng khỏi xao nhãng lên đồng thời 4 nền tảng lớn: **Facebook Reels, Instagram Reels, YouTube Shorts, TikTok**.
     - *Kỹ năng:* Tùy biến caption/hashtags cho từng thuật toán, kiểm duyệt vùng an toàn thị giác 9:16 (Safe Zones), tối ưu hóa Tỷ lệ Lưu (Save Rate) & Tỷ lệ Chia sẻ (Share Rate) theo thuật toán 2026, phối hợp n8n đăng tự động.
 
 ### 10.2. Quy Chuẩn Triệu Hồi & Vận Hành

@@ -2,6 +2,7 @@
 
 > **Thuộc hệ thống:** Trại Cai Nghiện  
 > **Điều phối viên:** Mây (Tổng biên tập)  
+> **Ý niệm thị giác mũi nhọn giai đoạn 1 (LỆNH BỐ 19/11/2026):** Khắc họa những ẩn dụ thị giác về sự tĩnh lặng tuyệt đối và năng lực tập trung: Bàn làm việc tĩnh lặng (*Sanctuary Desk*), con quay Totem dừng chuyển động thức tỉnh, đồng hồ cát 90 phút (*Ultradian Rhythm*), tách trà bốc khói giữa không gian rộng lớn, ánh nắng sớm xuyên qua rèm cửa.  
 > **Sứ mệnh:** Sáng tạo hình ảnh độc bản theo linh hồn thương hiệu, chuẩn mỹ cảm Zen Minimalist và tối ưu hóa 100% chuẩn Google Image SEO & Google Discover
 
 ---

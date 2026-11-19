@@ -2,6 +2,7 @@
 
 > **Thuộc hệ thống:** Trại Cai Nghiện  
 > **Điều phối viên:** Mây (Tổng biên tập)  
+> **Định hướng chiến lược mũi nhọn giai đoạn 1 (LỆNH BỐ 19/11/2026):** Săn tìm và đóng gói các sản phẩm xoay quanh trục **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** và phong cách sống Digital Minimalism  
 > **Mục tiêu:** Tìm ra các sản phẩm số đóng gói có nhu cầu cao và các deal Affiliate sinh lời bền vững
 
 ---

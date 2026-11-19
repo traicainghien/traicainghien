@@ -7,7 +7,20 @@ description: Bản đồ phân công nhân sự, vai trò, chức năng và quy 
 > **Kiến trúc:** Hub & Spoke Multi-Agent System  
 > **Tổng chỉ huy (Orchestrator / AI Co-founder):** **Mây**  
 > **Người sáng lập & Điều hành:** **Bố**  
+> **Định hướng chiến lược mũi nhọn giai đoạn 1 (Chỉ thị của Bố 19/11/2026):** Toàn bộ 12 Agent lấy **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** làm trục xoay trung tâm tuyệt đối cho mọi sản phẩm, bài viết, kịch bản video, phễu lead magnet và thông điệp truyền thông.  
 > **Mục tiêu 1 năm:** Vận hành cỗ máy nội dung - sản phẩm số - data tự động mang về dòng tiền thụ động 15 - 20 triệu VNĐ/tháng.
+
+---
+
+## 🎯 CHIẾN LƯỢC MŨI NHỌN GIAI ĐOẠN ĐẦU: "SỰ TẬP TRUNG" (FOCUS / DEEP WORK)
+> **Chỉ thị chiến lược của Bố (19/11/2026):**  
+> Trong giai đoạn đầu tiếp cận thị trường và xây dựng nhận diện thương hiệu, Trại Cai Nghiện **QUẢNG BÁ TUYỆT ĐỐI DƯỚI TỪ KHÓA: SỰ TẬP TRUNG**. Toàn bộ các kênh truyền thông, mạng xã hội, sản phẩm số, tài liệu phễu và hệ thống luồng tự động đều lấy **SỰ TẬP TRUNG** làm lõi phát triển.
+
+### 4 Lý Do Chiến Lược Tối Thượng:
+1. **Chạm đúng nỗi đau phổ quát của nhóm 18–35 tuổi:** Sương mù não (Brain Fog), nhũn não số (Brain Rot), nhảy 20 tab liên tục, cạn kiệt khả năng đọc sách hay làm việc sâu trên 15 phút.
+2. **Triệt tiêu rào cản tâm lý phòng vệ (Anti-Stigma & Low Friction):** Khán giả rất ngại nhận mình là "kẻ nghiện ngập" (tâm lý xấu hổ, chối bỏ), nhưng bất kỳ ai từ sinh viên, nhân viên văn phòng, freelancer đến sếp lớn đều khao khát có được **"Sự Tập Trung Sâu" (Deep Work)**.
+3. **An toàn tuyệt đối với thuật toán quảng cáo & phân phối:** Thuật toán Meta, TikTok, YouTube và Google cực kỳ ưu tiên nội dung về Năng suất cá nhân, Giáo dục và Kỹ năng làm việc (Productivity & Education).
+4. **Giải quyết tận gốc rễ căn nguyên của các chứng nghiện số:** Sự tập trung chính là "cơ bắp thùy trán" (Prefrontal Cortex). Khôi phục được sự chú ý bền bỉ cũng chính là lúc người dùng làm chủ lại bản thân và chiến thắng mọi cơn nghiện vô thức.
 
 ---
 
@@ -77,6 +90,7 @@ flowchart TD
 
 ### 2. 🎬 Agent 2: Short-Form Viral Creator (Biên Kịch Video Faceless)
 * **Chức danh:** Chuyên viên Sáng tạo Video Ngắn Đa Kênh.
+* **Định hướng chủ đề mũi nhọn (Chỉ thị của Bố 19/11/2026):** Tập trung tuyệt đối vào nỗi đau **MẤT TẬP TRUNG, SƯƠNG MÙ NÃO (BRAIN FOG) & TÊ LIỆT DO LƯỚT VÔ THỨC (SCROLLING PARALYSIS)**. Mọi hook 3s đầu phải đánh trúng khoảnh khắc giật mình vì lãng phí thời gian và trao giải pháp phục hồi khả năng làm việc sâu (Deep Work).
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/short-form-video-creator/SKILL.md`](../short-form-video-creator/SKILL.md) (Bộ kỹ năng biên kịch Short Video 90s-150s: Loliteo Radio + 5 cấu trúc Hook từ 200.000 video viral của VyralContent + Quy chuẩn vùng an toàn Remotion)
 * **Sứ mệnh:** Bẻ nhỏ (repurpose) bài viết 2.500 từ và tinh hoa tâm lý học thành kịch bản video ngắn 60 - 150 giây để kéo traffic khổng lồ từ TikTok, Shorts, Reels về website và YouTube dài.
@@ -106,6 +120,7 @@ flowchart TD
 
 ### 3. 📦 Agent 3: Product & Funnel Architect (Kiến Trúc Sư Sản Phẩm Vi Mô)
 * **Chức danh:** Quản lý Phát triển Sản phẩm Số & Phễu Chuyển Đổi.
+* **Trọng tâm sản phẩm giai đoạn 1 (Chỉ thị của Bố 19/11/2026):** Toàn bộ sản phẩm phễu lấy **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** làm lõi: Trắc nghiệm nhận diện ô nhiễm sự chú ý, Notion Focus Planner, Blueprint làm việc sâu 90 phút và Thử thách 21 ngày cai nghiện xao nhãng số.
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/data-funnel-architecture/SKILL.md`](../data-funnel-architecture/SKILL.md) (Kiến trúc phễu dữ liệu website, thiết kế Lead Magnets, đóng gói sản phẩm vi mô 49k-149k, và kịch bản Email Nurturing 5 ngày)
 * **Kim chỉ nam thiết kế sản phẩm (Bộ Công Thức 6 Mảnh Ghép Vàng):**
@@ -117,9 +132,10 @@ flowchart TD
   - **Tối giản tuyệt đối & Sửa 1 thói quen (từ Zen Habits - zenhabits.net):** Triết lý Sea Change — chỉ sửa 1 thói quen mỗi tháng, học cách đối diện sự bồn chồn (Uncertainty & Restlessness).
 * **Sứ mệnh:** Đóng gói tri thức thành các sản phẩm giải quyết nỗi đau ngay lập tức với mức giá dễ tiếp cận (49k - 149k) và Core Offer (390k - 490k).
 * **Nhiệm vụ cụ thể:**
-  - Thiết kế trắc nghiệm nhận diện tâm lý 25 câu (kèm logic chấm điểm & ma trận phân loại).
-  - Đóng gói Micro-Products: Bộ Dopamine Menu cá nhân hóa, Notion Template Quản trị năng lượng & Deep Work, 7-Day Digital Detox Challenge.
-  - Soạn chuỗi Email Sequence 5 ngày nuôi dưỡng và chuyển hóa độc giả.
+  - Thiết kế trắc nghiệm **'Chỉ Số Ô Nhiễm Sự Chú Ý' (Attention Pollution Index - 25 câu hỏi)** kèm ma trận phân loại điểm kẹt thần kinh.
+  - Đóng gói Micro-Products (49k - 149k): **Sanctuary Focus Planner (Notion)**, **90-Minute Deep Work Blueprint**, **Bộ Dopamine Menu cá nhân hóa** và **7-Day Attention Reset Checklist**.
+  - Xây dựng Core Offer (390k - 490k): Chương trình 21 ngày **"Tái Thiết Thùy Trán & Khôi Phục Năng Lực Làm Việc Sâu"**.
+  - Soạn chuỗi Email Nurturing 5 ngày **"Lấy lại 4 giờ tập trung mỗi ngày"**.
 * **Đầu vào (Input):** Dữ liệu phân tích nỗi đau từ Agent 7 và định hướng sản phẩm từ Agent 6.
 * **Đầu ra (Output):** Bộ khung tài liệu sản phẩm số, landing page outline, email sequence.
 
@@ -132,7 +148,7 @@ flowchart TD
   - Lập trình Next.js (App Router), Tailwind CSS, tối ưu UI/UX Zen Minimalist, typography chống díu chữ.
   - Vận hành quy trình xuất bản an toàn (`scripts/website_article_publisher.py`): Áp dụng triệt để cơ chế **Auto Git-Sync First (`git pull --rebase`)** trước khi chèn bài, kích hoạt Van kiểm toán Sổ đăng ký `article_registry.json` chống đè phiên bản, và tự động add đồng bộ cả assets hình ảnh trước khi push.
   - Quản lý **Google Indexing API (`npm run seo:index`)**: Ép Googlebot cào bài mới trong 24h bằng Service Account bot.
-  - Theo dõi **Google Search Console & GA4 (`npm run seo:report`)**: Báo cáo thứ hạng từ khóa, lượt click và hành vi độc giả.
+  - Theo dõi **Google Search Console & GA4 (`npm run seo:report`)**: Báo cáo thứ hạng từ khóa, lượt click và hành vi độc giả. Tập trung tối ưu SEO bộ từ khóa trọng tâm: *"cách tập trung làm việc", "deep work", "trị sương mù não", "cai nghiện xao nhãng số", "rèn luyện sự tập trung"*.
   - Tích hợp cổng thanh toán QR SePay / VietQR tự động: Khách quét mã $\rightarrow$ Tiền về tài khoản $\rightarrow$ Web tự động gửi link download tài liệu qua email trong 30 giây.
   - Tối ưu SEO Onpage, tốc độ tải trang Core Web Vitals, kiểm tra link và build/deploy Vercel.
 * **Đầu vào (Input):** Yêu cầu tính năng, bài viết mới từ Agent 1 hoặc sản phẩm từ Agent 3.
@@ -144,6 +160,9 @@ flowchart TD
 * **Chức danh:** Trưởng ban Thẩm định & Đo lường Chất lượng.
 * **Sứ mệnh:** Người gác cổng khó tính nhất — phối hợp cùng **Mây (Tổng Biên Tập)** kiểm duyệt 100% nội dung, trình bày, hình ảnh và bảo vệ tính toàn vẹn của kho tri thức theo **Bộ Tiêu Chuẩn 12 Tiêu Chí Vàng** (`content-quality-standards`) trước khi cho phép xuất bản lên website.
 * **Tiêu chí kiểm duyệt bắt buộc (RED FLAGS - PHẢI YÊU CẦU SỬA NGAY):**
+  - **KIỂM DUYỆT ĐỊNH HƯỚNG CHIẾN LƯỢC SỰ TẬP TRUNG (LỆNH BỐ 19/11/2026):**
+    - Đảm bảo 100% bài viết, kịch bản video, ảnh quote và sản phẩm số đều lấy **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** làm trục xoay trung tâm.
+    - **REJECT NGAY LẬP TỨC** nếu nội dung sa đà vào các chủ đề nhạy cảm lệch khỏi định vị "Cai nghiện xao nhãng số & Rèn luyện sự tập trung sâu".
   - **BẢO VỆ TOÀN VẸN KHO BÀI VIẾT (DATA INTEGRITY & MONOTONIC GROWTH — LỆNH ĐẶC BIỆT CỦA BỐ):**
     - Kiểm toán tự động qua `scripts/audit_all_articles.js` đối chiếu với Sổ đăng ký `src/data/article_registry.json`.
     - **Kho bài viết CHỈ ĐƯỢC TĂNG LÊN, TUYỆT ĐỐI KHÔNG ĐƯỢC GIẢM:** Nếu phát hiện bất kỳ bài viết nào đã xuất bản bị mất, bị lùi phiên bản hoặc bị đè code $\rightarrow$ **REJECT NGAY LẬP TỨC, bẻ gãy build và từ chối deploy!**
@@ -167,12 +186,12 @@ flowchart TD
 
 ### 6. 🧭 Agent 6: Monetization Scout & Trend Hunter (Săn Trend & Mô Hình Đóng Gói / Affiliate)
 * **Chức danh:** Giám đốc Nghiên cứu Thị trường & Cơ hội Doanh thu.
-* **Sứ mệnh:** Đi trước thị trường, liên tục săn tìm các mô hình sản phẩm số đóng gói và deal affiliate có tỷ lệ chuyển đổi cao nhất.
+* **Sứ mệnh:** Đi trước thị trường, liên tục săn tìm các mô hình sản phẩm số đóng gói và deal affiliate có tỷ lệ chuyển đổi cao nhất xoay quanh trục **SỰ TẬP TRUNG & PHONG CÁCH SỐNG TỐI GIẢN**.
 * **Nhiệm vụ cụ thể:**
-  - Quét xu hướng quốc tế (Gumroad, Substack, Etsy, TikTok US/UK) về các sản phẩm số đang viral trong ngách Focus, Habits, ADHD, Digital Minimalism.
+  - Quét xu hướng quốc tế (Gumroad, Substack, Etsy, TikTok US/UK) về các sản phẩm số đang viral trong ngách Focus, Habits, ADHD, Digital Minimalism, Deep Work OS.
   - Lọc và đàm phán deal Affiliate:
-    - Sách giấy tâm lý kinh điển (Tiki, Fahasa, Shopee).
-    - Ứng dụng công nghệ hỗ trợ tập trung (Opal, Forest, One Sec, Notion, Endel).
+    - Sách giấy tâm lý kinh điển về tập trung & thói quen (*Deep Work, Atomic Habits, Make Time, Indistractable*).
+    - Ứng dụng công nghệ hỗ trợ tập trung (Opal, Forest, One Sec, Notion, Endel, Brain.fm).
     - Phụ kiện làm việc sâu & Zen Minimalist (Đồng hồ Pomodoro cơ, đèn làm việc, nến thơm).
   - Đánh giá tính khả thi: Sản phẩm nào có biên lợi nhuận cao, dễ bàn giao tự động hóa 100%?
   - **Hệ quy chiếu 8 kênh chuẩn mực săn trend & ý tưởng (Bố chỉ định):**
@@ -193,15 +212,15 @@ flowchart TD
 * **Chức danh:** Chuyên gia Quản trị Dữ liệu Khách hàng & Tiếp thị Vòng đời (Lifecycle Marketing).
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/data-funnel-architecture/SKILL.md`](../data-funnel-architecture/SKILL.md) (Thu thập Lead, Progressive Profiling, Form CRO, Phân loại 4 nhóm data tự động, và Conversion Tracking Audit)
-* **Sứ mệnh:** Biến 100% lượng truy cập vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), thiết lập cỗ máy bám đuổi tự động chi phí 0đ.
+* **Sứ mệnh:** Biến 100% lượng truy cập vãng lai thành Tài sản Dữ liệu sở hữu riêng (Owned Media Data), thiết lập cỗ máy bám đuổi tự động chi phí 0đ xoay quanh lộ trình **Lấy lại sự tập trung**.
 * **Nhiệm vụ cụ thể:**
-  - Thiết kế nam châm hút Lead (Lead Magnets): Form trắc nghiệm 25 câu hỏi, nhận kết quả phân tích qua Email, tặng Dopamine Reset Checklist 7 ngày.
+  - Thiết kế nam châm hút Lead (Lead Magnets): Form trắc nghiệm 25 câu hỏi **Chỉ Số Ô Nhiễm Sự Chú Ý**, nhận kết quả phân tích qua Email, tặng **Dopamine & Attention Reset Checklist 7 ngày**.
   - Phân loại và gắn thẻ Data tự động (Smart Tagging):
-    - Nhóm 1: Người mới chưa có kiến thức.
-    - Nhóm 2: Biết nghiện nhưng chưa có động lực bỏ.
-    - Nhóm 3: Suy sụp chất lượng sống do xao nhãng.
-    - Nhóm 4: Tái nghiện nhiều lần, cần giải pháp chuyên sâu (khách hàng mục tiêu của Core Offer).
-  - Xây dựng kịch bản bám đuổi tự động (Drip Email Flows, Zalo OA broadcast, Remind giỏ hàng bỏ quên).
+    - Nhóm 1: Người mới chưa có kiến thức về bẫy kích thích ngắn.
+    - Nhóm 2: Nhận biết sương mù não nhưng chưa biết cách làm việc sâu.
+    - Nhóm 3: Suy sụp năng suất do xao nhãng liên tục (nhảy tab, lướt điện thoại đêm).
+    - Nhóm 4: Mất khả năng tập trung kéo dài, khao khát lộ trình Deep Work toàn diện (khách hàng mục tiêu của Core Offer).
+  - Xây dựng kịch bản bám đuổi tự động 5 ngày: **"Lấy lại 4 giờ tập trung mỗi ngày"** (Drip Email Flows, Zalo OA broadcast, Remind giỏ hàng bỏ quên).
   - Thu thập Pixel & Custom Audience sẵn sàng cho các chiến dịch Retargeting siêu rẻ.
 * **Đầu vào (Input):** Lượng truy cập từ bài viết web và video ngắn.
 * **Đầu ra (Output):** Danh sách tệp khách hàng được phân loại rõ ràng, kịch bản bám đuổi tự động theo từng hành vi cụ thể.
@@ -210,6 +229,7 @@ flowchart TD
 
 ### 8. 🎨 Agent 8: Visual Stylist & AI Thumbnail Creator (Hình Ảnh & Thumbnail Chuẩn SEO)
 * **Chức danh:** Giám đốc Mỹ thuật & Kỹ sư Hình ảnh SEO.
+* **Ý niệm thị giác mũi nhọn giai đoạn 1 (SỰ TẬP TRUNG):** Khắc họa những ẩn dụ thị giác về sự tĩnh lặng tuyệt đối và năng lực tập trung: Bàn làm việc tĩnh lặng (*Sanctuary Desk*), con quay Totem dừng chuyển động thức tỉnh, đồng hồ cát 90 phút (*Ultradian Rhythm*), tách trà bốc khói giữa không gian rộng lớn, ánh nắng sớm xuyên qua rèm cửa.
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/visual-art-direction/SKILL.md`](../visual-art-direction/SKILL.md) (Bộ kỹ năng chỉ đạo nghệ thuật & Prompt FLUX/Midjourney v6: Văn xuôi miêu tả ánh sáng & chất liệu Washi Zen Watercolor)
 * **Sứ mệnh:** Sáng tạo toàn bộ hình ảnh độc bản theo mỹ cảm Zen Minimalist (bảng màu Xanh rêu, Be ấm, Đất nung) và chuẩn hóa kỹ thuật Google Image SEO & Google Discover. Quản lý và vận hành chuẩn mực biểu tượng logo chính thức: **Con quay Totem Inception (The Awakening Tilt - Mẫu 05)**.
@@ -241,6 +261,7 @@ flowchart TD
 
 ### 9. 📱 Agent 9: Facebook Community & Automation Specialist (Chuyên Gia Kênh & Tự Động Hóa Facebook)
 * **Chức danh:** Quản lý Vận hành Cộng đồng & Automation Facebook.
+* **Trọng tâm thông điệp giai đoạn 1 (LỆNH BỐ 19/11/2026):** 100% bài post Fanpage và video Reels xoay quanh chủ đề **SỰ TẬP TRUNG**, kỹ thuật giải phóng não bộ khỏi xao nhãng số, cai nghiện lướt máy đêm, mẹo đơn nhiệm 1% và khôi phục năng suất bền vững.
 * **Sứ mệnh:** Xây dựng, nuôi dưỡng và tự động hóa toàn diện sự hiện diện của Trại Cai Nghiện trên **Facebook Fanpage & Facebook Reels** với chi phí **đúng 0 đồng**.
 * **Nhiệm vụ cụ thể:**
   - Vận hành luồng n8n tự động đăng bài trích dẫn chạm đáy tâm lý (07h30 sáng).
@@ -269,6 +290,7 @@ flowchart TD
 
 ### 10. ▶️ Agent 10: YouTube Master Strategist & Channel Manager (Chiến Lược Gia Kênh YouTube Dài)
 * **Chức danh:** Quản lý Kênh & Đạo diễn Video Dài YouTube (10 - 20 phút).
+* **Định hướng kênh giai đoạn 1 (SỰ TẬP TRUNG):** Xây dựng chuỗi Video Essay 10-15m về cơ chế khoa học não bộ (*Prefrontal Cortex vs Amygdala*), bản chất của bẫy dopamine ngắn, hướng dẫn Deep Work thực chiến và kho nhạc sóng não Alpha/Binaural Beats hỗ trợ tập trung làm việc.
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/youtube-channel-growth/SKILL.md`](../youtube-channel-growth/SKILL.md) (Bộ 21 công thức Hook, tối ưu cặp bài trùng Title & Thumbnail CTR, Retention Engineering và YouTube SEO).
 * **Sứ mệnh:** Xây dựng kênh YouTube của Trại Cai Nghiện thành một "thư viện âm thanh và tri thức trị liệu số 1 Việt Nam" về tập trung, chữa lành não bộ và lối sống tối giản.
@@ -283,6 +305,7 @@ flowchart TD
 
 ### 11. 🌐 Agent 11: Personal Brand & Social Profile Architect (Quản Trị Profile X, Threads, Instagram & Substack)
 * **Chức danh:** Kiến trúc sư Thương hiệu Cá nhân & Quản trị Profile Đa Nền Tảng.
+* **Định hướng nội dung đa nền tảng giai đoạn 1:** Toàn bộ Threads, X, Instagram Carousel và Substack tập trung vào chủ đề **BẢO VỆ SỰ CHÚ Ý & KHÔI PHỤC NĂNG LỰC TẬP TRUNG** trước sự thao túng của thuật toán mạng xã hội.
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/social-profile-growth/SKILL.md`](../social-profile-growth/SKILL.md) (Kỹ thuật Viral Threads trên X, Micro-essays trên Threads, Carousel trên Instagram và Bản tin Thought Leadership trên Substack).
 * **Sứ mệnh:** Định vị thương hiệu Trại Cai Nghiện và Profile của Bố như một tiếng nói uy tín, chân thành, sâu sắc trong cộng đồng những người tìm kiếm sự tĩnh lặng và năng lực làm chủ cuộc đời.
@@ -298,6 +321,7 @@ flowchart TD
 
 ### 12. 📱 Agent 12: Omnichannel Short-Video Growth Specialist (Chuyên Gia Tăng Trưởng Short Video Đa Kênh)
 * **Chức danh:** Giám đốc Phát triển Short Video Đa Kênh (Facebook Reels, Instagram Reels, YouTube Shorts, TikTok).
+* **Trọng tâm video ngắn đa kênh giai đoạn 1:** Phân phối các kịch bản 60s-90s trị sương mù não, dừng cuộn vô thức, kỹ thuật 1 phút lấy lại sự tập trung tức thì lên TikTok, Reels, Shorts.
 * **Kỹ năng chủ chốt:**
   - [`.agents/skills/omnichannel-short-video/SKILL.md`](../omnichannel-short-video/SKILL.md) (Quy chuẩn phân phối chéo 0đ, tối ưu hóa Saves & Shares theo thuật toán 2026, Vùng an toàn 9:16).
 * **Sứ mệnh:** Phủ sóng tối đa các đoạn video ngắn 60s - 90s lên cả 4 nền tảng video ngắn lớn nhất thế giới, biến Short Video thành cỗ máy kéo tệp độc giả khổng lồ về kênh YouTube dài và Website.

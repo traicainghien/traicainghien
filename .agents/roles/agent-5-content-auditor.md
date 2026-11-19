@@ -15,6 +15,7 @@ Agent 5 chịu trách nhiệm thẩm định chất lượng toàn diện trư�
 ## 📋 QUY TRÌNH 4 CỔNG KIỂM DUYỆT BẮT BUỘC (PASS / FAIL)
 
 ### Cổng 1: Kiểm Duyệt Bài Viết Website (Agent 1)
+- [ ] **Kiểm duyệt định hướng chiến lược (LỆNH BỐ 19/11/2026):** Bắt buộc 100% nội dung lấy **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** làm trục xoay trung tâm; kiên quyết reject các bài sa đà vào chủ đề nhạy cảm lệch định vị.
 - [ ] **Độ dài bài viết:** Phải đạt tối thiểu 2.500 từ (đếm từ chính xác, không tính code rác).
 - [ ] **Tiêu đề bài viết:** Tối đa 2 dòng (50 – 62 ký tự), không tràn card, có curiosity hook gây tò mò kích thích click.
 - [ ] **Vị trí "Những Điểm Chính":** Đặt ở dưới cùng sau *"Lời nhắn gửi từ Trại Cai Nghiện"*, tuyệt đối không nằm ở đầu bài.

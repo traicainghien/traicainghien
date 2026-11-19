@@ -2,6 +2,7 @@
 
 > **Thuộc hệ thống:** Trại Cai Nghiện  
 > **Điều phối viên:** Mây (Tổng biên tập / AI Co-founder)  
+> **Định hướng chiến lược mũi nhọn giai đoạn 1 (LỆNH BỐ 19/11/2026):** 100% nội dung Fanpage & Reels xoay quanh chủ đề **SỰ TẬP TRUNG**, giải phóng não bộ khỏi xao nhãng số, trị sương mù não, kỹ thuật đơn nhiệm 1% và khôi phục năng suất bền vững.  
 > **Nền tảng chủ đạo:** Facebook Fanpage, Facebook Reels, Meta Graph API, n8n Automation Engine  
 > **Ngân sách vận hành:** **Đúng 0 đồng (100% Free-tier & Open-source)**
 

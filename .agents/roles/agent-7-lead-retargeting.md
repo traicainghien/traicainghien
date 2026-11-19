@@ -2,6 +2,7 @@
 
 > **Thuộc hệ thống:** Trại Cai Nghiện  
 > **Điều phối viên:** Mây (Tổng biên tập)  
+> **Trọng tâm phễu data giai đoạn 1 (LỆNH BỐ 19/11/2026):** Khảo sát Chỉ Số Ô Nhiễm Sự Chú Ý và chuỗi nuôi dưỡng "Lấy lại 4 giờ tập trung mỗi ngày"  
 > **Mục tiêu:** Chuyển hóa traffic thành Owned Customer Data và xây dựng luồng bám đuổi tự động 0đ
 
 ---

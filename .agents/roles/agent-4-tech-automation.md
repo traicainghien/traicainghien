@@ -23,7 +23,7 @@ Agent 4 đảm bảo hệ thống website vận hành mượt mà, chịu trách
   ```bash
   npm run seo:report
   ```
-  *(Đo lường 28 ngày qua: Top từ khóa hiển thị, số lượt click, vị trí trung bình (CTR & Position) để báo cáo cho Mây và Bố nhằm tối ưu lại bài viết).*
+  *(Đo lường 28 ngày qua: Top từ khóa hiển thị, số lượt click, vị trí trung bình CTR & Position. Tập trung tối ưu SEO bộ từ khóa chiến lược của Bố: "cách tập trung làm việc", "deep work", "trị sương mù não", "cai nghiện xao nhãng số", "rèn luyện sự tập trung").*
 
 ### 2. Tích Hợp & Kiểm Soát Google Analytics (GA4)
 * Quản lý mã đo lường Google Analytics (`G-XXXXXXXXXX`) trong `src/app/layout.tsx`.

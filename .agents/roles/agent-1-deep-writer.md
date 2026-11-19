@@ -2,6 +2,7 @@
 
 > **Thuộc hệ thống:** Trại Cai Nghiện  
 > **Điều phối viên:** Mây (Tổng biên tập)  
+> **Định hướng chiến lược mũi nhọn giai đoạn 1 (LỆNH BỐ 19/11/2026):** Tập trung 100% ngòi bút vào **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)** — Giải phóng khỏi xao nhãng số, trị sương mù não (Brain Fog) và nhũn não số (Brain Rot), rèn luyện đơn nhiệm (Mono-tasking), khôi phục khả năng chú ý bền bỉ.  
 > **Tiêu chuẩn bắt buộc:** **2.500 từ/bài**, đúng 1 trong 4 Trụ cột cốt lõi, không từ ngữ trừu tượng.
 
 ---

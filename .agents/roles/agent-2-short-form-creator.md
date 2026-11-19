@@ -2,6 +2,7 @@
 
 > **Thuộc hệ thống:** Trại Cai Nghiện  
 > **Điều phối viên:** Mây (Tổng biên tập)  
+> **Định hướng chiến lược mũi nhọn giai đoạn 1 (LỆNH BỐ 19/11/2026):** Tập trung tuyệt đối vào chủ đề **SỰ TẬP TRUNG**, trị sương mù não, dừng cuộn vô thức và phục hồi năng lực làm việc sâu (Deep Work).  
 > **Kênh mục tiêu:** TikTok, YouTube Shorts, Instagram Reels, Facebook Reels
 
 ---
