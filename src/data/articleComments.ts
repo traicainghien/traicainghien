@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "lay-lai-su-tap-trung-bi-mat-tu-tinh-deo-cua-bo-nao-20261120": [
+      {
+          "id": "layla-1",
+          "name": "Phan Anh Tú (Chủ tiệm cà phê nhỏ)",
+          "content": "Đọc bài 'Lấy lại sự tập trung: Bí mật từ tính dẻo của bộ não con người' xong, mình hơi xấu hổ vì đã tự trách mình quá nhiều. Mình nhận ra mình không nghiện điện thoại, mình sợ khoảng lặng. Cứ rảnh hai giây là phải có cái gì đó chạy trong tai. Bài viết gọi đúng tên nỗi sợ đó mà không mắng mình một câu.",
+          "date": "Hôm qua",
+          "likes": 44,
+          "isLongStory": true
+      },
+      {
+          "id": "layla-2",
+          "name": "Nguyễn Diệu Linh (Sinh viên năm hai)",
+          "content": "Chỗ mình gạch chân là đoạn 'Bí mật từ tính dẻo của bộ não con người'. Mình đã thử và thấy đúng: bớt ma sát thì bớt phải gồng.",
+          "date": "Hôm qua",
+          "likes": 71
+      },
+      {
+          "id": "layla-3",
+          "name": "Lê Quốc Bảo (Sinh viên năm cuối)",
+          "content": "Cái này mình sẽ kể lại với học trò, nhất là phần 'Bí mật từ tính dẻo của bộ não con người'. Mình làm luôn, không chờ có động lực: nói với một người bạn để có người nhắc mình.",
+          "date": "Hôm qua",
+          "likes": 52
+      }
+  ],
   "100-ngay-cai-dien-thoai-nao-bo-tai-sinh-ky-dieu-the-nao": [
     {
       "id": "cdt-1",
