@@ -62,13 +62,19 @@ flowchart TD
 
 ### CỔNG 2: THỊ GIÁC & HÌNH ẢNH VISUAL (AGENT 8 → AGENT 5)
 *Trước khi bất kỳ hình ảnh nào được gắn vào bài viết web hoặc làm cover media:*
-- [ ] **1. QUY CHUẨN ĐỘC TÔN: 100% ẢNH BÌA BẮT BUỘC PHẢI LÀ DẠNG TRANH VẼ TAY (LỆNH ĐẶC BIỆT CỦA BỐ):**
-  - **CẤM TUYỆT ĐỐI 100% MỌI DẠNG ẢNH CHỤP & PHOTOREALISTIC:**
-    - ❌ **CẤM ẢNH CHỤP THỰC TẾ (Photo stills):** Tuyệt đối không dùng ảnh chụp từ máy ảnh, ảnh stock chụp người thật hay cảnh thật.
-    - ❌ **CẤM ẢNH PHOTOREALISTIC / 3D RENDER TĨNH VẬT THỰC TẾ:** Cấm hoàn toàn phong cách render 3D chân thực như ảnh chụp tĩnh vật (bàn gỗ, tách trà, chậu cây, cuốn sổ render bóng bẩy như chụp máy ảnh). Bất kể đồ vật hay con người đều bắt buộc phải được thể hiện bằng **bút pháp tranh vẽ tay màu nước thủy mặc**.
-  - **BẮT BUỘC TRANH VẼ TAY NGHỆ THUẬT:** 100% hình ảnh là tranh vẽ màu nước thủy mặc mộc mạc, tĩnh lặng trên nền giấy washi sần be ấm (`#FAF7F2`), nhìn rõ nét cọ vẽ tay, vệt loang màu nước tự nhiên (*watercolor pigment bleeds*) và nét viền mực Sumi-e xước nhẹ kết hợp sắc xanh rêu rừng (`#3A5A40`) và đất nung (`#C27D53`). Người xem nhìn vào phải nhận ra NGAY LẬP TỨC đó là một tác phẩm hội họa nghệ thuật.
-- [ ] **2. Cơ chế chống Cache trình duyệt & CDN (Cache-Busting URL):** Khi thay đổi/cập nhật hình ảnh, bắt buộc phải đổi tên file sang định danh mới (ví dụ: `-zen-`, `-v2.webp`) để trình duyệt và CDN không hiển thị lại ảnh cũ trong bộ nhớ đệm.
-- [ ] **3. NGUYÊN TẮC ĐỘC BẢN THỊ GIÁC & CẤM TRÙNG LẶP Ý TƯỞNG (ZERO VISUAL DUPLICATION — LỆNH ĐẶC BIỆT CỦA BỐ):**
+- [ ] **1. QUY CHUẨN THỊ GIÁC BÀI VIẾT WEBSITE: 100% CHUẨN PHƯƠNG ÁN B - CINEMATIC CONCEPTUAL (CHỈ THỊ CỦA BỐ 20/11/2026):**
+  - **Phong cách chủ đạo:** Nhiếp ảnh điện ảnh tĩnh lặng giàu tính ẩn dụ tâm lý học hành vi (*Cinematic Conceptual Stillness*).
+  - **Bóc tách ẩn dụ sâu sắc:** Bắt buộc hình ảnh phải mang ý niệm biểu trưng trực tiếp cho nội dung bài viết (Tan sương mù não $\rightarrow$ Nắng sớm xuyên qua sương rừng thông; Kaizen 1% $\rightarrow$ Tháp sỏi Zen cân bằng tĩnh tại; Cạn 10% năng lượng $\rightarrow$ Ngọn nến ấm trong bóng tối; Deep Work $\rightarrow$ Bàn gỗ tối giản không smartphone; Buông bỏ dằn vặt $\rightarrow$ Bóng người trầm ngâm bên cửa sổ hoàng hôn...).
+  - **Bộ lọc thép loại bỏ rác thị giác (Anti-Clutter Filter):**
+    - ❌ **CẤM 100% Chữ:** Tuyệt đối không dùng ảnh có chữ tiếng Anh lớn, bìa sách thương mại, poster, printable, checklist, journal prompts.
+    - ❌ **CẤM 100% Đồ vật ngẫu nhiên vô nghĩa:** Cấm ảnh tủ kệ kim loại, hộp carton đóng gói, đồ chơi, ảnh sinh hoạt gia đình phòng khách tây không ăn nhập.
+    - ❌ **CẤM 100% Stock model gượng gạo:** Cấm ảnh chụp cận cảnh khuôn mặt người mẫu thương mại tạo dáng gượng ép.
+  - **Quy chuẩn kỹ thuật Core Web Vitals:** Khổ ngang chuẩn 16:9 (`1200 x 675 px`), Center-crop, định dạng WebP nén đa tầng với dung lượng **nghiêm ngặt dưới trần 120KB** (lý tưởng từ 15KB – 115KB).
+- [ ] **2. Cơ chế chống Cache trình duyệt & CDN (Cache-Busting URL):** Khi thay đổi/cập nhật hình ảnh, bắt buộc phải đổi tên file sang định danh mới (ví dụ: `-cinematic.webp`) để trình duyệt và CDN không hiển thị lại ảnh cũ trong bộ nhớ đệm.
+- [ ] **3. CƠ CHẾ KIỂM SOÁT CHỐNG TRÙNG LẶP 3 LỚP (3-TIER ANTI-DUPLICATE GATE — LỆNH CỦA BỐ):**
+  - **Lớp 1 (URL Registry):** Đối chiếu link ảnh nguồn và tên file với `scripts/used_curated_images.json`.
+  - **Lớp 2 (MD5 Hash Check):** Tính toán mã băm nhị phân (`hashlib.md5(f.read()).hexdigest()`), cấm 100% trùng mã hash giữa bất kỳ 2 bài viết nào.
+  - **Lớp 3 (Hàng rào Pre-publish Audit Barrier):** Script `node scripts/audit_all_articles.js` tự động quét chéo toàn bộ kho ảnh; nếu phát hiện trùng mã hash hoặc quá 120KB sẽ **dập tắt ngay lập tức lệnh build/deploy (Exit Code 1)**.ẶC BIỆT CỦA BỐ):**
   - **CẤM TUYỆT ĐỐI TRÙNG LẶP HÌNH ẢNH HOẶC Ý TƯỞNG THỊ GIÁC:** Không bao giờ tái sử dụng thumbnail hoặc sơ đồ đã từng xuất hiện ở bất kỳ bài viết nào khác trên website. Mỗi bài viết là một thực thể độc lập, BẮT BUỘC phải có một tác phẩm tranh vẽ độc bản hoàn toàn mới.
   - **CẤM ĐỔI TÊN FILE ĐỂ TÁI SỬ DỤNG:** Tuyệt đối không lấy ảnh master cũ crop lại hoặc đổi tên file mới để lừa bộ lọc. Mọi hình ảnh phải mang ẩn dụ thị giác độc nhất.
   - **MỞ RỘNG BỐI CẢNH THỊ GIÁC (CẤM BÓ HẸP TRONG PHÒNG):** Không được lặp đi lặp lại bối cảnh bàn làm việc / góc phòng khép kín. Phải đa dạng hóa sang các không gian mở: thiên nhiên khoáng đạt, sườn núi mờ sương, lối mòn ven rừng thông, ban công đón bình minh, quán cà phê phố thị... mang lại cảm giác giải phóng tâm trí và tự do.

@@ -47,12 +47,19 @@
      - TUYỆT ĐỐI KHÔNG dùng ảnh tranh Zen Watercolor ngẫu nhiên cho Flow 01.
      - Duy trì bộ nhớ `sentLinks` để lọc bài viết mới tiếp theo, bảo đảm không bao giờ trùng bài và không bao giờ trùng ảnh trên kênh Telegram.
 
-5. **NGUYÊN TẮC THÉP VỀ HÌNH ẢNH: TUYỆT ĐỐI KHÔNG TRÙNG LẶP DƯỚI MỌI HÌNH THỨC (ZERO DUPLICATE IMAGES - LỆNH CỦA BỐ):**
-   * **Quy chuẩn độc bản:** Mỗi bài viết trên Website, mỗi bài đăng trên mạng xã hội (Facebook, Instagram, Threads, Telegram) BẮT BUỘC phải sở hữu một hình ảnh đại diện độc bản duy nhất. Tuyệt đối không được tái sử dụng bất kỳ ảnh nào đã từng xuất bản.
+5. **NGUYÊN TẮC THÉP VỀ HÌNH ẢNH: ĐỊNH HƯỚNG CINEMATIC CONCEPTUAL & TUYỆT ĐỐI KHÔNG TRÙNG LẶP (LỆNH ĐẶC BIỆT CỦA BỐ 20/11/2026):**
+   * **Định hướng phong cách chính thức bài viết Website (Phương án B):** Toàn bộ ảnh bìa (thumbnail) bài viết trên website `traicainghien.com` bắt buộc phải theo phong cách **Nhiếp ảnh Ẩn dụ Nghệ thuật (Cinematic Conceptual Photography)**:
+     - *Ý niệm ẩn dụ sâu sắc:* Mỗi bài viết bắt buộc phải sở hữu một hình tượng biểu trưng ăn khớp hoàn hảo với chiều sâu tâm lý học hành vi (Ví dụ: Tan sương mù não $\rightarrow$ Vệt nắng sớm xuyên qua sương rừng thông; Kaizen 1% $\rightarrow$ Tháp sỏi Zen cân bằng tĩnh tại bên hồ; Cạn 10% năng lượng $\rightarrow$ Ngọn nến lung linh trong bóng tối tĩnh mịch; Deep Work $\rightarrow$ Bàn gỗ tối giản mộc mạc không smartphone; Lẽ sống $\rightarrow$ Mầm cây vươn lên từ khe nứt đá cằn...).
+     - *Bộ lọc thép loại bỏ rác thị giác (Anti-Clutter Filter):*
+       - ❌ **0% Chữ:** Cấm tuyệt đối ảnh dính chữ tiếng Anh, poster, printable, checklist, bảng tô màu hay quotes in ấn.
+       - ❌ **0% Đồ vật ngẫu nhiên vô nghĩa:** Cấm ảnh tủ kệ kim loại, hộp carton, bao bì thương mại, ảnh sinh hoạt gia đình phòng khách tây không ăn nhập.
+       - ❌ **0% Stock model gượng gạo:** Không dùng ảnh chụp cận cảnh khuôn mặt người mẫu thương mại tạo dáng gượng ép.
+     - *Tiêu chuẩn kỹ thuật Core Web Vitals:* Tỉ lệ vàng 16:9 (`1200x675px`), căn giữa đối tượng (Center-crop), định dạng WebP nén đa tầng với dung lượng nghiêm ngặt **dưới trần 120KB** (dao động lý tưởng 15KB – 115KB).
+   * **Quy chuẩn độc bản (Zero-Duplicate Rule):** Mỗi bài viết trên Website và mỗi bài đăng mạng xã hội BẮT BUỘC phải sở hữu một hình ảnh đại diện độc bản duy nhất. Tuyệt đối không tái sử dụng ảnh cũ.
    * **Cơ chế kiểm soát 3 lớp (3-Tier Anti-Duplicate Gate):**
-     1. *Lớp 1 (URL & File Name Registry):* Đối chiếu link ảnh và tên file với toàn bộ danh sách `thumbnail` trong `src/data/articles.ts` và cơ sở dữ liệu `scripts/used_curated_images.json`.
-     2. *Lớp 2 (MD5 Hash Check):* Tính toán mã băm nội dung ảnh thực tế (MD5 checksum) trước khi tải và lưu file. Nếu phát hiện trùng mã hash với bất kỳ ảnh nào trong kho `public/images/articles/`, hệ thống lập tức từ chối và tự động chuyển sang ảnh tiếp theo.
-     3. *Lớp 3 (Lưu vết vĩnh viễn):* Ngay khi ảnh được gán cho bài viết hoặc lên lịch đăng, URL, mã hash và tên file được ghi vĩnh viễn vào `scripts/used_curated_images.json` để ngăn chặn trùng lặp tuyệt đối trong tương lai.
+     1. *Lớp 1 (URL & Source Registry):* Đối chiếu link ảnh nguồn và tên file với toàn bộ danh sách `thumbnail` trong `src/data/articles.ts` và cơ sở dữ liệu `scripts/used_curated_images.json`.
+     2. *Lớp 2 (MD5 Hash Check):* Tính toán mã băm nội dung ảnh nhị phân thực tế (`hashlib.md5(f.read()).hexdigest()`) ngay khi tải. Nếu phát hiện trùng dấu vân tay số với bất kỳ ảnh nào đã dùng, hệ thống lập tức từ chối và tự động chuyển sang ảnh tiếp theo.
+     3. *Lớp 3 (Hàng rào Pre-publish Audit Barrier):* Script gác cổng `node scripts/audit_all_articles.js` (Mây & Agent 5 trực tiếp duyệt) tự động quét đối chiếu chéo $N \times N$ toàn bộ kho ảnh thực tế trên ổ cứng. Nếu phát hiện bất kỳ bài nào trùng mã hash hoặc vượt quá 120KB, script lập tức **DẬP TẮT TIẾN TRÌNH BUILD (EXIT CODE 1)**, khóa cứng không cho phép deploy lên máy chủ VPS. Sau khi vượt qua kiểm toán, thông tin được lưu vết vĩnh viễn vào `scripts/used_curated_images.json`.
 
 ---
 

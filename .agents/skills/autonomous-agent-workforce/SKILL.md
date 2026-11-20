@@ -235,10 +235,13 @@ flowchart TD
 * **Sứ mệnh:** Sáng tạo toàn bộ hình ảnh độc bản theo mỹ cảm Zen Minimalist (bảng màu Xanh rêu, Be ấm, Đất nung) và chuẩn hóa kỹ thuật Google Image SEO & Google Discover. Quản lý và vận hành chuẩn mực biểu tượng logo chính thức: **Con quay Totem Inception (The Awakening Tilt - Mẫu 05)**.
 * **Quy chuẩn Mỹ Cảm & Kỹ Thuật Bắt Buộc (LỆNH ĐẶC BIỆT CỦA BỐ):**
   - **BIỂU TƯỢNG LOGO CHÍNH THỨC CỦA THƯƠNG HIỆU:** Con quay Totem trong *Inception* ở tư thế chao đảo nghiêng nhẹ chuẩn bị dừng quay (*The Awakening Tilt*), mang ý nghĩa thức tỉnh khỏi cơn mơ ảo ảnh số để quay về thực tại và phiên bản tốt nhất. Logo đi kèm tên thương hiệu `TRẠI CAI NGHIỆN` và slogan `- trở về phiên bản tốt nhất của bạn.`, được vẽ tay màu nước thủy mặc & viền mực than mộc mạc trên giấy Washi `#FAF7F2`.
-  - **100% LUÔN LUÔN LÀ TRANH VẼ TAY MÀU NƯỚC THỦY MẶC Á ĐÔNG (ZEN MINIMALIST WATERCOLOR & SUMI-E INK WASH — LỆNH ĐẶC BIỆT CỦA BỐ):** Trên nền giấy washi sần be ấm `#FAF7F2`, nét vẽ mực tàu sumi-e thanh thoát xước nhẹ kết hợp sắc xanh rêu `#3A5A40` và đất nung `#C27D53`. Người xem nhìn vào phải nhận ra NGAY LẬP TỨC đó là một bức tranh vẽ tay nghệ thuật.
-  - **CẤM TUYỆT ĐỐI 100% ẢNH CHỤP & 3D PHOTOREALISTIC:** Cấm ảnh chụp đời thực (photo stills), cấm ảnh stock, cấm render 3D chân thực như ảnh chụp tĩnh vật (bàn gỗ, tách trà, cuốn sổ rendered bóng bẩy photorealistic). Bất kể đồ vật hay con người đều bắt buộc phải là **bút pháp tranh vẽ tay màu nước**. Cấm đồ họa vector 2D phẳng, cấm SVG code mô phỏng hay anime lòe loẹt.
-  - **Cơ chế chống cache (Cache-Busting URL):** Khi cập nhật/sửa ảnh, bắt buộc phải dùng tên file mới (hậu tố `-zen-`, `-v2.webp`) để tránh bị cache trình duyệt/CDN.
-  - **Dung lượng & Kích thước:** Tỷ lệ chuẩn 16:9 (`1200x675px`), nén WebP nhẹ **bắt buộc dưới 120KB**.
+  - **ĐỊNH HƯỚNG THỊ GIÁC BÀI VIẾT WEBSITE: 100% CHUẨN CINEMATIC CONCEPTUAL PHOTOGRAPHY (LỆNH ĐẶC BIỆT CỦA BỐ 20/11/2026):** 
+    - Toàn bộ ảnh bìa bài viết trên Website chuyển sang phong cách **Nhiếp ảnh Ẩn dụ Nghệ thuật (Cinematic Conceptual Stillness)**: Bóc tách hình tượng ẩn dụ sâu sắc cho từng bài (nắng sớm xuyên sương mù não, tháp sỏi Zen cân bằng Kaizen 1%, ngọn nến lung linh sưởi ấm khi kiệt sức, bàn làm việc Deep Work không điện thoại...).
+    - **Bộ lọc thép loại bỏ rác:** 0% chữ tiếng Anh/poster/printable, 0% đồ vật vô nghĩa (tủ kim loại, hộp carton), 0% stock model gượng gạo.
+    - **Mỹ cảm Zen Watercolor:** Vẫn duy trì làm bản sắc logo thương hiệu con quay Totem Inception và các ấn phẩm triết học đặc biệt.
+  - **Cơ chế chống cache (Cache-Busting URL):** Khi cập nhật/sửa ảnh, bắt buộc phải dùng tên file mới (hậu tố `-cinematic.webp`) để tránh bị cache trình duyệt/CDN.
+  - **Dung lượng & Kích thước:** Tỷ lệ chuẩn 16:9 (`1200x675px`), Center-crop, nén WebP nhẹ **bắt buộc dưới trần 120KB** (dao động 15KB – 115KB).
+  - **CƠ CHẾ KIỂM SOÁT CHỐNG TRÙNG LẶP 3 LỚP (3-TIER ANTI-DUPLICATE GATE):** Lớp 1 (URL Registry) $\rightarrow$ Lớp 2 (MD5 Hash Check) $\rightarrow$ Lớp 3 (Hàng rào Pre-publish Audit `node scripts/audit_all_articles.js`). Cấm tuyệt đối trùng lặp ảnh giữa các bài viết.
   - **Nhận diện thương hiệu kép:** Đóng 2 huy hiệu: `🌿 TRẠI CAI NGHIỆN` (góc trên bên trái) và `traicainghien.com` (góc dưới bên phải).
   - Tên file không dấu, ngăn cách gạch nối, chứa từ khóa + thương hiệu: `tu-khoa-zen-trai-cai-nghien.webp`.
   - Cung cấp đầy đủ thẻ Alt Text tự nhiên chứa từ khóa cho bài viết.

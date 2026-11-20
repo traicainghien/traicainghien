@@ -61,13 +61,24 @@ Chất lượng của một tác phẩm nghệ thuật do AI sinh ra phụ thu�
   - Không được rập khuôn lặp đi lặp lại bối cảnh bàn làm việc / phòng ngủ / góc phòng kín.
   - Bắt buộc chủ động mở rộng không gian ra ngoài tự nhiên và đời sống đô thị thoáng đạt: Rừng thông mờ sương, cabin gỗ trên sườn núi, hồ nước phẳng lặng, bờ suối tiếp đất, ban công rộng đón ánh bình minh, mái hiên mưa rơi, quán cà phê ven đường chiều tà... tạo cảm giác giải phóng thị giác và tự do nội tâm cho người đọc.
 
-### 2.4. ĐỊNH HƯỚNG THỊ GIÁC MỚI: PINTEREST FOCUS AESTHETIC & ZEN HYBRID (CHỈ THỊ CỦA BỐ 20/11/2026)
-Để đồng bộ với chiến lược mũi nhọn **SỰ TẬP TRUNG** và chạm trúng tâm lý tệp khách hàng trẻ hiện đại (18 - 35 tuổi), hệ thống thị giác được nâng cấp:
+### 2.4. ĐỊNH HƯỚNG THỊ GIÁC CHÍNH THỨC CHO WEBSITE: CINEMATIC CONCEPTUAL PHOTOGRAPHY (CHỈ THỊ CỦA BỐ 20/11/2026)
+Để đồng bộ với chiến lược mũi nhọn **SỰ TẬP TRUNG** và chạm trúng tâm lý tệp khách hàng trẻ hiện đại (18 - 35 tuổi), toàn bộ hệ thống ảnh bìa bài viết Website được nâng cấp theo chuẩn mực cao cấp:
 
-1. **Hệ thống 1: Ảnh Bìa Bài Viết Website & Bài Phân Tích Chuyên Sâu:**
-   * **Phong cách chủ đạo:** **Pinterest Focus Aesthetic** (Không gian bàn làm việc tối giản, góc học tập Dark Academia, 60 phút buổi sáng không màn hình, bàn làm việc bên cửa sổ mưa, sổ tay Time-blocking, thiền trà chánh niệm).
-   * **Kỹ thuật xuất bản:** Khổ ngang chuẩn 16:9 (1200 x 675 px), nén WebP dưới 120KB qua xưởng `scripts/pinterest_curator.py`.
-   * **Ảnh AI Zen Watercolor:** Vẫn duy trì song song cho các bài viết triết lý sâu sắc, tổng kết sách kinh điển hoặc các bài cần ẩn dụ độc bản (như con quay Totem Inception, sóng não Alpha).
+1. **Hệ thống 1: Ảnh Bìa Bài Viết Website (100% Chuẩn Phương án B - Cinematic Conceptual):**
+   * **Bản chất phong cách:** Nhiếp ảnh điện ảnh giàu tính biểu tượng và chiều sâu tâm lý học hành vi (*Cinematic Conceptual Stillness*).
+   * **Cơ chế bóc tách ẩn dụ (Visual Metaphor Mapping):**
+     - Mỗi bài viết bắt buộc phải sở hữu một hình tượng ẩn dụ nghệ thuật ăn khớp với nỗi đau và sự chuyển hóa của người đọc (Ví dụ: Tan sương mù não $\rightarrow$ Nắng sớm xuyên qua sương rừng thông; Kaizen 1% $\rightarrow$ Tháp sỏi Zen cân bằng bên hồ; Cạn 10% năng lượng $\rightarrow$ Ngọn nến lung linh trong bóng tối ấm; Deep Work $\rightarrow$ Bàn gỗ tối giản không smartphone; Buông bỏ dằn vặt $\rightarrow$ Bóng người trầm ngâm bên cửa sổ hoàng hôn...).
+   * **Bộ lọc thép loại bỏ rác thị giác (Anti-Clutter Filter):**
+     - ❌ **CẤM 100% Chữ:** Cấm tuyệt đối ảnh dính chữ tiếng Anh lớn, bìa sách thương mại, poster, tài liệu in (printables), bảng theo dõi (journal prompts, habit trackers).
+     - ❌ **CẤM 100% Đồ vật ngẫu nhiên vô nghĩa:** Cấm ảnh tủ kệ kim loại, hộp carton đóng gói, đồ chơi, ảnh sinh hoạt gia đình phòng khách tây không ăn nhập.
+     - ❌ **CẤM 100% Stock model gượng gạo:** Cấm ảnh chụp cận cảnh khuôn mặt người mẫu thương mại tạo dáng gượng ép.
+   * **Tiêu chuẩn kỹ thuật Core Web Vitals:**
+     - Tỉ lệ vàng 16:9 (`1200 x 675 px`), căn giữa đối tượng (Center-crop).
+     - Nén WebP đa tầng, dung lượng bắt buộc **dưới trần 120KB** (dao động lý tưởng từ 15KB – 115KB).
+   * **Cơ chế kiểm soát chống trùng lặp 3 lớp (3-Tier Anti-Duplicate Gate):**
+     - *Lớp 1 (URL Registry):* Đối chiếu link nguồn với `scripts/used_curated_images.json`.
+     - *Lớp 2 (MD5 Hash Check):* Tính toán mã băm nhị phân (`hashlib.md5(f.read()).hexdigest()`), cấm 100% trùng mã hash.
+     - *Lớp 3 (Pre-publish Audit):* Script `node scripts/audit_all_articles.js` tự động quét chéo toàn bộ kho ảnh; nếu phát hiện trùng mã hash hoặc quá 120KB sẽ **khóa cứng lệnh build/deploy**.
 
 2. **Hệ thống 2: Kênh Mạng Xã Hội Đa Kênh (Threads, Instagram, Facebook Group Quotes):**
    * Vận hành theo quy chuẩn **Pinterest Aesthetic & Hybrid Dual-Source Engine** (quy định chi tiết tại skill `social-profile-growth`).
