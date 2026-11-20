@@ -393,7 +393,7 @@ const rawArticles: Article[] = [
   "slug": "ban-khong-he-luoi-ban-dang-tieu-xai-qua-som-cuoc-doi-minh",
   "title": "Bạn Không Hề Lười: Bạn Chỉ Đang Tiêu Xài Quá Sớm Cuộc Đời Mình",
   "excerpt": "Ngồi trước máy tính không quá 30 phút là tay tự với lấy điện thoại? Bạn không hề thiếu ý chí hay lười biếng. Bộ não của bạn chỉ đang bị kiệt quệ vì đã tiêu xài quá sớm những kích thích đáng ra phải đến sau.",
-  "thumbnail": "/images/articles/ban-khong-he-luoi-ban-dang-tieu-xai-qua-som-cuoc-doi-minh-pinterest.webp",
+  "thumbnail": "/images/articles/ban-khong-he-luoi-ban-dang-tieu-xai-qua-som-cuoc-doi-minh-cinematic.webp",
   "pillar": "Trụ cột 1: Cách tập trung làm việc & giải phóng khỏi xao nhãng số",
   "pillarTag": "LayLaiSuTapTrung",
   "categories": [
@@ -424,7 +424,7 @@ const rawArticles: Article[] = [
     "slug": "ky-luat-khong-can-gong-thoi-quen-nguyen-tu-20261108",
     "title": "Kỷ Luật Không Cần Gồng: Bí Mật Sức Mạnh Thói Quen Nguyên Tử",
     "excerpt": "Thay đổi lớn không đến từ những cú sốc ý chí ngắn hạn, mà bắt nguồn từ những chuyển động 1% mỗi ngày theo triết lý Kaizen. Đúc kết sâu sắc từ video của Better Version.",
-    "thumbnail": "/images/articles/ky-luat-khong-can-gong-thoi-quen-nguyen-tu-20261108-pinterest.webp",
+    "thumbnail": "/images/articles/ky-luat-khong-can-gong-thoi-quen-nguyen-tu-20261108-cinematic.webp",
     "pillar": "Trụ cột 2: Xây dựng thói quen tốt & kỷ luật không cần gồng",
     "pillarTag": "XayDungThoiQuen",
     "categories": [
@@ -450,7 +450,7 @@ const rawArticles: Article[] = [
     "slug": "chua-lanh-nao-bo-khoi-nhun-nao-so-brain-rot-20261108",
     "title": "Chữa Lành Não Bộ Khỏi Nhũn Não Số: Khôi Phục Khả Năng Tập Trung Sâu",
     "excerpt": "Tập trung không phải là gồng mình chiến đấu, mà là nghệ thuật làm dịu tâm trí và loại bỏ bẫy kích thích rẻ tiền. Góc nhìn sâu sắc được đúc kết từ video của Hieu The Consul.",
-    "thumbnail": "/images/articles/chua-lanh-nao-bo-khoi-nhun-nao-so-brain-rot-20261108-pinterest.webp",
+    "thumbnail": "/images/articles/chua-lanh-nao-bo-khoi-nhun-nao-so-brain-rot-20261108-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
@@ -476,7 +476,7 @@ const rawArticles: Article[] = [
     "slug": "khi-chi-con-10-phan-tram-nang-luong-giao-an-cho-ngay-kiet-que",
     "title": "Khi Chỉ Còn 10% Năng Lượng: Giáo Án Cho Một Ngày Kiệt Quệ",
     "excerpt": "Mở mắt ra thấy đầu nặng trịch, ngực tức nghẹn và chỉ muốn trốn cả thế giới? Đừng ép chiếc chân đang đau phải chạy nước rút. Khám phá cách làm việc nhân văn khi tinh thần chạm đáy.",
-    "thumbnail": "/images/articles/khi-chi-con-10-phan-tram-nang-luong-giao-an-cho-ngay-kiet-que-pinterest.webp",
+    "thumbnail": "/images/articles/khi-chi-con-10-phan-tram-nang-luong-giao-an-cho-ngay-kiet-que-cinematic.webp",
     "pillar": "Trụ cột 2: Phương pháp thay đổi & Thiết kế môi trường",
     "pillarTag": "QuanTriCamXuc",
     "categories": [
@@ -500,7 +500,7 @@ const rawArticles: Article[] = [
     "slug": "dung-flex-doc-sach-vi-sao-doc-nhieu-doi-van-tri-tre",
     "title": "Bẫy 'Nghiện Đọc': Đọc Hết 50 Cuốn Sách, Sao Cuộc Đời Vẫn Đứng Yên?",
     "excerpt": "Mua sách theo trend, check-in khoe số lượng, nhưng tâm trí vẫn bất an và cuộc sống dậm chân tại chỗ? Khám phá cạm bẫy 'thượng đẳng tri thức' và nghệ thuật đọc để chuyển hóa đời thực.",
-    "thumbnail": "/images/articles/dung-flex-doc-sach-vi-sao-doc-nhieu-doi-van-tri-tre-pinterest.webp",
+    "thumbnail": "/images/articles/dung-flex-doc-sach-vi-sao-doc-nhieu-doi-van-tri-tre-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "HieuHanhVi",
     "categories": [
@@ -524,7 +524,7 @@ const rawArticles: Article[] = [
     "slug": "bang-dieu-khien-nao-bo-4-hoa-chat-than-kinh-ky-luat-dinh-cao",
     "title": "Bảng Điều Khiển Não Bộ: 4 Hóa Chất Tạo Nên Kỷ Luật Đỉnh Cao",
     "excerpt": "Dopamine, Epinephrine, Acetylcholine và Serotonin: Cách làm chủ 4 hóa chất thần kinh để khôi phục năng lượng, tập trung và kỷ luật tự thân không cần gồng.",
-    "thumbnail": "/images/articles/bang-dieu-khien-nao-bo-4-hoa-chat-than-kinh-ky-luat-dinh-cao-pinterest.webp",
+    "thumbnail": "/images/articles/bang-dieu-khien-nao-bo-4-hoa-chat-than-kinh-ky-luat-dinh-cao-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "RenLuyenBoNao",
     "categories": [
