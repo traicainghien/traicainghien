@@ -47,12 +47,15 @@ Mọi bài viết, kịch bản video, ảnh quote và luồng tự động đ�
 * **Nội dung:** 100% bài viết Carousel và Visual Quote 4:5 giải mã cơ chế não bộ về **Sự Tập Trung**, hướng dẫn cách thiết kế bàn làm việc Deep Work và phục hồi thùy trán.
 * **Bio Call-To-Action:** Dẫn về bài test: *"Đo mức độ Mất Tập Trung (25 câu hỏi miễn phí): traicainghien.com/trac-nghiem"*.
 
-### 👥 3. Kênh Facebook Group (`Trại Cai Nghiện`) — Tần suất: 2 bài/ngày (08:15 & 20:45)
+### 👥 3. Kênh Facebook Group (`Trại Cai Nghiện`)
 * **Tên nhóm:** `Trại Cai Nghiện - Rèn Luyện Sự Tập Trung & Làm Việc Sâu (Deep Work)`
-* **Định vị:** **Phòng Gym rèn luyện cơ bắp Tập Trung**.
-* **Nghi thức:**
-  * 08:15 Sáng: Cam kết 1 mục tiêu tối quan trọng (WIG) & Điểm danh hiệp 45 phút Deep Work.
-  * 20:45 Tối: Kiểm toán sự chú ý, giải phẫu kẻ trộm thời gian trong ngày.
+* **Định vị:** **Phòng Gym rèn luyện cơ bắp Tập Trung & Sinh hoạt cộng đồng**.
+* **Phương thức vận hành (Lệnh cập nhật của Bố 20/11/2026):**
+  - **Ngắt liên kết khỏi Buffer:** Bỏ hoàn toàn luồng nhắc nhở (Reminders) của Buffer trên Group để giải phóng hàng đợi, tránh phiền hà thông báo đẩy.
+  - **Vận hành thực tế:** Admin đăng bài thủ công trực tiếp hoặc liên kết chia sẻ từ Fanpage Trại Cai Nghiện (nơi hệ thống bot tự động đăng 100% qua Meta Graph API).
+* **Nghi thức sinh hoạt:**
+  * Sáng: Cam kết 1 mục tiêu tối quan trọng (WIG) & Điểm danh hiệp 45 phút Deep Work.
+  * Tối: Kiểm toán sự chú ý, giải phẫu kẻ trộm thời gian trong ngày.
 
 ### 🌐 4. Website `traicainghien.com` & Phễu Chuyển Đổi
 * **Sản phẩm mồi (Lead Magnet):** Bài trắc nghiệm **Đo Mức Độ Mất Tập Trung (25 câu)**.

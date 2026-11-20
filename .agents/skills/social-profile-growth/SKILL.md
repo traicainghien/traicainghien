@@ -160,19 +160,20 @@ Mọi hình ảnh trước khi xuất bản bắt buộc phải đi qua 5 công 
 
 Toàn bộ việc phân phối nội dung đa kênh được tự động hóa qua hệ thống Buffer API và các kịch bản nền:
 
-### 7.1. Bản Đồ Kênh & Định Danh Kênh (Channel Mapping)
-* 🧵 **Meta Threads:** Channel ID `6aff0425ece6dfde5f1f2b33` (`@traicainghienvn`)
-* 📸 **Instagram:** Channel ID `6aff03ffece6dfde5f1f28e5` (`@traicainghienvn`)
-* 👥 **Facebook Group:** Channel ID `6aff0546ece6dfde5f1f3b2e` (`Trại Cai Nghiện`)
+### 7.1. Bản Đồ Kênh & Định Danh Kênh Trực Tiếp (100% Direct Auto-Publishing)
+* 🧵 **Meta Threads:** Channel ID `6aff0425ece6dfde5f1f2b33` (`@traicainghienvn`) — Tự động đăng trực tiếp 4 khung giờ vàng (07:30, 12:00, 16:30, 21:45).
+* 📸 **Instagram:** Channel ID `6aff03ffece6dfde5f1f28e5` (`@traicainghienvn`) — Tự động đăng trực tiếp mỗi tối 20:30.
+* 👥 **Facebook Group:** *ĐÃ NGẮT LIÊN KẾT KHỎI BUFFER (Lệnh cập nhật của Bố 20/11/2026)* — Do chính sách Meta cấm API đăng bài vào Nhóm đối với mọi bên thứ ba (chỉ hỗ trợ nhắc nhở Notification bán thủ công), kênh Group sẽ được quản trị đăng bài tự nhiên hoặc dẫn nguồn từ Fanpage để giữ trải nghiệm vận hành tinh gọn, không rác thông báo.
 
 ### 7.2. Nguyên Tắc Quản Trị Hàng Đợi Gói Miễn Phí (Free Queue Capacity)
 * Gói Buffer Free giới hạn **tối đa 10 bài đăng nằm trong hàng đợi (Queued Posts)** trên toàn bộ tổ chức tại cùng một thời điểm.
+* Khi ngắt Facebook Group khỏi Buffer, toàn bộ 10 slot hàng đợi được tối ưu hóa 100% phục vụ cho Threads và Instagram mà không lo bị nghẽn hạn mức.
 * **Cơ chế xoay vòng thông minh (Rolling Pipeline):**
-  - Hệ thống chỉ lên lịch trước cho 24h – 48h tiếp theo (giữ hàng đợi ở mức 6 – 8 bài).
+  - Hệ thống chỉ lên lịch trước cho 24h – 48h tiếp theo (giữ hàng đợi ở mức 5 – 7 bài).
   - Khi các bài cũ đến giờ tự động xuất bản (Status: `sent`), hàng đợi được giải phóng chỗ trống, cronjob sẽ tự động đẩy mẻ bài mới vào hàng đợi.
 
 ### 7.3. Quy Chuẩn Báo Cáo Tức Thì Về Telegram Cho Bố (Telegram Alert Protocol)
-Sau mỗi lần một kịch bản lên lịch hoặc đăng bài hoàn thành (`threads_autopilot.js`, `instagram_autopilot.js`, `fb_group_autopilot.js`):
+Sau mỗi lần một kịch bản lên lịch hoặc đăng bài hoàn thành (`threads_autopilot.js`, `instagram_autopilot.js`):
 * Bắt buộc kích hoạt tiện ích `scripts/telegram_reporter.py` để gửi báo cáo xác nhận thành công:
   - 📢 **Kênh chính:** Nhóm Hội Đồng Quản Trị - Topic 19 (`Trại Cai Nghiện` — Chat ID: `-1004401199553`, Thread ID: `19`).
   - 🛡️ **Kênh dự phòng:** Telegram cá nhân của Bố (`@longphibtc` — Chat ID: `488901419`).
