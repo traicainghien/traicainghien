@@ -241,41 +241,38 @@ def publish_teaser():
     print(caption[:500] + "\n...\n" + caption[-300:])
     print("------------------------------------------------\n")
 
-    # Đăng ảnh + caption lên Fanpage
-    url = f"https://graph.facebook.com/v20.0/{PAGE_ID}/photos"
-    print(f"📤 Đang đăng lên Facebook Graph API (Page ID: {PAGE_ID})...")
+    # Đăng bài dạng Rich Link Preview lên Fanpage Feed
+    feed_url = f"https://graph.facebook.com/v20.0/{PAGE_ID}/feed"
+    article_url = f"https://traicainghien.com/bai-viet/{slug}"
+    print(f"📤 Đang đăng lên Facebook Feed (Page ID: {PAGE_ID})...")
 
-    with open(photo_path, "rb") as f:
-        files = {"source": f}
-        data = {
-            "caption": caption,
-            "access_token": ACCESS_TOKEN,
-            "published": "true"
-        }
-        res = requests.post(url, data=data, files=files, timeout=40)
-        res_data = res.json()
+    data = {
+        "message": caption,
+        "link": article_url,
+        "access_token": ACCESS_TOKEN
+    }
+    res = requests.post(feed_url, data=data, timeout=40)
+    res_data = res.json()
 
-    if "id" not in res_data and "post_id" not in res_data:
-        raise RuntimeError(f"Lỗi đăng bài lên Facebook: {res_data}")
+    if "id" not in res_data:
+        raise RuntimeError(f"Lỗi đăng bài lên Facebook Feed: {res_data}")
 
-    published_post_id = res_data.get("post_id") or res_data.get("id")
+    published_post_id = res_data["id"]
     print(f"🎉 ĐÃ ĐĂNG BÀI THÀNH CÔNG! Post ID: {published_post_id}")
 
     # 1. Tự động like bài viết
-    like_target_id = published_post_id if "_" in str(published_post_id) else f"{PAGE_ID}_{published_post_id}"
-    like_url = f"https://graph.facebook.com/v20.0/{like_target_id}/likes"
+    like_url = f"https://graph.facebook.com/v20.0/{published_post_id}/likes"
     try:
         requests.post(like_url, data={"access_token": ACCESS_TOKEN}, timeout=15)
         print("👍 Đã thả Like bài viết tự động.")
     except Exception as e:
         print("Like warning:", e)
 
-    # 2. Ghim bình luận đầu tiên dẫn link website
+    # 2. Ghim bình luận đầu tiên dẫn link Telegram
     comment_url = f"https://graph.facebook.com/v20.0/{published_post_id}/comments"
     first_comment_text = (
-        f"📖 Mời bạn bước vào bài phân tích chuyên sâu tối nay để khám phá trọn vẹn lộ trình và bài tập thực hành chuyển hóa:\n"
-        f"👉 https://traicainghien.com/bai-viet/{slug}\n\n"
-        f"Tham gia cùng chúng mình tại Kênh Telegram để nhận bản tin tâm lý học mỗi ngày nhé: https://t.me/traicainghiendaily"
+        "🌿 Cùng tham gia Kênh Telegram Daily của Trại Cai Nghiện để nhận các bản tin tâm lý học và bài tập chuyển hóa mỗi ngày nhé bạn:\n"
+        "👉 https://t.me/traicainghiendaily"
     )
     try:
         c_res = requests.post(
@@ -283,12 +280,13 @@ def publish_teaser():
             data={"message": first_comment_text, "access_token": ACCESS_TOKEN},
             timeout=20
         )
-        print("💬 Đã ghim First Comment dẫn link bài viết:", c_res.json().get("id"))
+        print("💬 Đã ghim First Comment:", c_res.json().get("id"))
     except Exception as e:
         print("Comment warning:", e)
 
     # 3. Lấy permalink
-    permalink = f"https://www.facebook.com/{PAGE_ID}/posts/{published_post_id}"
+    post_short_id = published_post_id.split("_")[-1]
+    permalink = f"https://www.facebook.com/{PAGE_ID}/posts/{post_short_id}"
     try:
         link_url = f"https://graph.facebook.com/v20.0/{published_post_id}?fields=permalink_url&access_token={ACCESS_TOKEN}"
         l_res = requests.get(link_url, timeout=10)
