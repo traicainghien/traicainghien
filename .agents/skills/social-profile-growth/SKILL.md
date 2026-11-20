@@ -1,11 +1,11 @@
 ---
 name: social-profile-growth
-description: Kỹ năng xây dựng và phát triển profile cá nhân và kênh thương hiệu trên các nền tảng Text-first và Thought Leadership gồm X (Twitter), Threads, Instagram và Substack. Đúc kết từ sergebulaev/x-skills, sergebulaev/threads-skills và bayramannakov/founder-voice-ghostwriter.
+description: Kỹ năng xây dựng và phát triển profile cá nhân và kênh thương hiệu trên các nền tảng Text-first và Thought Leadership gồm X (Twitter), Threads, Instagram, Facebook Group và Substack. Đúc kết từ sergebulaev/x-skills, sergebulaev/threads-skills, bayramannakov/founder-voice-ghostwriter và hệ thống Visual Curation Pinterest Hybrid của Trại Cai Nghiện.
 ---
 
-# 🌐 CHIẾN LƯỢC XÂY DỰNG PROFILE & THƯƠNG HIỆU ĐA KÊNH: X, THREADS, INSTAGRAM & SUBSTACK
-> **Chịu trách nhiệm:** **Agent 11 (Personal Brand & Social Profile Architect)**  
-> **Mục tiêu:** Định vị Trại Cai Nghiện như một ngọn hải đăng tri thức về hành vi, sự tập trung và lối sống có chủ đích; xây dựng tệp người theo dõi chất lượng cao (High-Intent Followers) và tệp độc giả trung thành.
+# 🌐 CHIẾN LƯỢC XÂY DỰNG PROFILE & THƯƠNG HIỆU ĐA KÊNH: X, THREADS, INSTAGRAM, GROUP & SUBSTACK
+> **Chịu trách nhiệm:** **Agent 11 (Personal Brand & Social Profile Architect)** phối hợp cùng **Agent 8 (Visual Stylist)**  
+> **Trọng tâm mũi nhọn Giai đoạn 1 (Lệnh tối thượng của Bố):** Toàn bộ nội dung, định vị và phễu chuyển đổi đều quy về duy nhất một từ khóa lõi: **SỰ TẬP TRUNG (FOCUS / ATTENTION / DEEP WORK)**.
 
 ---
 
@@ -30,65 +30,150 @@ X là nền tảng của thông tin nhanh, cô đọng và những góc nhìn ph
 ---
 
 ## 2. 🧵 NỀN TẢNG META THREADS: NƠI TRÚ ẨN CỦA NHỮNG CUỘC ĐỐI THOẠI CHÂN THÀNH
-*(Đúc kết từ `sergebulaev/threads-skills`)*
+*(Đúc kết từ `sergebulaev/threads-skills` & Quy chuẩn Trại Cai Nghiện)*
 
 Thuật toán Threads ưu tiên **tính hội thoại (Conversational Depth)** và cảm xúc đời thực của người trẻ.
 
-### 2.1. Phong Cách Tự Sự Ngắn (Micro-Essays: 100 – 250 từ)
-* Viết như đang tâm sự lúc nửa đêm với một người bạn thân:
-  * Thú nhận sự yếu đuối, những ngày làm việc không hiệu quả, cảm giác trống rỗng khi lướt short video.
-  * Giọng văn khiêm nhường, không dạy đời, không dùng thuật ngữ đao to búa lớn.
-* **Kỹ thuật Đặt Câu Hỏi Mở Điểm Huyệt (Engagement Prompts):** Luôn kết thúc bằng một câu hỏi gợi mở để người đọc vào bình luận:
-  > *"Lần gần nhất bạn ngồi yên một chỗ 15 phút mà không chạm vào điện thoại là khi nào?"*  
-  > *"Có ai cũng bị thói quen vừa ăn cơm vừa phải tìm một video YouTube để xem không?"*
+### 2.1. Định Hướng Nội Dung Giai Đoạn 1: SỰ TẬP TRUNG
+* **Văn phong:** Viết như đang tâm sự lúc đêm muộn với một người bạn thân. Thú nhận sự yếu đuối, những ngày bất lực vì nhảy tab, mở máy định làm việc nhưng lướt video ngắn 2 tiếng trong hối hận.
+* **Quy chuẩn định dạng bài đăng (Clean & Authentic Formula):**
+  - **Độ dài bài:** Từ 2 đến 3 đoạn văn ngắn gọn, súc tích (tuyệt đối dưới 480 ký tự để không bị cắt chữ).
+  - **Hình ảnh đính kèm:** Bắt buộc 1 hình ảnh chuẩn tỉ lệ dọc 4:5 (1080x1350px) mang phong cách Pinterest Aesthetic (góc bàn làm việc, ánh đèn vàng ấm, tách trà) đã qua xử lý typography.
+  - **Dẫn link tự nhiên:** Chỉ đặt 1 dòng kêu gọi nhẹ nhàng ở cuối bài: `🌿 Tìm lại sự chú ý tại: traicainghien.com`.
+  - **Triệt tiêu Spam:** **Tuyệt đối không spam 3 bình luận (comment) dưới bài**. Giữ cho bài viết sạch sẽ, tự nhiên, chống bị thuật toán Threads đánh cờ vi phạm quy chế liên kết.
+
+### 2.2. Lịch Trình Phát Sóng 4 Khung Giờ Vàng (Threads Slots)
+1. 🌅 **07:30 (Sáng thức giấc):** Thức tỉnh tâm trí, cam kết 60 phút buổi sáng không chạm vào màn hình.
+2. ☕ **12:00 (Nghỉ trưa):** Nhắc nhở giải lao không dùng dopamine rác, phục hồi thùy trán.
+3. ⚡ **16:30 (Cuối chiều):** Vượt qua cơn tụt năng lượng (*Afternoon Slump*), đóng khung công việc cuối ngày.
+4. 🌙 **21:45 (Trước khi ngủ):** Xả rác tâm trí (Brain Dump), buông bỏ điện thoại, chuẩn bị giấc ngủ sâu.
 
 ---
 
-## 3. 📸 NỀN TẢNG INSTAGRAM: THỊ GIÁC ZEN MINIMALIST & CAROUSEL BÀI HỌC
-* **Định vị Profile:** Avatar tranh Zen vẽ tay, bio rõ ràng: *"Đồng hành cùng bạn giải phóng khỏi xao nhãng số & tìm lại năng lực làm việc sâu. 🌿 Trở về phiên bản tốt nhất của bạn."*
-* **Dạng bài Carousel (8 – 10 slide):**
-  * Kết hợp giữa **Tranh vẽ màu nước thủy mặc Á Đông** từ Agent 8 và các bài học hành vi cô đọng từ Agent 1.
-  * *Slide 1:* Hook giật tò mò (Tiêu đề 2 dòng + tranh minh họa Zen).
-  * *Slide 2–7:* Mỗi slide là một lát cắt tâm lý học ngắn gọn, dễ đọc, khoảng cách dòng thoáng đãng.
-  * *Slide cuối:* Tóm tắt hành động 1% Kaizen + Mời lưu bài viết (Save Post) để thực hành.
+## 3. 📸 NỀN TẢNG INSTAGRAM: THỊ GIÁC AESTHETIC & NĂNG SUẤT CHÁNH NIỆM
+
+### 3.1. Định Vị Kênh (@traicainghienvn)
+* **Bio:** *"Đồng hành cùng bạn giải phóng khỏi xao nhãng số & tìm lại năng lực làm việc sâu. 🌿 Trở về phiên bản tốt nhất của bạn. 🔗 traicainghien.com"*
+* **Khung giờ đăng bài tối ưu:** **20:30 mỗi tối** (Thời điểm người dùng thư giãn, bắt đầu có xu hướng lướt feed và dễ tiếp nhận thông điệp chữa lành, điều chỉnh thói quen).
+
+### 3.2. Cấu Trúc Nội Dung Bài Đăng (Instagram Post)
+* **Hình ảnh (Visual 4:5):** Kích thước chuẩn 1080 x 1350 px. Hình ảnh lấy từ nguồn Pinterest tuyển chọn qua xưởng Pillow Studio, mang cảm xúc ấm áp, tĩnh lặng.
+* **Phần mở đầu Caption (The Hook):** 1–2 câu đánh trúng tâm lý xao nhãng:
+  > *"Bạn có bao giờ tự hỏi: Tại sao chúng ta có thể ngồi lướt video ngắn 2 tiếng mà không thấy mệt, nhưng ngồi đọc một trang sách 10 phút lại thấy bồn chồn khó chịu?"*
+* **Thân bài (The Behavioral Truth):** Giải thích ngắn gọn cơ chế bập bênh Dopamine hoặc sự suy yếu của thùy trán (Prefrontal Cortex).
+* **Bài tập vi mô 1% (Kaizen Action):** Hướng dẫn 1 hành động cụ thể có thể làm ngay tối nay (ví dụ: cất điện thoại ngoài phòng ngủ).
+* **CTA & Bio Link:** Hướng dẫn nhấp vào link bio để làm bài trắc nghiệm nhận diện mức độ xao nhãng miễn phí.
 
 ---
 
-## 4. 📰 NỀN TẢNG SUBSTACK: TÀI SẢN TRI THỨC DÀI & CỘNG ĐỒNG BỀN VỮNG
+## 4. 👥 CHIẾN LƯỢC NHÓM FACEBOOK (FACEBOOK GROUP: TRẠI CAI NGHIỆN)
+> **Định vị:** Không gian thực hành & rèn luyện Sự Tập Trung (Focus Lab & Deep Work Sanctuary).
+
+### 4.1. Ba Trụ Cột Tương Tác Cốt Lõi
+1. **Chia sẻ phương pháp & Công cụ (Tactical Deep Work):** Giới thiệu các kỹ thuật Pomodoro biến thể, quy tắc 90 phút Ultradian, cách setup màn hình thang độ xám (Greyscale), template Notion quản trị sự chú ý.
+2. **Kỷ luật đồng hành (Accountability Check-in):** Tạo không gian an toàn để các thành viên điểm danh sự tập trung mỗi ngày, không phán xét nhau khi thất bại.
+3. **Thử thách định kỳ (Focus Challenges):** Thử thách 7 ngày buổi sáng không điện thoại, Thử thách 14 ngày cai short video, Thử thách 21 ngày làm việc sâu.
+
+### 4.2. Lịch Phát Sóng 2 Khung Giờ Nhóm Mỗi Ngày
+* 🌅 **08:15 (Morning Intention):** Bài viết ngắn định hình mục tiêu duy nhất trong ngày (One Single Priority) để tránh bẫy phân tán.
+* 🌙 **20:45 (Nightly Reflection):** Bài viết tổng kết, kiểm kê năng lượng, câu hỏi tương tác mở giúp thành viên xả stress và bình luận chia sẻ.
+
+---
+
+## 5. 📰 NỀN TẢNG SUBSTACK: TÀI SẢN TRI THỨC DÀI & CỘNG ĐỒNG BỀN VỮNG
 *(Đúc kết từ `bayramannakov/founder-voice-ghostwriter`)*
 
-Substack là pháo đài tri thức dài (Long-Form Essay) nơi bố xây dựng mối quan hệ tin cậy sâu sắc với độc giả qua Hòm thư Email.
-
-### 4.1. Cấu Trúc Bản Tin Hàng Tuần (Weekly Thought Leadership Newsletter)
-* **Tần suất:** 1 bản tin chất lượng cao vào sáng Chủ Nhật (đọc chậm cùng tách trà).
-* **Nội dung:** Phân tích một chủ đề sâu sắc (Cân bằng động, Nghịch lý Yerkes-Dodson, Bẫy tích lũy kiến thức).
-* **Văn phong:** Đậm chất tự sự của Bố & Mây — chân thực, ấm áp, sâu sắc, không thương mại hóa, không chèn ép quảng cáo.
-* **Chuyển đổi tự nhiên:** Biến người đọc miễn phí thành những người ủng hộ trung thành cho hành trình phụng sự của Trại Cai Nghiện.
+* **Tần suất:** 1 bản tin chuyên sâu vào sáng Chủ Nhật hàng tuần.
+* **Nội dung:** Bài luận tâm lý học hành vi dài 1.500 – 2.500 từ, đào sâu vào bản chất của sự chú ý, bẫy tiện nghi (The Comfort Crisis) và các phương pháp phục hồi năng lượng tinh thần.
 
 ---
 
-## 5. 📜 NGHỆ THUẬT PHÁT TRIỂN KÊNH QUOTE CARD FACEBOOK/INSTAGRAM (TINY BUDDHA & POWER OF POSITIVITY FORMULA) — LỆNH ĐẶC BIỆT CỦA BỐ
+## 6. 📌 HỆ THỐNG NGUỒN ẢNH PINTEREST & DUAL-SOURCE HYBRID CURATION ENGINE (LỆNH ĐẶC BIỆT CỦA BỐ)
 
-> **Chịu trách nhiệm:** **Agent 9 (Facebook Community Specialist)** phối hợp cùng **Agent 8 (Visual Stylist)**  
-> **Nguồn nội dung cảm hứng:** `Tiny Buddha` (@tinybuddha) & `Power of Positivity` (@powerofpositivity)  
-> **Phong cách thị giác:** Chữ viết tay bất toàn trên nền giấy sần Washi (`#FAF7F2`) theo phong cách tối giản của *Xanh Lam* (`bluesua`).
+Để tạo ra những tấm ảnh mạng xã hội có "gu", giàu cảm xúc và thu hút tương tác tự nhiên, hệ thống vận hành theo **Cơ chế Nguồn Kép (Hybrid Dual-Source Engine)**:
 
-### 5.1. Bộ Lọc 3 Trục Nội Dung Tuyển Lựa
-Không lấy những câu triết lý sáo rỗng hay sến súa. Nội dung trích dẫn bắt buộc phải lọc qua **3 Trục Giá Trị Cốt Lõi**:
-1. **Buông bỏ & Giảm tải tâm trí (Letting Go & Decluttering):** Dũng cảm buông bỏ sự kiểm soát thái quá, tha thứ cho những ngày không hoàn hảo, tắt bớt tiếng ồn xã hội.
-2. **Tự từ bi & Không phán xét chính mình (Radical Self-Compassion):** Nhẹ nhàng với chính mình khi trượt chân, hiểu rằng nghiện ngập/trì hoãn là nỗi đau cần vỗ về chứ không phải tội lỗi để tự sỉ vả.
-3. **Chậm lại giữa đời số xô bồ (Digital Stillness & Slow Living):** Nhắc nhở người đọc ngẩng đầu lên khỏi màn hình, hít thở sâu, kết nối lại với thiên nhiên và người thân yêu.
+```
+[ Pinterest Curated Public RSS ] ──┐
+                                   ├──> [ Pillow Studio Engine ] ──> [ Thành Phẩm 4:5 1080x1350 ]
+[ Unsplash / Pexels 4K Fallback] ──┘      (Crop + Gradient + Chữ + Totem)
+```
 
-### 5.2. Quy Tắc Việt Hóa "Chạm Đáy Cảm Xúc"
-* **Độ dài vàng:** Chỉ từ **2 đến 4 dòng ngắn**, mỗi dòng từ 4 – 8 từ.
-* **Ngắt dòng theo nhịp thở:** Dùng dấu `|` để xuống dòng đúng nhịp điệu thơ và ngữ nghĩa tự nhiên của tiếng Việt:
-  > *"Bạn không cần phải kiểm soát mọi thứ. | Đôi khi, điều dũng cảm nhất bạn có thể làm | chỉ đơn giản là buông tay | và thở một hơi thật sâu."*
-* **Loại bỏ văn mẫu AI:** Cấm dịch thô cứng kiểu Google Translate. Chuyển ngữ sang văn phong ấm áp, gần gũi, đời thường như người bạn ngồi uống trà cùng nhau.
+### 6.1. Kỹ Thuật Bóc Tách Ảnh Trực Tiếp Từ Pinterest (Bypass Cloudflare 403)
+* **Vấn đề:** Pinterest chặn 100% các bot cào trực tiếp qua trang tìm kiếm `pinterest.com/search` bằng Cloudflare (mã lỗi `403 Forbidden`).
+* **Giải pháp bóc tách hợp chuẩn qua RSS:** Mọi Bảng Pinterest công khai (Public Boards) đều phát luồng RSS hợp lệ theo định dạng:  
+  `https://www.pinterest.com/{username}/{board_name}.rss`
+* **Thuật toán nâng cấp ảnh từ thumbnail sang Full HD:**  
+  Trong dữ liệu XML của RSS, ảnh mặc định trong thẻ `<description>` ở dạng thumbnail nhỏ (`/236x/` hoặc `/474x/`). Script tự động thực hiện phép chuyển đổi chuỗi:
+  ```python
+  raw_image_url = match.group(1)
+  # Đổi sang độ phân giải nét cao nhất từ CDN i.pinimg.com
+  high_res_url = raw_image_url.replace('/236x/', '/736x/').replace('/474x/', '/736x/')
+  ```
+* **Nguồn Fallback an toàn (Unsplash/Pexels 4K):** Khi bảng Pinterest gặp sự cố mạng hoặc tác giả đổi quyền riêng tư, hệ thống tự động fallback sang Unsplash/Pexels theo từ khóa chủ đề để bảo đảm 100% luồng đăng bài không bị đứt gãy.
 
-### 5.3. Công Cụ & Quy Trình Đăng Bài
-* **Sản xuất ảnh:** Sử dụng script `scripts/make_quote_post.py` để tạo ảnh chất lượng cao 1080x1080px ngay lập tức.
-* **Caption đăng bài:**
-  * Giữ caption ngắn gọn (1–3 câu gợi mở), không viết dài dòng.
-  * Câu hỏi tương tác ở cuối: *"Hôm nay bạn đã kịp hít một hơi thật sâu chưa?"*
-  * Hashtags chuẩn: `#TraiCaiNghien #SốngCóChủĐích #BuôngBỏ #BìnhYên #TinyBuddha #PowerOfPositivity`
+### 6.2. Danh Bạ 15 Bảng Tuyển Chọn Pinterest Về "Sự Tập Trung"
+1. `dark-academia-desk`: Bàn làm việc gỗ trầm, sách cổ, đèn dầu, laptop tối giản.
+2. `quiet-morning-coffee`: Tách cà phê sớm bên cửa sổ, ánh nắng ban mai nhẹ nhàng.
+3. `zen-minimalist-workspace`: Góc làm việc phong cách Nhật Bản, thảm tatami, bàn trà.
+4. `rainy-day-reading`: Đọc sách bên khung cửa kính đọng nước mưa.
+5. `cozy-library-corners`: Góc thư viện sách cổ, ghế bành nhung ấm.
+6. `foggy-forest-walk`: Con đường mòn sương mù giữa rừng thông tĩnh mịch.
+7. `clean-desk-setup`: Bàn làm việc hiện đại, không một cọng dây thừa, đơn nhiệm.
+8. `journaling-candles`: Cuốn sổ tay mở, bút máy và ánh nến lung linh.
+9. `sunset-solitude`: Một người ngồi ngắm hoàng hôn buông trên đồi vắng.
+10. `tea-ceremony-stillness`: Ấm trà gốm mộc, khói trà bốc lên nhẹ nhàng.
+11. `artisan-workshop`: Góc sáng tạo thủ công của nghệ nhân, sự tập trung tỉ mỉ.
+12. `late-night-study`: Đèn bàn học le lói lúc nửa đêm, không gian yên tĩnh tuyệt đối.
+13. `autumn-leaves-bench`: Ghế đá công viên mùa thu lá vàng, chiếc radio cũ.
+14. `monochrome-architecture`: Kiến trúc tối giản bê tông & ánh sáng hình khối.
+15. `stargazing-peace`: Bầu trời đêm đầy sao giữa thiên nhiên bao la.
 
+### 6.3. Quy Chuẩn Xưởng Xử Lý Ảnh `Pillow Studio` (`scripts/pinterest_curator.py`)
+Mọi hình ảnh trước khi xuất bản bắt buộc phải đi qua 5 công đoạn gia công:
+1. **Nắn khung tỉ lệ vàng 4:5 (1080 x 1350 px):** Sử dụng thuật toán `LANCZOS` để phóng to và cắt xén thông minh từ tâm ảnh, tối ưu hóa diện tích hiển thị trên màn hình smartphone của Threads, Instagram và Facebook.
+2. **Đổ Gradient bóng tối tự nhiên (Atmospheric Dark Vignette):** Tạo một lớp phủ gradient mềm mại từ đen mờ (alpha 180) ở đỉnh ảnh và chân ảnh, giữ sáng ở trung tâm để làm nổi bật chủ thể bức ảnh đồng thời giúp chữ đọc rõ ràng 100%.
+3. **Typography Tiếng Việt có chân (Classical Serif):**
+   * Sử dụng font chữ có chân kinh điển (`Georgia` hoặc `Merriweather`).
+   * Cỡ chữ lớn 44–48px cho câu nói cốt lõi (Core Quote).
+   * Cỡ chữ nhỏ 24–26px cho lời đề tựa dịu dàng (Author/Sub-note).
+   * Chữ được căn giữa (*Centered*), ngắt dòng chuẩn theo nhịp thở từ 4–7 từ mỗi dòng.
+4. **Đóng dấu mộc nhận diện thương hiệu:**
+   * Dưới chân ảnh (vị trí y = 1270px) luôn có chữ ký nhận diện trang trọng:  
+     `🌿 TRẠI CAI NGHIỆN • traicainghien.com` (Màu xám sáng `#E6E6E6`, font trang nhã).
+5. **Độ sắc nét & Dung lượng:** Xuất file chuẩn `.png` hoặc `.jpg` chất lượng 95%, dung lượng dưới 1.5MB để tối ưu hóa tốc độ tải trang và không bị thuật toán nén ảnh làm mờ.
+
+### 6.4. Cơ Chế Chống Lặp Ảnh Tuyệt Đối 3 Lớp (Three-Tier Zero-Duplicate Gate - Lệnh của Bố)
+Để đảm bảo nguyên tắc thép **tuyệt đối không bao giờ tái sử dụng bất kỳ ảnh nào đã từng xuất bản trên website hay mạng xã hội**:
+1. **Lớp 1: Sổ Bộ Nhớ Lịch Sử Registry (`scripts/used_curated_images.json`):**
+   * Lưu vết vĩnh viễn toàn bộ URL ảnh Pinterest, tên file và bài viết đã sử dụng.
+   * Tự động đồng bộ với toàn bộ thumbnail có sẵn trong `src/data/articles.ts`. Nếu URL hoặc tên file đã tồn tại -> Bỏ qua ngay lập tức.
+2. **Lớp 2: Thẩm Định Mã Băm Vật Lý (MD5 Hash Checksum):**
+   * Trước khi cấp phép tải về hoặc gán cho bài viết, script tính toán mã MD5 của nội dung ảnh.
+   * Đối chiếu với kho hash độc bản (đã nạp sẵn hơn 84 mã hash hiện có). Dù ảnh bị người khác đổi link, đổi tên hay đổi metadata, nếu trùng mã hash -> Từ chối ngay và lấy ảnh tiếp theo.
+3. **Lớp 3: Hỗ Trợ 2 Định Dạng Xuất Bản Độc Bản:**
+   * **Khổ ngang 16:9 cho Website (1200 x 675 px):** Qua hàm `process_web_article_cover`, nén WebP dưới 120KB, vừa khít card bài viết.
+   * **Khổ dọc 4:5 cho Mạng Xã Hội (1080 x 1350 px):** Qua hàm `process_quote_card`, phủ gradient tối và chèn Typography tiếng Việt có chân.
+
+---
+
+## 7. 🚀 HỆ THỐNG VẬN HÀNH TỰ ĐỘNG QUA BUFFER (BUFFER OMNICHANNEL PIPELINE)
+
+Toàn bộ việc phân phối nội dung đa kênh được tự động hóa qua hệ thống Buffer API và các kịch bản nền:
+
+### 7.1. Bản Đồ Kênh & Định Danh Kênh (Channel Mapping)
+* 🧵 **Meta Threads:** Channel ID `6aff0425ece6dfde5f1f2b33` (`@traicainghienvn`)
+* 📸 **Instagram:** Channel ID `6aff03ffece6dfde5f1f28e5` (`@traicainghienvn`)
+* 👥 **Facebook Group:** Channel ID `6aff0546ece6dfde5f1f3b2e` (`Trại Cai Nghiện`)
+
+### 7.2. Nguyên Tắc Quản Trị Hàng Đợi Gói Miễn Phí (Free Queue Capacity)
+* Gói Buffer Free giới hạn **tối đa 10 bài đăng nằm trong hàng đợi (Queued Posts)** trên toàn bộ tổ chức tại cùng một thời điểm.
+* **Cơ chế xoay vòng thông minh (Rolling Pipeline):**
+  - Hệ thống chỉ lên lịch trước cho 24h – 48h tiếp theo (giữ hàng đợi ở mức 6 – 8 bài).
+  - Khi các bài cũ đến giờ tự động xuất bản (Status: `sent`), hàng đợi được giải phóng chỗ trống, cronjob sẽ tự động đẩy mẻ bài mới vào hàng đợi.
+
+### 7.3. Quy Chuẩn Báo Cáo Tức Thì Về Telegram Cho Bố (Telegram Alert Protocol)
+Sau mỗi lần một kịch bản lên lịch hoặc đăng bài hoàn thành (`threads_autopilot.js`, `instagram_autopilot.js`, `fb_group_autopilot.js`):
+* Bắt buộc kích hoạt tiện ích `scripts/telegram_reporter.py` để gửi báo cáo xác nhận thành công:
+  - 📢 **Kênh chính:** Nhóm Hội Đồng Quản Trị - Topic 19 (`Trại Cai Nghiện` — Chat ID: `-1004401199553`, Thread ID: `19`).
+  - 🛡️ **Kênh dự phòng:** Telegram cá nhân của Bố (`@longphibtc` — Chat ID: `488901419`).
+* Nội dung báo cáo bắt buộc ghi rõ: Tên nền tảng, giờ đăng dự kiến, tiêu đề bài viết, link ảnh preview và số lượng bài còn lại trong hàng đợi Buffer.

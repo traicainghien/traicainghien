@@ -61,6 +61,28 @@ Chất lượng của một tác phẩm nghệ thuật do AI sinh ra phụ thu�
   - Không được rập khuôn lặp đi lặp lại bối cảnh bàn làm việc / phòng ngủ / góc phòng kín.
   - Bắt buộc chủ động mở rộng không gian ra ngoài tự nhiên và đời sống đô thị thoáng đạt: Rừng thông mờ sương, cabin gỗ trên sườn núi, hồ nước phẳng lặng, bờ suối tiếp đất, ban công rộng đón ánh bình minh, mái hiên mưa rơi, quán cà phê ven đường chiều tà... tạo cảm giác giải phóng thị giác và tự do nội tâm cho người đọc.
 
+### 2.4. ĐỊNH HƯỚNG THỊ GIÁC MỚI: PINTEREST FOCUS AESTHETIC & ZEN HYBRID (CHỈ THỊ CỦA BỐ 20/11/2026)
+Để đồng bộ với chiến lược mũi nhọn **SỰ TẬP TRUNG** và chạm trúng tâm lý tệp khách hàng trẻ hiện đại (18 - 35 tuổi), hệ thống thị giác được nâng cấp:
+
+1. **Hệ thống 1: Ảnh Bìa Bài Viết Website & Bài Phân Tích Chuyên Sâu:**
+   * **Phong cách chủ đạo:** **Pinterest Focus Aesthetic** (Không gian bàn làm việc tối giản, góc học tập Dark Academia, 60 phút buổi sáng không màn hình, bàn làm việc bên cửa sổ mưa, sổ tay Time-blocking, thiền trà chánh niệm).
+   * **Kỹ thuật xuất bản:** Khổ ngang chuẩn 16:9 (1200 x 675 px), nén WebP dưới 120KB qua xưởng `scripts/pinterest_curator.py`.
+   * **Ảnh AI Zen Watercolor:** Vẫn duy trì song song cho các bài viết triết lý sâu sắc, tổng kết sách kinh điển hoặc các bài cần ẩn dụ độc bản (như con quay Totem Inception, sóng não Alpha).
+
+2. **Hệ thống 2: Kênh Mạng Xã Hội Đa Kênh (Threads, Instagram, Facebook Group Quotes):**
+   * Vận hành theo quy chuẩn **Pinterest Aesthetic & Hybrid Dual-Source Engine** (quy định chi tiết tại skill `social-profile-growth`).
+   * Sử dụng ảnh chụp đời thường giàu cảm xúc từ các Bảng Pinterest công khai (`i.pinimg.com/736x/`) hoặc nguồn fallback Unsplash 4K.
+   * Toàn bộ ảnh được gia công qua xưởng **Pillow Studio (`scripts/pinterest_curator.py`)**:
+     - Cắt chuẩn khung dọc 4:5 (1080 x 1350 px).
+     - Phủ dải màu chuyển tối tự nhiên (Atmospheric Dark Vignette).
+     - Chèn Typography tiếng Việt có chân kinh điển (Georgia/Merriweather) truyền tải thông điệp về **SỰ TẬP TRUNG**.
+     - Đóng dấu mộc watermark Con quay Totem và chữ ký thương hiệu `🌿 TRẠI CAI NGHIỆN • traicainghien.com`.
+
+3. **CƠ CHẾ CHỐNG LẶP ẢNH TUYỆT ĐỐI 3 LỚP (ZERO-DUPLICATE GATE - LỆNH CỦA BỐ):**
+   * **Lớp 1 (URL & Filename Registry):** Quét đối chiếu toàn bộ `thumbnail` trong `src/data/articles.ts` và cơ sở dữ liệu `scripts/used_curated_images.json`. URL hoặc tên file đã từng dùng sẽ bị loại bỏ ngay.
+   * **Lớp 2 (MD5 Hash Checksum):** Tính toán mã băm vật lý của nội dung file ảnh. Nếu trùng mã hash với bất kỳ ảnh nào trong kho `public/images/articles/` (đã nạp sẵn hơn 84 mã hash) -> Từ chối 100% và chuyển sang ảnh tiếp theo.
+   * **Lớp 3 (Lưu vết vĩnh viễn):** Ngay khi ảnh được gán cho bài viết hoặc lên lịch đăng, URL, mã hash và tên file được ghi vĩnh viễn vào `used_curated_images.json`.
+
 ---
 
 ## 3. 🎯 NGUYÊN TẮC BÁM SÁT NỘI DUNG & TỰ THÂN BÓC TÁCH "LÁT CẮT HÀNH ĐỘNG" (CONTENT-DRIVEN LIVING SCENE - LỆNH ĐẶC BIỆT CỦA BỐ)
