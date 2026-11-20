@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="flow-title flow-desc" id="chu-ky-flow-state-root">
+        <title id="flow-title">Chu Kỳ 4 Giai Đoạn Của Trạng Thái Dòng Chảy</title>
+        <desc id="flow-desc">Bốn giai đoạn từ Đấu tranh, Giải phóng đến Trạng thái Dòng chảy cao độ và Phục hồi thần kinh.</desc>
+        
+        <!-- Background with subtle Washi paper texture grid -->
+        <defs>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Serif:ital@0;1&amp;family=Noto+Sans+KR:wght@400;500;600&amp;family=Noto+Serif+KR:wght@400&amp;family=Noto+Sans+TC:wght@400;500;600&amp;family=Noto+Serif+TC:wght@400&amp;display=swap');
+      #chu-ky-flow-state-root { --color-paper: #FAF7F2;
+      --color-paper-2: #F2EDE4;
+      --color-ink: #2D312E;
+      --color-muted: #4A584E;
+      --color-soft: #637367;
+      --color-rule: rgba(45, 49, 46, 0.12);
+      --color-rule-solid: #D6CEBE;
+      --color-accent: #3A5A40;
+      --color-accent-tint: rgba(58, 90, 64, 0.08);
+      --color-focal: #C27D53;
+      --color-focal-tint: rgba(194, 125, 83, 0.10);
+      --font-sans: 'Be Vietnam Pro', system-ui, sans-serif;
+      --font-serif: 'Playfair Display', serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, monospace; }
+      #chu-ky-flow-state-root { font-family: var(--font-sans); color: var(--color-ink); }
+      #chu-ky-flow-state-root .subtitle { font-size: .95rem;
+      color: var(--color-muted);
+      margin-bottom: 2rem; }
+      #chu-ky-flow-state-root .diagram-container { width: 100%;
+      overflow-x: auto;
+      border: 1px solid var(--color-rule-solid);
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(45, 49, 46, 0.04);
+      background: var(--color-paper); }
+      @media print {
+#chu-ky-flow-state-root .diagram-container { overflow-x: visible; }
+}</style>
+          <pattern id="chu-ky-flow-state-washi-dots" width="24" height="24" patternUnits="userSpaceOnUse">
+            <circle cx="2" cy="2" r="1.0" fill="#2d312e" fill-opacity="0.07"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="#FAF7F2"/>
+        <rect width="100%" height="100%" fill="url(#chu-ky-flow-state-washi-dots)"/>
+
+        <!-- Flow Rail Track -->
+        <g aria-hidden="true">
+          <rect x="120" y="240" width="260" height="48" fill="#2d312e" rx="4" fill-opacity="0.05"/>
+          <rect x="380" y="240" width="260" height="48" fill="#2d312e" rx="4" fill-opacity="0.08"/>
+          <!-- Focal Stage: Flow State (Terracotta & Forest Green) -->
+          <rect x="640" y="240" width="260" height="48" fill="#c27d53" rx="4" fill-opacity="0.12"/>
+          <line x1="640" y1="240" x2="900" y2="240" stroke="#C27D53" stroke-width="1.5"/>
+          <line x1="640" y1="288" x2="900" y2="288" stroke="#C27D53" stroke-width="1.5"/>
+          <rect x="900" y="240" width="260" height="48" fill="#3a5a40" rx="4" fill-opacity="0.08"/>
+        </g>
+
+        <!-- Stage Numbers & Connectors -->
+        <g font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="0.14em" text-anchor="middle">
+          <text x="250" y="160" fill="#4A584E">GIAI ĐOẠN 01</text>
+          <line x1="250" y1="175" x2="250" y2="216" stroke="#D6CEBE" stroke-width="1.2"/>
+
+          <text x="510" y="160" fill="#4A584E">GIAI ĐOẠN 02</text>
+          <line x1="510" y1="175" x2="510" y2="216" stroke="#D6CEBE" stroke-width="1.2"/>
+
+          <text x="770" y="160" fill="#C27D53">GIAI ĐOẠN 03 (FOCAL)</text>
+          <line x1="770" y1="175" x2="770" y2="216" stroke="#C27D53" stroke-width="1.5"/>
+
+          <text x="1030" y="160" fill="#3A5A40">GIAI ĐOẠN 04</text>
+          <line x1="1030" y1="175" x2="1030" y2="216" stroke="#3A5A40" stroke-width="1.2"/>
+        </g>
+
+        <!-- Circular Stage Medallions -->
+        <g aria-hidden="true" fill="#FAF7F2" stroke-width="1.5">
+          <!-- 01: Struggle -->
+          <circle cx="250" cy="264" r="38" stroke="#2D312E"/>
+          <!-- 02: Release -->
+          <circle cx="510" cy="264" r="38" stroke="#2D312E"/>
+          <!-- 03: Flow (Focal) -->
+          <circle cx="770" cy="264" r="38" fill="#FAF7F2" stroke="none"/>
+          <circle cx="770" cy="264" r="38" fill="#c27d53" stroke="#C27D53" stroke-width="2" fill-opacity="0.12"/>
+          <!-- 04: Recovery -->
+          <circle cx="1030" cy="264" r="38" stroke="#3A5A40"/>
+        </g>
+
+        <!-- Medallion Icons / Symbols -->
+        <g aria-hidden="true" fill="none" stroke="#2D312E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <!-- 01: Brain tension / lightning / struggle -->
+          <g transform="translate(236 250)">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </g>
+          <!-- 02: Release / exhale / water waves -->
+          <g transform="translate(496 250)">
+            <path d="M2 12s3-4 7-4 7 4 11 4 7-4 7-4"/>
+            <path d="M2 18s3-4 7-4 7 4 11 4 7-4 7-4"/>
+          </g>
+          <!-- 03: Flow State / infinity / peak immersion (Terracotta) -->
+          <g transform="translate(756 250)" stroke="#C27D53">
+            <path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.261-8-12.356-8-5.096 0-5.096 8 0 8 5.095 0 7.261-8 12.356-8z"/>
+          </g>
+          <!-- 04: Recovery / tea / leaf sprout (Forest Green) -->
+          <g transform="translate(1016 250)" stroke="#3A5A40">
+            <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12"/>
+            <path d="M12 6v6l4 2"/>
+          </g>
+        </g>
+
+        <!-- Stage Titles & Text Content -->
+        <g font-family="'Be Vietnam Pro', sans-serif" text-anchor="middle">
+          <!-- Stage 1 -->
+          <text x="250" y="356" fill="#2D312E" font-size="15" font-weight="700">1. Đấu Tranh (Struggle)</text>
+          <text x="250" y="386" fill="#4A584E" font-size="11.5" font-family="'JetBrains Mono', monospace">Nạp dữ liệu &amp; đối mặt ngưỡng khó</text>
+          <text x="250" y="408" fill="#4A584E" font-size="11.5" font-family="'JetBrains Mono', monospace">Noradrenaline &amp; Cortisol tăng cao</text>
+          <text x="250" y="430" fill="#637367" font-size="10.5" font-style="italic">Bồn chồn, muốn bỏ cuộc tìm dopamine</text>
+
+          <!-- Stage 2 -->
+          <text x="510" y="356" fill="#2D312E" font-size="15" font-weight="700">2. Giải Phóng (Release)</text>
+          <text x="510" y="386" fill="#4A584E" font-size="11.5" font-family="'JetBrains Mono', monospace">Chủ động buông lỏng tâm trí</text>
+          <text x="510" y="408" fill="#4A584E" font-size="11.5" font-family="'JetBrains Mono', monospace">Chuyển từ sóng Beta sang Alpha</text>
+          <text x="510" y="430" fill="#637367" font-size="10.5" font-style="italic">Đi dạo, thở sâu, rời xa màn hình</text>
+
+          <!-- Stage 3 (Focal) -->
+          <text x="770" y="356" fill="#C27D53" font-size="15" font-weight="700">3. Dòng Chảy (Flow State)</text>
+          <text x="770" y="386" fill="#2D312E" font-size="11.5" font-family="'JetBrains Mono', monospace" font-weight="600">Đắm chìm hoàn toàn vào việc khó</text>
+          <text x="770" y="408" fill="#2D312E" font-size="11.5" font-family="'JetBrains Mono', monospace">Dopamine, Serotonin, Anandamide</text>
+          <text x="770" y="430" fill="#C27D53" font-size="10.5" font-style="italic">Quên thời gian, hiệu suất tăng x5</text>
+
+          <!-- Stage 4 -->
+          <text x="1030" y="356" fill="#3A5A40" font-size="15" font-weight="700">4. Phục Hồi (Recovery)</text>
+          <text x="1030" y="386" fill="#4A584E" font-size="11.5" font-family="'JetBrains Mono', monospace">Tái nạp năng lượng sinh học</text>
+          <text x="1030" y="408" fill="#4A584E" font-size="11.5" font-family="'JetBrains Mono', monospace">Củng cố liên kết nơ-ron thần kinh</text>
+          <text x="1030" y="430" fill="#3A5A40" font-size="10.5" font-style="italic">Ngủ đủ, thiền tĩnh, dinh dưỡng sạch</text>
+        </g>
+
+        <!-- Bottom Legend & Footer -->
+        <line x1="80" y1="560" x2="1200" y2="560" stroke="#2d312e" stroke-width="1" stroke-opacity="0.12"/>
+        
+        <!-- Legend items -->
+        <g font-family="'JetBrains Mono', monospace" font-size="9.5">
+          <text x="80" y="590" fill="#637367" letter-spacing="0.16em" font-weight="600">CHÚ GIẢI THỰC HÀNH</text>
+          
+          <circle cx="90" cy="618" r="6" fill="#FAF7F2" stroke="#2D312E" stroke-width="1.5"/>
+          <text x="106" y="622" fill="#4A584E">Giai đoạn chuẩn bị bắt buộc</text>
+
+          <circle cx="340" cy="618" r="6" fill="#c27d53" stroke="#C27D53" stroke-width="1.5" fill-opacity="0.15"/>
+          <text x="356" y="622" fill="#C27D53" font-weight="600">Trọng tâm kích hoạt (Focal State)</text>
+
+          <circle cx="630" cy="618" r="6" fill="#3a5a40" stroke="#3A5A40" stroke-width="1.5" fill-opacity="0.15"/>
+          <text x="646" y="622" fill="#3A5A40">Bảo vệ &amp; củng cố thần kinh</text>
+          
+          <!-- Brand Watermark on Right -->
+          <text x="1200" y="622" fill="#4A584E" text-anchor="end" font-weight="500">🌿 TRẠI CAI NGHIỆN · traicainghien.com</text>
+        </g>
+      </svg>
