@@ -61,7 +61,7 @@ export default function TracNghiemPage() {
 
   const handleCopyResult = () => {
     if (!result) return;
-    const textToCopy = `🌿 [TRẠI CAI NGHIỆN] Kết quả đo mức độ mất tập trung của tôi:\n• Điểm số: ${result.totalScore}/${result.maxScore} điểm (${result.percentage}%)\n• Hệ nghiện: ${result.archetype.name} (${result.archetype.tagline})\n• Đánh giá: ${result.title}\n👉 Đo mức độ mất tập trung của bạn tại: https://www.traicainghien.com/trac-nghiem`;
+    const textToCopy = `🌿 [TRẠI CAI NGHIỆN] Kết quả đo mức độ tập trung & xao nhãng số của tôi:\n• Điểm số: ${result.totalScore}/${result.maxScore} điểm (${result.percentage}% mức độ phân mảnh)\n• Trạng thái: ${result.archetype.name} (${result.archetype.tagline})\n• Đánh giá: ${result.title}\n👉 Tự đo mức độ tập trung của bạn tại: https://www.traicainghien.com/trac-nghiem`;
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
@@ -76,13 +76,13 @@ export default function TracNghiemPage() {
           {/* Header */}
           <div className="text-center space-y-3">
             <span className="text-xs font-bold uppercase tracking-wider text-[#3A5A40] bg-[#EBF0EC] px-3.5 py-1 rounded-full inline-block">
-              Trắc Nghiệm Nhập Trại • 25 Câu Hỏi
+              Thang Đo Khoa Học Thần Kinh & Hành Vi • 25 Câu Hỏi
             </span>
             <h1 className="text-3xl md:text-5xl font-bold font-serif text-[#2D312E]">
-              Đo Mức Độ Mất Tập Trung Của Bạn
+              Đo Mức Độ Tập Trung & Xao Nhãng Số
             </h1>
             <p className="text-xs md:text-sm text-[#6B726E] max-w-xl mx-auto leading-relaxed">
-              Không phán xét, không giáo điều. 25 câu hỏi bóc tách 5 tầng hành vi đời thực để gọi tên những điều bạn đang vô thức lặp lại mỗi ngày.
+              Dựa trên các nghiên cứu khoa học hành vi uy tín (WHO ASRS, Derryberry & Reed ACS, Gloria Mark và Stanford). 25 câu hỏi bóc tách 5 tầng chức năng thùy trán để chẩn đoán độ đứt gãy sự chú ý của bạn.
             </p>
           </div>
 
@@ -109,9 +109,17 @@ export default function TracNghiemPage() {
           {/* Question Box */}
           <div className="p-8 md:p-10 rounded-3xl bg-white border border-[#E6E1D8] shadow-sm space-y-6">
             <div>
-              <span className="text-xs text-[#C27D53] font-semibold block mb-1">
-                Tình huống: {currentQ.scenario}
-              </span>
+              <div className="flex items-center gap-2 mb-2 flex-wrap">
+                <span className="text-xs text-[#C27D53] font-semibold">
+                  Tình huống: {currentQ.scenario}
+                </span>
+                {currentQ.scientificReference && (
+                  <span className="text-[11px] text-[#3A5A40] bg-[#EBF0EC] px-2.5 py-0.5 rounded-full font-medium inline-flex items-center gap-1">
+                    <span>🔬</span>
+                    <span>{currentQ.scientificReference}</span>
+                  </span>
+                )}
+              </div>
               <h2 className="text-lg md:text-xl font-bold font-serif text-[#2D312E] leading-relaxed">
                 {currentQ.question}
               </h2>
@@ -195,12 +203,12 @@ export default function TracNghiemPage() {
             </p>
           </div>
 
-          {/* 1. ARCHETYPE CARD (HỆ NGHIỆN NỔI BẬT) */}
+          {/* 1. ARCHETYPE CARD (HỆ TRẠNG THÁI TẬP TRUNG) */}
           <div className="p-8 md:p-10 rounded-3xl bg-white border border-[#E6E1D8] shadow-md space-y-6 relative overflow-hidden">
             <div className="flex items-start justify-between gap-4">
               <div className="space-y-1">
                 <span className="text-xs uppercase font-bold text-[#C27D53] tracking-wider block">
-                  Hệ Nghiện Nổi Bật Của Bạn
+                  Trạng Thái Tập Trung Nổi Bật Của Bạn
                 </span>
                 <h2 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E] flex items-center gap-2">
                   <span>{result?.archetype.icon}</span>
@@ -231,23 +239,23 @@ export default function TracNghiemPage() {
             {/* 5 Chặng Điểm Số */}
             <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 pt-2 text-center text-xs">
               <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
-                <span className="text-gray-500 block text-[11px]">🌙 Đêm muộn</span>
+                <span className="text-gray-500 block text-[11px]">🎯 Chú ý sâu</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage1}/15</strong>
               </div>
               <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
-                <span className="text-gray-500 block text-[11px]">🧠 Chú ý</span>
+                <span className="text-gray-500 block text-[11px]">📱 Xao nhãng</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage2}/15</strong>
               </div>
               <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
-                <span className="text-gray-500 block text-[11px]">🛡️ Đối phó</span>
+                <span className="text-gray-500 block text-[11px]">🧘 Bền buồn chán</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage3}/15</strong>
               </div>
               <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
-                <span className="text-gray-500 block text-[11px]">📱 Tiện nghi</span>
+                <span className="text-gray-500 block text-[11px]">⚡ Khởi động việc</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage4}/15</strong>
               </div>
               <div className="p-2.5 rounded-xl bg-[#FAF7F2] border border-[#E6E1D8]">
-                <span className="text-gray-500 block text-[11px]">⚖️ Thuế ngầm</span>
+                <span className="text-gray-500 block text-[11px]">🌫️ Sương mù não</span>
                 <strong className="text-sm text-[#2D312E]">{result?.stageScores.stage5}/15</strong>
               </div>
             </div>
