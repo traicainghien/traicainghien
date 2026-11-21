@@ -36,23 +36,26 @@ HISTORY_FILE = os.path.join(ROOT_DIR, "scripts", "tcn_behavior_history.json")
 ARTICLES_TS_FILE = os.path.join(ROOT_DIR, "src", "data", "articles.ts")
 
 # Telegram config
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN") or "7604381831:AAHfWkO8T-2vJb8hUfZ17uYn_Qp4N5oH6w8" # fallback check
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN") or "9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q"
+TELEGRAM_ADMIN_CHAT_ID = os.environ.get("TELEGRAM_ADMIN_CHAT_ID") or "488901419"
 TELEGRAM_HDQT_GROUP_ID = os.environ.get("TELEGRAM_HDQT_GROUP_ID") or "-1004401199553"
 TELEGRAM_HDQT_TOPIC_ID = int(os.environ.get("TELEGRAM_HDQT_TOPIC_ID") or 19)
 
 
 def notify_telegram(message: str):
-    """Send notification to Telegram HĐQT Topic 19."""
+    """Send notification to Telegram HĐQT Topic 19 and Bố."""
     bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
     if not bot_token:
-        # try loading from .env
-        env_path = os.path.join(ROOT_DIR, ".env")
-        if os.path.exists(env_path):
-            with open(env_path, "r", encoding="utf-8") as f:
-                for line in f:
-                    if line.startswith("TELEGRAM_BOT_TOKEN="):
-                        bot_token = line.split("=", 1)[1].strip().strip('"\'')
-                        break
+        for ep in [os.path.join(ROOT_DIR, ".env.local"), os.path.join(ROOT_DIR, ".env")]:
+            if os.path.exists(ep):
+                with open(ep, "r", encoding="utf-8") as f:
+                    for line in f:
+                        if line.startswith("TELEGRAM_BOT_TOKEN="):
+                            bot_token = line.split("=", 1)[1].strip().strip('"\'')
+                            break
+            if bot_token:
+                break
+    bot_token = bot_token or "9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q"
     if not bot_token:
         print("[Telegram] No bot token configured, skipping Telegram notification.")
         return

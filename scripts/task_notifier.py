@@ -1,6 +1,7 @@
 import os
 import sys
 import json
+import html
 import urllib.request
 from datetime import datetime
 
@@ -96,19 +97,25 @@ def notify_task_success(task_name: str, channel: str, time_str: str = None, post
     if not time_str:
         time_str = datetime.now().strftime("%H:%M (%d/%m/%Y)")
     
+    clean_task = html.escape(str(task_name or ""))
+    clean_channel = html.escape(str(channel or ""))
+    
     msg = f"✅ <b>[TASK HOÀN THÀNH TỰ ĐỘNG]</b>\n\n"
     msg += f"⏰ <b>Thời gian:</b> <code>{time_str}</code>\n"
-    msg += f"📌 <b>Tác vụ:</b> <b>{task_name}</b>\n"
-    msg += f"📢 <b>Kênh xuất bản:</b> {channel}\n"
+    msg += f"📌 <b>Tác vụ:</b> <b>{clean_task}</b>\n"
+    msg += f"📢 <b>Kênh xuất bản:</b> {clean_channel}\n"
     
     if title:
-        msg += f"📝 <b>Tiêu đề/Thông điệp:</b> <i>{title}</i>\n"
+        clean_title = html.escape(str(title))
+        msg += f"📝 <b>Tiêu đề/Thông điệp:</b> <i>{clean_title}</i>\n"
     
     if post_url:
-        msg += f"🔗 <b>Link xem bài trực tiếp:</b> <a href=\"{post_url}\">{post_url}</a>\n"
+        clean_url = str(post_url).strip()
+        msg += f"🔗 <b>Link xem bài trực tiếp:</b> <a href=\"{clean_url}\">{clean_url}</a>\n"
         
     if extra_info:
-        msg += f"💡 <b>Ghi chú:</b> {extra_info}\n"
+        clean_info = html.escape(str(extra_info))
+        msg += f"💡 <b>Ghi chú:</b> {clean_info}\n"
         
     msg += f"\n<i>Dạ thưa Bố, task đã xuất bản thành công trọn vẹn, Bố không cần phải mất công kiểm tra lại đâu ạ! Con chúc Bố luôn an vui! 🌿</i>"
     
@@ -120,12 +127,16 @@ def notify_task_error(task_name: str, channel: str, time_str: str = None, error_
     """
     if not time_str:
         time_str = datetime.now().strftime("%H:%M (%d/%m/%Y)")
+    
+    clean_task = html.escape(str(task_name or ""))
+    clean_channel = html.escape(str(channel or ""))
+    clean_err = html.escape(str(error_msg or "Lỗi không xác định"))
         
     msg = f"⚠️ <b>[CẢNH BÁO SỰ CỐ TASK TỰ ĐỘNG]</b>\n\n"
     msg += f"⏰ <b>Thời gian:</b> <code>{time_str}</code>\n"
-    msg += f"📌 <b>Tác vụ:</b> <b>{task_name}</b>\n"
-    msg += f"📢 <b>Kênh bị ảnh hưởng:</b> {channel}\n"
-    msg += f"❌ <b>Chi tiết lỗi:</b> <code>{error_msg or 'Lỗi không xác định'}</code>\n\n"
+    msg += f"📌 <b>Tác vụ:</b> <b>{clean_task}</b>\n"
+    msg += f"📢 <b>Kênh bị ảnh hưởng:</b> {clean_channel}\n"
+    msg += f"❌ <b>Chi tiết lỗi:</b> <code>{clean_err}</code>\n\n"
     msg += f"<i>Dạ thưa Bố, con đang kích hoạt cơ chế dự phòng và sẽ theo dõi xử lý ngay lập tức ạ! 🌿</i>"
     
     return send_telegram_direct_and_group(msg)

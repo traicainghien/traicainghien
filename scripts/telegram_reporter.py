@@ -23,7 +23,7 @@ def get_env_variable(var_name):
                 pass
     return ""
 
-BOT_TOKEN = get_env_variable("TELEGRAM_BOT_TOKEN")
+BOT_TOKEN = get_env_variable("TELEGRAM_BOT_TOKEN") or "9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q"
 ADMIN_CHAT_ID = get_env_variable("TELEGRAM_ADMIN_CHAT_ID") or "488901419" # Bố @longphibtc
 CHANNEL_ID = get_env_variable("TELEGRAM_CHANNEL_ID") or "-1004488309634" # @traicainghiendaily
 HDQT_GROUP_CHAT_ID = get_env_variable("TELEGRAM_HDQT_GROUP_ID") or "-1004401199553" # Nhóm Hội Đồng Quản Trị

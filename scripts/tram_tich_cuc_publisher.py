@@ -8,8 +8,9 @@ import unicodedata
 import requests
 from PIL import Image, ImageDraw, ImageFont
 
-# Add scripts directory to path
+# Add scripts and root directory to path
 ROOT_DIR = "/root/traicainghien" if os.path.exists("/root/traicainghien") else os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, ROOT_DIR)
 sys.path.insert(0, os.path.join(ROOT_DIR, "scripts"))
 
 from curl_cffi import requests as cffi_requests
@@ -421,7 +422,10 @@ def publish_quote_flow(force_slot=None):
         print("💾 Đã cập nhật lịch sử chống trùng.")
 
         try:
-            from scripts.task_notifier import notify_task_success
+            try:
+                from task_notifier import notify_task_success
+            except ImportError:
+                from scripts.task_notifier import notify_task_success
             quote_snippet = quote_vn[:100] + "..." if len(quote_vn) > 100 else quote_vn
             notify_task_success(
                 task_name="Quote fan page Trạm Tích Cực",
@@ -443,7 +447,10 @@ def publish_quote_flow(force_slot=None):
     else:
         err_msg = f"Facebook Graph API error: {res_data}"
         try:
-            from scripts.task_notifier import notify_task_error
+            try:
+                from task_notifier import notify_task_error
+            except ImportError:
+                from scripts.task_notifier import notify_task_error
             notify_task_error(
                 task_name="Quote fan page Trạm Tích Cực",
                 channel="✨ Fanpage Facebook Trạm Tích Cực",
