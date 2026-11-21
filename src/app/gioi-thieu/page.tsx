@@ -4,7 +4,7 @@ import { ShieldCheck, Heart, Sparkles, Compass, CheckCircle2, ArrowRight } from 
 
 export const metadata = {
   title: "Giới Thiệu — Mục Đích Ra Đời Của Trại Cai Nghiện",
-  description: "Câu chuyện chân thành về lý do Trại Cai Nghiện ra đời, sứ mệnh giúp bạn trở về phiên bản tốt nhất của chính mình và triết lý không phán xét của chúng tôi.",
+  description: "Câu chuyện chân thành về lý do Trại Cai Nghiện ra đời, sứ mệnh giúp bạn làm chủ sự tập trung, sống có chủ đích và triết lý không phán xét của chúng tôi.",
 };
 
 export default function GioiThieuPage() {
@@ -20,7 +20,7 @@ export default function GioiThieuPage() {
           Tại sao "Trại Cai Nghiện" ra đời?
         </h1>
         <p className="text-base md:text-lg text-[#6B726E] max-w-2xl mx-auto leading-relaxed">
-          Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn.
+          Chúng tôi ở đây để cùng bạn đối diện và vượt qua xao nhãng số, giành lại quyền làm chủ tâm trí — làm chủ sự tập trung, sống có chủ đích.
         </p>
       </div>
 
@@ -108,7 +108,7 @@ export default function GioiThieuPage() {
 
       {/* CTA Bottom */}
       <div className="text-center space-y-4 pt-6">
-        <h3 className="text-xl font-bold font-serif text-[#2D312E]">Bạn đã sẵn sàng cùng chúng tôi trở về phiên bản tốt nhất của bạn?</h3>
+        <h3 className="text-xl font-bold font-serif text-[#2D312E]">Bạn đã sẵn sàng cùng chúng tôi làm chủ sự tập trung và sống có chủ đích?</h3>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
             href="/trac-nghiem"

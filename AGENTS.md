@@ -94,9 +94,9 @@
 ### 2.0. 🏷️ Bản Sắc Thương Hiệu Chính Thức
 * **Tên thương hiệu:** **Trại Cai Nghiện**
 * **Slogan / Tagline:**  
-  > **Trở về phiên bản tốt nhất của bạn.**
+  > **Làm chủ sự tập trung, sống có chủ đích.**
 * **Tuyên ngôn Sứ mệnh (Brand Manifesto):**  
-  > *"Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn."*
+  > *"Chúng tôi ở đây để cùng bạn đối diện và giải phóng khỏi xao nhãng số, giành lại quyền làm chủ tâm trí — làm chủ sự tập trung, sống có chủ đích."*
 * **Ba Giá Trị Trục Cột (Core Value Tags):**
   * `Hiểu hành vi`
   * `Thực hành thay đổi`
@@ -108,11 +108,11 @@
 * **Triết lý sâu sắc & Ẩn dụ hành vi:**
   * *Trong Inception:* Nếu con quay xoay mãi không dừng, nhân vật đang chìm đắm trong cơn mê hư vô vô tận. Chỉ khi con quay chao đảo, nghiêng mình và đổ xuống trên mặt bàn, đó mới là minh chứng đanh thép rằng họ đã thức tỉnh và đang chạm chân vào **ĐỜI THỰC**.
   * *Trong Trại Cai Nghiện:* Những giờ lướt short video vô thức xuyên đêm, những cơn nghiện dopamine rẻ tiền chính là "ma trận cơn mê tầng sâu" của thời hiện đại. Người trẻ bị ru ngủ bởi tiện nghi công nghiệp và đánh mất dần sinh mệnh.
-  * *Ý nghĩa biểu tượng:* Con quay Totem nghiêng đổ biểu trưng cho **khoảnh khắc thức tỉnh vĩ đại nhất của người nghiện**: Dũng cảm thừa nhận mình đang chìm trong ảo ảnh, chấm dứt vòng lặp vô thức, kéo tâm trí trở về với đời sống hiện tại, giành lại tự do và **trở về phiên bản tốt nhất của chính mình**.
+  * *Ý nghĩa biểu tượng:* Con quay Totem nghiêng đổ biểu trưng cho **khoảnh khắc thức tỉnh vĩ đại nhất của người nghiện**: Dũng cảm thừa nhận mình đang chìm trong ảo ảnh, chấm dứt vòng lặp vô thức, kéo tâm trí trở về với đời sống hiện tại, giành lại tự do và **làm chủ sự tập trung, sống có chủ đích**.
 * **Cấu trúc Typography & Bố cục:**
   * **Biểu tượng:** Con quay kim loại mộc mạc hơi nghiêng một góc chuẩn bị hạ cánh tĩnh lặng.
   * **Chữ thương hiệu:** **TRẠI CAI NGHIỆN** — Font chữ tối giản hiện đại, vững chãi, khoảng cách thoáng đãng, sắc xám than trầm (`#2D312E`) hoặc xanh rêu (`#3A5A40`).
-  * **Slogan phụ:** `- trở về phiên bản tốt nhất của bạn.` — Dịu dàng, khiêm nhường đặt ngay dưới chân tên thương hiệu, sắc đất nung ấm (`#C27D53`).
+  * **Slogan phụ:** `- làm chủ sự tập trung, sống có chủ đích.` — Dịu dàng, khiêm nhường đặt ngay dưới chân tên thương hiệu, sắc đất nung ấm (`#C27D53`).
 * **Mỹ cảm & Chất liệu bất di bất dịch:**
   * 100% Tranh vẽ tay màu nước thủy mặc & viền mực than Sumi-e trên nền giấy thô sần có hạt grain (`#FAF7F2`).
   * **CẤM TUYỆT ĐỐI:** Không dùng vector phẳng 2D, không dùng SVG code mô phỏng, không dùng 3D CGI bóng bẩy rẻ tiền.

@@ -19,12 +19,12 @@ export default function HomePage() {
 
           {/* Slogan Tagline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-serif text-[#2D312E] leading-tight md:whitespace-nowrap">
-            Trở về phiên bản tốt nhất của bạn
+            Làm chủ sự tập trung, sống có chủ đích
           </h1>
 
           {/* Brand Manifesto */}
           <p className="text-lg md:text-xl text-[#6B726E] max-w-2xl mx-auto leading-relaxed">
-            "Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn."
+            "Chúng tôi ở đây để cùng bạn đối diện và giải phóng khỏi xao nhãng số, giành lại quyền làm chủ tâm trí — làm chủ sự tập trung, sống có chủ đích."
           </p>
 
           {/* CTAs */}

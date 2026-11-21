@@ -53,7 +53,7 @@ Thuật toán Threads ưu tiên **tính hội thoại (Conversational Depth)** v
 ## 3. 📸 NỀN TẢNG INSTAGRAM: THỊ GIÁC AESTHETIC & NĂNG SUẤT CHÁNH NIỆM
 
 ### 3.1. Định Vị Kênh (@traicainghienvn)
-* **Bio:** *"Đồng hành cùng bạn giải phóng khỏi xao nhãng số & tìm lại năng lực làm việc sâu. 🌿 Trở về phiên bản tốt nhất của bạn. 🔗 traicainghien.com"*
+* **Bio:** *"Đồng hành cùng bạn giải phóng khỏi xao nhãng số & tìm lại năng lực làm việc sâu. 🌿 Làm chủ sự tập trung, sống có chủ đích. 🔗 traicainghien.com"*
 * **Khung giờ đăng bài tối ưu:** **20:30 mỗi tối** (Thời điểm người dùng thư giãn, bắt đầu có xu hướng lướt feed và dễ tiếp nhận thông điệp chữa lành, điều chỉnh thói quen).
 
 ### 3.2. Cấu Trúc Nội Dung Bài Đăng (Instagram Post)

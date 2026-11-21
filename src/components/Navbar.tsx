@@ -90,7 +90,7 @@ export default function Navbar() {
               Trại Cai Nghiện
             </span>
             <span className="text-[11px] block text-[#6B726E] dark:text-[#9DA39F] font-medium tracking-tight mt-0.5 whitespace-nowrap">
-              Trở về phiên bản tốt nhất của bạn
+              Làm chủ sự tập trung, sống có chủ đích
             </span>
           </div>
         </Link>

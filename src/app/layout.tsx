@@ -19,9 +19,9 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn",
-  description: "Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn.",
-  keywords: ["trại cai nghiện", "cai nghiện dopamine", "trở về phiên bản tốt nhất", "thói quen nguyên tử", "làm chủ thói quen", "ikigai", "kaizen"],
+  title: "Trại Cai Nghiện — Làm chủ sự tập trung, sống có chủ đích",
+  description: "Chúng tôi ở đây để cùng bạn đối diện và vượt qua xao nhãng số, giành lại quyền làm chủ tâm trí — làm chủ sự tập trung, sống có chủ đích.",
+  keywords: ["trại cai nghiện", "sự tập trung", "làm chủ sự tập trung", "sống có chủ đích", "cai nghiện dopamine", "deep work", "trị não phân tâm", "sương mù não", "kaizen", "ikigai"],
   icons: {
     icon: "/images/logo-totem.webp",
     apple: "/images/logo-totem.webp",

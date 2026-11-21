@@ -6,8 +6,8 @@ description: Hướng dẫn tư duy, lập luận và phong cách viết nội d
 # ✍️ KỸ NĂNG VIẾT NỘI DUNG TÂM LÝ HỌC & KỂ CHUYỆN THỰC CHIẾN: TRẠI CAI NGHIỆN
 
 > **Thương hiệu:** **Trại Cai Nghiện**  
-> **Tagline:** **Trở về phiên bản tốt nhất của bạn.**  
-> **Tuyên ngôn:** *"Trại Cai Nghiện chỉ đơn giản là một nơi mà ở đó chúng tôi giúp bạn tìm lại con người với nhiều động lực, ước mơ của bạn — một phiên bản fresh tươi mới mà bạn đã từng có. Chúng tôi không bán gì cả, chúng tôi chỉ giúp đỡ để bạn trở lại phiên bản tốt nhất của chính mình và của những người yêu thương bạn. Sự thay đổi của bạn là động lực duy nhất của chúng tôi."*  
+> **Tagline:** **Làm chủ sự tập trung, sống có chủ đích.**  
+> **Tuyên ngôn:** *"Trại Cai Nghiện chỉ đơn giản là một nơi mà ở đó chúng tôi giúp bạn tìm lại con người với nhiều động lực, ước mơ của bạn — một phiên bản fresh tươi mới mà bạn đã từng có. Chúng tôi không bán gì cả, chúng tôi chỉ giúp đỡ để bạn làm chủ sự tập trung, giành lại quyền làm chủ tâm trí và sống một cuộc đời có chủ đích. Sự thay đổi của bạn là động lực duy nhất của chúng tôi."*  
 > **Ba trục giá trị cốt lõi:** `Hiểu hành vi` • `Thực hành thay đổi` • `Sống có chủ đích`
 
 ---

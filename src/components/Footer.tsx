@@ -24,7 +24,7 @@ export default function Footer() {
               <span className="text-xl font-bold font-serif text-[#2D312E] dark:text-[#F0ECE6]">Trại Cai Nghiện</span>
             </div>
             <p className="text-sm text-[#6B726E] dark:text-[#9DA39F] leading-relaxed max-w-md">
-              "Chúng tôi ở đây để cùng bạn đối diện và vượt qua những cơn nghiện vô thức, giành lại sự tự do và làm chủ cuộc đời — trở về phiên bản tốt nhất của chính bạn."
+              "Chúng tôi ở đây để cùng bạn đối diện và vượt qua xao nhãng số, giành lại quyền làm chủ tâm trí — làm chủ sự tập trung, sống có chủ đích."
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
               <span className="text-xs px-3 py-1 rounded-full bg-[#EBF0EC] dark:bg-[#202A23] text-[#3A5A40] dark:text-[#78A380] font-medium">#HieuHanhVi</span>
@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-[#E6E1D8] dark:border-[#2E3531] flex flex-col md:flex-row items-center justify-between text-xs text-[#6B726E] dark:text-[#9DA39F] gap-4 text-center md:text-left">
           <div>
-            © 2026 Trại Cai Nghiện • Trở về phiên bản tốt nhất của bạn.
+            © 2026 Trại Cai Nghiện • Làm chủ sự tập trung, sống có chủ đích.
           </div>
           <div>
             Giành lại sự tự do và làm chủ cuộc đời.
