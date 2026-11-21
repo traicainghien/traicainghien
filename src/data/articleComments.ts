@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121": [
+      {
+          "id": "phimp-1",
+          "name": "Hồ Nhật Trường (Nhân viên IT helpdesk)",
+          "content": "Đọc bài 'Phim PỎN và Cú Lừa Dopamine: Cách Lấy Lại Bản Lĩnh Đàn Ông' xong, mình phải bỏ điện thoại xuống mới đọc hết được. Mình từng cài đủ loại app chặn mạng xã hội rồi lại gỡ. Bài viết chỉ ra chỗ mình sai: mình chặn bằng ý chí thay vì dời cái ma sát đi. Hôm nay mình chỉ đổi một việc là sạc điện thoại ở nhà bếp thay vì đầu giường.",
+          "date": "2 ngày trước",
+          "likes": 51,
+          "isLongStory": true
+      },
+      {
+          "id": "phimp-2",
+          "name": "Vũ Thu Trang (Dược sĩ lâm sàng • 29 tuổi)",
+          "content": "Có một chỗ mình thấy như được gọi tên, đó là phần 'Cách Lấy Lại Bản Lĩnh Đàn Ông'. Cách giải thích bằng sinh học thần kinh làm mình thôi tự mắng mình.",
+          "date": "1 ngày trước",
+          "likes": 20
+      },
+      {
+          "id": "phimp-3",
+          "name": "Đặng Minh Quân (Project Manager)",
+          "content": "Mình dừng lại lâu nhất ở phần 'Cách Lấy Lại Bản Lĩnh Đàn Ông'. Mình làm luôn, không chờ có động lực: đặt điện thoại ở phòng khác khi làm việc, hôm nay làm liền 45 phút không gián đoạn.",
+          "date": "1 ngày trước",
+          "likes": 58
+      }
+  ],
   "lay-lai-su-tap-trung-bi-mat-tu-tinh-deo-cua-bo-nao-20261120": [
       {
           "id": "layla-1",
