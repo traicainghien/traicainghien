@@ -18,7 +18,7 @@ export async function GET(
     return new NextResponse('⛔ Không có quyền thực hiện thao tác này.', { status: 403 });
   }
 
-  if (action !== 'approve' && action !== 'reject') {
+  if (action !== 'approve' && action !== 'reject' && action !== 'delete') {
     return new NextResponse('Thao tác không hợp lệ.', { status: 400 });
   }
 
@@ -94,12 +94,14 @@ export async function GET(
 </head>
 <body>
   <div class="card">
-    <div class="icon">${action === 'approve' ? '🌿' : '🛑'}</div>
-    <h1>${action === 'approve' ? 'Đã duyệt bài thành công!' : 'Đã từ chối bài viết'}</h1>
+    <div class="icon">${action === 'approve' ? '🌿' : action === 'delete' ? '🗑️' : '🛑'}</div>
+    <h1>${action === 'approve' ? 'Đã duyệt bài thành công!' : action === 'delete' ? 'Đã xóa bài viết vĩnh viễn' : 'Đã từ chối bài viết'}</h1>
     <p>
       ${
         action === 'approve'
           ? 'Bài tâm sự đã được xuất bản công khai lên Bức Tường Góc Tâm Sự. Độc giả đã có thể đọc và gửi cái ôm ấm áp.'
+          : action === 'delete'
+          ? 'Bài tâm sự đã được xóa hoàn toàn khỏi cơ sở dữ liệu.'
           : 'Bài tâm sự đã bị từ chối và sẽ không hiển thị trên website.'
       }
     </p>

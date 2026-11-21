@@ -377,12 +377,21 @@ export async function addReaction(
 
 export async function moderateConfession(
   id: string,
-  action: 'approve' | 'reject',
+  action: 'approve' | 'reject' | 'delete',
   reviewer: string,
   fallbackData?: Partial<Confession>
 ): Promise<Confession | null> {
   const all = getConfessionsList();
   let target = all.find((c) => c.id === id);
+
+  if (action === 'delete') {
+    if (target) {
+      const filtered = all.filter((c) => c.id !== id);
+      saveConfessionsList(filtered);
+      return target;
+    }
+    return null;
+  }
 
   if (!target && fallbackData && fallbackData.content) {
     target = {
