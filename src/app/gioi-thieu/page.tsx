@@ -14,7 +14,7 @@ export default function GioiThieuPage() {
       {/* 1. HEADER TINH GỌN */}
       <div className="text-center space-y-3">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-[#EBF0EC] dark:bg-[#202A23] text-[#3A5A40] dark:text-[#78A380]">
-          <span>Câu Chuyện Sáng Lập</span> • <span>Sứ Mệnh Phụng Sự</span>
+          <span>Câu Chuyện Của Tôi</span>
         </div>
         <h1 className="text-3xl md:text-4xl font-bold font-serif text-[#2D312E] dark:text-[#F0ECE6] leading-tight">
           Tại sao Trại Cai Nghiện ra đời?
