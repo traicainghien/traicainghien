@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getApprovedConfessions, createConfession } from '@/lib/confessionsStorage';
-import { ConfessionSubmission, MoodTag } from '@/types/confession';
+import { ConfessionSubmission, MoodTag, Confession } from '@/types/confession';
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q';
 const HDQT_GROUP_ID = process.env.TELEGRAM_HDQT_GROUP_ID || '-1004401199553';
@@ -45,26 +45,35 @@ function generateCompassionReply(mood: MoodTag): string {
 }
 
 async function sendTelegramApprovalNotification(
-  confessionId: string,
-  mood: MoodTag,
-  content: string,
-  email?: string,
-  aiReply?: string
+  confession: Confession,
+  email?: string
 ) {
   try {
-    const approveUrl = `${SITE_URL}/api/confessions/${confessionId}/moderate?action=approve&token=${MOD_SECRET}`;
-    const rejectUrl = `${SITE_URL}/api/confessions/${confessionId}/moderate?action=reject&token=${MOD_SECRET}`;
+    const payloadData = Buffer.from(
+      JSON.stringify({
+        id: confession.id,
+        slug: confession.slug,
+        moodTag: confession.moodTag,
+        content: confession.content,
+        aiCompassionReply: confession.aiCompassionReply,
+        cardColorTheme: confession.cardColorTheme,
+        createdAt: confession.createdAt,
+      })
+    ).toString('base64url');
+
+    const approveUrl = `${SITE_URL}/api/confessions/${confession.id}/moderate?action=approve&token=${MOD_SECRET}&data=${payloadData}`;
+    const rejectUrl = `${SITE_URL}/api/confessions/${confession.id}/moderate?action=reject&token=${MOD_SECRET}`;
 
     const text = `🌿 <b>[GÓC TÂM SỰ MỚI CẦN DUYỆT]</b>
 ⏰ <b>Thời gian:</b> ${new Date().toLocaleString('vi-VN')}
-🏷 <b>Chủ đề:</b> ${MOOD_NAMES[mood] || mood}
+🏷 <b>Chủ đề:</b> ${MOOD_NAMES[confession.moodTag] || confession.moodTag}
 📧 <b>Email:</b> ${email ? `<code>${email}</code> (Đăng ký nhận cẩm nang)` : '<i>(Ẩn danh hoàn toàn)</i>'}
 
 📝 <b>Nội dung tâm sự:</b>
-<i>"${content.replace(/</g, '&lt;').replace(/>/g, '&gt;')}"</i>
+<i>"${confession.content.replace(/</g, '&lt;').replace(/>/g, '&gt;')}"</i>
 
 💬 <b>Lời vỗ về từ Mây:</b>
-<i>"${aiReply?.replace(/</g, '&lt;').replace(/>/g, '&gt;')}"</i>
+<i>"${confession.aiCompassionReply?.replace(/</g, '&lt;').replace(/>/g, '&gt;')}"</i>
 
 👉 <i>Bố hoặc Mây bấm nút bên dưới để duyệt cho bài hiển thị lên website:</i>`;
 
@@ -84,11 +93,16 @@ async function sendTelegramApprovalNotification(
       },
     };
 
-    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    const res = await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error('Telegram API error response:', errText);
+    }
   } catch (error) {
     console.error('Failed to send Telegram moderation notification:', error);
   }
@@ -137,13 +151,7 @@ export async function POST(request: NextRequest) {
 
     // Nếu chọn chia sẻ lên cộng đồng, gửi duyệt qua Telegram
     if (body.isPublic) {
-      await sendTelegramApprovalNotification(
-        confession.id,
-        body.moodTag,
-        body.content,
-        body.email,
-        aiReply
-      );
+      await sendTelegramApprovalNotification(confession, body.email);
     }
 
     return NextResponse.json({
@@ -160,6 +168,12 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('Error creating confession:', error);
-    return NextResponse.json({ success: false, message: 'Có lỗi xảy ra khi gửi bài.' }, { status: 500 });
+    return NextResponse.json(
+      {
+        success: false,
+        message: error instanceof Error ? error.message : 'Có lỗi xảy ra khi gửi bài.',
+      },
+      { status: 500 }
+    );
   }
 }

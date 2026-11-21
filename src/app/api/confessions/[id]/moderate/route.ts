@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { moderateConfession, getConfessionById } from '@/lib/confessionsStorage';
+import { moderateConfession } from '@/lib/confessionsStorage';
+import { Confession } from '@/types/confession';
 
 const MOD_SECRET = process.env.MODERATION_SECRET || 'tcn-mod-secret-2026';
 
@@ -11,6 +12,7 @@ export async function GET(
   const { searchParams } = new URL(request.url);
   const action = searchParams.get('action');
   const token = searchParams.get('token');
+  const dataParam = searchParams.get('data');
 
   if (token !== MOD_SECRET) {
     return new NextResponse('⛔ Không có quyền thực hiện thao tác này.', { status: 403 });
@@ -20,7 +22,16 @@ export async function GET(
     return new NextResponse('Thao tác không hợp lệ.', { status: 400 });
   }
 
-  const updated = await moderateConfession(id, action, 'Bố Long');
+  let fallbackData: Partial<Confession> | undefined;
+  if (dataParam) {
+    try {
+      fallbackData = JSON.parse(Buffer.from(dataParam, 'base64url').toString('utf-8'));
+    } catch (e) {
+      console.warn('Could not parse fallback data in moderation link:', e);
+    }
+  }
+
+  const updated = await moderateConfession(id, action, 'Bố Long', fallbackData);
 
   if (!updated) {
     return new NextResponse('Không tìm thấy bài tâm sự hoặc bài đã bị xóa.', { status: 404 });
@@ -99,7 +110,6 @@ export async function GET(
   `;
 
   return new NextResponse(html, {
-    status: 200,
     headers: { 'Content-Type': 'text/html; charset=utf-8' },
   });
 }
