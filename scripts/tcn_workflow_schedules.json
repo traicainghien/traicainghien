@@ -1,7 +1,7 @@
 {
   "project": "Trại Cai Nghiện",
-  "version": "1.1.0",
-  "last_updated": "2026-11-22T21:16:00+07:00",
+  "version": "1.2.0",
+  "last_updated": "2026-11-22T21:25:00+07:00",
   "maintained_by": "Mây (AI Co-founder) & Bố Long",
   "timezone": "Asia/Ho_Chi_Minh (UTC+7)",
   "total_daily_milestones": 11,
@@ -31,16 +31,17 @@
       "importance": "high"
     },
     {
-      "id": "TCN-PUB-02",
+      "id": "TCN-WEB-01",
       "time": "10:00",
       "cron": "0 10 * * *",
-      "name": "Bài Viết Teaser & Dẫn Luồng Đọc Sâu",
-      "type": "n8n_flow / python_dispatcher",
-      "workflow_id": "wWXJoMhbchKzrkqr / tcn_article_teaser",
-      "channel": "Facebook Fanpage Trại Cai Nghiện & Website",
-      "target": "Độc giả mạng xã hội",
-      "description": "Đoạn trích dẫn chạm nỗi đau trì hoãn / sương mù não, kích thích tò mò (Curiosity Gap) điều hướng về website traicainghien.com.",
-      "importance": "normal"
+      "name": "🌐 XUẤT BẢN BÀI VIẾT WEBSITE: Tập Trung Sâu & Deep Work (Flow 03)",
+      "type": "n8n_flow / omnichannel_engine",
+      "workflow_id": "Lj3wvfAe0CEqnWbQ",
+      "runner": "scripts/omnichannel_dispatcher.py -> website_article_publisher.py",
+      "channel": "🌐 Website (traicainghien.com) + Facebook Fanpage + Telegram Daily",
+      "target": "Toàn bộ độc giả tìm kiếm tri thức chuyên sâu",
+      "description": "Đào YouTube tri thức cao ➔ Tái cấu trúc thành bài viết chuyên sâu 1,500 - 2,500 từ trên Website traicainghien.com/bai-viet/{slug} ➔ Sinh bình luận seeding độc bản ➔ Git push tự động để Vercel deploy live ➔ Đăng bài Teaser lên Fanpage Facebook (ghim link bài vào First Comment) và tóm tắt lên Telegram.",
+      "importance": "critical"
     },
     {
       "id": "TCN-SOC-01",
@@ -91,16 +92,17 @@
       "importance": "high"
     },
     {
-      "id": "TCN-PUB-05",
+      "id": "TCN-WEB-02",
       "time": "21:00",
       "cron": "0 21 * * *",
-      "name": "Trạm Tích Cực: Quote Thủy Mặc & Triết Lý Stoic",
-      "type": "python_dispatcher",
-      "runner": "scripts/tram_tich_cuc_publisher.py",
-      "channel": "Telegram Daily (@traicainghiendaily) & Facebook Fanpage",
-      "target": "Độc giả trẻ cần điểm tựa tinh thần",
-      "description": "Bức ảnh Black Card / Tranh Zen tối giản kèm câu danh ngôn đắt giá về sự tập trung, tĩnh lặng và nghị lực sống.",
-      "importance": "normal"
+      "name": "🌐 XUẤT BẢN BÀI VIẾT WEBSITE: Thói Quen & Cai Nghiện Số (Flow 03) + Trạm Tích Cực",
+      "type": "n8n_flow / omnichannel_engine",
+      "workflow_id": "Lj3wvfAe0CEqnWbQ",
+      "runner": "scripts/omnichannel_dispatcher.py -> website_article_publisher.py / tram_tich_cuc_publisher.py",
+      "channel": "🌐 Website (traicainghien.com) + Facebook Fanpage + Telegram Daily",
+      "target": "Toàn bộ độc giả buổi tối",
+      "description": "Xuất bản bài nghiên cứu chuyên sâu về Thói quen Kaizen / Tái lập Dopamine lên Website traicainghien.com (Git push deploy live qua Vercel) ➔ Kèm ảnh Quote Black Card / Triết lý Stoic Zen tĩnh lặng đa kênh.",
+      "importance": "critical"
     },
     {
       "id": "TCN-SOC-03",
@@ -135,7 +137,7 @@
       "runner": "scripts/telegram_reporter.py --type audit",
       "channel": "Telegram HĐQT (Topic 19)",
       "target": "Bố Long (@longphibtc) & HĐQT",
-      "description": "Tổng kết toàn bộ chỉ số trong ngày (Website CDN, Fanpage Likes/Followers, Telegram reach, Threads reach) và đề xuất chiến lược ngày mai.",
+      "description": "Tổng kết toàn bộ chỉ số trong ngày (Website Uptime/Bài mới, Fanpage Likes/Reach, Telegram views, Threads reach) và đề xuất chiến lược ngày mai.",
       "importance": "critical"
     }
   ],
@@ -144,8 +146,8 @@
       "id": "TCN-DYN-01",
       "name": "Đào YouTube & Xuất Bản Đa Kênh (Flow 03 - Agent 10)",
       "workflow_id": "Lj3wvfAe0CEqnWbQ",
-      "trigger_type": "webhook_or_poll",
-      "description": "Tự động phân tích video mới từ các kênh YouTube chất lượng cao về Tâm lý/Tập trung, chuyển ngữ và tạo bản thảo bài viết đa kênh."
+      "trigger_times": ["10:00", "21:00"],
+      "description": "Tự động phân tích video mới từ các kênh YouTube chất lượng cao về Tâm lý/Tập trung, chuyển ngữ và tạo bản thảo bài viết Website chuyên sâu."
     },
     {
       "id": "TCN-DYN-02",
