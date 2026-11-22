@@ -141,11 +141,6 @@ def record_task_log(task_name: str, status: str, channel: str, time_str: str = N
         # Ghi trực tiếp cả vào thư mục gốc ROOT_DIR (/root/traicainghien/TASKS_TRAICAINGHIEN_TODAY.md)
         with open(os.path.join(ROOT_DIR, "TASKS_TRAICAINGHIEN_TODAY.md"), "w", encoding="utf-8") as f:
             f.write(md_content)
-        # Giữ thêm file phụ TASKS_TODAY.md để tương thích
-        with open(os.path.join(LOGS_DIR, "TASKS_TODAY.md"), "w", encoding="utf-8") as f:
-            f.write(md_content)
-        with open(os.path.join(ROOT_DIR, "TASKS_TODAY.md"), "w", encoding="utf-8") as f:
-            f.write(md_content)
     except Exception as e:
         print("[Logger Error] Không thể ghi md_file:", e)
 
@@ -157,8 +152,6 @@ def record_task_log(task_name: str, status: str, channel: str, time_str: str = N
                 json.dump(today_summary, f, ensure_ascii=False, indent=2)
             hermes_md = os.path.join(HERMES_DIR, "TASKS_TRAICAINGHIEN_TODAY.md")
             with open(hermes_md, "w", encoding="utf-8") as f:
-                f.write(md_content)
-            with open(os.path.join(HERMES_DIR, "TASKS_TODAY.md"), "w", encoding="utf-8") as f:
                 f.write(md_content)
         except Exception as e:
             print("[Logger Error] Ghi vào Hermes folder:", e)
