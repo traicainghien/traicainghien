@@ -1,0 +1,115 @@
+{
+  "project": "Trại Cai Nghiện",
+  "version": "1.0.0",
+  "last_updated": "2026-11-22T21:12:00+07:00",
+  "maintained_by": "Mây (AI Co-founder) & Bố Long",
+  "timezone": "Asia/Ho_Chi_Minh (UTC+7)",
+  "total_daily_milestones": 8,
+  "schedules": [
+    {
+      "id": "TCN-REP-01",
+      "time": "06:10",
+      "cron": "10 6 * * *",
+      "name": "Báo Cáo Sáng Vận Hành Hệ Thống",
+      "type": "cronjob_python",
+      "runner": "scripts/telegram_reporter.py --type morning",
+      "channel": "Telegram HĐQT (Topic 19)",
+      "target": "Bố Long (@longphibtc) & HĐQT",
+      "description": "Quét Uptime 3 luồng n8n, kiểm tra Pool 10 Gemini API, Token Facebook Fanpage, Website Uptime và điểm danh 6 mốc phát sóng trong ngày.",
+      "importance": "critical"
+    },
+    {
+      "id": "TCN-PUB-01",
+      "time": "08:30",
+      "cron": "30 8 * * *",
+      "name": "Bản Tin Sáng: Tâm Lý & Thói Quen (Flow 01)",
+      "type": "n8n_flow",
+      "workflow_id": "wWXJoMhbchKzrkqr",
+      "channel": "Telegram Daily (@traicainghiendaily) & Facebook Fanpage",
+      "target": "Độc giả cộng đồng Trại Cai Nghiện",
+      "description": "Phát sóng bài phân tích tâm lý học hành vi, Kaizen 1% buổi sáng, giải phóng xao nhãng số kèm ảnh báo chí nguồn độc bản.",
+      "importance": "high"
+    },
+    {
+      "id": "TCN-PUB-02",
+      "time": "10:00",
+      "cron": "0 10 * * *",
+      "name": "Bài Viết Teaser & Dẫn Luồng Đọc Sâu",
+      "type": "n8n_flow / python_dispatcher",
+      "workflow_id": "wWXJoMhbchKzrkqr / tcn_article_teaser",
+      "channel": "Facebook Fanpage Trại Cai Nghiện & Website",
+      "target": "Độc giả mạng xã hội",
+      "description": "Đoạn trích dẫn chạm nỗi đau trì hoãn / sương mù não, kích thích tò mò (Curiosity Gap) điều hướng về website traicainghien.com.",
+      "importance": "normal"
+    },
+    {
+      "id": "TCN-PUB-03",
+      "time": "15:00",
+      "cron": "0 15 * * *",
+      "name": "Bản Tin Chiều: Năng Suất & Deep Work (Flow 01)",
+      "type": "n8n_flow",
+      "workflow_id": "wWXJoMhbchKzrkqr",
+      "channel": "Telegram Daily (@traicainghiendaily) & Facebook Fanpage",
+      "target": "Người đi làm, Freelancer, Sinh viên",
+      "description": "Giải cứu cơn buồn ngủ/nhũn não buổi chiều, kỹ thuật 90 phút Ultradian Rhythm và thiết kế không gian làm việc tĩnh lặng.",
+      "importance": "high"
+    },
+    {
+      "id": "TCN-PUB-04",
+      "time": "20:30",
+      "cron": "30 20 * * *",
+      "name": "Bản Tin Tối: Phục Hồi Dopamine & Thói Quen (Flow 01)",
+      "type": "n8n_flow",
+      "workflow_id": "wWXJoMhbchKzrkqr",
+      "channel": "Telegram Daily (@traicainghiendaily) & Facebook Fanpage",
+      "target": "Độc giả thời gian rảnh buổi tối",
+      "description": "Phân tích cơ chế nghiện dopamine ngắn (Shorts, Reels, TikTok), bài học tự trắc ẩn và phương pháp cai nghiện công nghệ.",
+      "importance": "high"
+    },
+    {
+      "id": "TCN-PUB-05",
+      "time": "21:00",
+      "cron": "0 21 * * *",
+      "name": "Trạm Tích Cực: Quote Thủy Mặc & Triết Lý Stoic",
+      "type": "python_dispatcher",
+      "runner": "scripts/tram_tich_cuc_publisher.py",
+      "channel": "Telegram Daily (@traicainghiendaily) & Facebook Fanpage",
+      "target": "Độc giả trẻ cần điểm tựa tinh thần",
+      "description": "Bức ảnh Black Card / Tranh Zen tối giản kèm câu danh ngôn đắt giá về sự tập trung, tĩnh lặng và nghị lực sống.",
+      "importance": "normal"
+    },
+    {
+      "id": "TCN-PUB-06",
+      "time": "22:00",
+      "cron": "0 22 * * *",
+      "name": "Lời Nhắc Đi Ngủ Dịu Dàng (Flow 02)",
+      "type": "n8n_flow",
+      "workflow_id": "E6PVBHKrtYPlfevu",
+      "channel": "Telegram Daily (@traicainghiendaily) & Facebook Fanpage",
+      "target": "Người hay thức khuya, lướt điện thoại đêm",
+      "description": "Bức thư vỗ về dịu dàng, nhắc nhở buông bỏ điện thoại, tha thứ cho những điều còn dang dở và chuẩn bị giấc ngủ an lành.",
+      "importance": "critical"
+    },
+    {
+      "id": "TCN-REP-02",
+      "time": "22:10",
+      "cron": "10 22 * * *",
+      "name": "Báo Cáo Tối Tổng Kết Tăng Trưởng & Audit",
+      "type": "cronjob_python",
+      "runner": "scripts/telegram_reporter.py --type audit",
+      "channel": "Telegram HĐQT (Topic 19)",
+      "target": "Bố Long (@longphibtc) & HĐQT",
+      "description": "Tổng kết toàn bộ chỉ số trong ngày (Website CDN, Fanpage Likes/Followers, Telegram reach, phản hồi độc giả) và đề xuất chiến lược ngày mai.",
+      "importance": "critical"
+    }
+  ],
+  "dynamic_flows": [
+    {
+      "id": "TCN-DYN-01",
+      "name": "Đào YouTube & Xuất Bản Đa Kênh (Flow 03)",
+      "workflow_id": "Lj3wvfAe0CEqnWbQ",
+      "trigger_type": "webhook_or_poll",
+      "description": "Tự động phân tích video mới từ các kênh YouTube chất lượng cao về Tâm lý/Tập trung, chuyển ngữ và tạo bản thảo bài viết đa kênh."
+    }
+  ]
+}
