@@ -1,10 +1,10 @@
 {
   "project": "Trại Cai Nghiện",
-  "version": "1.0.0",
-  "last_updated": "2026-11-22T21:12:00+07:00",
+  "version": "1.1.0",
+  "last_updated": "2026-11-22T21:16:00+07:00",
   "maintained_by": "Mây (AI Co-founder) & Bố Long",
   "timezone": "Asia/Ho_Chi_Minh (UTC+7)",
-  "total_daily_milestones": 8,
+  "total_daily_milestones": 11,
   "schedules": [
     {
       "id": "TCN-REP-01",
@@ -15,7 +15,7 @@
       "runner": "scripts/telegram_reporter.py --type morning",
       "channel": "Telegram HĐQT (Topic 19)",
       "target": "Bố Long (@longphibtc) & HĐQT",
-      "description": "Quét Uptime 3 luồng n8n, kiểm tra Pool 10 Gemini API, Token Facebook Fanpage, Website Uptime và điểm danh 6 mốc phát sóng trong ngày.",
+      "description": "Quét Uptime 3 luồng n8n, kiểm tra Pool 10 Gemini API, Token Facebook Fanpage, Website Uptime và điểm danh lịch phát sóng trong ngày.",
       "importance": "critical"
     },
     {
@@ -43,6 +43,18 @@
       "importance": "normal"
     },
     {
+      "id": "TCN-SOC-01",
+      "time": "12:00",
+      "cron": "0 12 * * *",
+      "name": "Threads & Instagram Trưa: Bóc Tách Bẫy Xao Nhãng (Agent 11)",
+      "type": "buffer_bridge / python_dispatcher",
+      "runner": "scripts/schedule_today_threads.py / social_buffer_publisher.py",
+      "channel": "Meta Threads (@traicainghien) & Instagram",
+      "target": "Người đi làm, sinh viên giờ nghỉ trưa",
+      "description": "Micro-essay thức tỉnh cơn nghiện lướt điện thoại vô thức giờ nghỉ trưa, giải pháp để máy ở phòng khác ăn trọn bữa cơm.",
+      "importance": "high"
+    },
+    {
       "id": "TCN-PUB-03",
       "time": "15:00",
       "cron": "0 15 * * *",
@@ -53,6 +65,18 @@
       "target": "Người đi làm, Freelancer, Sinh viên",
       "description": "Giải cứu cơn buồn ngủ/nhũn não buổi chiều, kỹ thuật 90 phút Ultradian Rhythm và thiết kế không gian làm việc tĩnh lặng.",
       "importance": "high"
+    },
+    {
+      "id": "TCN-SOC-02",
+      "time": "16:30",
+      "cron": "30 16 * * *",
+      "name": "Threads & Instagram Chiều: 4 Bước Làm Chủ Tập Trung (Agent 11)",
+      "type": "buffer_bridge / python_dispatcher",
+      "runner": "scripts/schedule_today_threads.py / social_buffer_publisher.py",
+      "channel": "Meta Threads (@traicainghien) & Instagram",
+      "target": "Người chuẩn bị kết thúc ngày làm việc",
+      "description": "Checklist ngắn 4 bước đóng tab linh tinh, ghi 3 việc quan trọng ngày mai, dọn sạch bàn làm việc và bảo vệ sự tập trung.",
+      "importance": "normal"
     },
     {
       "id": "TCN-PUB-04",
@@ -79,6 +103,18 @@
       "importance": "normal"
     },
     {
+      "id": "TCN-SOC-03",
+      "time": "21:45",
+      "cron": "45 21 * * *",
+      "name": "Threads & Instagram Đêm: Thư Buông Bỏ & Tắt Ánh Sáng Xanh (Agent 11)",
+      "type": "buffer_bridge / python_dispatcher",
+      "runner": "scripts/schedule_today_threads.py / social_buffer_publisher.py",
+      "channel": "Meta Threads (@traicainghien) & Instagram",
+      "target": "Cộng đồng thức đêm lướt mạng xã hội",
+      "description": "Bức thư vỗ về trước giờ ngủ kèm ảnh nến ấm cúng Zen độc bản, tha thứ cho bản thân và reset thụ thể Dopamine D2.",
+      "importance": "high"
+    },
+    {
       "id": "TCN-PUB-06",
       "time": "22:00",
       "cron": "0 22 * * *",
@@ -99,17 +135,25 @@
       "runner": "scripts/telegram_reporter.py --type audit",
       "channel": "Telegram HĐQT (Topic 19)",
       "target": "Bố Long (@longphibtc) & HĐQT",
-      "description": "Tổng kết toàn bộ chỉ số trong ngày (Website CDN, Fanpage Likes/Followers, Telegram reach, phản hồi độc giả) và đề xuất chiến lược ngày mai.",
+      "description": "Tổng kết toàn bộ chỉ số trong ngày (Website CDN, Fanpage Likes/Followers, Telegram reach, Threads reach) và đề xuất chiến lược ngày mai.",
       "importance": "critical"
     }
   ],
-  "dynamic_flows": [
+  "omnichannel_flows": [
     {
       "id": "TCN-DYN-01",
-      "name": "Đào YouTube & Xuất Bản Đa Kênh (Flow 03)",
+      "name": "Đào YouTube & Xuất Bản Đa Kênh (Flow 03 - Agent 10)",
       "workflow_id": "Lj3wvfAe0CEqnWbQ",
       "trigger_type": "webhook_or_poll",
       "description": "Tự động phân tích video mới từ các kênh YouTube chất lượng cao về Tâm lý/Tập trung, chuyển ngữ và tạo bản thảo bài viết đa kênh."
+    },
+    {
+      "id": "TCN-DYN-02",
+      "name": "Short Video Đa Kênh: Reels & Shorts (Agent 12)",
+      "runner": "scripts/omnichannel_dispatcher.py",
+      "channel": "Facebook Reels, Instagram Reels, YouTube Shorts, TikTok",
+      "trigger_type": "automated_batch",
+      "description": "Phân phối video ngắn định dạng 9:16 tối ưu Tỷ lệ Lưu (Save Rate) & Tỷ lệ Chia sẻ (Share Rate)."
     }
   ]
 }
