@@ -45,7 +45,7 @@ ADMIN_CHAT_ID = get_env_variable("TELEGRAM_ADMIN_CHAT_ID") or "488901419"
 HDQT_GROUP_CHAT_ID = get_env_variable("TELEGRAM_HDQT_GROUP_ID") or "-1004401199553"
 HDQT_TOPIC_THREAD_ID = int(get_env_variable("TELEGRAM_HDQT_TOPIC_ID") or 19)
 MOD_SECRET = get_env_variable("MODERATION_SECRET") or "tcn-mod-secret-2026"
-SITE_URL = get_env_variable("NEXT_PUBLIC_SITE_URL") or "https://traicainghien.com"
+SITE_URL = get_env_variable("NEXT_PUBLIC_SITE_URL") or "https://www.traicainghien.com"
 
 # Đường dẫn thư mục Hermes trên máy cá nhân của Bố (nếu có trên môi trường local)
 HERMES_DIR = r"C:\Users\MrFine\Documents\Hermes"
