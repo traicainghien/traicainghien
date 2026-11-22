@@ -50,11 +50,11 @@
 Khi **ĐẠI KA Long** hỏi: *"Hôm nay các task chạy thế nào rồi?"* hoặc *"Có task nào không thành công không?"*:
 
 1. **Bước 1 (Lấy dữ liệu thực tế):**
-   * Đọc file `TASKS_TODAY.md` hoặc `tcn_tasks_log.json` (nếu cần dữ liệu mới nhất, chạy `python sync_tasks.py`).
+   * Đọc file `TASKS_TRAICAINGHIEN_TODAY.md` hoặc `tcn_tasks_log.json` (nếu cần dữ liệu mới nhất, chạy `python sync_tasks.py`).
 2. **Bước 2 (Đối chiếu với mốc giờ hiện tại):**
    * So sánh giờ hiện tại với bảng lịch trình 11 mốc ở trên:
      - Những mốc giờ nào **đã qua** tính đến thời điểm ĐẠI KA hỏi?
-     - Mốc giờ đó **đã có bản ghi log tương ứng** trong `TASKS_TODAY.md` chưa?
+     - Mốc giờ đó **đã có bản ghi log tương ứng** trong `TASKS_TRAICAINGHIEN_TODAY.md` chưa?
      - Đặc biệt lưu ý 2 mốc xuất bản bài Website: **10:00 Sáng** (`TCN-WEB-01`) và **21:00 Tối** (`TCN-WEB-02`).
      - Trạng thái là **✅ Thành công** hay **❌ Lỗi**?
 3. **Bước 3 (Báo cáo súc tích cho ĐẠI KA):**

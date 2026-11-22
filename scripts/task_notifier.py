@@ -123,7 +123,7 @@ def record_task_log(task_name: str, status: str, channel: str, time_str: str = N
     except Exception as e:
         print("[Logger Error] Không thể ghi today_file:", e)
 
-    # 3. Tạo file Markdown trực quan: logs/TASKS_TODAY.md
+    # 3. Tạo file Markdown trực quan: logs/TASKS_TRAICAINGHIEN_TODAY.md
     md_content = f"# 📊 BÁO CÁO CÁC TASK N8N TRẠI CAI NGHIỆN • {today_str}\n\n"
     md_content += f"> **Trạng thái:** {today_summary['status_summary']}\n"
     md_content += f"> **Tổng số task:** {today_summary['total']} (✅ {today_summary['success_count']} thành công, ❌ {today_summary['error_count']} lỗi)\n\n"
@@ -134,9 +134,12 @@ def record_task_log(task_name: str, status: str, channel: str, time_str: str = N
         detail = f"Lỗi: {t['error']}" if t.get("error") else (f"Tiêu đề: {t['title']}" if t.get("title") else "-")
         md_content += f"| {t['time_str']} | {t['task']} | {t['channel']} | {st} | {detail} |\n"
     
-    md_file = os.path.join(LOGS_DIR, "TASKS_TODAY.md")
+    md_file = os.path.join(LOGS_DIR, "TASKS_TRAICAINGHIEN_TODAY.md")
     try:
         with open(md_file, "w", encoding="utf-8") as f:
+            f.write(md_content)
+        # Giữ thêm file phụ TASKS_TODAY.md để tương thích
+        with open(os.path.join(LOGS_DIR, "TASKS_TODAY.md"), "w", encoding="utf-8") as f:
             f.write(md_content)
     except Exception as e:
         print("[Logger Error] Không thể ghi md_file:", e)
@@ -147,8 +150,10 @@ def record_task_log(task_name: str, status: str, channel: str, time_str: str = N
             hermes_log = os.path.join(HERMES_DIR, "tcn_tasks_log.json")
             with open(hermes_log, "w", encoding="utf-8") as f:
                 json.dump(today_summary, f, ensure_ascii=False, indent=2)
-            hermes_md = os.path.join(HERMES_DIR, "TASKS_TODAY.md")
+            hermes_md = os.path.join(HERMES_DIR, "TASKS_TRAICAINGHIEN_TODAY.md")
             with open(hermes_md, "w", encoding="utf-8") as f:
+                f.write(md_content)
+            with open(os.path.join(HERMES_DIR, "TASKS_TODAY.md"), "w", encoding="utf-8") as f:
                 f.write(md_content)
         except Exception as e:
             print("[Logger Error] Ghi vào Hermes folder:", e)
