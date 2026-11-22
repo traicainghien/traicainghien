@@ -4,6 +4,22 @@ Bảng thời gian biểu chuẩn toàn bộ các tác vụ tự động của d
 
 ---
 
+## 📌 DANH SÁCH 11 MỐC GIỜ THỰC TẾ TRONG NGÀY (TÓM TẮT NHANH)
+
+* **06:10** - 🌅 `bao_cao_sang_van_hanh_he_thong`: Báo cáo sáng Telegram Topic 19 (HĐQT)
+* **08:30** - 🌊 `ban_tin_sang_tam_ly_thoi_quen`: Bản tin sáng Telegram Daily (`@traicainghiendaily`) & Fanpage Facebook (`@traicainghien.fb`)
+* **10:00** - 🌐 `xuat_ban_bai_viet_website_ca_1_deep_work`: Xuất bản bài Website chuyên sâu về Sự Tập Trung (`https://www.traicainghien.com/bai-viet/`) + Teaser Fanpage
+* **12:00** - 💬 `threads_insta_trua_boc_tach_xao_nhang`: Threads & Instagram trưa (`@traicainghienvn`)
+* **15:00** - ☀️ `ban_tin_chieu_nang_suat_deep_work`: Bản tin chiều Telegram Daily (`@traicainghiendaily`) & Fanpage Facebook (`@traicainghien.fb`)
+* **16:30** - 📌 `threads_insta_chieu_4_buoc_lam_chu_tap_trung`: Threads & Instagram chiều (`@traicainghienvn`)
+* **20:30** - 🌆 `ban_tin_toi_phuc_hoi_dopamine`: Bản tin tối Telegram Daily (`@traicainghiendaily`) & Fanpage Facebook (`@traicainghien.fb`)
+* **21:00** - 🌐 `xuat_ban_bai_viet_website_ca_2_thoi_quen_tram_tich_cuc`: Xuất bản bài Website chuyên sâu về Thói Quen Kaizen (`https://www.traicainghien.com/bai-viet/`) + Trạm Tích Cực Zen Black Card
+* **21:45** - 🕯️ `threads_insta_dem_thu_buong_bo_tat_anh_sang_xanh`: Threads & Instagram đêm (`@traicainghienvn`)
+* **22:00** - 🌙 `loi_nhac_di_ngu_diu_dang`: Lời nhắc đi ngủ dịu dàng Telegram Daily & Fanpage Facebook (Flow 02)
+* **22:10** - 📊 `bao_cao_toi_tong_ket_ngay_audit`: Báo cáo tối tổng kết & Audit Telegram Topic 19 (HĐQT)
+
+---
+
 ## 📋 BẢNG THỜI GIAN BIỂU CHI TIẾT 11 MỐC GIỜ
 
 | STT | Tên Task Chạy | Giờ Chạy (VN) | Kênh Thực Thi | Nội Dung Tác Vụ | Mục Đích Chiến Lược |
