@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "lay-lai-su-tap-trung-thoat-khoi-doomscrolling-20261123": [
+      {
+          "id": "layla-1",
+          "name": "Ngô Tuấn Kiệt (Nhân viên thiết kế đồ họa)",
+          "content": "Đọc bài 'Lấy Lại Sự Tập Trung: Thoát Khỏi Cạm Bẫy Doomscrolling' xong, mình thấy trúng tim đen quá. Cái đoạn nói về chi phí chuyển đổi ngữ cảnh làm mình nhớ lại một ngày mình mở 32 tab. Tưởng là làm nhiều việc, thật ra không xong việc nào. Từ hôm qua mình chỉ để 3 tab.",
+          "date": "2 giờ trước",
+          "likes": 74,
+          "isLongStory": true
+      },
+      {
+          "id": "layla-2",
+          "name": "Lý Mai Chi (Biên tập viên • 30 tuổi)",
+          "content": "Thứ mình cần nhất hôm nay là đoạn 'Thoát Khỏi Cạm Bẫy Doomscrolling'. Mình đã thử và thấy đúng: bớt ma sát thì bớt phải gồng.",
+          "date": "Hôm qua",
+          "likes": 29
+      },
+      {
+          "id": "layla-3",
+          "name": "Lê Quốc Bảo (Sinh viên năm cuối)",
+          "content": "Mình vừa đọc to đoạn này cho vợ nghe, phần 'Thoát Khỏi Cạm Bẫy Doomscrolling'. Mình làm luôn, không chờ có động lực: ghi lại mỗi tối một câu mình đã làm được trong ngày.",
+          "date": "1 ngày trước",
+          "likes": 60
+      }
+  ],
   "phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121": [
       {
           "id": "phimp-1",
