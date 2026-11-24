@@ -4,7 +4,7 @@ export const sevenDaysFocusCourse: Course = {
   slug: '7-ngay-tap-trung',
   title: '7 Ngày Lấy Lại Sự Tập Trung',
   tagline: 'Lộ trình khoa học thần kinh giúp bạn dọn dẹp sương mù não, thoát khỏi bẫy dopamine ngắn và làm chủ sự chú ý sâu.',
-  badge: 'Khóa Học Độc Quyền • Miễn Phí 100%',
+  badge: 'Hệ Thống Cai Nghiện • Miễn Phí 100%',
   description: 'Một hành trình 7 ngày thực chiến, mỗi ngày 5 phút đọc và 15 phút thực hành, giúp bạn khôi phục thùy trán, thiết lập môi trường không xao nhãng và tìm lại trạng thái dòng chảy (Flow State) trong công việc và đời sống.',
   targetAudience: 'Người làm việc trí óc, sáng tạo nội dung, sinh viên và bất kỳ ai đang cảm thấy não bộ bị phân mảnh bởi video ngắn, thông báo và thói quen nhảy tab vô thức.',
   commitment: '5 phút đọc lý thuyết • 15 phút thực hành hành động vi mô mỗi ngày',

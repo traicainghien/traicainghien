@@ -38,8 +38,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold uppercase tracking-wider text-[#3A5A40] dark:text-[#6B9A73] mb-4">Các Mục Chính</h4>
             <ul className="space-y-2.5 text-sm text-[#6B726E] dark:text-[#9DA39F]">
               <li><Link href="/" className="hover:text-[#3A5A40] dark:hover:text-[#6B9A73] transition-colors">Trang Chủ</Link></li>
-              <li><Link href="/khoa-hoc/7-ngay-tap-trung" className="hover:text-[#3A5A40] dark:hover:text-[#6B9A73] transition-colors font-medium">Khóa Học 7 Ngày Lấy Lại Tập Trung (Free)</Link></li>
-              <li><Link href="/he-thong-cai-nghien" className="text-[#3A5A40] dark:text-[#6B9A73] font-bold hover:underline">Hệ Thống Cai Nghiện</Link></li>
+              <li><Link href="/khoa-hoc/7-ngay-tap-trung" className="text-[#3A5A40] dark:text-[#6B9A73] font-bold hover:underline">Hệ Thống Cai Nghiện (Free)</Link></li>
               <li><Link href="/trac-nghiem" className="hover:text-[#3A5A40] dark:hover:text-[#6B9A73] transition-colors">Đo Mức Độ Mất Tập Trung (25 câu)</Link></li>
               <li><Link href="/bai-viet" className="hover:text-[#3A5A40] dark:hover:text-[#6B9A73] transition-colors">Kho Bài Viết Tâm Lý</Link></li>
               <li><Link href="/gioi-thieu" className="hover:text-[#3A5A40] dark:hover:text-[#6B9A73] transition-colors">Giới Thiệu & Sứ Mệnh</Link></li>
