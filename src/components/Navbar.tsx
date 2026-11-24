@@ -112,9 +112,9 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/khoa-hoc/7-ngay-tap-trung"
+            href="/he-thong-cai-nghien"
             className={`transition-colors py-1 relative inline-flex items-center gap-1.5 ${
-              isActive("/khoa-hoc") || isActive("/he-thong-cai-nghien")
+              isActive("/he-thong-cai-nghien") || isActive("/khoa-hoc")
                 ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
                 : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
             }`}
@@ -123,7 +123,7 @@ export default function Navbar() {
             <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">
               Free
             </span>
-            {(isActive("/khoa-hoc") || isActive("/he-thong-cai-nghien")) && (
+            {(isActive("/he-thong-cai-nghien") || isActive("/khoa-hoc")) && (
               <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
             )}
           </Link>
@@ -261,10 +261,10 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/khoa-hoc/7-ngay-tap-trung"
+            href="/he-thong-cai-nghien"
             onClick={() => setMobileMenuOpen(false)}
             className={`flex items-center justify-between py-2 text-sm font-medium transition-colors ${
-              isActive("/khoa-hoc") || isActive("/he-thong-cai-nghien") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+              isActive("/he-thong-cai-nghien") || isActive("/khoa-hoc") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
             }`}
           >
             <span>Hệ Thống Cai Nghiện</span>
