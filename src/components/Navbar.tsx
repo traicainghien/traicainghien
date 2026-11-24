@@ -125,6 +125,23 @@ export default function Navbar() {
             )}
           </Link>
 
+          <Link
+            href="/khoa-hoc/7-ngay-tap-trung"
+            className={`transition-colors py-1 relative inline-flex items-center gap-1.5 ${
+              isActive("/khoa-hoc")
+                ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold"
+                : "text-[#2D312E] dark:text-[#D1CCC4] hover:text-[#3A5A40] dark:hover:text-[#6B9A73]"
+            }`}
+          >
+            <span>7 Ngày Tập Trung</span>
+            <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">
+              Free
+            </span>
+            {isActive("/khoa-hoc") && (
+              <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#3A5A40] dark:bg-[#6B9A73] rounded-full" />
+            )}
+          </Link>
+
           {/* Bài Viết with Dropdown Menu */}
           <div className="relative group/dropdown py-6">
             <Link
@@ -265,6 +282,19 @@ export default function Navbar() {
             }`}
           >
             Hệ Thống Cai Nghiện
+          </Link>
+
+          <Link
+            href="/khoa-hoc/7-ngay-tap-trung"
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-between py-2 text-sm font-medium transition-colors ${
+              isActive("/khoa-hoc") ? "text-[#3A5A40] dark:text-[#6B9A73] font-bold" : "text-[#2D312E] dark:text-[#D1CCC4]"
+            }`}
+          >
+            <span>7 Ngày Lấy Lại Sự Tập Trung</span>
+            <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300">
+              Khóa Học Free
+            </span>
           </Link>
 
           {/* Mobile Accordion for Bài Viết */}
