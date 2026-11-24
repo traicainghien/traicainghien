@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "ky-luat-tu-dong-bien-thoi-quen-thanh-phan-xa-20261124": [
+      {
+          "id": "kylua-1",
+          "name": "Bùi Thanh Hà (Mẹ hai con • 33 tuổi)",
+          "content": "Đọc bài 'Kỷ luật tự động: Biến thói quen thành phản xạ không cần gồng' xong, mình thấy trúng tim đen quá. Mình là mẹ hai con, thời gian rời rạc lắm. Thay vì cố một tiếng liền mạch, mình chia thành ba khúc mười phút. Ba tuần rồi vẫn giữ được, chuyện chưa từng xảy ra với mình.",
+          "date": "3 ngày trước",
+          "likes": 69,
+          "isLongStory": true
+      },
+      {
+          "id": "kylua-2",
+          "name": "Đặng Minh Quân (Project Manager)",
+          "content": "Mình thấy nhẹ người nhất khi đọc phần 'Biến thói quen thành phản xạ không cần gồng'. Cách giải thích bằng sinh học thần kinh làm mình thôi tự mắng mình.",
+          "date": "1 ngày trước",
+          "likes": 69
+      },
+      {
+          "id": "kylua-3",
+          "name": "Phạm Hải Đăng (24 tuổi)",
+          "content": "Mình đọc lúc nửa đêm nên nhớ nhất phần 'Biến thói quen thành phản xạ không cần gồng'. Mình làm luôn, không chờ có động lực: sạc điện thoại ở nhà bếp thay vì đầu giường, ba đêm nay ngủ sớm hơn một tiếng.",
+          "date": "3 ngày trước",
+          "likes": 34
+      }
+  ],
   "lay-lai-su-tap-trung-thoat-khoi-doomscrolling-20261123": [
       {
           "id": "layla-1",
