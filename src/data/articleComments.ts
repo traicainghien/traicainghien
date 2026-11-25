@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "sieu-nhan-thuc-lay-lai-su-tap-trung-ky-nguyen-ai-20261125": [
+      {
+          "id": "sieun-1",
+          "name": "Hồ Nhật Trường (Nhân viên IT helpdesk)",
+          "content": "Đọc bài 'Siêu nhận thức: Chìa khóa lấy lại sự tập trung trong kỷ nguyên AI' xong, mình hơi xấu hổ vì đã tự trách mình quá nhiều. Mình từng cài đủ loại app chặn mạng xã hội rồi lại gỡ. Bài viết chỉ ra chỗ mình sai: mình chặn bằng ý chí thay vì dời cái ma sát đi. Hôm nay mình chỉ đổi một việc là sạc điện thoại ở nhà bếp thay vì đầu giường.",
+          "date": "2 giờ trước",
+          "likes": 52,
+          "isLongStory": true
+      },
+      {
+          "id": "sieun-2",
+          "name": "Trịnh Công Minh (Nhân viên kinh doanh • 26 tuổi)",
+          "content": "Mình đọc lúc nửa đêm nên nhớ nhất phần 'Chìa khóa lấy lại sự tập trung trong kỷ nguyên AI'. Góc nhìn không phán xét là thứ mình hiếm khi tìm được ở mấy bài kiểu này.",
+          "date": "2 ngày trước",
+          "likes": 44
+      },
+      {
+          "id": "sieun-3",
+          "name": "Đặng Minh Quân (Project Manager)",
+          "content": "Chỗ mình gạch chân là đoạn 'Chìa khóa lấy lại sự tập trung trong kỷ nguyên AI'. Mình làm luôn, không chờ có động lực: dán một tờ giấy nhắc ngay trên màn hình máy tính.",
+          "date": "2 giờ trước",
+          "likes": 38
+      }
+  ],
   "ky-luat-tu-dong-bien-thoi-quen-thanh-phan-xa-20261124": [
       {
           "id": "kylua-1",
