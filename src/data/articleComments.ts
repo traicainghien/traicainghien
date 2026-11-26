@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "giai-ma-con-nghien-dopamine-lay-lai-su-tap-trung-20261126": [
+      {
+          "id": "giaim-1",
+          "name": "Hoàng Thùy Linh (Giáo viên Ngữ văn • 31 tuổi)",
+          "content": "Đọc bài 'Giải mã cơn nghiện Dopamine: Cách lấy lại sự tập trung đỉnh cao' xong, mình thấy trúng tim đen quá. Mình là giáo viên, tối nào cũng mang bài về nhà chấm. Trước đây vừa chấm vừa bật video cho đỡ buồn, xong chẳng nhớ gì. Bây giờ mình chấm 25 phút rồi nghỉ 5 phút, thấy nhẹ người hơn nhiều.",
+          "date": "3 ngày trước",
+          "likes": 46,
+          "isLongStory": true
+      },
+      {
+          "id": "giaim-2",
+          "name": "Nguyễn Diệu Linh (Sinh viên năm hai)",
+          "content": "Thứ mình cần nhất hôm nay là đoạn 'Cách lấy lại sự tập trung đỉnh cao'. Cái hay là bài không bảo mình phải mạnh mẽ hơn, chỉ bảo mình đổi cách sắp xếp.",
+          "date": "3 ngày trước",
+          "likes": 23
+      },
+      {
+          "id": "giaim-3",
+          "name": "Nguyễn Hoàng Nam (Lập trình viên Backend • 28 tuổi)",
+          "content": "Mình đã chụp màn hình lại phần 'Cách lấy lại sự tập trung đỉnh cao'. Mình làm luôn, không chờ có động lực: sạc điện thoại ở nhà bếp thay vì đầu giường, ba đêm nay ngủ sớm hơn một tiếng.",
+          "date": "Hôm qua",
+          "likes": 17
+      }
+  ],
   "sieu-nhan-thuc-lay-lai-su-tap-trung-ky-nguyen-ai-20261125": [
       {
           "id": "sieun-1",
