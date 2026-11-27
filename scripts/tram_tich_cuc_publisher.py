@@ -122,31 +122,39 @@ def fetch_positivity_blog_rss():
         return None
 
 def fetch_curated_wisdom_quote(slot="night"):
-    """Kho châm ngôn tỉnh thức & chữa lành độc bản xoay vòng theo khung giờ."""
+    """
+    Kho châm ngôn VĂN XUÔI tỉnh thức, push tinh thần, yêu cuộc sống & sống ở thực tại.
+    Đa dạng chủ đề, tuyệt đối không viết thành thơ, giàu sức nặng tri thức và truyền cảm hứng.
+    """
     wisdom_pool = {
         "morning": [
-            {"quote": "Mỗi buổi sáng thức dậy là một cơ hội mới để bạn yêu lấy chính mình và bắt đầu lại, chậm rãi nhưng vững vàng.", "author": "Trạm Tích Cực"},
-            {"quote": "Đừng vội vã với cuộc đời. Đi chậm một chút cũng được, miễn là bạn không buông xuôi chính mình.", "author": "Matt Haig"},
-            {"quote": "Sự bình an không nằm ở một nơi nào xa xôi, nó bắt đầu từ hơi thở tỉnh thức đầu tiên khi bạn mở mắt chào ngày mới.", "author": "Thích Nhất Hạnh"},
-            {"quote": "Bạn không cần phải trở nên hoàn hảo để được yêu thương. Hãy mang sự chân thật của mình bước vào ngày mới.", "author": "Brené Brown"}
+            # Push tinh thần & Khởi đầu mới
+            {"quote": "Mỗi buổi sáng thức dậy là một cơ hội mới để bạn viết tiếp cuộc đời mình. Đừng để những nuối tiếc của ngày hôm qua đánh cắp năng lượng và sự tự tin của ngày hôm nay.", "author": "Trạm Tích Cực", "topic": "Khởi đầu & Động lực"},
+            {"quote": "Đừng đợi đến khi mọi thứ hoàn hảo mới bắt đầu. Sự dũng cảm thực sự nằm ở chỗ bạn dám bước đi ngay cả khi đôi chân còn nhiều bỡ ngỡ.", "author": "Brené Brown", "topic": "Dũng cảm dấn thân"},
+            {"quote": "Thức dậy vào mỗi sớm mai và nhận ra mình vẫn còn được thở, được nhìn thấy ánh nắng và được yêu thương—đó đã là một phép màu vô giá.", "author": "Marcus Aurelius", "topic": "Biết ơn sự sống"},
+            {"quote": "Kỷ luật không phải là sự trừng phạt, mà là món quà lớn nhất bạn dành cho tương lai của chính mình. Hãy bắt đầu ngày mới bằng một hành động nhỏ nhưng dứt khoát.", "author": "Trạm Tích Cực", "topic": "Kỷ luật tự thân"},
+            {"quote": "Hãy đón chào ngày mới bằng một nụ cười chân thành với chính mình trong gương. Bạn đã đi qua rất nhiều thử thách để đứng vững ở đây hôm nay.", "author": "Matt Haig", "topic": "Yêu lấy chính mình"},
+            {"quote": "Sự bình an không nằm ở một nơi nào xa xôi. Nó bắt đầu từ hơi thở tỉnh thức đầu tiên khi bạn buông chiếc điện thoại xuống và mỉm cười đón ngày mới.", "author": "Thích Nhất Hạnh", "topic": "Sống ở thực tại"}
         ],
         "afternoon": [
-            {"quote": "Nếu buổi chiều này quá nhiều áp lực, hãy dừng lại 2 phút, uống một ngụm nước ấm và thở thật sâu. Bạn đã cố gắng nhiều rồi.", "author": "Trạm Tích Cực"},
-            {"quote": "Nghỉ ngơi không phải là bỏ cuộc. Đó là cách bạn nạp lại năng lượng để đi tiếp con đường dài.", "author": "Tiny Buddha"},
-            {"quote": "Đừng để sự vội vã của người khác làm xáo trộn nhịp điệu bình an bên trong bạn.", "author": "Eckhart Tolle"}
+            # Tỉnh thức giữa ngày, yêu đời & nạp năng lượng
+            {"quote": "Khoảnh khắc duy nhất bạn thực sự sở hữu là ngay lúc này. Buông màn hình xuống một chút, nhìn sâu vào những điều bình dị quanh mình và hít một hơi thật đầy.", "author": "Eckhart Tolle", "topic": "Hiện diện ở thực tại"},
+            {"quote": "Chậm lại một nhịp không phải là tụt hậu. Đó là cách bạn cho phép tâm hồn mình bắt kịp với cơ thể sau những giờ làm việc căng thẳng.", "author": "Trạm Tích Cực", "topic": "Sống chậm chánh niệm"},
+            {"quote": "Đừng chỉ đếm những gì bạn chưa làm được. Hãy dừng lại giữa buổi chiều để cảm ơn bản thân vì đã nỗ lực hết mình cho đến tận phút này.", "author": "Tiny Buddha", "topic": "Biết ơn & Công nhận bản thân"},
+            {"quote": "Uống một ngụm nước ấm, ngắm nhìn vệt nắng ngoài cửa sổ và thở thật sâu. Cuộc sống vẫn luôn chứa đựng những điều kỳ diệu dành cho người biết lắng lại.", "author": "Trạm Tích Cực", "topic": "Yêu cuộc sống bình dị"},
+            {"quote": "Nghỉ ngơi không phải là từ bỏ. Đó là trạm sạc cần thiết để bạn tiếp tục bước đi vững vàng trên hành trình dài phía trước.", "author": "Trạm Tích Cực", "topic": "Tái tạo năng lượng"}
         ],
         "night": [
-            {"quote": "Dù hôm nay có chông chênh đến mấy, câu chuyện của bạn vẫn xứng đáng có thêm chương mới. Nỗi đau không phải là bạn, ngày mai luôn chờ một khởi đầu dịu dàng.", "author": "Positivity And Inspiration"},
-            {"quote": "Đừng mang những muộn phiền của ngày hôm nay vào giấc ngủ. Đêm là để tâm trí nghỉ ngơi và xoa dịu những vết thương.", "author": "Matt Haig"},
-            {"quote": "Hôm nay bạn đã làm rất tốt rồi. Hãy ôm lấy những cố gắng nhỏ bé, buông bỏ những điều chưa trọn vẹn và ngủ một giấc thật sâu.", "author": "Trạm Tích Cực"},
-            {"quote": "Bạn không cần phải kiểm soát tất cả mọi thứ để tìm thấy sự bình an. Bình an bắt đầu khi bạn học cách buông tay.", "author": "Eckhart Tolle"},
-            {"quote": "Cứ cho phép mình được yếu đuối một chút sau cả ngày gồng gánh. Ngày mai mặt trời vẫn mọc, và bạn vẫn xứng đáng được bắt đầu lại.", "author": "Brené Brown"},
-            {"quote": "Hít một hơi thật sâu, thở ra mọi gánh nặng. Đêm nay, hãy trở về làm bạn với chính mình trong tĩnh lặng.", "author": "Thích Nhất Hạnh"}
+            # Buông bỏ gánh nặng, bao dung nội tâm & giấc ngủ an lành
+            {"quote": "Bạn không cần phải mang vác tất cả gánh nặng của ngày hôm nay vào giấc ngủ. Hãy học cách đặt xuống để đôi tay còn đón nhận những điều tươi mới vào sáng mai.", "author": "Eckhart Tolle", "topic": "Buông bỏ & Tự do"},
+            {"quote": "Hôm nay bạn đã làm rất tốt rồi. Dù có những việc chưa trọn vẹn, xin đừng tự dằn vặt. Ngày mai mặt trời vẫn mọc và bạn luôn có cơ hội để bắt đầu lại.", "author": "Brené Brown", "topic": "Bao dung với bản thân"},
+            {"quote": "Dù hôm nay có chông chênh đến mấy, câu chuyện của bạn vẫn xứng đáng có thêm những chương mới rực rỡ. Đêm nay, hãy cho phép tâm trí mình được nghỉ ngơi trọn vẹn.", "author": "Matt Haig", "topic": "Niềm tin & Hy vọng"},
+            {"quote": "Tắt màn hình, khép lại những lo toan và lắng nghe nhịp thở êm đềm của căn phòng. Sự bình yên thực sự luôn ở ngay bên trong bạn.", "author": "Thích Nhất Hạnh", "topic": "Tĩnh lặng nội tâm"},
+            {"quote": "Sau tất cả những áp lực ngoài kia, điều tuyệt vời nhất bạn có thể làm cho mình đêm nay là thả lỏng toàn bộ cơ thể và ngủ một giấc thật ngon.", "author": "Trạm Tích Cực", "topic": "Chăm sóc giấc ngủ"}
         ]
     }
     
     quotes = wisdom_pool.get(slot, wisdom_pool["night"])
-    # Chọn xoay vòng theo ngày và giờ
     day_seed = int(datetime.datetime.now().strftime("%Y%m%d%H"))
     selected = quotes[day_seed % len(quotes)]
     
@@ -155,37 +163,51 @@ def fetch_curated_wisdom_quote(slot="night"):
         "source_url": "https://facebook.com/tramtichcuchn",
         "post_id": f"wisdom_{hash(selected['quote'])}",
         "permalink": "https://facebook.com/tramtichcuchn",
-        "text": selected["quote"]
+        "text": selected["quote"],
+        "topic": selected.get("topic", "Năng lượng tích cực")
     }
 
 def translate_and_craft_content(raw_text, source_name, source_url, slot="night"):
-    """Dùng Gemini chuyển dịch sang tiếng Việt sâu lắng, mộc mạc, phù hợp với Trạm Tích Cực."""
+    """
+    Dùng Gemini biên soạn câu quote VĂN XUÔI sâu sắc, đa dạng chủ đề:
+    - Push tinh thần, dũng cảm dấn thân
+    - Sống ở thực tại, tỉnh thức chánh niệm
+    - Yêu cuộc sống, lòng biết ơn chân thành
+    - Bao dung, bình an nội tâm
+    TUYỆT ĐỐI KHÔNG VIẾT THÀNH THƠ, không gieo vần gượng gạo.
+    """
     system_prompt = (
-        "Bạn là Chuyên gia Biên soạn & Truyền cảm hứng của Trạm Tích Cực (thuộc dự án Trại Cai Nghiện).\n"
-        "Nhiệm vụ của bạn là lấy câu châm ngôn/bài học tích cực từ nguồn nước ngoài (Power of Positivity, Positivity And Inspiration),\n"
-        "dịch sang tiếng Việt cực kỳ tự nhiên, mộc mạc, chạm sâu vào trái tim, giải phóng cảm giác dằn vặt và truyền năng lượng an yên.\n"
-        "Tuyệt đối không dùng văn mẫu AI, không đao to búa lớn, không dịch máy thô cứng."
+        "Bạn là Giám đốc Sáng tạo Nội dung của Trạm Tích Cực (thuộc dự án Trại Cai Nghiện - traicainghien.com).\n"
+        "Sứ mệnh của Trạm Tích Cực là mang đến nguồn cảm hứng sống đẹp, push tinh thần tích cực, giúp người đọc trân trọng từng khoảnh khắc ở thực tại, yêu cuộc sống và nuôi dưỡng sự bình an nội tâm.\n\n"
+        "QUY TẮC CỐT TỬ VỀ ĐỊNH DẠNG QUOTE:\n"
+        "1. TUYỆT ĐỐI KHÔNG VIẾT THÀNH THƠ! Không gieo vần, không làm thơ lục bát, 4 chữ hay 5 chữ.\n"
+        "2. BẮT BUỘC THỂ HIỆN DƯỚI DẠNG VĂN XUÔI ĐÚC KẾT (Punchy Prose / Philosophical Epigram):\n"
+        "   - Độ dài từ 25 đến 45 từ (khoảng 2-3 câu văn xuôi ngắn gọn, súc tích, ngắt nhịp tự nhiên).\n"
+        "   - Ngôn từ mộc mạc, hiện đại, có sức nặng tâm lý, nói thẳng vào tâm trí người đọc như một câu trích dẫn tâm đắc trong sách kinh điển.\n"
+        "   - Tự động ngắt dòng bằng ký tự xuống dòng (\\n) sau mỗi vế câu hoàn chỉnh (khoảng 2-4 dòng văn xuôi) để căn giữa tuyệt đẹp trên ảnh thẻ vuông 1080x1080.\n"
+        "3. ĐA DẠNG HÓA CHỦ ĐỀ: Luân chuyển giữa: [1] Push tinh thần, dám bắt đầu & vượt qua giới hạn; [2] Sống ở thực tại, ngắt kết nối xao nhãng; [3] Yêu cuộc sống, biết ơn những điều bình dị; [4] Xoa dịu lo âu, bao dung với chính mình.\n"
+        "4. KHÔNG DÙNG VĂN MẪU AI: Cấm các từ sáo rỗng như 'hãy nhớ rằng', 'hãy cùng nhau', 'trong cuộc sống hối hả', 'ngọn hải đăng'."
     )
 
     if slot == "morning":
-        slot_desc = "morning: 10h00 sáng - Động lực, hiện diện, kỷ luật vi mô, bắt đầu ngày mới tràn đầy hy vọng"
+        slot_desc = "morning: 10h00 sáng - Động lực mạnh mẽ, push tinh thần, dám bắt đầu, kỷ luật tự thân, biết ơn ngày mới"
     elif slot == "afternoon":
-        slot_desc = "afternoon: 14h30 chiều - Giải tỏa áp lực và uể oải giữa giờ làm việc, tái tạo năng lượng tích cực, nhắc nhở uống nước và thả lỏng cơ thể"
+        slot_desc = "afternoon: 14h30 chiều - Sống ở thực tại, giải tỏa áp lực công việc, nhắc nhở uống nước, thả lỏng tâm trí và tận hưởng từng khoảnh khắc"
     else:
-        slot_desc = "night: 21h00 tối - Xoa dịu tâm trí, buông bỏ muộn phiền, bao dung với bản thân, giấc ngủ an lành"
+        slot_desc = "night: 21h00 tối - Yêu cuộc sống, trân trọng hành trình đã qua, buông bỏ dằn vặt, giấc ngủ an lành và phục hồi"
 
     user_prompt = f"""
-Nguồn gốc: {source_name} ({source_url})
-Nội dung gốc (English):
+Nguồn cảm hứng: {source_name}
+Nội dung gốc:
 \"\"\"{raw_text}\"\"\"
 
 Khung giờ đăng: {slot_desc}
 
-Hãy chuyển hóa thành JSON format với các trường sau:
+Hãy chuyển hóa thành JSON format với cấu trúc:
 {{
-  "quote_vn": "Câu quote tiếng Việt dịch tinh tế, chia thành 3-5 dòng thơ/câu ngắn gọn (dưới 35 từ, căn giữa đẹp mắt khi in lên ảnh thẻ vuông 1080x1080)",
-  "caption": "Bài viết chi tiết 3-4 đoạn văn ngắn giải thích triết lý, liên hệ đời sống thực tế, xoa dịu tâm trí, có lời chúc an lành và hashtag #TramTichCuc #TraiCaiNghien",
-  "comment": "Bình luận đầu tiên dịu dàng, khéo léo dẫn link https://www.traicainghien.com/bai-viet"
+  "quote_vn": "Câu châm ngôn VĂN XUÔI sâu sắc (25-45 từ, KHÔNG PHẢI THƠ). Ngắt 2-4 dòng bằng dấu \\n tự nhiên để in lên ảnh thẻ vuông 1080x1080.",
+  "caption": "Bài viết đi kèm 3-4 đoạn văn xuôi sâu sắc, liên hệ đời thực, truyền cảm hứng sống tích cực, có lời chúc ấm áp và hashtag #TramTichCuc #TraiCaiNghien #SongCoChuDich #YeuCuocSong #SongOThucTai",
+  "comment": "Bình luận đầu tiên dịu dàng, khéo léo dẫn link về cẩm nang và bài viết chữa lành tại https://www.traicainghien.com/bai-viet"
 }}
 Chỉ trả về JSON thuần túy, không có code blocks markdown ```json.
 """
@@ -217,7 +239,18 @@ def render_quote_image(
     if not os.path.exists(font_path):
         font_path = os.path.join(font_dir, "BeVietnamPro-Medium.ttf")
 
-    quote_font_size = 46
+    # Tự động điều chỉnh kích cỡ font chữ thông minh cho văn xuôi
+    text_len = len(quote_text.strip())
+    if text_len > 140:
+        quote_font_size = 38
+        wrap_width = 36
+    elif text_len > 90:
+        quote_font_size = 42
+        wrap_width = 34
+    else:
+        quote_font_size = 46
+        wrap_width = 32
+
     quote_font = ImageFont.truetype(font_path, quote_font_size)
     brand_font_path = os.path.join(font_dir, "BeVietnamPro-Medium.ttf")
     if not os.path.exists(brand_font_path):
@@ -228,14 +261,14 @@ def render_quote_image(
 
     lines = [l.strip() for l in quote_text.strip().split("\n") if l.strip()]
     formatted_lines = []
+    import textwrap
     for line in lines:
-        if len(line) > 38:
-            import textwrap
-            formatted_lines.extend(textwrap.wrap(line, width=38))
+        if len(line) > wrap_width:
+            formatted_lines.extend(textwrap.wrap(line, width=wrap_width))
         else:
             formatted_lines.append(line)
 
-    line_height = int(quote_font_size * 1.6)
+    line_height = int(quote_font_size * 1.65)
     total_text_height = len(formatted_lines) * line_height
     start_y = (height - total_text_height) // 2 - 40
 
