@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "phan-biet-adhd-va-xao-nhang-so-co-le-ban-khong-bi-20261127": [
+      {
+          "id": "phanb-1",
+          "name": "Lý Mai Chi (Biên tập viên • 30 tuổi)",
+          "content": "Đọc bài 'Phân biệt ADHD thật và xao nhãng số: Bạn có thực sự bị bệnh?' xong, mình muốn gửi ngay cho mấy đứa bạn cùng cảnh. Có một câu trong bài khiến mình dừng lại: mình không cần trở nên kỷ luật hơn, mình cần bớt bị quấy nhiễu hơn. Mình đã viết câu đó ra giấy và dán lên màn hình.",
+          "date": "Vừa xong",
+          "likes": 94,
+          "isLongStory": true
+      },
+      {
+          "id": "phanb-2",
+          "name": "Trần Thị Mai Phương (Content Strategist)",
+          "content": "Mình đọc lúc nửa đêm nên nhớ nhất phần 'Bạn có thực sự bị bệnh?'. Có số liệu, có cơ chế, mà vẫn đọc như đang nghe bạn kể chuyện.",
+          "date": "2 ngày trước",
+          "likes": 34
+      },
+      {
+          "id": "phanb-3",
+          "name": "Trịnh Công Minh (Nhân viên kinh doanh • 26 tuổi)",
+          "content": "Chỗ mình gạch chân là đoạn 'Bạn có thực sự bị bệnh?'. Mình làm luôn, không chờ có động lực: bắt đầu bằng đúng hai phút, không đặt mục tiêu cao hơn.",
+          "date": "2 ngày trước",
+          "likes": 26
+      }
+  ],
   "giai-ma-con-nghien-dopamine-lay-lai-su-tap-trung-20261126": [
       {
           "id": "giaim-1",
