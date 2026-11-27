@@ -65,7 +65,14 @@ def attempt_deploy():
     docker restart $CONTAINER_ID
     sleep 5
     echo "=== WORKFLOW STATUS IN N8N ==="
-    docker exec $CONTAINER_ID n8n list:workflows
+    python3 -c "
+import sqlite3
+conn = sqlite3.connect('/root/n8n_data/database.sqlite')
+c = conn.cursor()
+c.execute('SELECT id, name, active FROM workflow_entity WHERE id = \\'wWXJoMhbchKzrkqr\\'')
+print('N8N Live Workflow:', c.fetchone())
+conn.close()
+"
     '''
     stdin, stdout, stderr = ssh.exec_command(cmd)
     output = stdout.read().decode('utf-8')

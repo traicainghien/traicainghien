@@ -31,6 +31,6 @@ try:
     out = stdout.read().decode().strip()
     print("VPS Verification Output:", out)
     ssh.close()
-    print("🎉 All 9 Gemini API keys synced to VPS successfully!")
+    print("🎉 All 10 Gemini API keys synced to VPS successfully!")
 except Exception as e:
     print("⚠️ VPS note (network timeout or port restricted):", e)

@@ -154,6 +154,12 @@ Mọi hình ảnh trước khi xuất bản bắt buộc phải đi qua 5 công 
    * **Khổ ngang 16:9 cho Website (1200 x 675 px):** Qua hàm `process_web_article_cover`, nén WebP dưới 120KB, vừa khít card bài viết.
    * **Khổ dọc 4:5 cho Mạng Xã Hội (1080 x 1350 px):** Qua hàm `process_quote_card`, phủ gradient tối và chèn Typography tiếng Việt có chân.
 
+### 6.5. Quy Chuẩn Quote Card Nền Kem Washi (Trạm Tích Cực & Facebook Quotes 1080x1080px — Lệnh của Bố 27/11/2026)
+Áp dụng cho `scripts/tram_tich_cuc_publisher.py` và các ấn phẩm Quote Card nền trơn tối giản trên Facebook:
+* **Văn phong nội dung trên ảnh & Caption:** Viết thành **đoạn văn xuôi liền mạch (Continuous Prose Flow)**, các câu nối tiếp nhau tự nhiên theo mạch suy nghĩ, **không ngắt dòng vụn vặt từng câu** và không dùng gạch đầu dòng checklist máy móc.
+* **Lề hai bên nhỏ & Vùng chữ rộng:** Thu hẹp lề hai bên xuống còn **`side_margin = 90px`** (vùng chữ rộng **`900px / 1080px`**) để bức hình có bố cục đầy đặn, không bị trống trải hai bên.
+* **Ngắt dòng theo pixel thực tế & Cỡ chữ lớn:** Dùng hàm `wrap_text_by_pixel_width` đo độ rộng pixel thực tế và tự động dò cỡ chữ lớn nhất có thể (`56px – 64px`, giãn dòng `1.45`) sao cho khối chữ vừa vặn, dày dặn, dễ đọc trên điện thoại mà vẫn giữ khoảng thở hài hòa với logo Totem (`@tramtichcuchn`) bên dưới.
+
 ---
 
 ## 7. 🚀 HỆ THỐNG VẬN HÀNH TỰ ĐỘNG QUA BUFFER (BUFFER OMNICHANNEL PIPELINE)

@@ -88,6 +88,9 @@ Chất lượng của một tác phẩm nghệ thuật do AI sinh ra phụ thu�
      - Phủ dải màu chuyển tối tự nhiên (Atmospheric Dark Vignette).
      - Chèn Typography tiếng Việt có chân kinh điển (Georgia/Merriweather) truyền tải thông điệp về **SỰ TẬP TRUNG**.
      - Đóng dấu mộc watermark Con quay Totem và chữ ký thương hiệu `🌿 TRẠI CAI NGHIỆN • traicainghien.com`.
+3. **Hệ thống 3: Quote Card Nền Kem Washi Tối Giản (1080 x 1080 px — Trạm Tích Cực & Facebook Quotes — Lệnh của Bố 27/11/2026):**
+   * Áp dụng cho `scripts/tram_tich_cuc_publisher.py`: nền giấy kem Washi (`#FAF7F2`), chữ xanh rêu than trầm (`#234338`).
+   * **Bố cục kín chữ, lề hẹp, cỡ chữ lớn:** Thu hẹp lề 2 bên xuống `side_margin = 90px` (vùng chữ rộng `900px / 1080px`), tự động ngắt dòng theo độ rộng pixel thực tế (`wrap_text_by_pixel_width`) và tự động dò cỡ chữ lớn nhất vừa vặn khung hình (`56px – 64px`, giãn dòng `1.45`) để bức hình đầy đặn, không bị trống trải, giữ khoảng thở hài hòa với cụm logo Totem bên dưới.
 
 3. **CƠ CHẾ CHỐNG LẶP ẢNH TUYỆT ĐỐI 3 LỚP (ZERO-DUPLICATE GATE - LỆNH CỦA BỐ):**
    * **Lớp 1 (URL & Filename Registry):** Quét đối chiếu toàn bộ `thumbnail` trong `src/data/articles.ts` và cơ sở dữ liệu `scripts/used_curated_images.json`. URL hoặc tên file đã từng dùng sẽ bị loại bỏ ngay.

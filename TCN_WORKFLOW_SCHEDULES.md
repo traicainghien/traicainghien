@@ -5,21 +5,27 @@
 
 ---
 
-## ⏰ BẢNG LỊCH TRÌNH 11 MỐC GIỜ PHÁT SÓNG TRONG NGÀY (BAO GỒM BÀI WEB, THREADS & INSTA)
+## ⏰ BẢNG LỊCH TRÌNH CÁC MỐC GIỜ PHÁT SÓNG & LẬP LỊCH TỰ ĐỘNG (TOÀN DIỆN ĐA KÊNH)
 
 | STT | Mốc giờ | Tên luồng & Tác vụ | ID / Runner / Phụ trách | Kênh xuất bản | Tính chất |
 | :---: | :---: | :--- | :--- | :--- | :---: |
 | 1 | **06:10** | 🌅 **Báo cáo sáng vận hành** | `telegram_reporter.py` | Telegram Topic 19 (HĐQT) | 🔴 Bắt buộc |
-| 2 | **08:30** | 🌊 **Bản tin sáng: Tâm lý & Thói quen** | Flow 01 (`wWXJoMhbchKzrkqr`) | Telegram Daily + Fanpage FB | 🔴 Quan trọng |
-| 3 | **10:00** | 🌐 **XUẤT BẢN BÀI WEBSITE CA 1: Deep Work & Tập Trung** | Flow 03 (`Lj3wvfAe0CEqnWbQ`) ➔ `website_article_publisher.py` | 🌐 Website traicainghien.com + Fanpage + Telegram | 🔴 Bắt buộc |
-| 4 | **12:00** | 💬 **Threads & Insta Trưa: Bóc tách bẫy xao nhãng** | `schedule_today_threads.py` (Agent 11) | Meta Threads + Instagram | 🔴 Quan trọng |
-| 5 | **15:00** | ☀️ **Bản tin chiều: Deep Work & Năng suất** | Flow 01 (`wWXJoMhbchKzrkqr`) | Telegram Daily + Fanpage FB | 🔴 Quan trọng |
-| 6 | **16:30** | 📌 **Threads & Insta Chiều: 4 bước làm chủ tập trung** | `schedule_today_threads.py` (Agent 11) | Meta Threads + Instagram | 🟡 Tiêu chuẩn |
-| 7 | **20:30** | 🌆 **Bản tin tối: Phục hồi Dopamine** | Flow 01 (`wWXJoMhbchKzrkqr`) | Telegram Daily + Fanpage FB | 🔴 Quan trọng |
-| 8 | **21:00** | 🌐 **XUẤT BẢN BÀI WEBSITE CA 2: Thói Quen & Cai Nghiện** + Trạm Tích Cực | Flow 03 (`Lj3wvfAe0CEqnWbQ`) ➔ `website_article_publisher.py` | 🌐 Website traicainghien.com + Fanpage + Telegram | 🔴 Bắt buộc |
-| 9 | **21:45** | 🕯️ **Threads & Insta Đêm: Thư buông bỏ & Tắt ánh sáng xanh** | `schedule_today_threads.py` (Agent 11) | Meta Threads + Instagram | 🔴 Quan trọng |
-| 10 | **22:00** | 🌙 **Lời nhắc đi ngủ dịu dàng** | Flow 02 (`E6PVBHKrtYPlfevu`) | Telegram Daily + Fanpage FB | 🔴 Bắt buộc |
-| 11 | **22:10** | 📊 **Báo cáo tối tổng kết ngày & Audit** | `telegram_reporter.py` | Telegram Topic 19 (HĐQT) | 🔴 Bắt buộc |
+| 2 | **06:15** | 🧵 **Tự động lên lịch Threads cả ngày (4 slots)** | `threads_daily_autopilot.py` (Agent 11) | Nạp Buffer Đám Mây (`@traicainghienvn`) | 🔴 Bắt buộc |
+| 3 | **06:20** | 📸 **Tự động lên lịch Instagram chuyên sâu (20:30)** | `instagram_daily_autopilot.py` (Agent 11) | Nạp Buffer Đám Mây (`@traicainghienvn`) | 🔴 Bắt buộc |
+| 4 | **07:30** | 🌅 **Threads Sáng: Đánh thức sự tập trung** | Buffer Cloud Scheduler | Meta Threads (`@traicainghienvn`) | 🟡 Tiêu chuẩn |
+| 5 | **08:30** | 🌊 **Bản tin sáng: Tâm lý & Thói quen** | Flow 01 (`wWXJoMhbchKzrkqr`) | Telegram Daily + Fanpage FB | 🔴 Quan trọng |
+| 6 | **10:00** | 🌐 **XUẤT BẢN BÀI WEBSITE CA 1: Deep Work & Tập Trung** | Flow 03 (`Lj3wvfAe0CEqnWbQ`) ➔ `website_article_publisher.py` | 🌐 Website traicainghien.com + Fanpage + Telegram | 🔴 Bắt buộc |
+| 7 | **11:30** | 🐕 **Watchdog Threads: Kiểm tra & Bù giờ khẩn cấp** | `threads_daily_autopilot.py --watchdog` | Kiểm toán Buffer Queue & Tự phục hồi | 🛡️ Giám sát |
+| 8 | **11:35** | 🐕 **Watchdog Instagram: Kiểm tra & Bù giờ khẩn cấp** | `instagram_daily_autopilot.py --watchdog` | Kiểm toán Buffer Queue & Tự phục hồi | 🛡️ Giám sát |
+| 9 | **12:00** | ☀️ **Threads Trưa: Bóc tách bẫy xao nhãng & Ăn trưa chánh niệm** | Buffer Cloud Scheduler | Meta Threads (`@traicainghienvn`) | 🟡 Tiêu chuẩn |
+| 10 | **15:00** | ☀️ **Bản tin chiều: Deep Work & Năng suất** | Flow 01 (`wWXJoMhbchKzrkqr`) | Telegram Daily + Fanpage FB | 🔴 Quan trọng |
+| 11 | **16:30** | ☕ **Threads Chiều: Vượt qua uể oải thùy trán lúc 4h** | Buffer Cloud Scheduler | Meta Threads (`@traicainghienvn`) | 🟡 Tiêu chuẩn |
+| 12 | **20:30** | 📸 **Instagram Tối: Bài viết ảnh chuyên sâu Wabi Sabi / Deep Work** | Buffer Cloud Scheduler | Instagram (`@traicainghienvn`) | 🔴 Quan trọng |
+| 13 | **20:30** | 🌆 **Bản tin tối: Phục hồi Dopamine** | Flow 01 (`wWXJoMhbchKzrkqr`) | Telegram Daily + Fanpage FB | 🔴 Quan trọng |
+| 14 | **21:00** | 🌐 **XUẤT BẢN BÀI WEBSITE CA 2: Thói Quen & Cai Nghiện** | Flow 03 (`Lj3wvfAe0CEqnWbQ`) ➔ `website_article_publisher.py` | 🌐 Website traicainghien.com + Fanpage + Telegram | 🔴 Bắt buộc |
+| 15 | **21:45** | 🕯️ **Threads Đêm: Thư buông bỏ & Tắt ánh sáng xanh** | Buffer Cloud Scheduler | Meta Threads (`@traicainghienvn`) | 🔴 Quan trọng |
+| 16 | **22:00** | 🌙 **Lời nhắc đi ngủ dịu dàng** | Flow 02 (`E6PVBHKrtYPlfevu`) | Telegram Daily + Fanpage FB | 🔴 Bắt buộc |
+| 17 | **22:10** | 📊 **Báo cáo tối tổng kết ngày & Audit** | `telegram_reporter.py` | Telegram Topic 19 (HĐQT) | 🔴 Bắt buộc |
 
 ---
 

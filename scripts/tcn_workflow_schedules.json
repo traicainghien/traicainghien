@@ -44,13 +44,37 @@
       "importance": "critical"
     },
     {
+      "id": "TCN-AUTOPILOT-01",
+      "time": "06:15",
+      "cron": "15 6 * * *",
+      "name": "Tự Động Lên Lịch Meta Threads (Agent 11)",
+      "type": "cronjob_python",
+      "runner": "scripts/threads_daily_autopilot.py",
+      "channel": "Buffer API ➔ Meta Threads (@traicainghienvn)",
+      "target": "Nạp 4 khung giờ vàng (07:30, 12:00, 16:30, 21:45) kèm ảnh độc bản MD5",
+      "description": "Tự động biên tập 4 bài viết theo chủ đề SỰ TẬP TRUNG, băm mã MD5 ảnh độc bản, nạp vào Buffer Cloud Queue.",
+      "importance": "critical"
+    },
+    {
+      "id": "TCN-AUTOPILOT-02",
+      "time": "06:20",
+      "cron": "20 6 * * *",
+      "name": "Tự Động Lên Lịch Instagram (Agent 11)",
+      "type": "cronjob_python",
+      "runner": "scripts/instagram_daily_autopilot.py",
+      "channel": "Buffer API ➔ Instagram (@traicainghienvn)",
+      "target": "Nạp bài viết chuyên sâu 20:30 tối kèm ảnh nghệ thuật độc bản",
+      "description": "Tự động lên lịch bài viết chuyên sâu Wabi Sabi / Deep Work lên Instagram, băm mã MD5 kiểm soát trùng ảnh tuyệt đối.",
+      "importance": "critical"
+    },
+    {
       "id": "TCN-SOC-01",
       "time": "12:00",
       "cron": "0 12 * * *",
-      "name": "Threads & Instagram Trưa: Bóc Tách Bẫy Xao Nhãng (Agent 11)",
+      "name": "Threads Trưa: Bóc Tách Bẫy Xao Nhãng (Agent 11)",
       "type": "buffer_bridge / python_dispatcher",
-      "runner": "scripts/schedule_today_threads.py / social_buffer_publisher.py",
-      "channel": "Meta Threads (@traicainghien) & Instagram",
+      "runner": "Buffer Cloud Scheduler (Từ threads_daily_autopilot.py)",
+      "channel": "Meta Threads (@traicainghienvn)",
       "target": "Người đi làm, sinh viên giờ nghỉ trưa",
       "description": "Micro-essay thức tỉnh cơn nghiện lướt điện thoại vô thức giờ nghỉ trưa, giải pháp để máy ở phòng khác ăn trọn bữa cơm.",
       "importance": "high"

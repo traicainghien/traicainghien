@@ -440,14 +440,14 @@ Trước khi bất kỳ sản phẩm nào được đưa lên live chính thức
 4. *Chuẩn nén WebP siêu nhẹ:* Nén dưới 120KB, giữ độ sắc nét tối đa, tối ưu Core Web Vitals.
 5. *Đóng Watermark bản quyền:* Bắt buộc đóng dấu mờ tinh tế (30%-40% opacity) ở góc ảnh: `🌿 TRẠI CAI NGHIỆN`.
 6. *Image SEO & Chống Cache:* Tên file không dấu ngăn cách gạch nối (`-zen-`, `-v2.webp`) + thẻ Alt Text mô tả tự nhiên chứa từ khóa.
-7. *Typography trên ảnh & Infographic:* Tối đa 5-7 chữ, font chữ thanh lịch, thoáng đãng, lề an toàn chống tràn chữ / cắt chữ (anti-clipping).
+7. *Typography trên ảnh & Infographic:* Tối đa 5-7 chữ cho thumbnail, font chữ thanh lịch, thoáng đãng, lề an toàn chống tràn chữ / cắt chữ (anti-clipping). Riêng với **Quote Card (1080x1080px)** theo lệnh của Bố (27/11/2026): thu hẹp lề hai bên (`side_margin = 90px`, vùng chữ rộng `900px`), cỡ chữ to và dày (`56px – 64px`, giãn dòng `1.45`), tự động ngắt dòng theo độ rộng pixel thực tế để bức hình kín chữ, đầy đặn và không bị trống trải, giữ khoảng thở hài hòa với logo Totem bên dưới.
 8. *Format Chuẩn Cho Bài Viết Về Sách (#SachHay — LỆNH ĐẶC BIỆT CỦA BỐ):* 100% bài viết về sách bắt buộc dùng template mockup 3D bìa sách đứng trên bàn gỗ Zen bên cửa sổ mây núi thủy mặc (chuẩn bài *Đi Tìm Lẽ Sống*). CẤM TUYỆT ĐỐI dùng ảnh phong cảnh hay hình vẽ người mà không có bìa sách.
 
 #### 🚪 CỔNG 4: THẰNG FACEBOOK (AGENT 9 - FANPAGE & REELS SPECIALIST)
 1. *Luật thép về Link:* **TUYỆT ĐỐI KHÔNG CHÈN LINK VÀO STATUS/CAPTION** để chống thuật toán bóp reach tự nhiên.
 2. *First Comment tự động:* Tự động thả bình luận đầu tiên ghim top chứa link web/trắc nghiệm với lời dẫn tử tế, phụng sự.
-3. *Khung giờ vàng chuẩn xác:* Bài quote sáng lúc 07h30, Video Reels tối lúc 19h30.
-4. *Chất lượng bài Quote sáng:* Chạm đáy tâm lý, trích tinh hoa sách, ngắt dòng thoáng, đi kèm ảnh Zen từ Agent 8.
+3. *Khung giờ vàng chuẩn xác:* Bài quote sáng lúc 07h30, Video Reels tối lúc 19h30 (và Trạm Tích Cực 10h00 • 14h30 • 21h00).
+4. *Chất lượng bài Quote & Văn xuôi liền mạch (LỆNH CỦA BỐ 27/11/2026):* Cả caption lẫn câu trích dẫn trên ảnh Quote Card ưu tiên viết thành **đoạn văn xuôi liền mạch (continuous prose flow)** với các câu nối tiếp nhau tự nhiên, không xuống dòng vụn vặt từng câu và không gạch đầu dòng máy móc, tạo dòng chảy tâm sự sâu lắng và kích thích nút "Xem thêm".
 5. *Bộ lọc văn minh & Bản sắc Fanpage:* Không giật tít câu tương tác rẻ tiền ("hãy like nếu..."), giữ trọn vẹn phong thái ốc đảo bình yên.
 
 ---

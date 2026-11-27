@@ -1,175 +1,79 @@
-import urllib.request
-import urllib.parse
-import json
-import re
-import html
+"""
+Script gửi bài kiểm thử (test) lên kênh Telegram @traicainghiendaily
+DÙNG ĐÚNG CHUẨN như daily_news_dispatcher.py:
+  - Gemini dịch tiêu đề sang tiếng Việt
+  - 3 góc nhìn: Cơ chế sinh học / Bẫy hành vi / Góc nhìn tự do
+  - Key Action + Quote
+  - Link nguồn + footer chuẩn
+
+Sử dụng:
+  python scripts/send_test_telegram_post.py            # gửi thật lên kênh
+  python scripts/send_test_telegram_post.py --dry-run # chỉ preview, không gửi
+"""
+import os
 import sys
 
 sys.stdout.reconfigure(encoding='utf-8')
 
-BOT_TOKEN = "9249970693:AAFnHi-ZCx7N576orPkdMqapeRLWfHQLH6Q"
-CHANNEL_ID = "-1004488309634" # @traicainghiendaily
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if BASE_DIR not in sys.path:
+    sys.path.insert(0, BASE_DIR)
 
-def decode_entities(val):
-    return html.unescape(val or '').strip()
+from scripts.daily_news_dispatcher import (  # noqa: E402
+    fetch_psychology_articles,
+    extract_article_info,
+    synthesize_bulletin_with_gemini,
+    send_telegram_bulletin,
+    load_history,
+)
 
-def clean_text(val):
-    clean = re.sub(r'<[^>]*>', ' ', val or '')
-    clean = decode_entities(clean)
-    return re.sub(r'\s+', ' ', clean).strip()
+SESSION_TEST = "BẢN TIN ĐÊM 22:00 (BẢN KIỂM THỬ)"
 
-def truncate(val, max_len):
-    chars = list(val or '')
-    if len(chars) > max_len:
-        return ''.join(chars[:max_len - 1]) + '…'
-    return ''.join(chars)
 
-def escape_html(val):
-    return html.escape(val or '', quote=True)
+def run_test_post(dry_run=False):
+    print("=" * 60)
+    print("🧪 GỬI BÀI KIỂM THỬ - CHUẨN TRẠI CAI NGHIỆN DAILY")
+    print("=" * 60)
 
-def fetch_rss_candidates():
-    # Thử lấy bài mới nhất từ Psychology Today feed
-    feeds = [
-        'https://www.psychologytoday.com/us/blog/science-choice/feed',
-        'https://www.psychologytoday.com/us/blog/the-athletes-way/feed',
-        'https://www.psychologytoday.com/us/blog/brain-waves/feed'
-    ]
-    import xml.etree.ElementTree as ET
-    for feed_url in feeds:
-        try:
-            req = urllib.request.Request(feed_url, headers={'User-Agent': 'Mozilla/5.0'})
-            with urllib.request.urlopen(req, timeout=10) as r:
-                root = ET.fromstring(r.read())
-                items = root.findall('.//item')
-                candidates = []
-                for it in items:
-                    t = it.find('title').text if it.find('title') is not None else ''
-                    l = it.find('link').text if it.find('link') is not None else ''
-                    d = it.find('description').text if it.find('description') is not None else ''
-                    if l:
-                        candidates.append({'title': t, 'link': l, 'description': d})
-                if candidates:
-                    return candidates
-        except Exception as e:
-            print(f"Feed {feed_url} error: {e}")
-    return []
+    history = load_history()
+    print(f"Đã tải {len(history)} bài đã gửi trước đó.")
 
-def extract_meta(page_html, prop_name):
-    match = re.search(rf'<meta[^>]+property=[\'"]{prop_name}[\'"][^>]+content=[\'"]([^\'"]+)[\'"]', page_html, re.I)
-    if not match:
-        match = re.search(rf'<meta[^>]+content=[\'"]([^\'"]+)[\'"][^>]+property=[\'"]{prop_name}[\'"]', page_html, re.I)
-    return decode_entities(match.group(1)) if match else ''
+    candidates = fetch_psychology_articles()
+    print(f"Quét được {len(candidates)} link bài từ nguồn quốc tế.")
 
-def extract_paragraphs(page_html):
-    matches = re.findall(r'<p\b[^>]*>(.*?)</p>', page_html, re.I | re.DOTALL)
-    valid_p = []
-    for m in matches:
-        text = clean_text(m)
-        if len(text) > 70 and not re.search(r'subscribe|sign up|privacy policy|cookie', text, re.I):
-            valid_p.append(text)
-    return ' '.join(valid_p[:2])
+    selected = None
+    for url in candidates:
+        if url in history:
+            continue
+        info = extract_article_info(url)
+        if info and info.get("image") and info["image"].startswith("http"):
+            selected = info
+            break
 
-def prepare_and_send():
-    print("1. Đang quét bài viết mới nhất từ Psychology Today...")
-    candidates = fetch_rss_candidates()
-    if not candidates:
-        print("Không tìm thấy bài viết RSS nào!")
+    if not selected:
+        print("❌ Không tìm được bài mới có og:image hợp lệ.")
         return False
 
-    selected_post = None
-    for cand in candidates:
-        link = cand['link']
-        print(f" -> Kiểm tra bài: {cand['title']} ({link})")
-        try:
-            req = urllib.request.Request(link, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'})
-            with urllib.request.urlopen(req, timeout=10) as r:
-                page_html = r.read().decode('utf-8')
-        except Exception as e:
-            print(f"    Lỗi tải bài: {e}")
-            continue
+    print(f"✅ Bài được chọn: {selected['title']}")
+    print(f"   URL: {selected['url']}")
+    print(f"   Ảnh gốc: {selected['image']}")
 
-        og_image = extract_meta(page_html, 'og:image')
-        if not og_image:
-            print("    Không có og:image -> bỏ qua bài này theo quy chuẩn.")
-            continue
+    caption = synthesize_bulletin_with_gemini(selected, session=SESSION_TEST)
 
-        title = clean_text(cand['title'] or extract_meta(page_html, 'og:title'))
-        summary = clean_text(cand['description']) or clean_text(extract_meta(page_html, 'og:description')) or extract_paragraphs(page_html)
-
-        selected_post = {
-            'link': link,
-            'title': title,
-            'summary': summary,
-            'photo': og_image
-        }
-        break
-
-    if not selected_post:
-        print("Không tìm được bài viết hợp lệ có og:image!")
-        return False
-
-    print("\n2. Chuẩn bị định dạng bài viết chuẩn Flow 01...")
-    parsed_link = urllib.parse.urlparse(selected_post['link'])
-    source_host = parsed_link.hostname.replace('www.', '') if parsed_link.hostname else 'psychologytoday.com'
-    safe_title = escape_html(truncate(selected_post['title'], 150))
-    safe_summary = escape_html(truncate(selected_post['summary'], 360))
-
-    session_name = "BẢN TIN ĐÊM 22:00 (BẢN KIỂM THỬ LIVE FLOW 01)"
-    prefix = f"🌿 <b>TRẠI CAI NGHIỆN DAILY • {session_name}</b>\n\n" \
-             f"🧠 <b>[TÂM LÝ HỌC &amp; HÀNH VI]</b>\n" \
-             f"👉 <b>{safe_title}</b>\n\n"
-
-    summary_label = "📰 <b>Điểm đáng chú ý từ nghiên cứu gốc:</b>\n"
-    action = "\n\n💡 <b>Gợi ý hôm nay:</b>\n" \
-             "Đọc phần phương pháp và kết luận trong bài gốc trước khi áp dụng lời khuyên cho mình.\n\n"
-
-    suffix = f'📖 <a href="{escape_html(selected_post["link"])}">Đọc bài gốc tại {escape_html(source_host)}</a>\n\n' \
-             f"🌿 <b>Trại Cai Nghiện — Trở về phiên bản tốt nhất của bạn</b>\n" \
-             f'<a href="https://traicainghien.com">Website</a> · ' \
-             f'<a href="https://traicainghien.com/trac-nghiem">Trắc nghiệm Dopamine</a>'
-
-    safe_summary_text = safe_summary or 'Nguồn RSS không có đoạn tóm tắt; bạn có thể xem chi tiết tại bài gốc.'
-    caption = f"{prefix}{summary_label}{safe_summary_text}{action}{suffix}"
-
-    while len(caption) > 1024 and len(safe_summary_text) > 24:
-        safe_summary_text = truncate(safe_summary_text, max(24, len(safe_summary_text) - 40))
-        caption = f"{prefix}{summary_label}{safe_summary_text}{action}{suffix}"
-
-    print(f" -> Ảnh gốc: {selected_post['photo']}")
-    print(f" -> Độ dài Caption: {len(caption)} ký tự (Giới hạn Telegram: 1024)")
-    print("\n=== NỘI DUNG BẢN TIN TRÊN TELEGRAM ===")
+    print("\n--- NỘI DUNG BẢN KIỂM THỬ (PREVIEW) ---")
     print(caption)
-    print("======================================\n")
+    print(f"--- Độ dài caption: {len(caption)} ký tự ---\n")
 
-    print("3. Đang gửi bài viết tới kênh Telegram @traicainghiendaily...")
-    send_url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
-    payload = {
-        'chat_id': CHANNEL_ID,
-        'photo': selected_post['photo'],
-        'caption': caption,
-        'parse_mode': 'HTML'
-    }
+    if dry_run:
+        print("🧪 Dry-run: không gửi lên Telegram.")
+        return True
 
-    req_tg = urllib.request.Request(
-        send_url,
-        data=json.dumps(payload).encode('utf-8'),
-        headers={'Content-Type': 'application/json'}
-    )
+    print("📢 Đang gửi lên kênh Telegram @traicainghiendaily...")
+    send_telegram_bulletin(selected["image"], caption)
+    print("✅ Đã gửi bài kiểm thử lên kênh.")
+    return True
 
-    try:
-        with urllib.request.urlopen(req_tg, timeout=15) as resp:
-            res_data = json.loads(resp.read().decode('utf-8'))
-            if res_data.get('ok'):
-                msg_id = res_data['result']['message_id']
-                print(f"✅ GỬI THÀNH CÔNG LÊN TELEGRAM! Message ID: {msg_id}")
-                print(f"🔗 Xem bài tại: https://t.me/traicainghiendaily/{msg_id}")
-                return True
-            else:
-                print(f"❌ Telegram trả về lỗi: {res_data}")
-                return False
-    except Exception as e:
-        print(f"❌ Lỗi gửi Telegram: {e}")
-        return False
 
-if __name__ == '__main__':
-    prepare_and_send()
+if __name__ == "__main__":
+    dry = "--dry-run" in sys.argv
+    run_test_post(dry_run=dry)

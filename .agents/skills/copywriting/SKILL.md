@@ -85,3 +85,7 @@ graph TD
 ### 3.2. Lời Kêu Gọi Hành Động (CTA Guidelines)
 * **Vị kỷ (Self-interested):** Nêu bật việc người đọc **nhận được sự tự do và bình an** gì khi thực hiện, thay vì ra lệnh ép buộc.
 * **Giảm thiểu ma sát (Frictionless):** Hướng dẫn bước đi đầu tiên nhỏ nhất có thể (chỉ mất 1-2 phút, ví dụ: để điện thoại xa 2 mét, thở 3 nhịp).
+
+### 3.3. Quy Chuẩn Văn Xuôi Liền Mạch Cho Bài Đăng Mạng Xã Hội & Quote Card (Lệnh của Bố 27/11/2026)
+* **Viết thành đoạn văn xuôi liên tục (Continuous Prose Flow):** Đối với các bài đăng tự sự, chiêm nghiệm, tâm lý học trên Facebook/Threads và nội dung trên Quote Card (như Trạm Tích Cực), các câu văn viết nối tiếp nhau liền mạch trong cùng một đoạn, **không bấm Enter xuống dòng sau mỗi câu** và **không dùng gạch đầu dòng (`•`, `-`) hay đánh số lắt nhắt**.
+* **Tác dụng:** Giữ dòng chảy cảm xúc êm ái như lời tâm sự thủ thỉ, triệt tiêu 100% cảm giác văn mẫu máy móc của AI, đồng thời giúp 3–4 dòng đầu trên Facebook tạo thành một bối cảnh trọn vẹn kích thích người đọc bấm nút *"Xem thêm"*.
