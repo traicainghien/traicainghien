@@ -383,6 +383,7 @@ def insert_article_to_website(article_obj):
 def git_commit_and_push(commit_message):
     """
     Commits changes và push lên tất cả remote GitHub để kích hoạt Vercel deploy.
+    Được trang bị cơ chế tự phục hồi, stash an toàn và kiểm tra mã lỗi nghiêm ngặt.
     """
     try:
         # Add cả articles, registry, comments và thư mục ảnh
@@ -397,24 +398,34 @@ def git_commit_and_push(commit_message):
 
         subprocess.run(["git", "add"] + files_to_add, cwd=BASE_DIR, check=True)
         subprocess.run(["git", "commit", "-m", commit_message], cwd=BASE_DIR, check=True)
-        print("Git commit thành công. Đang đẩy lên remote GitHub...")
-        
-        # Pull --rebase để tích hợp các commit mới nhất trước khi push
-        subprocess.run(["git", "pull", "--rebase"], cwd=BASE_DIR, capture_output=True)
+        print("Git commit thành công. Đang đồng bộ và đẩy lên GitHub...")
 
-        # Push lên remote mặc định
-        res = subprocess.run(["git", "push"], cwd=BASE_DIR, capture_output=True, text=True)
-        print("Git push result:", res.stdout.strip() if res.stdout else "OK")
+        # Stash bất kỳ file nháp/log nào còn sót lại để pull --rebase không bao giờ bị nghẽn
+        stashed = False
+        stash_res = subprocess.run(["git", "stash"], cwd=BASE_DIR, capture_output=True, text=True)
+        if "Saved working directory" in (stash_res.stdout or ""):
+            stashed = True
 
-        # Nếu có remote fork, push thêm fork để Vercel nhận diện
         try:
-            subprocess.run(["git", "push", "fork", "main"], cwd=BASE_DIR, capture_output=True, text=True)
-        except:
-            pass
+            # Pull rebase từ origin main
+            pull_res = subprocess.run(["git", "pull", "--rebase", "origin", "main"], cwd=BASE_DIR, capture_output=True, text=True)
+            if pull_res.returncode != 0:
+                print(f"⚠️ Cảnh báo git pull --rebase: {pull_res.stderr.strip()}")
+                subprocess.run(["git", "rebase", "--abort"], cwd=BASE_DIR, capture_output=True)
+        finally:
+            if stashed:
+                subprocess.run(["git", "stash", "pop"], cwd=BASE_DIR, capture_output=True)
 
-        return True
+        # Push lên remote origin (sẽ tự đẩy vào cả 2 kho GitHub đã cấu hình)
+        push_res = subprocess.run(["git", "push", "origin", "main"], cwd=BASE_DIR, capture_output=True, text=True)
+        if push_res.returncode == 0:
+            print("🚀 Git push thành công lên GitHub! Vercel đã nhận webhook và đang deploy.")
+            return True
+        else:
+            print(f"❌ Git push thất bại (exit code {push_res.returncode}): {push_res.stderr.strip()}")
+            return False
     except Exception as e:
-        print("Git commit/push note:", e)
+        print("Git commit/push exception:", e)
         return False
 
 if __name__ == "__main__":
