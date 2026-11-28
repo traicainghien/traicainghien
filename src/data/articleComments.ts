@@ -9,6 +9,30 @@ export interface Comment {
 
 // Bộ bình luận seeding độc bản theo từng bài viết (bám sát 100% nội dung, thuật ngữ và bài học thực hành)
 export const articleCommentsMap: Record<string, Comment[]> = {
+  "hai-quy-tac-lay-lai-su-tap-trung-dinh-cao-20261128": [
+      {
+          "id": "haiqu-1",
+          "name": "Đinh Thị Kim Ngân (Kế toán • 32 tuổi)",
+          "content": "Đọc bài 'Hai quy tắc vàng giúp bạn lấy lại sự tập trung đỉnh cao' xong, mình phải dừng lại giữa chừng vì hơi rát mặt. Mình đang trên xe buýt về nhà thì mở bài này ra, và thấy hơi xấu hổ vì đã tự mắng mình quá nhiều. Hóa ra cảm giác mục rỗng kia là phản ứng bình thường của một bộ não bị lấy cắp sự chú ý mỗi ngày.",
+          "date": "2 giờ trước",
+          "likes": 40,
+          "isLongStory": true
+      },
+      {
+          "id": "haiqu-2",
+          "name": "Vũ Thu Trang (Dược sĩ lâm sàng • 29 tuổi)",
+          "content": "Mình thấy nhẹ người nhất khi đọc phần 'Hai quy tắc vàng giúp bạn lấy lại sự tập trung đỉnh cao'. Cái hay là bài không bảo mình phải mạnh mẽ hơn, chỉ bảo mình đổi cách sắp xếp.",
+          "date": "Vừa xong",
+          "likes": 60
+      },
+      {
+          "id": "haiqu-3",
+          "name": "Phan Anh Tú (Chủ tiệm cà phê nhỏ)",
+          "content": "Mình dừng lại lâu nhất ở phần 'Hai quy tắc vàng giúp bạn lấy lại sự tập trung đỉnh cao'. Mình làm luôn, không chờ có động lực: đi bộ mười phút sau bữa tối, không mang tai nghe.",
+          "date": "3 ngày trước",
+          "likes": 17
+      }
+  ],
   "phan-biet-adhd-va-xao-nhang-so-co-le-ban-khong-bi-20261127": [
       {
           "id": "phanb-1",
