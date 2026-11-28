@@ -92,14 +92,14 @@ function BaiVietContent() {
           Kho Tàng Tri Thức • Trại Cai Nghiện
         </span>
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-serif text-[#2D312E] dark:text-[#F0ECE6] tracking-tight">
-          Bài Viết Tâm Lý Hành Vi
+          Lấy Lại Sự Tập Trung & Làm Chủ Hành Vi
         </h1>
         <p className="text-sm md:text-base text-[#6B726E] dark:text-[#9DA39F] leading-relaxed">
-          Đúc kết khoa học thần kinh và kinh nghiệm thực chiến từ người thường dành cho người thường. Không giáo điều, không phán xét, trao phương pháp để bạn làm chủ cuộc đời.
+          Đúc kết khoa học thần kinh, phương pháp Deep Work và kỷ luật không gồng để bạn giải phóng khỏi xao nhãng số, lấy lại sự tập trung và sống có chủ đích.
         </p>
       </div>
 
-      {/* 8 Chủ Đề Filter - Tinh gọn, thẩm mỹ Zen Minimalist */}
+      {/* 8 Chủ Đề Filter - Tinh gọn, thẩm mỹ Zen Minimalist (Ưu tiên #LayLaiSuTapTrung) */}
       <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 max-w-5xl mx-auto">
         <button
           onClick={() => handleTabChange("ALL")}
@@ -110,6 +110,23 @@ function BaiVietContent() {
           }`}
         >
           Tất Cả ({getCount("ALL")})
+        </button>
+
+        <button
+          onClick={() => handleTabChange("LayLaiSuTapTrung")}
+          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
+            activeTab === "LayLaiSuTapTrung"
+              ? "bg-blue-700 text-white shadow-md scale-105"
+              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-blue-600"
+          }`}
+        >
+          <span>🎯</span>
+          <span>#LayLaiSuTapTrung</span>
+          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
+            activeTab === "LayLaiSuTapTrung" ? "bg-white/20 text-white" : "bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300"
+          }`}>
+            {getCount("LayLaiSuTapTrung")}
+          </span>
         </button>
 
         <button
@@ -143,23 +160,6 @@ function BaiVietContent() {
             activeTab === "XayDungThoiQuen" ? "bg-white/20 text-white" : "bg-[#F9EFE9] dark:bg-[#2D231C] text-[#C27D53] dark:text-[#D48C62]"
           }`}>
             {getCount("XayDungThoiQuen")}
-          </span>
-        </button>
-
-        <button
-          onClick={() => handleTabChange("LayLaiSuTapTrung")}
-          className={`px-4 py-2.5 rounded-2xl text-xs md:text-sm font-semibold transition-all shadow-sm flex items-center gap-1.5 ${
-            activeTab === "LayLaiSuTapTrung"
-              ? "bg-blue-700 text-white shadow-md scale-105"
-              : "bg-white dark:bg-[#1E2220] border border-[#E6E1D8] dark:border-[#2E3531] text-[#6B726E] dark:text-[#9DA39F] hover:text-[#2D312E] dark:hover:text-[#F0ECE6] hover:border-blue-600"
-          }`}
-        >
-          <span>🎯</span>
-          <span>#LayLaiSuTapTrung</span>
-          <span className={`text-[11px] px-1.5 py-0.5 rounded-full font-bold ${
-            activeTab === "LayLaiSuTapTrung" ? "bg-white/20 text-white" : "bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300"
-          }`}>
-            {getCount("LayLaiSuTapTrung")}
           </span>
         </button>
 

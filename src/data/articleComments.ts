@@ -157,7 +157,7 @@ export const articleCommentsMap: Record<string, Comment[]> = {
       {
           "id": "phimp-1",
           "name": "Hồ Nhật Trường (Nhân viên IT helpdesk)",
-          "content": "Đọc bài 'Phim PỎN và Cú Lừa Dopamine: Cách Lấy Lại Bản Lĩnh Đàn Ông' xong, mình phải bỏ điện thoại xuống mới đọc hết được. Mình từng cài đủ loại app chặn mạng xã hội rồi lại gỡ. Bài viết chỉ ra chỗ mình sai: mình chặn bằng ý chí thay vì dời cái ma sát đi. Hôm nay mình chỉ đổi một việc là sạc điện thoại ở nhà bếp thay vì đầu giường.",
+          "content": "Đọc bài 'Siêu Kích Thích Đêm Muộn: Cách Lấy Lại Sự Tập Trung Sâu' xong, mình phải bỏ điện thoại xuống mới đọc hết được. Mình từng cài đủ loại app chặn mạng xã hội rồi lại gỡ. Bài viết chỉ ra chỗ mình sai: mình chặn bằng ý chí thay vì dời cái ma sát đi. Hôm nay mình chỉ đổi một việc là sạc điện thoại ở nhà bếp thay vì đầu giường.",
           "date": "2 ngày trước",
           "likes": 51,
           "isLongStory": true

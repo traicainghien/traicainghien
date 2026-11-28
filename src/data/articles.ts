@@ -163,8 +163,8 @@ const rawArticles: Article[] = [
   },
   {
     "slug": "phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121",
-    "title": "Phim PỎN và Cú Lừa Dopamine: Cách Lấy Lại Bản Lĩnh Đàn Ông",
-    "excerpt": "Bạn không hề giải tỏa căng thẳng, bạn đang tự nguyện quăng đi động lực sống và năng lực kết nối chỉ vì những ảo ảnh trên màn hình điện thoại lúc 2 giờ sáng.",
+    "title": "Siêu Kích Thích Đêm Muộn: Cách Lấy Lại Sự Tập Trung Sâu",
+    "excerpt": "Bạn không hề yếu đuối hay thiếu kỷ luật, não bộ đang bị bủa vây bởi các siêu kích thích số lúc 2 giờ sáng. Hãy giải mã cơ chế Dopamine để phục hồi thùy trán và lấy lại sự tập trung sâu.",
     "thumbnail": "/images/articles/phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",

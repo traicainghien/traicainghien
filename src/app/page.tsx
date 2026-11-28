@@ -236,17 +236,17 @@ export default function HomePage() {
           <div className="p-6 md:p-8 rounded-2xl bg-[#EBF0EC]/70 border border-[#3A5A40]/20 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
             <div className="space-y-1 max-w-xl">
               <p className="text-base font-bold font-serif text-[#2D312E]">
-                Bạn không hề yếu đuối — bạn chỉ đang bị kẹt trong một hệ thống bẫy dopamine.
+                Bạn không hề yếu đuối — bạn chỉ đang bị bủa vây bởi những bẫy xao nhãng số.
               </p>
               <p className="text-xs md:text-sm text-[#6B726E]">
-                Bước đầu tiên để giành lại tự do là gọi tên chính xác điều gì đang chi phối bạn.
+                Bước đầu tiên để giành lại sự tự do là đo lường chính xác mức độ phân mảnh chú ý của bạn.
               </p>
             </div>
             <Link
               href="/trac-nghiem"
               className="px-6 py-3.5 rounded-xl text-xs md:text-sm font-bold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-sm shrink-0 transition-all flex items-center gap-2 hover:scale-105"
             >
-              <span>Đo mức độ mất tập trung ngay</span>
+              <span>Đo chỉ số tập trung sâu ngay</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -261,10 +261,10 @@ export default function HomePage() {
             Giải Pháp Thực Chiến
           </span>
           <h2 className="text-3xl md:text-4xl font-bold font-serif text-[#2D312E]">
-            Hệ Thống Cai Nghiện & Chuyển Hóa
+            Hệ Thống Rèn Luyện & Khôi Phục Sự Tập Trung
           </h2>
           <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
-            Bạn không thể dùng ý chí trần trụi để chiến đấu với các thuật toán gây nghiện. Đây là các hệ thống được thiết kế riêng cho từng nỗi đau của thời đại số.
+            Bạn không thể dùng ý chí trần trụi để chiến đấu với các thuật toán gây phân tâm. Đây là các hệ thống rèn luyện được thiết kế giúp bạn khôi phục sự tập trung bền bỉ.
           </p>
         </div>
 
@@ -378,7 +378,7 @@ export default function HomePage() {
             href="/he-thong-cai-nghien"
             className="inline-flex items-center gap-2 text-sm font-bold text-[#3A5A40] hover:underline"
           >
-            <span>Xem đầy đủ thông số các lộ trình cai nghiện</span>
+            <span>Xem đầy đủ lộ trình khôi phục sự tập trung</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -393,15 +393,15 @@ export default function HomePage() {
                 Trắc nghiệm nhập trại • 25 Câu Hỏi
               </span>
               <h2 className="text-2xl md:text-3xl font-bold font-serif text-[#2D312E]">
-                Đo mức độ mất tập trung: Bạn thuộc Hệ Nghiện nào?
+                Đo Chỉ Số Tập Trung: Bạn Đang Bị Xao Nhãng Số Ở Mức Nào?
               </h2>
               <p className="text-sm md:text-base text-[#6B726E] leading-relaxed">
-                Đêm muộn nằm lướt TikTok đến nóng máy không ngủ được, sáng ra lờ đờ, hay cáu gắt và mất tập trung? Bài trắc nghiệm 25 câu hỏi 5 chặng sẽ bóc tách chính xác 5 Hệ Nghiện thời hiện đại và Khoản Thuế Vô Hình bạn đang âm thầm gánh chịu.
+                Đêm muộn quẹt video ngắn vô thức, sáng dậy sương mù não, mở máy định làm việc nhưng nhảy tab liên tục? Bài trắc nghiệm 25 câu hỏi khoa học sẽ bóc tách chính xác độ đứt gãy sự chú ý và trao bạn giải pháp lấy lại sự tập trung sâu.
               </p>
               <div className="flex flex-wrap gap-4 text-xs font-semibold text-[#2D312E] pt-2">
-                <span>🌙 Phân loại 5 Hệ Nghiện</span>
+                <span>🎯 Đo mức độ phân mảnh chú ý</span>
                 <span>⚖️ Bóc trần Khoản Thuế Vô Hình</span>
-                <span>💡 Kèm đơn thuốc Kaizen 1%</span>
+                <span>💡 Lộ trình Kaizen lấy lại tập trung</span>
               </div>
             </div>
 
@@ -410,7 +410,7 @@ export default function HomePage() {
                 href="/trac-nghiem"
                 className="w-full md:w-auto px-8 py-4 rounded-2xl text-base font-bold text-white bg-[#3A5A40] hover:bg-[#2F4A34] shadow-md hover:scale-105 transition-all text-center"
               >
-                Bắt đầu đo mức độ mất tập trung
+                Bắt đầu đo chỉ số tập trung (3 phút)
               </Link>
               <span className="text-[11px] text-[#6B726E]">Nhận kết quả phân tích tức thì</span>
             </div>

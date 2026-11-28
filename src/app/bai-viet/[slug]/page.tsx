@@ -603,17 +603,17 @@ export default async function ArticleDetailPage({
       <div className="my-10 p-8 md:p-10 rounded-3xl bg-[#EBF0EC] dark:bg-[#1F2722] border border-[#E6E1D8] dark:border-[#2E3531] text-center space-y-4 shadow-sm">
         <Sparkles className="w-7 h-7 text-[#3A5A40] dark:text-[#8FC99D] mx-auto" />
         <h3 className="text-xl md:text-2xl font-bold font-serif text-[#2D312E] dark:text-[#F5F2EB]">
-          Bạn muốn biết mức độ kiệt quệ dopamine của mình?
+          Bạn muốn đo lường mức độ xao nhãng và khả năng tập trung sâu của mình?
         </h3>
         <p className="text-xs md:text-sm text-[#6B726E] dark:text-[#9DA39F] max-w-lg mx-auto leading-relaxed">
-          Thực hiện bài trắc nghiệm 25 câu hỏi để nhận diện các trigger tiềm ẩn và nhận ngay 1 bài tập Kaizen vi mô phù hợp nhất cho ngày hôm nay.
+          Thực hiện bài trắc nghiệm 25 câu hỏi khoa học để nhận diện các bẫy xao nhãng vô thức, bóc tách &apos;khoản thuế vô hình&apos; đang đánh cắp thời gian và nhận ngay lộ trình Kaizen lấy lại sự tập trung đỉnh cao.
         </p>
         <div className="pt-2">
           <Link
             href="/trac-nghiem"
             className="inline-block px-8 py-3.5 rounded-xl text-xs md:text-sm font-semibold text-white bg-[#3A5A40] hover:bg-[#2F4A34] dark:bg-[#4E7655] dark:hover:bg-[#3D6244] transition-all shadow-md hover:scale-105"
           >
-            Làm bài trắc nghiệm 25 câu (3 phút)
+            Đo chỉ số tập trung sâu (3 phút)
           </Link>
         </div>
       </div>

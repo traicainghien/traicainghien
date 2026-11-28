@@ -9,6 +9,12 @@ import ThemeToggle from "./ThemeToggle";
 
 const categories = [
   {
+    tag: "LayLaiSuTapTrung",
+    label: "Lấy Lại Sự Tập Trung",
+    icon: "🎯",
+    desc: "Giành lại chủ quyền và sự chú ý cho tâm trí của bạn",
+  },
+  {
     tag: "HieuHanhVi",
     label: "Hiểu Hành Vi",
     icon: "🌱",
@@ -19,12 +25,6 @@ const categories = [
     label: "Xây Dựng Thói Quen",
     icon: "🛠️",
     desc: "Từng bước nhỏ nâng đỡ một cuộc đời tự do",
-  },
-  {
-    tag: "LayLaiSuTapTrung",
-    label: "Lấy Lại Sự Tập Trung",
-    icon: "🎯",
-    desc: "Giành lại chủ quyền cho tâm trí của bạn",
   },
   {
     tag: "TrietHocCuocSong",
