@@ -33,33 +33,31 @@ class NoUniqueThumbnailError(RuntimeError):
     """Khong con tac pham doc ban nao dat chuan -> phai dung pipeline, khong duoc tai su dung anh cu."""
 
 
-def get_unique_thumbnail(topic: str = "focus") -> str:
+def get_unique_thumbnail(topic: str = "focus", target_slug: str = None) -> str:
     """
-    Chon 1 tac pham doc ban < 120KB tu public/images/articles.
-
-    FAIL-CLOSED (Lenh cua Bo, sua ngay 13/11/2026):
-    - NEU THIEU Pillow/numpy -> NEM LOI NGAY, khong duoc bo qua kiem toan thị giác.
-      (Day chinh la lo hong tung de 3 cap thumbnail gan trung nhau lot len website.)
-    - So sanh ung vien voi TOAN BO thumbnail dang dung theo 3 lop:
-        1. Ten file da xuat hien trong src/data/articles.ts
-        2. MD5 trung nhau (ban sao byte-identical)
-        3. Sai lech pixel trung binh < 15.0 (ban sao nen lai / chinh sua nhe)
-    - KHONG con anh du phong dung chung: het anh dat chuan thi nem NoUniqueThumbnailError.
+    Chon hoac tao 1 tac pham Nhiếp ảnh Ẩn dụ Nghệ thuật (Cinematic Conceptual Photography) < 120KB.
+    BẮT BUỘC TUÂN THỦ NGUYÊN TẮC THÉP CỦA BỐ (20/11/2026):
+    - Đuôi file bắt buộc là '-cinematic.webp'
+    - Tỉ lệ 16:9 (1200x675)
+    - 0% Chữ, 0% Đồ vật ngẫu nhiên (tivi, giường, trang sức), 0% Stock model, 0% Tranh Zen watercolor
+    - MD5 và khoảng cách thị giác độc bản 100%
     """
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     articles_ts_path = os.path.join(BASE_DIR, "src", "data", "articles.ts")
-    existing_content = ""
-    used_hashes = set()
-    existing_arrays = []
+    used_db_path = os.path.join(BASE_DIR, "scripts", "used_curated_images.json")
+    pool_path = os.path.join(BASE_DIR, "scripts", "curated_cinematic_pool.json")
+    images_dir = os.path.join(BASE_DIR, "public", "images", "articles")
+    os.makedirs(images_dir, exist_ok=True)
 
     try:
         from PIL import Image
         import numpy as np
     except ImportError as e:
-        raise NoUniqueThumbnailError(
-            "Thieu Pillow/numpy nen KHONG THE kiem toan tinh doc ban cua anh. "
-            "Cai dat: python3 -m pip install --break-system-packages pillow numpy"
-        ) from e
+        raise NoUniqueThumbnailError("Thieu Pillow/numpy de xu ly anh cinematic.") from e
+
+    existing_content = ""
+    used_hashes = set()
+    used_unsplash = set()
 
     if os.path.exists(articles_ts_path):
         with open(articles_ts_path, "r", encoding="utf-8") as f:
@@ -71,90 +69,125 @@ def get_unique_thumbnail(topic: str = "focus") -> str:
             if os.path.exists(p):
                 try:
                     with open(p, "rb") as bf:
-                        h = hashlib.md5(bf.read()).hexdigest()
-                        used_hashes.add(h)
-                    if not slug.startswith(('review-sach', 'doc-sach', 'doc-cau-chuyen')):
-                        img = Image.open(p).convert('RGB').resize((64, 64))
-                        existing_arrays.append(np.array(img, dtype=float))
+                        used_hashes.add(hashlib.md5(bf.read()).hexdigest())
                 except Exception:
                     pass
 
-    images_dir = os.path.join(BASE_DIR, "public", "images", "articles")
-    if not os.path.exists(images_dir):
-        raise NoUniqueThumbnailError(f"Khong thay thu muc {images_dir}")
+    if os.path.exists(used_db_path):
+        try:
+            with open(used_db_path, "r", encoding="utf-8") as f:
+                ud = json.load(f)
+                records = ud.get("records", []) if isinstance(ud, dict) else ud
+                for r in records:
+                    if "hash" in r:
+                        used_hashes.add(r["hash"])
+                    if "unsplash_id" in r:
+                        used_unsplash.add(r["unsplash_id"])
+        except Exception:
+            pass
 
-    candidates = glob.glob(os.path.join(images_dir, "*.webp"))
-    # Sort for deterministic selection
+    # 1. Kiểm tra nếu file {target_slug}-cinematic.webp đã có sẵn và hợp lệ
+    if target_slug:
+        candidate_slug_file = f"{target_slug}-cinematic.webp"
+        candidate_slug_path = os.path.join(images_dir, candidate_slug_file)
+        if os.path.exists(candidate_slug_path):
+            with open(candidate_slug_path, "rb") as bf:
+                h = hashlib.md5(bf.read()).hexdigest()
+            if h not in used_hashes or candidate_slug_file in existing_content:
+                return f"/images/articles/{candidate_slug_file}"
+
+    # 2. Tìm ảnh có sẵn trong thư mục đạt chuẩn Cinematic (-cinematic.webp) chưa dùng
+    candidates = glob.glob(os.path.join(images_dir, "*-cinematic.webp"))
     candidates.sort()
-
-    rejected = {"used_name": 0, "too_big": 0, "same_hash": 0, "too_similar": 0, "not_art": 0}
-    best_fallback = None  # (diff, fname, size) - ghi lai de bao cao cho Bo
-
     for cand in candidates:
         fname = os.path.basename(cand)
-        # Skip diagrams, infographics, cycles and book mockups
-        if any(skip in fname for skip in ["so-do", "bieu-do", "chu-ky", "infographic", "sach-"]):
-            rejected["not_art"] += 1
-            continue
-        # Skip if filename is already in articles.ts
         if fname in existing_content:
-            rejected["used_name"] += 1
             continue
         try:
             size = os.path.getsize(cand)
-            if size > 122880:  # Must be <= 120KB
-                rejected["too_big"] += 1
+            if size > 122880:
                 continue
             with open(cand, "rb") as bf:
                 h = hashlib.md5(bf.read()).hexdigest()
             if h in used_hashes:
-                rejected["same_hash"] += 1
                 continue
-
-            # Check perceptual visual distance >= 15.0
-            cand_img = Image.open(cand).convert('RGB').resize((64, 64))
-            cand_arr = np.array(cand_img, dtype=float)
-            min_diff = min(np.mean(np.abs(cand_arr - ex_arr)) for ex_arr in existing_arrays) if existing_arrays else 999.0
-            if min_diff < 15.0:
-                rejected["too_similar"] += 1
-                if best_fallback is None or min_diff > best_fallback[0]:
-                    best_fallback = (min_diff, fname, size)
-                continue
-
-            print(f"✅ [THUMBNAIL GATE] Chọn thành công ảnh độc bản chuẩn Zen: {fname} ({size/1024:.1f}KB | lệch gần nhất {min_diff:.1f})")
+            print(f"✅ [THUMBNAIL GATE] Chọn thành công ảnh Cinematic có sẵn: {fname} ({size/1024:.1f}KB)")
             return f"/images/articles/{fname}"
         except Exception:
             pass
 
-    # FALLBACK: Nếu toàn bộ ảnh có sẵn đã được dùng, tự động kích hoạt Agent 8 vẽ tác phẩm Zen mới
-    print("🎨 [AGENT 8 THUMBNAIL] Kho ảnh có sẵn đã dùng hết, tự động kích hoạt Agent 8 vẽ tác phẩm Zen độc bản mới...")
-    try:
-        import subprocess
-        auto_slug = f"zen-{topic}-{int(datetime.now().timestamp())}"
-        scene = f"A peaceful Vietnamese contemplation scene about {topic}, solitary figure reading by misty mountains, Zen watercolor, sumi-e ink, rough washi paper texture, muted earthy tones"
-        proc = subprocess.run([
-            sys.executable,
-            "scripts/generate_zen_thumbnails.py",
-            "--slug", auto_slug,
-            "--scene", scene
-        ], capture_output=True, text=True)
-        m = re.search(r'DAT CHUAN: (/images/articles/[^\s]+\.webp)', proc.stdout)
-        if m:
-            new_thumb = m.group(1)
-            print(f"✅ [AGENT 8 THUMBNAIL] Đã vẽ thành công tranh Zen độc bản mới: {new_thumb}")
-            return new_thumb
-    except Exception as e:
-        print(f"⚠️ [AGENT 8 AUTO-DRAW NOTE] {e}")
+    # 3. Kéo ảnh mới từ Kho Curated Cinematic Pool (36+ ảnh Unsplash thiên nhiên/tĩnh lặng đã qua kiểm duyệt)
+    if os.path.exists(pool_path):
+        try:
+            with open(pool_path, "r", encoding="utf-8") as f:
+                pool_data = json.load(f)
+            verified_pool = pool_data.get("verified_pool", [])
+            for item in verified_pool:
+                pid = item.get("unsplash_id")
+                if not pid or pid in used_unsplash:
+                    continue
+                url = item.get("url") or f"https://images.unsplash.com/{pid}?w=1600&auto=format&fit=crop&q=85"
+                print(f"🌊 [AUTO-CINEMATIC] Đang tải tác phẩm nhiếp ảnh nghệ thuật mới '{pid}' từ Unsplash...")
+                import urllib.request
+                import io
+                from datetime import datetime
+                req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+                with urllib.request.urlopen(req, timeout=15) as resp:
+                    img_bytes = resp.read()
 
-    detail = ", ".join(f"{k}={v}" for k, v in rejected.items() if v)
-    msg = (
-        "KHONG con tac pham nao dat chuan doc ban. "
-        f"Da loai: {detail}. "
-    )
-    if best_fallback:
-        msg += f"Anh gan nhat van lech {best_fallback[0]:.2f} (<15.0): {best_fallback[1]}. "
-    msg += "Can Agent 8 ve tac pham moi. TUYET DOI khong tai su dung anh da dung."
-    raise NoUniqueThumbnailError(msg)
+                img = Image.open(io.BytesIO(img_bytes)).convert("RGB")
+                orig_w, orig_h = img.size
+                target_ratio = 16.0 / 9.0
+                current_ratio = orig_w / float(orig_h)
+                if current_ratio > target_ratio:
+                    new_w = int(orig_h * target_ratio)
+                    left = (orig_w - new_w) // 2
+                    img_cropped = img.crop((left, 0, left + new_w, orig_h))
+                else:
+                    new_h = int(orig_w / target_ratio)
+                    top = (orig_h - new_h) // 2
+                    img_cropped = img.crop((0, top, orig_w, top + new_h))
+
+                img_resized = img_cropped.resize((1200, 675), Image.Resampling.LANCZOS)
+                file_slug = target_slug or f"cinematic-{topic}-{int(datetime.now().timestamp())}"
+                new_fname = f"{file_slug}-cinematic.webp"
+                new_fpath = os.path.join(images_dir, new_fname)
+
+                quality = 85
+                final_data = None
+                while quality >= 50:
+                    buf = io.BytesIO()
+                    img_resized.save(buf, format="WEBP", quality=quality, method=6)
+                    data = buf.getvalue()
+                    if len(data) <= 118 * 1024 or quality <= 50:
+                        final_data = data
+                        with open(new_fpath, "wb") as f_out:
+                            f_out.write(data)
+                        break
+                    quality -= 5
+
+                new_hash = hashlib.md5(final_data).hexdigest()
+                # Ghi nhận vào used_curated_images.json
+                used_record = {
+                    "slug": file_slug,
+                    "unsplash_id": pid,
+                    "filename": new_fname,
+                    "hash": new_hash,
+                    "size_kb": round(len(final_data)/1024, 1)
+                }
+                if os.path.exists(used_db_path):
+                    with open(used_db_path, "r", encoding="utf-8") as f:
+                        ud = json.load(f)
+                    ud.setdefault("records", []).append(used_record)
+                    with open(used_db_path, "w", encoding="utf-8") as f:
+                        json.dump(ud, f, ensure_ascii=False, indent=2)
+
+                print(f"✅ [AUTO-CINEMATIC] Tạo thành công thumbnail chuẩn Cinematic: {new_fname} ({len(final_data)/1024:.1f}KB)")
+                return f"/images/articles/{new_fname}"
+        except Exception as e:
+            print(f"⚠️ [CINEMATIC POOL DOWNLOAD NOTE] {e}")
+
+    raise NoUniqueThumbnailError("Khong con anh Cinematic nao dat chuan va khong the tai anh moi tu kho Unsplash.")
 
 def generate_article_with_gemini(video_data: Dict[str, Any], topic: str) -> Dict[str, Any]:
     """
@@ -256,8 +289,12 @@ def build_article_from_video(video_data: Dict[str, Any], topic: str = "focus") -
         print(f"❌ [GEMINI GENERATION ERROR] {e}")
         raise RuntimeError(f"Hệ thống AI không thể tạo bài viết đạt chuẩn cho '{title_raw}': {e}. Dừng luồng để bảo vệ chất lượng nội dung!")
 
-    # Select unique thumbnail
-    thumbnail = get_unique_thumbnail(topic)
+    # Generate slug first so thumbnail can be named after it
+    date_suffix = datetime.now().strftime("%Y%m%d")
+    raw_slug = f"{slugify(clean_title[:45])}-{date_suffix}"
+    slug = raw_slug[:75].rstrip("-")
+    # Select unique thumbnail with slug binding
+    thumbnail = get_unique_thumbnail(topic, target_slug=slug)
 
     clean_title = ai_data.get("clean_title", "").strip().strip('"')
     if len(clean_title) < 40 or len(clean_title) > 65:

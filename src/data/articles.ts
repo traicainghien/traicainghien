@@ -21,7 +21,7 @@ const rawArticles: Article[] = [
     "slug": "hai-quy-tac-lay-lai-su-tap-trung-dinh-cao-20261128",
     "title": "Hai quy tắc vàng giúp bạn lấy lại sự tập trung đỉnh cao",
     "excerpt": "Bạn thấy mình bồn chồn khi ngồi yên 10 giây? Hãy cùng Mây giải mã cơ chế não bộ đằng sau sự xao nhãng và tìm lại phiên bản tập trung nhất của chính mình.",
-    "thumbnail": "/images/articles/6-buoc-can-lam-khi-con-them-ap-den-urge-surfing-pinterest.webp",
+    "thumbnail": "/images/articles/hai-quy-tac-lay-lai-su-tap-trung-dinh-cao-20261128-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
@@ -45,7 +45,7 @@ const rawArticles: Article[] = [
     "slug": "phan-biet-adhd-va-xao-nhang-so-co-le-ban-khong-bi-20261127",
     "title": "Phân biệt ADHD thật và xao nhãng số: Bạn có thực sự bị bệnh?",
     "excerpt": "Đừng vội dán nhãn ADHD cho bản thân chỉ vì vài clip TikTok. Sự thật về bộ não dopamine của bạn và cách lấy lại sự tập trung đang ở ngay đây.",
-    "thumbnail": "/images/articles/5-cong-cu-chan-cam-do-man-hinh-trai-cai-nghien.webp",
+    "thumbnail": "/images/articles/phan-biet-adhd-va-xao-nhang-so-co-le-ban-khong-bi-20261127-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
@@ -69,7 +69,7 @@ const rawArticles: Article[] = [
     "slug": "giai-ma-con-nghien-dopamine-lay-lai-su-tap-trung-20261126",
     "title": "Giải mã cơn nghiện Dopamine: Cách lấy lại sự tập trung đỉnh cao",
     "excerpt": "Bạn không lười, bạn chỉ đang kẹt trong vòng xoáy Dopamine rẻ tiền. Hãy cùng Mây hiểu về cán cân não bộ để tìm lại phiên bản rực rỡ nhất của chính mình.",
-    "thumbnail": "/images/articles/4-hoa-chat-than-kinh-can-bang-nao-bo-zen.webp",
+    "thumbnail": "/images/articles/giai-ma-con-nghien-dopamine-lay-lai-su-tap-trung-20261126-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
@@ -93,7 +93,7 @@ const rawArticles: Article[] = [
     "slug": "sieu-nhan-thuc-lay-lai-su-tap-trung-ky-nguyen-ai-20261125",
     "title": "Siêu nhận thức: Chìa khóa lấy lại sự tập trung trong kỷ nguyên AI",
     "excerpt": "Bạn đang làm chủ tâm trí hay chỉ là con rối của thuật toán? Khám phá siêu nhận thức để giải phóng bản thân khỏi sự xao nhãng và tìm lại phiên bản rạng rỡ nhất.",
-    "thumbnail": "/images/articles/2-quy-tac-don-gian-cai-thien-su-tap-trung-pinterest.webp",
+    "thumbnail": "/images/articles/sieu-nhan-thuc-lay-lai-su-tap-trung-ky-nguyen-ai-20261125-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
@@ -117,7 +117,7 @@ const rawArticles: Article[] = [
     "slug": "ky-luat-tu-dong-bien-thoi-quen-thanh-phan-xa-20261124",
     "title": "Kỷ luật tự động: Biến thói quen thành phản xạ không cần gồng",
     "excerpt": "Bạn mệt mỏi vì phải gồng mình kỷ luật? Khám phá bí mật từ khoa học thần kinh để biến thói quen thành phản xạ tự nhiên, không còn đấu tranh nội tâm mỗi ngày.",
-    "thumbnail": "/images/articles/2-quy-tac-cai-thien-tap-trung-trai-cai-nghien.webp",
+    "thumbnail": "/images/articles/ky-luat-tu-dong-bien-thoi-quen-thanh-phan-xa-20261124-cinematic.webp",
     "pillar": "Trụ cột 2: Xây dựng thói quen tốt & kỷ luật không cần gồng",
     "pillarTag": "XayDungThoiQuen",
     "categories": [
@@ -141,7 +141,7 @@ const rawArticles: Article[] = [
     "slug": "lay-lai-su-tap-trung-thoat-khoi-doomscrolling-20261123",
     "title": "Lấy Lại Sự Tập Trung: Thoát Khỏi Cạm Bẫy Doomscrolling",
     "excerpt": "Bạn thấy mình kiệt sức dù chẳng làm gì? Đó không phải là lười biếng, mà là bộ não đang bị 'luyện tập' để xao nhãng. Hãy cùng Mây tìm lại sự bình yên.",
-    "thumbnail": "/images/articles/100-ngay-cai-dien-thoai-zen-watercolor.webp",
+    "thumbnail": "/images/articles/lay-lai-su-tap-trung-thoat-khoi-doomscrolling-20261123-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [
@@ -165,7 +165,7 @@ const rawArticles: Article[] = [
     "slug": "phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121",
     "title": "Phim PỎN và Cú Lừa Dopamine: Cách Lấy Lại Bản Lĩnh Đàn Ông",
     "excerpt": "Bạn không hề giải tỏa căng thẳng, bạn đang tự nguyện quăng đi động lực sống và năng lực kết nối chỉ vì những ảo ảnh trên màn hình điện thoại lúc 2 giờ sáng.",
-    "thumbnail": "/images/articles/100-ngay-cai-dien-thoai-nao-bo-tai-sinh-ky-dieu-the-nao-pinterest.webp",
+    "thumbnail": "/images/articles/phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121-cinematic.webp",
     "pillar": "Trụ cột 1: Hiểu cơ chế hành vi & Rèn luyện bộ não",
     "pillarTag": "LayLaiSuTapTrung",
     "categories": [

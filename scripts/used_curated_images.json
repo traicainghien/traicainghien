@@ -835,6 +835,69 @@
       "thumbnail": "/images/articles/cu-lua-can-bang-cuoc-song-nghe-thuat-can-bang-dong-cinematic.webp",
       "hash": "b31aedfa92d2e04866aa2ff6d1bec666",
       "url": "https://images.unsplash.com/photo-1516214104703-d870798883c5?w=1600&auto=format&fit=crop&q=85"
+    },
+    {
+      "slug": "hai-quy-tac-lay-lai-su-tap-trung-dinh-cao-20261128",
+      "title": "Hai quy tắc vàng giúp bạn lấy lại sự tập trung đỉnh cao",
+      "unsplash_id": "photo-1544787219-7f47ccb76574",
+      "concept": "Ấm trà gang tối giản nghi ngút khói bên bàn gỗ sáng sớm (Nghi thức tập trung tối giản, tĩnh tại, làm chủ 2 quy tắc vàng)",
+      "filename": "hai-quy-tac-lay-lai-su-tap-trung-dinh-cao-20261128-cinematic.webp",
+      "hash": "e02c1ce0e96e57a47f7719f72749e597",
+      "size_kb": 28.1
+    },
+    {
+      "slug": "phan-biet-adhd-va-xao-nhang-so-co-le-ban-khong-bi-20261127",
+      "title": "Phân biệt ADHD thật và xao nhãng số: Bạn có thực sự bị bệnh?",
+      "unsplash_id": "photo-1542273917363-3b1817f69a2d",
+      "concept": "Luồng nắng sớm chiếu xuyên qua sương rừng cây cao vút (Xua tan sương mù não, tỉnh thức khỏi cạm bẫy dán nhãn ADHD)",
+      "filename": "phan-biet-adhd-va-xao-nhang-so-co-le-ban-khong-bi-20261127-cinematic.webp",
+      "hash": "3b289dfedc1d27e88c31e3405ce33c2a",
+      "size_kb": 112.2
+    },
+    {
+      "slug": "giai-ma-con-nghien-dopamine-lay-lai-su-tap-trung-20261126",
+      "title": "Giải mã cơn nghiện Dopamine: Cách lấy lại sự tập trung đỉnh cao",
+      "unsplash_id": "photo-1532274402911-5a369e4c4bb5",
+      "concept": "Mặt hồ nước màu ngọc bích phẳng lặng như gương phản chiếu rặng núi trong nắng sớm (Cơ chế cân bằng nội môi Homeostasis, tái lập Dopamine)",
+      "filename": "giai-ma-con-nghien-dopamine-lay-lai-su-tap-trung-20261126-cinematic.webp",
+      "hash": "842813ce8144331042cabe73152dd936",
+      "size_kb": 116.6
+    },
+    {
+      "slug": "sieu-nhan-thuc-lay-lai-su-tap-trung-ky-nguyen-ai-20261125",
+      "title": "Siêu nhận thức: Chìa khóa lấy lại sự tập trung trong kỷ nguyên AI",
+      "unsplash_id": "photo-1486870591958-9b9d0d1dda99",
+      "concept": "Đỉnh núi hùng vĩ vươn lên trên biển mây bồng bềnh dưới ánh ban mai (Góc nhìn ban công - Metacognition, làm chủ tâm trí trong kỷ nguyên AI)",
+      "filename": "sieu-nhan-thuc-lay-lai-su-tap-trung-ky-nguyen-ai-20261125-cinematic.webp",
+      "hash": "8efc94c8006e489883adeebc5f59b7fd",
+      "size_kb": 103.5
+    },
+    {
+      "slug": "ky-luat-tu-dong-bien-thoi-quen-thanh-phan-xa-20261124",
+      "title": "Kỷ luật tự động: Biến thói quen thành phản xạ không cần gồng",
+      "unsplash_id": "photo-1507652313519-d4e9174996dd",
+      "concept": "Tháp sỏi Zen cân bằng tĩnh tại bên bờ nước phẳng lặng (Kỷ luật không cần gồng, chuyển hóa thói quen thành phản xạ tự nhiên)",
+      "filename": "ky-luat-tu-dong-bien-thoi-quen-thanh-phan-xa-20261124-cinematic.webp",
+      "hash": "aa65e5db91cd9f89acccd210f3a5219f",
+      "size_kb": 98.0
+    },
+    {
+      "slug": "lay-lai-su-tap-trung-thoat-khoi-doomscrolling-20261123",
+      "title": "Lấy Lại Sự Tập Trung: Thoát Khỏi Cạm Bẫy Doomscrolling",
+      "unsplash_id": "photo-1501504905252-473c47e087f8",
+      "concept": "Bàn làm việc gỗ mộc bên khung cửa sổ ngập tràn ánh nắng sớm và cuốn sổ tay mở (Rời bỏ cạm bẫy màn hình vô thức, trở về với thế giới thực)",
+      "filename": "lay-lai-su-tap-trung-thoat-khoi-doomscrolling-20261123-cinematic.webp",
+      "hash": "1c8fe03a15475fb335f500b429306e40",
+      "size_kb": 46.6
+    },
+    {
+      "slug": "phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121",
+      "title": "Phim PỎN và Cú Lừa Dopamine: Cách Lấy Lại Bản Lĩnh Đàn Ông",
+      "unsplash_id": "photo-1469854523086-cc02fe5d8800",
+      "concept": "Hẻm núi đá đại ngàn hùng vĩ đón ánh bình minh rạng rỡ (Bản lĩnh kiên cường, sức mạnh nội tại và ý chí làm chủ dục vọng của người đàn ông)",
+      "filename": "phim-pon-va-cu-lua-dopamine-lay-lai-ban-linh-dan-o-20261121-cinematic.webp",
+      "hash": "a9f271f43c77151a0ea45d34eede2a6c",
+      "size_kb": 111.2
     }
   ]
 }

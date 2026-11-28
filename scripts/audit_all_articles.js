@@ -148,6 +148,20 @@ articleBlocks.forEach((block, index) => {
       } else {
         seenThumbHashes.set(fileHash, slug);
       }
+
+      // C2. [LỆNH ĐẶC BIỆT CỦA BỐ 20/11/2026] BẮT BUỘC ẢNH CINEMATIC CONCEPTUAL CHO BÀI VIẾT TỪ 21/11/2026
+      const baseThumb = path.basename(thumbnail);
+      const isPostNov20 = slug.includes("2026112") || slug.includes("2026113") || slug.includes("202612");
+      if (isPostNov20) {
+        if (!baseThumb.endsWith("-cinematic.webp")) {
+          console.error(`❌ [LỖI QUY CHUẨN CINEMATIC - LỆNH ĐẶC BIỆT CỦA BỐ] Bài '${slug}' dùng thumbnail '${baseThumb}' không có hậu tố '-cinematic.webp'! Bắt buộc dùng ảnh Nhiếp ảnh Ẩn dụ Nghệ thuật.`);
+          hasErrors = true;
+        }
+        if (baseThumb.includes("pinterest") || baseThumb.includes("zen-watercolor") || baseThumb.includes("5-cong-cu") || baseThumb.includes("4-hoa-chat")) {
+          console.error(`❌ [LỖI RÁC THỊ GIÁC / TRANH CŨ] Bài '${slug}' dùng thumbnail '${baseThumb}' bị dính rác Pinterest hoặc tranh vẽ cũ.`);
+          hasErrors = true;
+        }
+      }
     }
   }
 
